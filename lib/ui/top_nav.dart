@@ -23,65 +23,71 @@ class TopNavBarSimpleState extends State<TopNavBarPage> {
         extendBodyBehindAppBar: false,
         body: SafeArea(
           child: Container(
-              // color: FColors.background,
-              height: 50 + s,
+              color: FColors.topNavBar_background,
+              height: 51,
               alignment: AlignmentDirectional.topCenter,
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: <Widget>[
-                  Container(
-                    // color: Colors.blue,
-                    child: SizedBox(
-                      height: 50,
-                      child: Row(
-                        children: <Widget>[
-                          SizedBox(
-                            width: 70,
-                            child: GestureDetector(
-                              child: IconButton(
-                                color: Colors.blueGrey,
-                                splashRadius: 22,
-                                onPressed: () {
-                                  Shared.showToast(context, "Back $s");
-                                },
-                                icon: Icon(
-                                  Icons.more_vert,
-                                  size: 28,
+                  Material(
+                    elevation: 2,
+                    shadowColor: Colors.grey[100],
+                    child: Container(
+                      // color: Colors.blue,
+                      child: SizedBox(
+                        height: 50,
+                        child: Row(
+                          children: <Widget>[
+                            SizedBox(
+                              width: 50,
+                              child: GestureDetector(
+                                child: IconButton(
+                                  color: FColors.topNavBar_buttons,
+                                  splashRadius: 22,
+                                  onPressed: () {
+                                    Shared.showToast(context, "More $s");
+                                  },
+                                  icon: Icon(
+                                    Icons.more_vert,
+                                    size: 28,
+                                  ),
                                 ),
                               ),
                             ),
-                          ),
-                          Expanded(
-                            child: Center(
-                                child: Text(
-                              "Center",
-                              style: TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.w300,
-                              ),
-                            )),
-                          ),
-                          SizedBox(
-                            width: 70,
-                            child: GestureDetector(
-                              child: IconButton(
-                                color: Colors.blueGrey,
-                                splashRadius: 22,
-                                onPressed: () {
-                                  Shared.showToast(context, "Back $s");
-                                },
-                                icon: Icon(
-                                  Icons.arrow_forward_ios,
-                                  size: 28,
+                            Expanded(
+                              child: Center(
+                                  child: Text(
+                                "Center",
+                                style: TextStyle(
+                                  color: FColors.topNavBar_tittle,
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w300,
+                                ),
+                              )),
+                            ),
+                            SizedBox(
+                              width: 50,
+                              child: GestureDetector(
+                                child: IconButton(
+                                  color: FColors.topNavBar_buttons,
+                                  splashRadius: 22,
+                                  onPressed: () {
+                                    Shared.showToast(context, "Back $s");
+                                  },
+                                  icon: Icon(
+                                    Icons.arrow_forward_ios,
+                                    size: 28,
+                                  ),
                                 ),
                               ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     ),
                   ),
-                  Container(
+
+                  /*          Container(
                     height: Shared.getLogicalPixelFromDevicePixel(context, 1),
                     width: double.infinity,
                     // color: Colors.grey[200],
@@ -98,7 +104,7 @@ class TopNavBarSimpleState extends State<TopNavBarPage> {
                     // child: PhysicalModel(
                     //   color: Colors.,
                     // )
-                  )
+                  )*/
                 ],
               )),
         ));

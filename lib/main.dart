@@ -1,5 +1,6 @@
 import 'package:flip_app/shared/fcolors.dart';
 import 'package:flip_app/shared/my_colors.dart';
+import 'package:flip_app/ui/bottom_nav.dart';
 import 'package:flip_app/ui/hello_world.dart';
 import 'package:flip_app/ui/login.dart';
 import 'package:flip_app/ui/login/login_simple_green.dart';
@@ -60,6 +61,7 @@ class ListBasicRouteState extends State<ListBasicRoute> {
 
   Widget get(String title, Widget page) {
     return ListTile(
+      // dense: true,
       title: Text(title),
       onTap: () {
         goToPage(page);
@@ -115,6 +117,7 @@ class ListBasicRouteState extends State<ListBasicRoute> {
         get("Main Chat tab", ChatTabPage()),
         get("Hello World", HelloWorldPage()),
         get("TopNavBarPage", TopNavBarPage()),
+        get("BottomNavBarPage", BottomNavBarPage()),
         Divider(
           height: 2,
           color: MyColors.grey_95,
