@@ -6,6 +6,8 @@ class FColors {
   // static const Color background = Color(0xffffeeee);
   static const Color background = Color(0xffffffff);
   static const Color red = Colors.red;
+  static const Color blue = Colors.blue;
+  static const Color black = Colors.black;
   static const Color primary2 = Color(0xFF1976D2);
   // static Color primary2 = convert.hex.lab('DEADBF');;
   // static const Color primary = Color.;
