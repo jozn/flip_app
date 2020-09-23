@@ -36,21 +36,43 @@ class TopNavBarSimpleState extends State<TopNavBarPage> {
                       child: Row(
                         children: <Widget>[
                           SizedBox(
-                            width: 50,
-                          ),
-                          Expanded(
-                            child: Center(child: Text("Center")),
-                          ),
-                          SizedBox(
-                            width: 50,
+                            width: 70,
                             child: GestureDetector(
                               child: IconButton(
-                                splashRadius: 25,
+                                color: Colors.blueGrey,
+                                splashRadius: 22,
+                                onPressed: () {
+                                  Shared.showToast(context, "Back $s");
+                                },
+                                icon: Icon(
+                                  Icons.more_vert,
+                                  size: 28,
+                                ),
+                              ),
+                            ),
+                          ),
+                          Expanded(
+                            child: Center(
+                                child: Text(
+                              "Center",
+                              style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.w300,
+                              ),
+                            )),
+                          ),
+                          SizedBox(
+                            width: 70,
+                            child: GestureDetector(
+                              child: IconButton(
+                                color: Colors.blueGrey,
+                                splashRadius: 22,
                                 onPressed: () {
                                   Shared.showToast(context, "Back $s");
                                 },
                                 icon: Icon(
                                   Icons.arrow_forward_ios,
+                                  size: 28,
                                 ),
                               ),
                             ),
