@@ -1,4 +1,5 @@
-import 'package:flip_app/my_colors.dart';
+import 'package:flip_app/shared/fcolors.dart';
+import 'package:flip_app/shared/my_colors.dart';
 import 'package:flip_app/ui/login.dart';
 import 'package:flip_app/ui/login/login_simple_green.dart';
 import 'package:flutter/material.dart';
@@ -16,6 +17,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        // primarySwatch: FColors.primary2,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: Scaffold(
@@ -29,24 +31,18 @@ class MyApp extends StatelessWidget {
 }
 
 class ListBasicRoute extends StatefulWidget {
-
   ListBasicRoute();
 
   @override
   ListBasicRouteState createState() => new ListBasicRouteState();
 }
 
-
 class Menu {
   String title;
   Widget route;
 
-  Menu({
-    this.title,
-    this.route
-  });
+  Menu({this.title, this.route});
 }
-
 
 class ListBasicRouteState extends State<ListBasicRoute> {
   BuildContext context;
@@ -58,59 +54,65 @@ class ListBasicRouteState extends State<ListBasicRoute> {
     Toast.show("me", context);
   }
 
-
   Widget get(String title, Widget page) {
     return ListTile(
       title: Text(title),
-      onTap: () {goToPage(page);},
+      onTap: () {
+        goToPage(page);
+      },
     );
   }
-  
-  void goToPage(Widget w){
-    Navigator.push(context, MaterialPageRoute(
-        builder: (BuildContext context) {
-          return w;
-        })
-    );
+
+  void goToPage(Widget w) {
+    Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) {
+      return w;
+    }));
   }
 
   @override
   Widget build(BuildContext context) {
     this.context = context;
 
-
     return ListView(
-
       children: <Widget>[
         ListTile(
           title: Text("Bars"),
-          onTap: (){ Toast.show("me", context);},
+          onTap: () {
+            Toast.show("me", context);
+          },
         ),
         ListTile(
           title: Text("Bars"),
           onTap: tap,
-        ),        ListTile(
+        ),
+        ListTile(
           title: Text("Login"),
           // onTap: (){ Navigator.of(context).re(LoginCardLightRoute)},
-          onTap: (){ Navigator.push(context, MaterialPageRoute(
-              builder: (BuildContext context) {
-                return LoginCardLightRoute();
-              })
-
-          );},
+          onTap: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (BuildContext context) {
+              return LoginCardLightRoute();
+            }));
+          },
         ),
         ListTile(
           title: Text("Login 2"),
-          onTap: (){goToPage(LoginCardLightRoute());},
+          onTap: () {
+            goToPage(LoginCardLightRoute());
+          },
         ),
         ListTile(
           title: Text("Login 2"),
-          onTap: (){goToPage(LoginCardLightRoute());},
+          onTap: () {
+            goToPage(LoginCardLightRoute());
+          },
         ),
         get("Login green", LoginSimpleGreenRoute()),
-        Divider(height: 2, color: MyColors.grey_95,),
+        Divider(
+          height: 2,
+          color: MyColors.grey_95,
+        ),
       ],
     );
   }
 }
-

@@ -1,25 +1,24 @@
-import 'package:flip_app/my_colors.dart';
+import 'package:flip_app/shared/my_colors.dart';
 import 'package:flip_app/shared/my_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class LoginCardLightRoute extends StatefulWidget {
-
   LoginCardLightRoute();
 
   @override
   LoginCardLightRouteState createState() => new LoginCardLightRouteState();
 }
 
-
 class LoginCardLightRouteState extends State<LoginCardLightRoute> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       backgroundColor: MyColors.grey_5,
-      appBar: PreferredSize(preferredSize: Size.fromHeight(0), child: Container(color: Colors.white)),
+      appBar: PreferredSize(
+          preferredSize: Size.fromHeight(0),
+          child: Container(color: Colors.white)),
       body: Column(
         mainAxisSize: MainAxisSize.max,
         children: <Widget>[
@@ -30,14 +29,16 @@ class LoginCardLightRouteState extends State<LoginCardLightRoute> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Spacer(),
-                  Text("Sign in", style: MyText.title(context).copyWith(
-                      color: Colors.blue[600], fontWeight: FontWeight.bold
-                  )),
+                  Text("Sign in",
+                      style: MyText.title(context).copyWith(
+                          color: Colors.blue[600],
+                          fontWeight: FontWeight.bold)),
                   Container(height: 10),
-                  Container(height: 4, width:40, color: Colors.blue[600]),
+                  Container(height: 4, width: 40, color: Colors.blue[600]),
                   Container(height: 25),
                   Card(
-                      shape: RoundedRectangleBorder( borderRadius: BorderRadius.circular(4)),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(4)),
                       clipBehavior: Clip.antiAliasWithSaveLayer,
                       child: Container(
                         padding: EdgeInsets.all(15),
@@ -47,27 +48,29 @@ class LoginCardLightRouteState extends State<LoginCardLightRoute> {
                             TextField(
                               keyboardType: TextInputType.text,
                               decoration: InputDecoration(
-                                  labelText: "USERNAME", labelStyle: MyText.caption(context)
-                              ),
+                                  labelText: "USERNAME",
+                                  labelStyle: MyText.caption(context)),
                             ),
                             Container(height: 25),
                             TextField(
                               keyboardType: TextInputType.text,
                               decoration: InputDecoration(
-                                  labelText: "PASSWORD", labelStyle: MyText.caption(context)
-                              ),
+                                  labelText: "PASSWORD",
+                                  labelStyle: MyText.caption(context)),
                             ),
                             Container(height: 5),
                             InkWell(
                               child: Row(
                                 children: <Widget>[
                                   Checkbox(value: false, onChanged: (value) {}),
-                                  Text("Keep me Signed in", style: MyText.body2(context).copyWith(
-                                      color: Colors.blue[600]
-                                  )),
+                                  Text("Keep me Signed in",
+                                      style: MyText.body2(context)
+                                          .copyWith(color: Colors.blue[600])),
                                 ],
                               ),
-                              onTap: (){ setState(() {}); },
+                              onTap: () {
+                                setState(() {});
+                              },
                             ),
                             Container(height: 5),
                             Row(
@@ -75,7 +78,8 @@ class LoginCardLightRouteState extends State<LoginCardLightRoute> {
                                 Spacer(),
                                 FlatButton(
                                   child: Text("Forgot Password?",
-                                      style: TextStyle(color: MyColors.grey_20)),
+                                      style:
+                                          TextStyle(color: MyColors.grey_20)),
                                   color: Colors.transparent,
                                   onPressed: () {},
                                 )
@@ -83,19 +87,20 @@ class LoginCardLightRouteState extends State<LoginCardLightRoute> {
                             ),
                           ],
                         ),
-                      )
-                  ),
+                      )),
                   Spacer(),
                 ],
               ),
             ),
           ),
           Container(
-            width: double.infinity, height: 55,
+            width: double.infinity,
+            height: 55,
             child: FlatButton(
-              child: Text("SIGNIN", style: MyText.subhead(context).copyWith(color: Colors.white)),
+              child: Text("SIGNIN",
+                  style: MyText.subhead(context).copyWith(color: Colors.white)),
               color: Colors.blue[600],
-              onPressed: (){ },
+              onPressed: () {},
             ),
           )
         ],
@@ -103,4 +108,3 @@ class LoginCardLightRouteState extends State<LoginCardLightRoute> {
     );
   }
 }
-
