@@ -5,6 +5,8 @@ import 'package:flip_app/ui/login/login_simple_green.dart';
 import 'package:flutter/material.dart';
 import 'package:toast/toast.dart';
 
+import 'ui/tab_chat.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -108,6 +110,7 @@ class ListBasicRouteState extends State<ListBasicRoute> {
           },
         ),
         get("Login green", LoginSimpleGreenRoute()),
+        get("Main Chat tab", ChatTabPage()),
         Divider(
           height: 2,
           color: MyColors.grey_95,

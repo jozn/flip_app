@@ -4,10 +4,8 @@ class FStrings {
 
 
 
-
   // Login
   static String login_welcome = "به فلیپ خوش امدید.";
 
-  
 
 }
