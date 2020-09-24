@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:toast/toast.dart';
 import 'package:flip_app/shared/shared.dart';
 
-class ChatTabPage extends StatefulWidget {
-  ChatTabPage();
+class ChatListPageOld extends StatefulWidget {
+  ChatListPageOld();
 
   @override
-  ChatTabPageState createState() => new ChatTabPageState();
+  ChatListPageOldState createState() => new ChatListPageOldState();
 }
 
-class ChatTabPageState extends State<ChatTabPage> {
+class ChatListPageOldState extends State<ChatListPageOld> {
   GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
   BuildContext context;
 

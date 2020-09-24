@@ -1,11 +1,12 @@
-import 'package:flip_app/shared/fcolors.dart';
 import 'package:flip_app/shared/my_colors.dart';
 import 'package:flip_app/ui/bottom_nav.dart';
 import 'package:flip_app/ui/chat_list.dart';
+import 'package:flip_app/ui/chat_tab_page.dart';
 import 'package:flip_app/ui/contacts_list.dart';
 import 'package:flip_app/ui/hello_world.dart';
 import 'package:flip_app/ui/login.dart';
 import 'package:flip_app/ui/login/login_simple_green.dart';
+import 'package:flip_app/ui/tab_chat.dart';
 import 'package:flip_app/ui/top_nav.dart';
 import 'package:flutter/material.dart';
 import 'package:toast/toast.dart';
@@ -90,12 +91,13 @@ class ListBasicRouteState extends State<ListBasicRoute> {
           },
         ),
         get("Login green", LoginSimpleGreenRoute()),
-        get("Main Chat tab", ChatTabPage()),
+        get("Main Chat tab", ChatListPageOld()),
         get("Hello World", HelloWorldPage()),
         get("TopNavBarPage", TopNavBarPage()),
         get("BottomNavBarPage", BottomNavBarPage()),
         get("ContactsListPage", ContactsListPage()),
         get("ChatListPage", ChatListPage()),
+        get("ChatTabPage", ChatTabPage()),
         Divider(
           height: 2,
           color: MyColors.grey_95,
