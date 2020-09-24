@@ -1,6 +1,7 @@
 import 'package:flip_app/shared/fcolors.dart';
 import 'package:flip_app/shared/my_colors.dart';
 import 'package:flip_app/ui/bottom_nav.dart';
+import 'package:flip_app/ui/chat_list.dart';
 import 'package:flip_app/ui/contacts_list.dart';
 import 'package:flip_app/ui/hello_world.dart';
 import 'package:flip_app/ui/login.dart';
@@ -83,32 +84,6 @@ class ListBasicRouteState extends State<ListBasicRoute> {
     return ListView(
       children: <Widget>[
         ListTile(
-          title: Text("Bars"),
-          onTap: () {
-            Toast.show("me", context);
-          },
-        ),
-        ListTile(
-          title: Text("Bars"),
-          onTap: tap,
-        ),
-        ListTile(
-          title: Text("Login"),
-          // onTap: (){ Navigator.of(context).re(LoginCardLightRoute)},
-          onTap: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (BuildContext context) {
-              return LoginCardLightRoute();
-            }));
-          },
-        ),
-        ListTile(
-          title: Text("Login 2"),
-          onTap: () {
-            goToPage(LoginCardLightRoute());
-          },
-        ),
-        ListTile(
           title: Text("Login 2"),
           onTap: () {
             goToPage(LoginCardLightRoute());
@@ -120,6 +95,7 @@ class ListBasicRouteState extends State<ListBasicRoute> {
         get("TopNavBarPage", TopNavBarPage()),
         get("BottomNavBarPage", BottomNavBarPage()),
         get("ContactsListPage", ContactsListPage()),
+        get("ChatListPage", ChatListPage()),
         Divider(
           height: 2,
           color: MyColors.grey_95,

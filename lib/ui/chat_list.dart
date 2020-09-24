@@ -3,14 +3,14 @@ import 'package:flip_app/shared/shared.dart';
 import 'package:flutter/material.dart';
 import 'package:toast/toast.dart';
 
-class ContactsListPage extends StatefulWidget {
-  ContactsListPage();
+class ChatListPage extends StatefulWidget {
+  ChatListPage();
 
   @override
-  ContactsListPageState createState() => new ContactsListPageState();
+  ChatListPageState createState() => new ChatListPageState();
 }
 
-class ContactsListPageState extends State<ContactsListPage> {
+class ChatListPageState extends State<ChatListPage> {
   BuildContext context;
   void onItemClick(int index) {
     Toast.show("News " + index.toString() + "clicked", context,
@@ -22,10 +22,12 @@ class ContactsListPageState extends State<ContactsListPage> {
     this.context = context;
     List<Contact> items = [];
 
-    for (var i = 1; i < 15; i++) {
+    for (var i = 1; i < 60; i++) {
       var c = Contact();
+      c.id = i;
       c.title = "Me contancts name  $i";
       c.date = "14:$i last visit from yesterday";
+      c.date2 = "14:$i pm";
       c.subtitle = "Last visit yesterday $i";
       c.image = "assets/avatars/$i.jpg";
 
@@ -36,22 +38,20 @@ class ContactsListPageState extends State<ContactsListPage> {
         backgroundColor: Colors.white,
         body: SafeArea(
           child: CustomScrollView(
-            slivers: <Widget>[
-              ContactsListAdapter(items, onItemClick).getView()
-            ],
+            slivers: <Widget>[ChatListAdapter(items, onItemClick).getView()],
           ),
         ));
   }
 }
 
-class ContactsListAdapter {
+class ChatListAdapter {
   List items = <Contact>[];
-  List itemsTile = <ContactRowCell>[];
+  List itemsTile = <ChatRowCell>[];
 
-  ContactsListAdapter(this.items, onItemClick) {
+  ChatListAdapter(this.items, onItemClick) {
     for (var i = 0; i < items.length; i++) {
-      itemsTile.add(
-          ContactRowCell(index: i, object: items[i], onClick: onItemClick));
+      itemsTile
+          .add(ChatRowCell(index: i, object: items[i], onClick: onItemClick));
     }
   }
 
@@ -61,12 +61,12 @@ class ContactsListAdapter {
 }
 
 // ignore: must_be_immutable
-class ContactRowCell extends StatelessWidget {
+class ChatRowCell extends StatelessWidget {
   final Contact object;
   final int index;
   final Function onClick;
 
-  const ContactRowCell({
+  const ChatRowCell({
     Key key,
     @required this.index,
     @required this.object,
@@ -83,12 +83,13 @@ class ContactRowCell extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var id = object.id;
     return InkWell(
       onTap: () {
         onItemClick(object, context);
       },
       child: Container(
-        height: 60,
+        height: 64,
         color: FColors.transparent,
         width: double.infinity,
         padding: EdgeInsets.fromLTRB(10, 0, 0, 0),
@@ -102,6 +103,12 @@ class ContactRowCell extends StatelessWidget {
                   Spacer(),
                   Row(
                     children: [
+                      Text(object.date2,
+                          maxLines: 3,
+                          style: TextStyle(
+                              color: FColors.contactsPage_rowUserTittle,
+                              fontSize: 14,
+                              fontWeight: FontWeight.w400)),
                       Spacer(),
                       Text(object.title,
                           maxLines: 3,
@@ -112,10 +119,25 @@ class ContactRowCell extends StatelessWidget {
                     ],
                   ),
                   SizedBox(
-                    height: 10,
+                    height: 8,
                   ),
                   Row(
                     children: <Widget>[
+                      Container(
+                        // color: FColors.pages_background,
+                        // height: 18,
+                        decoration: BoxDecoration(
+                          color: FColors.inboxRow_unseenBadgeBackground,
+                          borderRadius: BorderRadius.all(Radius.circular(20)),
+                        ),
+                        padding: EdgeInsets.symmetric(vertical: 2.5, horizontal: 8),
+                        child: Text("$id",
+                            maxLines: 3,
+                            style: TextStyle(
+                                color: FColors.inboxRow_unseenBadgeCounter,
+                                fontSize: 14,
+                                fontWeight: FontWeight.w400)),
+                      ),
                       Spacer(),
                       Text(object.date,
                           style: TextStyle(

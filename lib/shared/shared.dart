@@ -15,3 +15,12 @@ class Shared {
     return (pixels / ratio);
   }
 }
+
+class Contact {
+  num id;
+  String title;
+  String date;
+  String date2;
+  String subtitle;
+  String image;
+}
