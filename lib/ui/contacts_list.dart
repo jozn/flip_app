@@ -1,9 +1,9 @@
 import 'package:flip_app/shared/fcolors.dart';
+import 'package:flip_app/shared/shared.dart';
 import 'package:flutter/material.dart';
 import 'package:toast/toast.dart';
 
 class ContactsListPage extends StatefulWidget {
-
   ContactsListPage();
 
   @override
@@ -13,7 +13,8 @@ class ContactsListPage extends StatefulWidget {
 class ContactsListPageState extends State<ContactsListPage> {
   BuildContext context;
   void onItemClick(int index) {
-    Toast.show("News " + index.toString() + "clicked", context, duration: Toast.LENGTH_SHORT);
+    Toast.show("News " + index.toString() + "clicked", context,
+        duration: Toast.LENGTH_SHORT);
   }
 
   @override
@@ -21,26 +22,25 @@ class ContactsListPageState extends State<ContactsListPage> {
     this.context = context;
     List<Contact> items = [];
 
-    for(var i=1;i<15;i++){
+    for (var i = 1; i < 15; i++) {
       var c = Contact();
-      c.title = "Me title $i";
-      c.date = "14:$i last visit";
-      c.subtitle = "Last visit $i";
+      c.title = "Me contancts name  $i";
+      c.date = "14:$i last visit from yesterday";
+      c.subtitle = "Last visit yesterday $i";
       c.image = "assets/avatars/$i.jpg";
 
       items.add(c);
     }
 
     return Scaffold(
-      backgroundColor: Colors.white,
-      body: SafeArea(
-        child: CustomScrollView(
-          slivers: <Widget>[
-            ContactsListAdapter(items, onItemClick).getView()
-          ],
-        ),
-      )
-    );
+        backgroundColor: Colors.white,
+        body: SafeArea(
+          child: CustomScrollView(
+            slivers: <Widget>[
+              ContactsListAdapter(items, onItemClick).getView()
+            ],
+          ),
+        ));
   }
 }
 
@@ -57,7 +57,8 @@ class ContactsListAdapter {
 
   ContactsListAdapter(this.items, onItemClick) {
     for (var i = 0; i < items.length; i++) {
-      itemsTile.add(ContactTile(index: i, object: items[i], onClick: onItemClick));
+      itemsTile
+          .add(ContactTile(index: i, object: items[i], onClick: onItemClick));
     }
   }
 
@@ -82,17 +83,97 @@ class ContactTile extends StatelessWidget {
         assert(onClick != null),
         super(key: key);
 
-  void onItemClick(Contact obj) {
-    onClick(index, obj);
+  void onItemClick(Contact obj, BuildContext context) {
+    // onClick(index, obj);
+    Shared.showToast(context, "user "+ this.object.image);
   }
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: (){ onItemClick(object); },
+      onTap: () {
+        onItemClick(object,context);
+      },
       child: Container(
-        height: 60, width: double.infinity,
-        padding: EdgeInsets.fromLTRB(15, 2, 15, 2),
+        height: 60,
+        color: FColors.transparent,
+        width: double.infinity,
+        padding: EdgeInsets.fromLTRB(10, 0, 0, 0),
+        child: Row(
+          children: <Widget>[
+            Expanded(
+              child: Column(
+                textDirection: TextDirection.rtl,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Spacer(),
+                  Row(
+                    children: [
+                      Spacer(),
+                      Text(object.title,
+                          maxLines: 3,
+                          style: TextStyle(
+                              color: FColors.contactsPage_rowUserTittle,
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600)),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Row(
+                    children: <Widget>[
+                      Spacer(),
+                      Text(object.date,
+                          style: TextStyle(
+                            color: FColors.contactsPage_lastActivity,
+                            fontSize: 14,
+                          )),
+                    ],
+                  ),
+                  Spacer(),
+                  Divider(
+                    color: FColors.contactsPage_divider,
+                    height: 1,
+                  )
+                ],
+              ),
+            ),
+            SizedBox(
+              width: 66,
+              child: Center(
+                child: Card(
+                    margin: EdgeInsets.all(0),
+                    elevation: 0,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(800),
+                    ),
+                    clipBehavior: Clip.antiAliasWithSaveLayer,
+                    child: Image.asset(
+                      object.image,
+                      height: 52,
+                      // width: 52,
+                      fit: BoxFit.fitHeight,
+                    )),
+              )
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  @override
+  Widget buildOld(BuildContext context) {
+    return InkWell(
+      onTap: () {
+        //onItemClick(object);
+      },
+      child: Container(
+        height: 58,
+        color: FColors.transparent,
+        width: double.infinity,
+        padding: EdgeInsets.fromLTRB(15, 0, 15, 0),
         child: Column(
           children: <Widget>[
             Expanded(
@@ -101,24 +182,33 @@ class ContactTile extends StatelessWidget {
                   Expanded(
                     child: Column(
                       children: <Widget>[
-                        Text(object.title, maxLines:3,
-                            style: TextStyle(
-                              color:  FColors.blue,
-                            fontSize: 15,
-                            fontWeight: FontWeight.w500)),
-                        Spacer(),
+                        Row(
+                          children: [
+                            Spacer(),
+                            Text(object.title,
+                                maxLines: 3,
+                                style: TextStyle(
+                                    color: FColors.contactsPage_rowUserTittle,
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.w400)),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
                         Row(
                           children: <Widget>[
-                            Text(object.subtitle.toUpperCase(), style: TextStyle(
-                                color:  FColors.blue,
-                                fontSize: 15,
-                                fontWeight: FontWeight.w500)),
+                            /*Text(object.subtitle.toUpperCase(),
+                                style: TextStyle(
+                                    color: FColors.blue,
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.w500)),*/
                             Spacer(),
                             Text(object.date,
                                 style: TextStyle(
-                                    color:  FColors.blue,
-                                    fontSize: 15,
-                                    fontWeight: FontWeight.w500)),
+                                  color: FColors.contactsPage_lastActivity,
+                                  fontSize: 14,
+                                )),
                           ],
                         ),
                       ],
@@ -126,11 +216,18 @@ class ContactTile extends StatelessWidget {
                   ),
                   Container(width: 10),
                   Card(
-                      margin: EdgeInsets.all(0), elevation: 0,
-                      shape: RoundedRectangleBorder( borderRadius: BorderRadius.circular(8),),
+                      margin: EdgeInsets.all(0),
+                      elevation: 0,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(800),
+                      ),
                       clipBehavior: Clip.antiAliasWithSaveLayer,
-                      child: Image.asset(object.image, height: 50, width: 50, fit: BoxFit.cover)
-                  ),
+                      child: Image.asset(
+                        object.image,
+                        height: 50,
+                        width: 50,
+                        fit: BoxFit.cover,
+                      )),
                 ],
               ),
             ),
