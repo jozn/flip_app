@@ -1,6 +1,7 @@
 import 'package:flip_app/shared/fcolors.dart';
 import 'package:flip_app/shared/shared.dart';
 import 'package:flip_app/ui/chat_list.dart';
+import 'package:flip_app/ui/hello_world.dart';
 import 'package:flutter/material.dart';
 
 class ChatTabPage extends StatefulWidget {
@@ -14,6 +15,9 @@ class ChatTabPage extends StatefulWidget {
 
 class ChatTabPageState extends State<ChatTabPage> with SingleTickerProviderStateMixin{
 
+  GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>(debugLabel: "sdf");
+  BuildContext ctx;
+
   TabController _tabController;
   ScrollController _scrollController;
 
@@ -22,6 +26,9 @@ class ChatTabPageState extends State<ChatTabPage> with SingleTickerProviderState
     _tabController = TabController(length: 2, vsync: this,initialIndex: 1);
     _scrollController = ScrollController();
     super.initState();
+      Future.delayed(Duration(seconds: 1), () {
+        scaffoldKey.currentState.openDrawer();
+      });
   }
 
   @override
@@ -33,8 +40,10 @@ class ChatTabPageState extends State<ChatTabPage> with SingleTickerProviderState
 
   @override
   Widget build(BuildContext context) {
-
+    this.ctx = context;
     return Scaffold(
+      key: scaffoldKey,
+      endDrawer: getDrawer(),
       backgroundColor: Colors.grey[200],
       body: SafeArea(
         child: Container(
@@ -96,6 +105,7 @@ class ChatTabPageState extends State<ChatTabPage> with SingleTickerProviderState
                               splashRadius: 22,
                               onPressed: () {
                                 Shared.showToast(context, "Back ");
+                                scaffoldKey.currentState.openDrawer();
                               },
                               icon: Icon(
                                 Icons.dehaze,
@@ -113,7 +123,7 @@ class ChatTabPageState extends State<ChatTabPage> with SingleTickerProviderState
 
                 child: TabBarView(
                   children: [
-                    Tab(text: "GAMES 555"),
+                    HelloWorldPage(),
                     ChatListPage(),
                     // Tab(text: "GAMES 555"),
                     // Tab(text: "GAMES 555"),
@@ -127,64 +137,121 @@ class ChatTabPageState extends State<ChatTabPage> with SingleTickerProviderState
       )
     );
   }
-
-  @override
-  Widget build_old(BuildContext context) {
-
-    return Scaffold(
-      backgroundColor: Colors.grey[200],
-      body: NestedScrollView(
-        controller: _scrollController,
-        headerSliverBuilder: (BuildContext context, bool innerBoxIsScroller){
-          return <Widget>[
-            SliverAppBar(
-              // title: Text('Store'), pinned: true, floating: true,
-              backgroundColor: Colors.blueGrey[600],
-              // leading: IconButton(icon: const Icon(Icons.menu), onPressed: () {
-              //   Navigator.pop(context);
-              // }),
-              // actions: <Widget>[
-              //   IconButton(
-              //     icon: const Icon(Icons.search),
-              //     onPressed: () {},
-              //   ),// overflow menu
-              //   PopupMenuButton<String>(
-              //     onSelected: (String value){},
-              //     itemBuilder: (context) => [
-              //       PopupMenuItem(
-              //         value: "Settings",
-              //         child: Text("Settings"),
-              //       ),
-              //     ],
-              //   )
-              // ],
-              bottom: TabBar(
-                indicatorColor: Colors.white,
-                indicatorSize: TabBarIndicatorSize.tab, indicatorWeight: 4,
-                // labelStyle:
-                unselectedLabelColor: Colors.grey[400],
-                tabs: [
-                  Tab(text: "MUSIC"),
-                  Tab(text: "MOVIE"),
-                  Tab(text: "BOOKS"),
-                  Tab(text: "GAMES"),
-                ],
-                controller: _tabController,
-              ),
-            )
-          ];
-        },
-        body: TabBarView(
-          children: [
-            Tab(text: "GAMES"),
-            Tab(text: "GAMES"),
-            Tab(text: "GAMES"),
-            Tab(text: "GAMES"),
-          ],
-          controller: _tabController,
-        ),
-      ),
-    );
-  }
 }
 
+
+Widget getDrawer() {
+  return Drawer(
+    child: SingleChildScrollView(
+      child: Column(
+        children: <Widget>[
+          Container(
+            height: 200,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Container(height: 30),
+                CircleAvatar(
+                  radius: 32,
+                  backgroundColor: FColors.contactsPage_lastActivity,
+                  child: CircleAvatar(
+                    radius: 30,
+                    backgroundImage: AssetImage(("assets/avatars/1.jpg")),
+                  ),
+                ),
+                Container(height: 7),
+                Text("Evans Collins",),
+                Container(height: 2),
+                Text("evan.collins@mail.com",)
+              ],
+            ),
+          ),
+          Container(height: 8),
+
+        ],
+      ),
+    ),
+  );
+}
+
+
+Widget getDrawer2() {
+  return  Drawer(
+    child: SingleChildScrollView(
+      child: Column(
+        children: <Widget>[
+          Container(
+            height: 190,
+            child: Stack(
+              children: <Widget>[
+                Image.asset(
+                  "assets/avatars/5.jpg",
+                  width: double.infinity,
+                  height: double.infinity,
+                  fit: BoxFit.cover,
+                ),
+                Padding(
+                  padding:
+                  EdgeInsets.symmetric(vertical: 40, horizontal: 14),
+                  child: CircleAvatar(
+                    radius: 36,
+                    backgroundColor: Colors.grey[100],
+                    child: CircleAvatar(
+                      radius: 33,
+                      backgroundImage: AssetImage("assets/avatars/5.jpg"),
+                    ),
+                  ),
+                ),
+                Align(
+                  alignment: Alignment.bottomLeft,
+                  child: Padding(
+                      padding: EdgeInsets.symmetric(
+                          horizontal: 20, vertical: 18),
+                      child: Row(
+                        children: <Widget>[
+                          Expanded(
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                Text(
+                                  "John Miller",
+                                ),
+                                Container(height: 5),
+                                Text(
+                                  "johnmiller@mail.com",
+                                )
+                              ],
+                            ),
+                          ),
+                          InkWell(
+                            child: Icon(Icons.arrow_drop_down,
+                                size: 24.0, color: Colors.white),
+                            onTap: () {},
+                          )
+                        ],
+                      )),
+                ),
+              ],
+            ),
+          ),
+          Container(height: 8),
+          ListTile(
+            title: Text(
+              "All inboxes",
+            ),
+            leading: Icon(Icons.move_to_inbox,
+                size: 25.0, color: Colors.grey[600]),
+            trailing: Text(
+              "75",
+            ),
+            onTap: () {
+              // onDrawerItemClicked("All inboxes");
+            },
+          ),
+          Divider(),
+        ],
+      ),
+    ),
+  );
+}
