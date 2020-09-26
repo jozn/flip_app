@@ -289,118 +289,21 @@ Widget getDrawerScreen(BuildContext context) {
                   Text(
                     "Evans Collins",
                   ),
-                  Container(height: 2),
+                  Container(height: 4),
                   Text(
                     "evan.collins@mail.com",
                   )
                 ],
               ),
             ),
-            Container(height: 8),
-            Container(height: 10),
-            InkWell(
-              onTap: () {},
-              child: Container(
-                height: 40,
-                padding: EdgeInsets.symmetric(horizontal: 20),
-                child: Row(
-                  children: <Widget>[
-                    Expanded(
-                        child: Text("Settings",
-                            textDirection: TextDirection.rtl,
-                            style: TextStyle())),
-                    Container(width: 20),
-                    Icon(Icons.menu,
-                        color: FColors.contactsPage_lastActivity, size: 20),
-                  ],
-                ),
-              ),
-            ),
+            Container(height: 5),
+            Divider(height: 2,),
+            Container(height: 5),
             Column(
               children: cellsWidgets,
             ),
           ],
         ),
-      ),
-    ),
-  );
-}
-
-Widget getDrawer2() {
-  return Drawer(
-    child: SingleChildScrollView(
-      child: Column(
-        children: <Widget>[
-          Container(
-            height: 190,
-            child: Stack(
-              children: <Widget>[
-                Image.asset(
-                  "assets/avatars/5.jpg",
-                  width: double.infinity,
-                  height: double.infinity,
-                  fit: BoxFit.cover,
-                ),
-                Padding(
-                  padding: EdgeInsets.symmetric(vertical: 40, horizontal: 14),
-                  child: CircleAvatar(
-                    radius: 36,
-                    backgroundColor: Colors.grey[100],
-                    child: CircleAvatar(
-                      radius: 33,
-                      backgroundImage: AssetImage("assets/avatars/5.jpg"),
-                    ),
-                  ),
-                ),
-                Align(
-                  alignment: Alignment.bottomLeft,
-                  child: Padding(
-                      padding:
-                          EdgeInsets.symmetric(horizontal: 20, vertical: 18),
-                      child: Row(
-                        children: <Widget>[
-                          Expanded(
-                            child: Column(
-                              mainAxisSize: MainAxisSize.min,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: <Widget>[
-                                Text(
-                                  "John Miller",
-                                ),
-                                Container(height: 5),
-                                Text(
-                                  "johnmiller@mail.com",
-                                )
-                              ],
-                            ),
-                          ),
-                          InkWell(
-                            child: Icon(Icons.arrow_drop_down,
-                                size: 24.0, color: Colors.white),
-                            onTap: () {},
-                          )
-                        ],
-                      )),
-                ),
-              ],
-            ),
-          ),
-          Container(height: 8),
-          ListTile(
-            title: Text(
-              "All inboxes",
-            ),
-            leading:
-                Icon(Icons.move_to_inbox, size: 25.0, color: Colors.grey[600]),
-            trailing: Text(
-              "75",
-            ),
-            onTap: () {
-              // onDrawerItemClicked("All inboxes");
-            },
-          ),
-          Divider(),
-        ],
       ),
     ),
   );
