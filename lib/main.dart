@@ -6,6 +6,7 @@ import 'package:flip_app/ui/contacts_list.dart';
 import 'package:flip_app/ui/hello_world.dart';
 import 'package:flip_app/ui/login.dart';
 import 'package:flip_app/ui/login/login_simple_green.dart';
+import 'package:flip_app/ui/messages_list.dart';
 import 'package:flip_app/ui/tab_chat.dart';
 import 'package:flip_app/ui/top_nav.dart';
 import 'package:flutter/material.dart';
@@ -98,6 +99,7 @@ class ListBasicRouteState extends State<ListBasicRoute> {
         get("ContactsListPage", ContactsListPage()),
         get("ChatListPage", ChatListPage()),
         get("ChatTabPage", ChatTabPage()),
+        get("ChatTelegramRoute", ChatTelegramRoute()),
         Divider(
           height: 2,
           color: MyColors.grey_95,

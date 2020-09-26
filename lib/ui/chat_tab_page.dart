@@ -140,9 +140,9 @@ class ChatTabPageState extends State<ChatTabPage>
 }
 
 class _CellRowDrawer extends StatelessWidget {
-  _Cell info;
+  _CellDrawerInfo info;
 
-  _CellRowDrawer(_Cell info) {
+  _CellRowDrawer(_CellDrawerInfo info) {
     this.info = info;
   }
 
@@ -177,12 +177,12 @@ class _CellRowDrawer extends StatelessWidget {
   }
 }
 
-class _Cell {
+class _CellDrawerInfo {
   String title;
   IconData icon;
   VoidCallback callback;
 
-  _Cell({
+  _CellDrawerInfo({
     this.title,
     this.icon,
     this.callback,
@@ -200,56 +200,56 @@ Widget getDrawerScreen(BuildContext context) {
   };
 
   var cells = [
-    _Cell(
+    _CellDrawerInfo(
       title: "Settings",
       icon: Icons.settings,
       callback: () {
         goToPage(LoginCardLightRoute());
       },
     ),
-    _Cell(
+    _CellDrawerInfo(
       title: "Notification",
       icon: Icons.notifications,
       callback: () {
         goToPage(LoginCardLightRoute());
       },
     ),
-    _Cell(
+    _CellDrawerInfo(
       title: "New group",
       icon: Icons.group,
       callback: () {
         goToPage(LoginCardLightRoute());
       },
     ),
-    _Cell(
+    _CellDrawerInfo(
       title: "New Channels",
       icon: Icons.speaker_group,
       callback: () {
         goToPage(LoginCardLightRoute());
       },
     ),
-    _Cell(
+    _CellDrawerInfo(
       title: "Contacts",
       icon: Icons.person,
       callback: () {
         goToPage(LoginCardLightRoute());
       },
     ),
-    _Cell(
+    _CellDrawerInfo(
       title: "Notification",
       icon: Icons.notifications,
       callback: () {
         goToPage(LoginCardLightRoute());
       },
     ),
-    _Cell(
+    _CellDrawerInfo(
       title: "Add Store",
       icon: Icons.store,
       callback: () {
         goToPage(LoginCardLightRoute());
       },
     ),
-    _Cell(
+    _CellDrawerInfo(
       title: "Moderators",
       icon: Icons.delete_sweep,
       callback: () {
