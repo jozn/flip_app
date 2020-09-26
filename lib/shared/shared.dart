@@ -6,7 +6,7 @@ import 'package:toast/toast.dart';
 class Shared {
   static void showToast(BuildContext context, String action) {
     print(action);
-    Toast.show(action + " clicked", context);
+    Toast.show(action + "", context);
   }
 
   static double getLogicalPixelFromDevicePixel(

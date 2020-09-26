@@ -130,7 +130,8 @@ class ChatRowCell extends StatelessWidget {
                           color: FColors.inboxRow_unseenBadgeBackground,
                           borderRadius: BorderRadius.all(Radius.circular(20)),
                         ),
-                        padding: EdgeInsets.symmetric(vertical: 2.5, horizontal: 8),
+                        padding:
+                            EdgeInsets.symmetric(vertical: 2.5, horizontal: 8),
                         child: Text("$id",
                             maxLines: 3,
                             style: TextStyle(
