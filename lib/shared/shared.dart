@@ -28,9 +28,7 @@ class Contact {
   String image;
 }
 
-
 class CircleImage extends StatelessWidget {
-
   final double size;
   final Color backgroundColor;
   final ImageProvider imageProvider;
@@ -40,7 +38,8 @@ class CircleImage extends StatelessWidget {
     @required this.imageProvider,
     this.size,
     this.backgroundColor,
-  }) : assert(imageProvider != null), super(key: key);
+  })  : assert(imageProvider != null),
+        super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -50,17 +49,14 @@ class CircleImage extends StatelessWidget {
         height: size != null ? size : 20,
         decoration: new BoxDecoration(
             shape: BoxShape.circle,
-            color: backgroundColor != null ? backgroundColor : Colors.transparent,
-            image: new DecorationImage(
-                fit: BoxFit.fill,
-                image: imageProvider
-            )
-        )
-    );
+            color:
+                backgroundColor != null ? backgroundColor : Colors.transparent,
+            image:
+                new DecorationImage(fit: BoxFit.fill, image: imageProvider)));
   }
 }
 
-class Message{
+class Message {
   int id;
   String date;
   String content;
@@ -74,7 +70,8 @@ class Message{
     this.fromMe = fromMe;
   }
 
-  Message.time(int id, String content, bool fromMe, bool showTime, String date) {
+  Message.time(
+      int id, String content, bool fromMe, bool showTime, String date) {
     this.id = id;
     this.date = date;
     this.content = content;
@@ -83,7 +80,6 @@ class Message{
   }
 }
 
-
 class Tools {
   static void setStatusBarColor(Color color) {
     SystemChrome.setSystemUIOverlayStyle(
@@ -91,7 +87,7 @@ class Tools {
   }
 
   static String allCaps(String str) {
-    if(str != null && str.isNotEmpty){
+    if (str != null && str.isNotEmpty) {
       return str.toUpperCase();
     }
     return str;
@@ -116,9 +112,11 @@ class Tools {
     DateFormat newFormat = new DateFormat("h:mm a");
     return newFormat.format(new DateTime.fromMillisecondsSinceEpoch(time));
   }
-  static String getFormattedCardNo(String cardNo){
-    if(cardNo.length < 5) return cardNo;
-    return cardNo.replaceAllMapped(RegExp(r".{4}"), (match) => "${match.group(0)} ");
+
+  static String getFormattedCardNo(String cardNo) {
+    if (cardNo.length < 5) return cardNo;
+    return cardNo.replaceAllMapped(
+        RegExp(r".{4}"), (match) => "${match.group(0)} ");
   }
 
   static void directUrl(String link) async {
@@ -126,5 +124,4 @@ class Tools {
       await launch(link);
     }
   }
-
 }

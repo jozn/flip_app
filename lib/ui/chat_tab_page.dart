@@ -166,10 +166,11 @@ class _CellRowDrawer extends StatelessWidget {
                       fontSize: 16,
                     ))),
             Container(width: 20),
-            Icon(info.icon,
-                color: Colors.blueGrey[600],
-                size: 24,
-              ),
+            Icon(
+              info.icon,
+              color: Colors.blueGrey[600],
+              size: 24,
+            ),
           ],
         ),
       ),
@@ -190,7 +191,6 @@ class _CellDrawerInfo {
 }
 
 Widget getDrawerScreen(BuildContext context) {
-
   var goToPage = (Widget w) {
     Shared.showToast(context, "Go TO Page - Remove me");
     return;
@@ -267,12 +267,10 @@ Widget getDrawerScreen(BuildContext context) {
     width: 260,
     child: Drawer(
       child: SingleChildScrollView(
-
         child: Column(
           children: <Widget>[
             Container(
               height: 200,
-
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
@@ -297,7 +295,9 @@ Widget getDrawerScreen(BuildContext context) {
               ),
             ),
             Container(height: 5),
-            Divider(height: 2,),
+            Divider(
+              height: 2,
+            ),
             Container(height: 5),
             Column(
               children: cellsWidgets,
