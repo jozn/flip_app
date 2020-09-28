@@ -1,3 +1,4 @@
+import 'package:flip_app/shared/shared.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
 
@@ -7,7 +8,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 import 'package:intl/intl.dart';
 import 'package:url_launcher/url_launcher.dart';
-
 
 
 class ChatTelegramRoute extends StatefulWidget {
@@ -22,6 +22,8 @@ class ChatTelegramRoute extends StatefulWidget {
 class ChatTelegramRouteState extends State<ChatTelegramRoute> {
 
   bool showSend = false;
+  double dsf = 0;
+
   final TextEditingController inputController = new TextEditingController();
   List<Message> items = [];
   ChatTelegramAdapter adapter;
@@ -29,13 +31,17 @@ class ChatTelegramRouteState extends State<ChatTelegramRoute> {
   @override
   void initState() {
     super.initState();
+    var m1= "sdfsafsd kfjsdflsdflksdf slkjfds";
     items.add(Message.time(items.length, "Hai..", false, items.length % 5 == 0, Tools.getFormattedTimeEvent(DateTime.now().millisecondsSinceEpoch)));
     items.add(Message.time(items.length, "Hello!", true, items.length % 5 == 0, Tools.getFormattedTimeEvent(DateTime.now().millisecondsSinceEpoch)));
+    items.add(Message.time(items.length, m1, true, items.length % 5 == 0, Tools.getFormattedTimeEvent(DateTime.now().millisecondsSinceEpoch)));
+    items.add(Message.time(items.length, m1, true, items.length % 5 == 0, Tools.getFormattedTimeEvent(DateTime.now().millisecondsSinceEpoch)));
   }
 
   @override
   Widget build(BuildContext context) {
     adapter = ChatTelegramAdapter(context, items, onItemClick);
+    print("build $dsf"); dsf++;
 
     return Scaffold(
       backgroundColor: Color(0xffD0DBE2),
@@ -82,19 +88,22 @@ class ChatTelegramRouteState extends State<ChatTelegramRoute> {
         child: Column(
           mainAxisSize: MainAxisSize.max,
           children: <Widget>[
+            // Messages list
             Expanded(
               child: adapter.getView(),
             ),
+            // Input box
             Container(
               color: Colors.white,
               alignment: Alignment.centerLeft,
               child: Row(
                 children: <Widget>[
-                  IconButton(icon: const Icon(Icons.sentiment_satisfied, ), onPressed: () {}),
+                  IconButton(icon: const Icon(Icons.sentiment_very_satisfied, ), onPressed: () {}),
                   Expanded(
                     child: TextField(
                       controller: inputController,
-                      maxLines: 1, minLines: 1,
+                      maxLines: 1000000,
+                      minLines: 1,
                       keyboardType: TextInputType.multiline,
                       decoration: new InputDecoration.collapsed(
                           hintText: 'Message'
@@ -148,28 +157,6 @@ class ChatTelegramRouteState extends State<ChatTelegramRoute> {
 }
 
 //////////////////////////////
-class Message{
-  int id;
-  String date;
-  String content;
-  bool fromMe;
-  bool showTime = true;
-
-  Message(int id, String content, bool fromMe, String date) {
-    this.id = id;
-    this.date = date;
-    this.content = content;
-    this.fromMe = fromMe;
-  }
-
-  Message.time(int id, String content, bool fromMe, bool showTime, String date) {
-    this.id = id;
-    this.date = date;
-    this.content = content;
-    this.fromMe = fromMe;
-    this.showTime = showTime;
-  }
-}
 
 
 class ChatTelegramAdapter {
@@ -203,7 +190,21 @@ class ChatTelegramAdapter {
   }
 
   Widget buildListItemView(int index, Message item){
+    var p = _MsgParam();
+    p.msg = item;
+    p.withUserHeader = true;
+    p.withFooter = true;
+    p.withAvatar = true;
+
+    var m =_MsgRowEntryHolder();
+    m.param = p;
+
+    return m;
+  }
+
+  Widget buildListItemView2(int index, Message item){
     bool isMe = item.fromMe;
+
     return Wrap(
       alignment: isMe ? WrapAlignment.end : WrapAlignment.start,
       children: <Widget>[
@@ -218,7 +219,9 @@ class ChatTelegramAdapter {
                 children: <Widget>[
                   Container(
                     constraints: BoxConstraints(minWidth: 150),
-                    child: Text(item.content,
+                    child: Text("$index "+item.content,
+                        maxLines: 100,
+                      softWrap: true,
                                            ),
                   ),
                   Container(height: 3, width: 0),
@@ -243,81 +246,243 @@ class ChatTelegramAdapter {
 
 }
 
-class CircleImage extends StatelessWidget {
+enum _Align {
+  right,
+  left,
+}
 
-  final double size;
-  final Color backgroundColor;
-  final ImageProvider imageProvider;
+// Default for right 
+class _MsgColors {
+  Color bubbleBackground = Colors.blue;
+  Color mainText = Colors.white;
+  Color dateText = Colors.grey[600];
+}
 
-  const CircleImage({
-    Key key,
-    @required this.imageProvider,
-    this.size,
-    this.backgroundColor,
-  }) : assert(imageProvider != null), super(key: key);
+class _MsgParam {
+    Message msg;
+    _Align align = _Align.right;
+    _MsgColors colors = _MsgColors();
+    bool withAvatar;
+    bool withFooter; // for channels msgs
+    bool withUserHeader; // for channels
+
+}
+
+class _MsgRowEntryHolder extends StatelessWidget {
+
+  _MsgParam param;
 
   @override
   Widget build(BuildContext context) {
-    assert(debugCheckHasMediaQuery(context));
+    var allContent = _MsgRowAllContent();
+    allContent.param = param;
+
+    if(param.align == _Align.right){
+      return Container(
+        color: Colors.grey[500],
+        margin: EdgeInsets.fromLTRB(0, 5, 0, 5),
+        child: Row(
+
+          children: <Widget> [
+            Spacer(),
+            allContent,
+            SizedBox(width: 10,),
+          ],
+        ),
+      );
+    }else{
+      return Container(
+
+        child: Row(
+
+          children: <Widget> [
+            SizedBox(width: 10,),
+            allContent,
+            Spacer(),
+          ],
+        ),
+
+      );
+    }
+  }
+}
+
+class _MsgRowAllContent extends StatelessWidget {
+  _MsgParam param;
+
+  @override
+  Widget build(BuildContext context) {
+    var contentFull = _MsgRowFullContents();
+    contentFull.param = param;
+
+    if(param.withAvatar){
+      return Container(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget> [
+            contentFull,
+            Align(
+              child: CircleImage(
+                imageProvider: AssetImage("assets/avatars/8.jpg"), size: 40,
+              ),
+            ),
+            // MsgContent
+            // Avatar
+          ],
+        ),
+      );
+    }else{
+      return Container(
+          child: contentFull,
+      );
+    }
+  }
+}
+
+class _MsgRowFullContents extends StatelessWidget {
+  _MsgParam param;
+
+  @override
+  Widget build(BuildContext context) {
+
+    var bubble  = _MsgRowBubble();
+    bubble.param = param;
+
+    var childs = <Widget> [
+      bubble,
+    ];
+
+    if(param.withFooter) {
+      var footer  = _MsgRowFooter();
+      footer.param = param;
+      childs.add(footer);
+    }
+
     return Container(
-        width: size != null ? size : 20,
-        height: size != null ? size : 20,
-        decoration: new BoxDecoration(
-            shape: BoxShape.circle,
-            color: backgroundColor != null ? backgroundColor : Colors.transparent,
-            image: new DecorationImage(
-                fit: BoxFit.fill,
-                image: imageProvider
-            )
-        )
+      child: Column(
+
+        children: childs,
+      ),
     );
   }
 }
 
+class _MsgRowBubble extends StatelessWidget {
+  _MsgParam param;
 
+  @override
+  Widget build(BuildContext context) {
 
+    var childs = <Widget> [
 
-class Tools {
-  static void setStatusBarColor(Color color) {
-    SystemChrome.setSystemUIOverlayStyle(
-        SystemUiOverlayStyle(statusBarColor: color));
-  }
+    ];
 
-  static String allCaps(String str) {
-    if(str != null && str.isNotEmpty){
-      return str.toUpperCase();
-    }
-    return str;
-  }
+    if(param.withAvatar){
+      return Container(
+        padding: EdgeInsets.all(4),
+        color: Colors.white,
+        margin: EdgeInsets.all(4),
 
-  static String getFormattedDateShort(int time) {
-    DateFormat newFormat = new DateFormat("MMM dd, yyyy");
-    return newFormat.format(new DateTime.fromMillisecondsSinceEpoch(time));
-  }
-
-  static String getFormattedDateSimple(int time) {
-    DateFormat newFormat = new DateFormat("MMMM dd, yyyy");
-    return newFormat.format(new DateTime.fromMillisecondsSinceEpoch(time));
-  }
-
-  static String getFormattedDateEvent(int time) {
-    DateFormat newFormat = new DateFormat("EEE, MMM dd yyyy");
-    return newFormat.format(new DateTime.fromMillisecondsSinceEpoch(time));
-  }
-
-  static String getFormattedTimeEvent(int time) {
-    DateFormat newFormat = new DateFormat("h:mm a");
-    return newFormat.format(new DateTime.fromMillisecondsSinceEpoch(time));
-  }
-  static String getFormattedCardNo(String cardNo){
-    if(cardNo.length < 5) return cardNo;
-    return cardNo.replaceAllMapped(RegExp(r".{4}"), (match) => "${match.group(0)} ");
-  }
-
-  static void directUrl(String link) async {
-    if (await canLaunch(link)) {
-      await launch(link);
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start ,
+          children: <Widget> [
+            Text(" sdfldskjfklshfds slkfdsfljksd kljasfl"),
+         Container(
+           color: Colors.red,
+           // width: 100,
+           child: Align(
+             alignment: Alignment.bottomRight,
+             child: getDateWidget(param),
+           ),
+         ),
+          ],
+        ),
+      );
+    }else{
+      return Container(
+        // Just Msg Content
+      );
     }
   }
+}
 
+class _MsgRowFooter extends StatelessWidget {
+  _MsgParam param;
+
+  @override
+  Widget build(BuildContext context) {
+
+    var childs = <Widget> [
+
+    ];
+
+    return Container(
+      child: Column(
+
+        children: <Widget> [
+          _MsgRowFooterInfo(),
+          Text("Footer"),
+          _MsgRowFooterButtons(),
+        ],
+      ),
+    );
+  }
+}
+
+class _MsgRowFooterInfo extends StatelessWidget {
+  _MsgParam param;
+
+  @override
+  Widget build(BuildContext context) {
+
+    var childs = <Widget> [
+
+    ];
+
+    return Container(
+      child: Row(
+
+        children: <Widget> [
+          Text("Footer info")
+        ],
+      ),
+    );
+  }
+}
+
+class _MsgRowFooterButtons extends StatelessWidget {
+  _MsgParam param;
+
+  @override
+  Widget build(BuildContext context) {
+
+    var childs = <Widget> [
+
+    ];
+
+    return Container(
+      child: Row(
+
+        children: <Widget> [
+          Text("Footer buttons")
+        ],
+      ),
+    );
+  }
+}
+
+Widget getDateWidget(_MsgParam param){
+  var item = param.msg;
+  var isMe = param.msg.id %2 ==0 ? true : false;
+
+  return Row(
+    crossAxisAlignment: CrossAxisAlignment.center,
+    mainAxisSize: MainAxisSize.min,
+    children: <Widget>[
+      Text(item.date, textAlign: TextAlign.end, style: TextStyle(fontSize: 12, color: isMe ? Color(0xff58B346) : Color(0xffffB346))),
+      Container(width: 3),
+      isMe ? Icon(Icons.done_all, size: 12, color: Color(0xff58B346)) : Container(width: 0, height: 0)
+    ],
+  );
 }
