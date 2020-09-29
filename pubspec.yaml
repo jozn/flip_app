@@ -53,6 +53,16 @@ flutter:
   assets:
     - assets/avatars/
     - assets/
+  fonts:
+    - family: IRANMobile
+      fonts:
+        - asset: assets/fonts/IRANSansMobile.ttf
+    - family: IRANMobile_Light
+      fonts:
+        - asset: assets/fonts/IRANSansMobile_Light.ttf
+    - family: IRANMobile_Medium
+      fonts:
+        - asset: assets/fonts/IRANSansMobile_Medium.ttf
 
   # To add assets to your application, add an assets section, like this:
   # assets:

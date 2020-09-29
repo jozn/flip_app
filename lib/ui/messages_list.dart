@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:ui';
 
+import 'package:flip_app/shared/fcolors.dart';
 import 'package:flip_app/shared/shared.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -13,7 +14,7 @@ class ChatTelegramRoute extends StatefulWidget {
   ChatTelegramRouteState createState() => new ChatTelegramRouteState();
 }
 
-var m1 = """ 🔻
+var m2 = """ 🔻
 گوشت و فیله ی سینه ی مرغ برای سوزاندن چربی بهترین گزینه است.
 
 
@@ -23,6 +24,15 @@ var m1 = """ 🔻
 
 دریافت برنامه تمرین و رژیم👇
 🔴 @FITNESS_19""";
+var m1 = """ 🔻پایان اخذ رای در 3 حوزه انتخابیه استان فارس
+
+رئیس ستاد انتخابات استان فارس از پایان اخذ رای در3 حوزه انتخاباتی استان فارس خبرداد.
+به گزارش خبرگزاری فارس از شیراز، احمد احمدی زاده، جمعه شب درجمع خبرنگاران از پایان رای گیری در 3 حوزه انتخاباتی اخذ رای در استان خبرداد وگفت:انتخابات یازدهیمن دوره مجلس شوای اسلامی در شعب های انتخابیه رستم،ممسنی،فیروزآباد،مرودشت ارسنجان،پاسارگاد،بیضا وسپیدان به پایان رسید.
+
+📌http://fna.ir/dfgfnp
+
+✅خبرگزاری فارس استان فارس👇🏻👇🏻
+https://t.me/farsnaonline""";
 
 class ChatTelegramRouteState extends State<ChatTelegramRoute> {
   bool showSend = false;
@@ -53,9 +63,9 @@ class ChatTelegramRouteState extends State<ChatTelegramRoute> {
     dsf++;
 
     return Scaffold(
-      backgroundColor: Color(0xffD0DBE2),
+      backgroundColor: Colors.white, //Color(0xffD0DBE2),
       appBar: AppBar(
-          backgroundColor: Color(0xff527DA3),
+          //backgroundColor: Colors.white,// Color(0xff527DA3),
           title: Row(
             children: <Widget>[
               CircleImage(
@@ -97,6 +107,7 @@ class ChatTelegramRouteState extends State<ChatTelegramRoute> {
       body: Container(
         width: double.infinity,
         height: double.infinity,
+        color: BACKGROUND_COLOR,
         child: Column(
           mainAxisSize: MainAxisSize.max,
           children: <Widget>[
@@ -106,7 +117,7 @@ class ChatTelegramRouteState extends State<ChatTelegramRoute> {
             ),
             // Input box
             Container(
-              color: Colors.white,
+              //color: Colors.green,//Colors.white,
               alignment: Alignment.centerLeft,
               child: Row(
                 children: <Widget>[
@@ -202,7 +213,7 @@ class ChatTelegramAdapter {
   Widget getView() {
     return ListView.builder(
       itemCount: items.length,
-      padding: EdgeInsets.symmetric(vertical: 10),
+      padding: EdgeInsets.symmetric(vertical: 10,horizontal: 10),
       controller: scrollController,
       itemBuilder: (context, index) {
         Message item = items[index];
@@ -304,6 +315,15 @@ class _MsgParam {
   double screenWidth;
 }
 
+// const BACKGROUND_COLOR = Color(0xffEEEEEE);
+const BACKGROUND_COLOR = Colors.white;
+// const BACKGROUND_CHAT_COLOR = Colors.white;//Color(0xffeeeeee);
+// const BACKGROUND_CHAT_COLOR = Color(0xfff8f8f8);
+// const BACKGROUND_CHAT_COLOR = Color(0xfff7f7f7);
+// const BACKGROUND_CHAT_COLOR = Color(0xfff6f6f6);
+const BACKGROUND_CHAT_COLOR = Color(0xfff5f5f5);
+// const BACKGROUND_CHAT_COLOR = Color(0xfff3f3f3);
+
 class _MsgRowEntryHolder extends StatelessWidget {
   _MsgParam param;
 
@@ -316,7 +336,7 @@ class _MsgRowEntryHolder extends StatelessWidget {
 
     if (param.align == _Align.right) {
       return Container(
-        color: Colors.grey[500],
+        color: FColors.transparent,
         margin: EdgeInsets.fromLTRB(0, 5, 0, 5),
         child: Row(
           children: <Widget>[
@@ -418,16 +438,17 @@ class _MsgRowBubble extends StatelessWidget {
     Widget headerByChannelWidget = getHeaderUserWidget(param);
     Widget replayForwardWidget = getReplayForwardWidget(param);
 
-    var width = param.screenWidth * 0.80 - 4;
+    var width = param.screenWidth * 0.80 ;//- 4;
 
     return Container(
-      padding: EdgeInsets.all(4),
+      padding: EdgeInsets.all(6),
       // color: Colors.white,
-      margin: EdgeInsets.all(4),
+      margin: EdgeInsets.all(0),
       clipBehavior: Clip.antiAlias,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.all(Radius.circular(4)),
-        color: Colors.white,
+        border: Border.all(width: 1, color: Color(0xffeeeeee) ), //Colors.grey[200]
+        color: BACKGROUND_CHAT_COLOR,
       ),
       // child: Expanded(
       child: Column(
@@ -443,7 +464,7 @@ class _MsgRowBubble extends StatelessWidget {
                 borderRadius: BorderRadius.all(Radius.circular(4)),
               ),
               child: Image.asset(
-                "assets/dog.jpg",
+                "assets/dog2.jpg",
                 width: width,
                 height: width,
                 fit: BoxFit.fill,
@@ -455,12 +476,18 @@ class _MsgRowBubble extends StatelessWidget {
             softWrap: true,
             maxLines: 10000,
             textDirection: TextDirection.rtl,
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: 15,
+              fontFamily: Shared.IRAN_FONT,
+              // fontWeight: FontWeight.w700,
+            ),
           ),
           SizedBox(
             height: 3,
           ),
           Container(
-            color: Colors.white,
+            // color: Colors.white,
             // width: 100,
             child: Align(
               alignment: Alignment.bottomRight,
@@ -561,7 +588,8 @@ Widget getHeaderUserWidget(_MsgParam param) {
             textDirection: TextDirection.rtl,
             textAlign: TextAlign.start,
             style: TextStyle(
-              fontSize: 14,
+              fontFamily: Shared.IRAN_FONT,
+              fontSize: 12,
               color: Colors.blue,
             ),
           ),
@@ -589,10 +617,11 @@ Widget getReplayForwardWidget(_MsgParam param) {
         textDirection: TextDirection.rtl,
         textAlign: TextAlign.start,
         style: TextStyle(
-          fontSize: 12,
+          fontSize: 10,
+          fontFamily: Shared.IRAN_FONT,
           color: Colors.blue,
-          fontWeight: FontWeight.w600,
-          height: 0.95,
+          // fontWeight: FontWeight.w600,
+          // height: 1.00,
         ),
       ),
       Text(
@@ -602,9 +631,10 @@ Widget getReplayForwardWidget(_MsgParam param) {
         textDirection: TextDirection.rtl,
         textAlign: TextAlign.start,
         style: TextStyle(
-          fontSize: 11,
+          fontSize: 10,
+          fontFamily: Shared.IRAN_FONT_LIGHT,
           color: Colors.blue,
-          height: 0.95,
+          // height: 1,
           // textBaseline: TextBaseline.ideographic,
         ),
       ),
