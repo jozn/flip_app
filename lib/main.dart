@@ -11,8 +11,32 @@ import 'package:flip_app/ui/tab_chat.dart';
 import 'package:flip_app/ui/top_nav.dart';
 import 'package:flutter/material.dart';
 import 'package:toast/toast.dart';
+import 'package:http/http.dart' as http;
 
 import 'ui/tab_chat.dart';
+import 'pb/rpc_social.pb.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
+
+/*class FlipRpcClient extends RpcClient {
+
+  @override
+  Future<T> invoke<T extends GeneratedMessage>(
+      ClientContext ctx,
+      String serviceName,
+      String methodName,
+      GeneratedMessage request,
+      T emptyResponse){
+
+  }
+}*/
+
+void playPb(){
+  // Send request
+  var ctx = $pb.ClientContext();
+  var m = RPC_SocialApi(null);
+  var req = EditCommentParam();
+  m.editComment(ctx, req);
+}
 
 void main() {
   runApp(MyApp());
@@ -73,6 +97,23 @@ class ListBasicRouteState extends State<ListBasicRoute> {
     );
   }
 
+  void  hh() async {
+    // var s = await http.post("dsf");
+    var url = 'https://example.com/whatsit/create';
+    var response = await http.post(url, body: {'name': 'doodle', 'color': 'blue'});
+    print('Response status: ${response.statusCode}');
+    print('Response body: ${response.body.length}');
+
+    try {
+      var m = (await http.read('https://example.com/foobar.txt'));
+      print(m.length);
+    } catch(e) {
+      print("sdf");
+      print(e);
+    }
+
+  }
+
   void goToPage(Widget w) {
     Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) {
       return w;
@@ -82,7 +123,7 @@ class ListBasicRouteState extends State<ListBasicRoute> {
   @override
   Widget build(BuildContext context) {
     this.context = context;
-
+    hh();
     return ListView(
       children: <Widget>[
         ListTile(
