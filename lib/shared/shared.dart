@@ -28,6 +28,10 @@ class Shared {
       return w;
     }));
   }
+
+  static void goBack(BuildContext context) {
+    Navigator.pop(context);
+  }
 }
 
 class Contact {

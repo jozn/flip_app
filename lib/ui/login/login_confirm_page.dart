@@ -1,6 +1,7 @@
 import 'package:flip_app/shared/fcolors.dart';
 import 'package:flip_app/shared/fstrings.dart';
 import 'package:flip_app/shared/shared.dart';
+import 'package:flip_app/shared/shared_widget.dart';
 import 'package:flip_app/ui/login/VerificationCodeInput.dart';
 import 'package:flutter/material.dart';
 
@@ -20,26 +21,35 @@ class LoginConfirmRouteState extends State<LoginConfirmRoute> {
       appBar:
           PreferredSize(child: Container(), preferredSize: Size.fromHeight(0)),
       body: Container(
-        padding: EdgeInsets.symmetric(vertical: 10, horizontal: 40),
-        child: ConstrainedBox(
-          constraints: BoxConstraints(
-            minHeight: 700,
-          ),
-          child: Column(
-            mainAxisSize: MainAxisSize.max,
-            children: <Widget>[
-              Container(height: 25),
-              Container(height: 5),
-              Text(FStrings.loginConfirm_title,
-                  style: TextStyle(
-                      color: Colors.grey,
-                      fontSize: 16,
-                      fontFamily: Shared.IRAN_FONT
-                  )),
-              // Spacer(),
-              SizedBox(
-                height: 20,
+
+        child: Column(
+          children: [
+            SimpleTopNavBar(
+              title: "09015132328",
+              showGoButton: true,
+              rightIcon: null,
+            ),
+            ConstrainedBox(
+              constraints: BoxConstraints(
+                minHeight: 400,
               ),
+              child: Container(
+                padding: EdgeInsets.symmetric(vertical: 10, horizontal: 40),
+                child: Column(
+                  mainAxisSize: MainAxisSize.max,
+                  children: <Widget>[
+                    Container(height: 25),
+                    Container(height: 5),
+                    Text(FStrings.loginConfirm_title,
+                        style: TextStyle(
+                            color: Colors.grey,
+                            fontSize: 16,
+                            fontFamily: Shared.IRAN_FONT
+                        )),
+                    // Spacer(),
+                    SizedBox(
+                      height: 20,
+                    ),
 /*              Align(
                 alignment: Alignment.centerRight,
                 child: Row(
@@ -65,18 +75,18 @@ class LoginConfirmRouteState extends State<LoginConfirmRoute> {
                   ],
                 )
               ),*/
-              SizedBox(height: 50,),
-              VerificationCodeInput(
-                keyboardType: TextInputType.number,
-                length: 4,
-                autofocus: true,
-                onCompleted: (String value) {
-                  //...
-                  Shared.showToast(context, value);
-                  print(value);
-                },
-              ),
-              SizedBox(height: 40,),
+                    SizedBox(height: 50,),
+                    VerificationCodeInput(
+                      keyboardType: TextInputType.number,
+                      length: 4,
+                      autofocus: true,
+                      onCompleted: (String value) {
+                        //...
+                        Shared.showToast(context, value);
+                        print(value);
+                      },
+                    ),
+                    SizedBox(height: 40,),
 /*              Container(
                 width: double.infinity,
                 margin: EdgeInsets.symmetric(horizontal: 10, vertical: 4),
@@ -98,59 +108,62 @@ class LoginConfirmRouteState extends State<LoginConfirmRoute> {
                   },
                 ),
               ),*/
-              Row(
-                children: [
-                  Align(
-                    child: Text(FStrings.loginConfirm_sendAgain),
-                  ),
-                ],
-              ),
-
-              Row(
-                children: [
-                  Align(
-                    alignment: Alignment.topRight,
-                    child: Text(FStrings.loginConfirm_sendAgain),
-                  ),
-                ],
-              ),
-              Align(
-                alignment: Alignment.centerRight,
-                child: Text(FStrings.loginConfirm_sendAgain,
-                    style: TextStyle(
-                        color: Colors.blueGrey,
-                        fontSize: 16,
-                        fontFamily: Shared.IRAN_FONT
-                    )),
-              ),
-
-              Align(
-                alignment: Alignment.centerRight,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    GestureDetector(
-                      onTap: (){},
-                      child: Text(
-                        FStrings.loginConfirm_sendAgain,
-                        style: TextStyle(
-                            color: Colors.blue,
-                            fontSize: 14,
-                            fontFamily: Shared.IRAN_FONT
+                    Row(
+                      children: [
+                        Align(
+                          child: Text(FStrings.loginConfirm_sendAgain),
                         ),
-                      ),
+                      ],
                     ),
-                    Text(FStrings.loginConfirm_notRecived,
-                        style: TextStyle(
-                            color: Colors.blueGrey,
-                            fontSize: 16,
-                            fontFamily: Shared.IRAN_FONT
-                        )),
+
+                    Row(
+                      children: [
+                        Align(
+                          alignment: Alignment.topRight,
+                          child: Text(FStrings.loginConfirm_sendAgain),
+                        ),
+                      ],
+                    ),
+                    Align(
+                      alignment: Alignment.centerRight,
+                      child: Text(FStrings.loginConfirm_sendAgain,
+                          style: TextStyle(
+                              color: Colors.blueGrey,
+                              fontSize: 16,
+                              fontFamily: Shared.IRAN_FONT
+                          )),
+                    ),
+
+                    Align(
+                        alignment: Alignment.centerRight,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            GestureDetector(
+                              onTap: (){},
+                              child: Text(
+                                FStrings.loginConfirm_sendAgain,
+                                style: TextStyle(
+                                    color: Colors.blue,
+                                    fontSize: 14,
+                                    fontFamily: Shared.IRAN_FONT
+                                ),
+                              ),
+                            ),
+                            Text(FStrings.loginConfirm_notRecived,
+                                style: TextStyle(
+                                    color: Colors.blueGrey,
+                                    fontSize: 16,
+                                    fontFamily: Shared.IRAN_FONT
+                                )),
+                          ],
+                        )
+                    ),
                   ],
-                )
-              ),
-            ],
-          ),
+                ),
+              )
+            ),
+          ],
         ),
       ),
     );
