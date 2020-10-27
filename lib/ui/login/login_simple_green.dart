@@ -11,7 +11,6 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'package:flip_app/ui/Api.dart' as Api;
 
-
 class LoginSimpleGreenRoute extends StatefulWidget {
   LoginSimpleGreenRoute();
 
@@ -20,7 +19,6 @@ class LoginSimpleGreenRoute extends StatefulWidget {
 }
 
 class LoginSimpleGreenRouteState extends State<LoginSimpleGreenRoute> {
-
   void sendSmsCallback() async {
     // playPb();
     Shared.showToast(context, "sxnnnnnnnnxxxdf");
@@ -64,7 +62,9 @@ class LoginSimpleGreenRouteState extends State<LoginSimpleGreenRoute> {
                         fontSize: 16,
                         fontFamily: Shared.IRAN_FONT)),
               ),
-              SizedBox(height: 10,),
+              SizedBox(
+                height: 10,
+              ),
               TextField(
                 keyboardType: TextInputType.phone,
                 autofocus: true,
@@ -72,7 +72,9 @@ class LoginSimpleGreenRouteState extends State<LoginSimpleGreenRoute> {
                 style: TextStyle(color: Colors.black),
                 decoration: InputDecoration(
                   hintText: "09123456789",
-                  hintStyle: TextStyle(color: Colors.grey[400],),
+                  hintStyle: TextStyle(
+                    color: Colors.grey[400],
+                  ),
                   enabledBorder: UnderlineInputBorder(
                     borderSide:
                         BorderSide(color: Colors.blueGrey[400], width: 1),
@@ -175,4 +177,3 @@ void playPb() async {
       }
   }
 }*/
-
