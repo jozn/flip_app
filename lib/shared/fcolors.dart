@@ -41,4 +41,7 @@ class FColors {
   // Chat Inbox Row
   static const Color inboxRow_unseenBadgeBackground = blue;
   static const Color inboxRow_unseenBadgeCounter = Colors.white;
+
+  // Chat Inbox Row
+  static const Color login_sendSmsButton = blue;
 }
