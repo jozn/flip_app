@@ -23,12 +23,10 @@ class LoginSimpleGreenRouteState extends State<LoginSimpleGreenRoute> {
 
   void sendSmsCallback() async {
     // playPb();
-    Shared.showToast(context, "sxxxxdf");
+    Shared.showToast(context, "sxnnnnnnnnxxxdf");
 
     var param = SendConfirmCodeParam();
-    Api.Auth.sendConfirmCode2(param);
-    await Api.Auth.sendConfirmCode(param);
-
+    var res = await Api.Auth.sendConfirmCode(param);
   }
 
   @override
