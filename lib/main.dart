@@ -7,6 +7,7 @@ import 'package:flip_app/ui/chat_tab_page.dart';
 import 'package:flip_app/ui/contacts_list.dart';
 import 'package:flip_app/ui/hello_world.dart';
 import 'package:flip_app/ui/login.dart';
+import 'package:flip_app/ui/login/login_confirm_page.dart';
 import 'package:flip_app/ui/login/login_simple_green.dart';
 import 'package:flip_app/ui/messages_list.dart';
 import 'package:flip_app/ui/protcol_buffer.dart';
@@ -150,6 +151,7 @@ class ListBasicRouteState extends State<ListBasicRoute> {
           },
         ),
         get("Login green", LoginSimpleGreenRoute()),
+        get("Login confim", LoginConfirmRoute()),
         get("Main Chat tab", ChatListPageOld()),
         get("Hello World", HelloWorldPage()),
         get("TopNavBarPage", TopNavBarPage()),

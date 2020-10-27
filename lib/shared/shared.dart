@@ -22,6 +22,12 @@ class Shared {
     var ratio = MediaQuery.of(context).devicePixelRatio;
     return (pixels / ratio);
   }
+
+  static void goToPage(BuildContext context,Widget w) {
+    Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) {
+      return w;
+    }));
+  }
 }
 
 class Contact {
