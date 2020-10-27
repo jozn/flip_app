@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flip_app/shared/my_colors.dart';
 import 'package:flip_app/ui/bottom_nav.dart';
 import 'package:flip_app/ui/chat_list.dart';
@@ -7,6 +9,7 @@ import 'package:flip_app/ui/hello_world.dart';
 import 'package:flip_app/ui/login.dart';
 import 'package:flip_app/ui/login/login_simple_green.dart';
 import 'package:flip_app/ui/messages_list.dart';
+import 'package:flip_app/ui/protcol_buffer.dart';
 import 'package:flip_app/ui/tab_chat.dart';
 import 'package:flip_app/ui/top_nav.dart';
 import 'package:flutter/material.dart';
@@ -15,27 +18,41 @@ import 'package:http/http.dart' as http;
 
 import 'ui/tab_chat.dart';
 import 'pb/rpc_social.pb.dart';
+import 'pb/sys.pb.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
+import 'package:protobuf/protobuf.dart';
 
-/*class FlipRpcClient extends RpcClient {
 
+class FlipRpcClient extends RpcClient {
   @override
-  Future<T> invoke<T extends GeneratedMessage>(
-      ClientContext ctx,
-      String serviceName,
-      String methodName,
-      GeneratedMessage request,
-      T emptyResponse){
+  Future<T> invoke<T extends GeneratedMessage>(ClientContext ctx, String serviceName, String methodName, GeneratedMessage request, T emptyResponse) {
+
+    var d = request;
+    var act = Invoke();
+    act.namespace = 0;
+    act.method = 939965206;
+    // act.rpcData = ;
+
+    http.post("http://127.0.0.1:3002/rpc",
+        // body: ,
+        encoding: Encoding.getByName("utf-8"));
 
   }
-}*/
+
+
+}
 
 void playPb(){
   // Send request
   var ctx = $pb.ClientContext();
-  var m = RPC_SocialApi(null);
+  var client = FlipRpcClient();
+  var m = RPC_SocialApi(client);
   var req = EditCommentParam();
+  req.writeToBuffer();
+
   m.editComment(ctx, req);
+
+
 }
 
 void main() {
@@ -141,6 +158,8 @@ class ListBasicRouteState extends State<ListBasicRoute> {
         get("ChatListPage", ChatListPage()),
         get("ChatTabPage", ChatTabPage()),
         get("ChatTelegramRoute", ChatTelegramRoute()),
+        get("PB", PbPage()),
+
         Divider(
           height: 2,
           color: MyColors.grey_95,
