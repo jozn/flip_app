@@ -1,5 +1,3 @@
-
-
 import 'package:flip_app/shared/shared.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -11,14 +9,14 @@ class SimpleTopNavBar extends StatelessWidget {
   final String title;
   final Widget rightIcon;
 
-  const SimpleTopNavBar(
-      {Key key,
-        this.title = "Title",
-        this.showGoButton,
-        this.rightIcon,
-      }) : super(key: key);
+  const SimpleTopNavBar({
+    Key key,
+    this.title = "Title",
+    this.showGoButton,
+    this.rightIcon,
+  }) : super(key: key);
 
-  static Widget topRightDefault =  SizedBox(
+  static Widget topRightDefault = SizedBox(
     width: 50,
     child: GestureDetector(
       child: IconButton(
@@ -37,29 +35,33 @@ class SimpleTopNavBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var childrens = [];
+    var childs = <Widget>[];
 
-    // right icon
-    if(this.rightIcon != null){
-      childrens.add(this.rightIcon);
+    // left custom icon
+    if (this.rightIcon != null) {
+      childs.add(this.rightIcon);
+    } else {
+      childs.add(SizedBox(width: 50, child: SizedBox()));
     }
 
-    childrens.add(Expanded(
+    // center title
+    childs.add(Expanded(
       child: Center(
           child: Text(
-            this.title,
-            style: TextStyle(
-              color: FColors.topNavBar_tittle,
-              fontSize: 18,
-              fontWeight: FontWeight.w300,
-            ),
-          )),
+        this.title,
+        style: TextStyle(
+          color: FColors.topNavBar_tittle,
+          fontSize: 18,
+          fontWeight: FontWeight.w300,
+        ),
+      )),
     ));
 
-    if(this.showGoButton){
-      childrens.add(SizedBox(
+    // right go back button
+    if (this.showGoButton) {
+      childs.add(SizedBox(
         width: 50,
-        child:  GestureDetector(
+        child: GestureDetector(
           child: IconButton(
             color: FColors.topNavBar_buttons,
             splashRadius: 22,
@@ -74,11 +76,8 @@ class SimpleTopNavBar extends StatelessWidget {
           ),
         ),
       ));
-    }else {
-      childrens.add(SizedBox(
-        width: 50,
-        child: SizedBox()
-      ));
+    } else {
+      childs.add(SizedBox(width: 50, child: SizedBox()));
     }
 
     return Material(
@@ -88,42 +87,9 @@ class SimpleTopNavBar extends StatelessWidget {
         // color: Colors.blue,
         child: SizedBox(
           height: 50,
-          child: Row(
-            children: <Widget>[
-
-              Expanded(
-                child: Center(
-                    child: Text(
-                      this.title,
-                      style: TextStyle(
-                        color: FColors.topNavBar_tittle,
-                        fontSize: 18,
-                        fontWeight: FontWeight.w300,
-                      ),
-                    )),
-              ),
-              SizedBox(
-                width: 50,
-                child:  GestureDetector(
-                  child: IconButton(
-                    color: FColors.topNavBar_buttons,
-                    splashRadius: 22,
-                    onPressed: () {
-                      Shared.goBack(context);
-                      Shared.showToast(context, "Back s");
-                    },
-                    icon: Icon(
-                      Icons.arrow_forward_ios,
-                      size: 28,
-                    ),
-                  ),
-                ),
-              ),
-            ],
-          ),
+          child: Row(children: childs),
         ),
-      ) ,
+      ),
     );
   }
-
 }

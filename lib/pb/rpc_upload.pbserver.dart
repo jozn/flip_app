@@ -16,23 +16,30 @@ import 'rpc_upload.pbjson.dart';
 export 'rpc_upload.pb.dart';
 
 abstract class RPC_UploadServiceBase extends $pb.GeneratedService {
-  $async.Future<$10.UploadFileResponse> uploadFile($pb.ServerContext ctx, $10.UploadFileParam request);
+  $async.Future<$10.UploadFileResponse> uploadFile(
+      $pb.ServerContext ctx, $10.UploadFileParam request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'UploadFile': return $10.UploadFileParam();
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'UploadFile':
+        return $10.UploadFileParam();
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'UploadFile': return this.uploadFile(ctx, request);
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'UploadFile':
+        return this.uploadFile(ctx, request);
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $core.Map<$core.String, $core.dynamic> get $json => RPC_UploadServiceBase$json;
-  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> get $messageJson => RPC_UploadServiceBase$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      RPC_UploadServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => RPC_UploadServiceBase$messageJson;
 }
-

@@ -213,7 +213,7 @@ class ChatTelegramAdapter {
   Widget getView() {
     return ListView.builder(
       itemCount: items.length,
-      padding: EdgeInsets.symmetric(vertical: 10,horizontal: 10),
+      padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
       controller: scrollController,
       itemBuilder: (context, index) {
         Message item = items[index];
@@ -438,7 +438,7 @@ class _MsgRowBubble extends StatelessWidget {
     Widget headerByChannelWidget = getHeaderUserWidget(param);
     Widget replayForwardWidget = getReplayForwardWidget(param);
 
-    var width = param.screenWidth * 0.80 ;//- 4;
+    var width = param.screenWidth * 0.80; //- 4;
 
     return Container(
       padding: EdgeInsets.all(6),
@@ -447,7 +447,8 @@ class _MsgRowBubble extends StatelessWidget {
       clipBehavior: Clip.antiAlias,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.all(Radius.circular(4)),
-        border: Border.all(width: 1, color: Color(0xffeeeeee) ), //Colors.grey[200]
+        border:
+            Border.all(width: 1, color: Color(0xffeeeeee)), //Colors.grey[200]
         color: BACKGROUND_CHAT_COLOR,
       ),
       // child: Expanded(

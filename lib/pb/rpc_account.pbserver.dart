@@ -16,23 +16,30 @@ import 'rpc_account.pbjson.dart';
 export 'rpc_account.pb.dart';
 
 abstract class RPC_AccountServiceBase extends $pb.GeneratedService {
-  $async.Future<$0.ChangePhoneNumberResponse> changePhoneNumber($pb.ServerContext ctx, $0.ChangePhoneNumberParam request);
+  $async.Future<$0.ChangePhoneNumberResponse> changePhoneNumber(
+      $pb.ServerContext ctx, $0.ChangePhoneNumberParam request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'ChangePhoneNumber': return $0.ChangePhoneNumberParam();
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'ChangePhoneNumber':
+        return $0.ChangePhoneNumberParam();
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'ChangePhoneNumber': return this.changePhoneNumber(ctx, request);
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'ChangePhoneNumber':
+        return this.changePhoneNumber(ctx, request);
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $core.Map<$core.String, $core.dynamic> get $json => RPC_AccountServiceBase$json;
-  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> get $messageJson => RPC_AccountServiceBase$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      RPC_AccountServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => RPC_AccountServiceBase$messageJson;
 }
-

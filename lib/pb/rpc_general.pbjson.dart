@@ -40,7 +40,11 @@ const RPC_GeneralServiceBase$json = const {
   '1': 'RPC_General',
   '2': const [
     const {'1': 'Echo', '2': '.EchoParam', '3': '.EchoResponse'},
-    const {'1': 'CheckUserName', '2': '.CheckUserNameParam', '3': '.CheckUserNameResponse'},
+    const {
+      '1': 'CheckUserName',
+      '2': '.CheckUserNameParam',
+      '3': '.CheckUserNameResponse'
+    },
   ],
 };
 
@@ -50,4 +54,3 @@ const RPC_GeneralServiceBase$messageJson = const {
   '.CheckUserNameParam': CheckUserNameParam$json,
   '.CheckUserNameResponse': CheckUserNameResponse$json,
 };
-

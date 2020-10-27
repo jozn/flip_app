@@ -30,7 +30,13 @@ const SendConfirmCodeResponse$json = const {
   '2': const [
     const {'1': 'Done', '3': 1, '4': 1, '5': 8, '10': 'Done'},
     const {'1': 'ErrorMessage', '3': 2, '4': 1, '5': 9, '10': 'ErrorMessage'},
-    const {'1': 'JustEmailRegister', '3': 3, '4': 1, '5': 8, '10': 'JustEmailRegister'},
+    const {
+      '1': 'JustEmailRegister',
+      '3': 3,
+      '4': 1,
+      '5': 8,
+      '10': 'JustEmailRegister'
+    },
     const {'1': 'SmsNumbers', '3': 4, '4': 3, '5': 9, '10': 'SmsNumbers'},
     const {'1': 'IsLogin', '3': 5, '4': 1, '5': 8, '10': 'IsLogin'},
   ],
@@ -50,7 +56,14 @@ const ConfirmCodeResponse$json = const {
   '2': const [
     const {'1': 'Done', '3': 1, '4': 1, '5': 8, '10': 'Done'},
     const {'1': 'ErrorMessage', '3': 2, '4': 1, '5': 9, '10': 'ErrorMessage'},
-    const {'1': 'SelfUserView', '3': 3, '4': 1, '5': 11, '6': '.SelfUserView', '10': 'SelfUserView'},
+    const {
+      '1': 'SelfUserView',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.SelfUserView',
+      '10': 'SelfUserView'
+    },
   ],
 };
 
@@ -71,14 +84,27 @@ const SingUpResponse$json = const {
   '2': const [
     const {'1': 'Done', '3': 1, '4': 1, '5': 8, '10': 'Done'},
     const {'1': 'ErrorMessage', '3': 2, '4': 1, '5': 9, '10': 'ErrorMessage'},
-    const {'1': 'SelfUserView', '3': 3, '4': 1, '5': 11, '6': '.SelfUserView', '10': 'SelfUserView'},
+    const {
+      '1': 'SelfUserView',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.SelfUserView',
+      '10': 'SelfUserView'
+    },
   ],
 };
 
 const SingInParam$json = const {
   '1': 'SingInParam',
   '2': const [
-    const {'1': 'UserNamePhoneEmail', '3': 4, '4': 1, '5': 9, '10': 'UserNamePhoneEmail'},
+    const {
+      '1': 'UserNamePhoneEmail',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '10': 'UserNamePhoneEmail'
+    },
     const {'1': 'Password', '3': 5, '4': 1, '5': 9, '10': 'Password'},
   ],
 };
@@ -88,7 +114,14 @@ const SingInResponse$json = const {
   '2': const [
     const {'1': 'Done', '3': 1, '4': 1, '5': 8, '10': 'Done'},
     const {'1': 'ErrorMessage', '3': 2, '4': 1, '5': 9, '10': 'ErrorMessage'},
-    const {'1': 'SelfUserView', '3': 3, '4': 1, '5': 11, '6': '.SelfUserView', '10': 'SelfUserView'},
+    const {
+      '1': 'SelfUserView',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.SelfUserView',
+      '10': 'SelfUserView'
+    },
   ],
 };
 
@@ -107,8 +140,16 @@ const LogOutResponse$json = const {
 const RPC_AuthServiceBase$json = const {
   '1': 'RPC_Auth',
   '2': const [
-    const {'1': 'SendConfirmCode', '2': '.SendConfirmCodeParam', '3': '.SendConfirmCodeResponse'},
-    const {'1': 'ConfirmCode', '2': '.ConfirmCodeParam', '3': '.ConfirmCodeResponse'},
+    const {
+      '1': 'SendConfirmCode',
+      '2': '.SendConfirmCodeParam',
+      '3': '.SendConfirmCodeResponse'
+    },
+    const {
+      '1': 'ConfirmCode',
+      '2': '.ConfirmCodeParam',
+      '3': '.ConfirmCodeResponse'
+    },
     const {'1': 'SingUp', '2': '.SingUpParam', '3': '.SingUpResponse'},
     const {'1': 'SingIn', '2': '.SingInParam', '3': '.SingInResponse'},
     const {'1': 'LogOut', '2': '.LogOutParam', '3': '.LogOutResponse'},
@@ -130,4 +171,3 @@ const RPC_AuthServiceBase$messageJson = const {
   '.LogOutParam': LogOutParam$json,
   '.LogOutResponse': LogOutResponse$json,
 };
-

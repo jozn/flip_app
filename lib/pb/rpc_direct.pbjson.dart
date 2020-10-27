@@ -208,31 +208,131 @@ const DirectGetFoldersFullListResponse$json = const {
 const RPC_DirectServiceBase$json = const {
   '1': 'RPC_Direct',
   '2': const [
-    const {'1': 'DirectDeleteDirect', '2': '.DirectDeleteDirectParam', '3': '.DirectDeleteDirectResponse'},
-    const {'1': 'DirectChangeTitle', '2': '.DirectChangeTitleParam', '3': '.DirectChangeTitleResponse'},
-    const {'1': 'DirectSetCustomNotification', '2': '.DirectSetCustomNotificationParam', '3': '.DirectSetCustomNotificationResponse'},
-    const {'1': 'DirectSendActionDoing', '2': '.DirectSendActionDoingParam', '3': '.DirectSendActionDoingResponse'},
-    const {'1': 'DirectSetDraft', '2': '.DirectSetDraftParam', '3': '.DirectSetDraftResponse'},
-    const {'1': 'DirectDeleteDirects', '2': '.DirectDeleteDirectsParam', '3': '.DirectDeleteDirectsResponse'},
-    const {'1': 'DirectMarkAsRead', '2': '.DirectMarkAsReadParam', '3': '.DirectMarkAsReadResponse'},
-    const {'1': 'DirectMarkAsUnRead', '2': '.DirectMarkAsUnReadParam', '3': '.DirectMarkAsUnReadResponse'},
-    const {'1': 'DirectPinDirects', '2': '.DirectPinDirectsParam', '3': '.DirectPinDirectsResponse'},
-    const {'1': 'DirectUnPinDirects', '2': '.DirectUnPinDirectsParam', '3': '.DirectUnPinDirectsResponse'},
-    const {'1': 'DirectArchiveDirects', '2': '.DirectArchiveDirectsParam', '3': '.DirectArchiveDirectsResponse'},
-    const {'1': 'DirectUnArchiveDirects', '2': '.DirectUnArchiveDirectsParam', '3': '.DirectUnArchiveDirectsResponse'},
-    const {'1': 'DirectClearHistories', '2': '.DirectClearHistoriesParam', '3': '.DirectClearHistoriesResponse'},
-    const {'1': 'DirectMuteDirects', '2': '.DirectMuteDirectsParam', '3': '.DirectMuteDirectsResponse'},
-    const {'1': 'DirectUnMuteDirects', '2': '.DirectUnMuteDirectsParam', '3': '.DirectUnMuteDirectsResponse'},
-    const {'1': 'DirectCreateFolder', '2': '.DirectCreateFolderParam', '3': '.DirectCreateFolderResponse'},
-    const {'1': 'DirectChangeFolder', '2': '.DirectChangeFolderParam', '3': '.DirectChangeFolderResponse'},
-    const {'1': 'DirectRemoveFromFolder', '2': '.DirectRemoveFromFolderParam', '3': '.DirectRemoveFromFolderResponse'},
-    const {'1': 'DirectReordersFolder', '2': '.DirectReordersFolderParam', '3': '.DirectReordersFolderResponse'},
-    const {'1': 'DirectDeleteFolder', '2': '.DirectDeleteFolderParam', '3': '.DirectDeleteFolderResponse'},
-    const {'1': 'DirectGetChatsList', '2': '.DirectGetChatsListParam', '3': '.DirectGetChatsListResponse'},
-    const {'1': 'DirectGetGroupsList', '2': '.DirectGetGroupsListParam', '3': '.DirectGetGroupsListResponse'},
-    const {'1': 'DirectGetChannelsList', '2': '.DirectGetChannelsListParam', '3': '.DirectGetChannelsListResponse'},
-    const {'1': 'DirectGetFoldersList', '2': '.DirectGetFoldersListParam', '3': '.DirectGetFoldersListResponse'},
-    const {'1': 'DirectGetFoldersFullList', '2': '.DirectGetFoldersFullListParam', '3': '.DirectGetFoldersFullListResponse'},
+    const {
+      '1': 'DirectDeleteDirect',
+      '2': '.DirectDeleteDirectParam',
+      '3': '.DirectDeleteDirectResponse'
+    },
+    const {
+      '1': 'DirectChangeTitle',
+      '2': '.DirectChangeTitleParam',
+      '3': '.DirectChangeTitleResponse'
+    },
+    const {
+      '1': 'DirectSetCustomNotification',
+      '2': '.DirectSetCustomNotificationParam',
+      '3': '.DirectSetCustomNotificationResponse'
+    },
+    const {
+      '1': 'DirectSendActionDoing',
+      '2': '.DirectSendActionDoingParam',
+      '3': '.DirectSendActionDoingResponse'
+    },
+    const {
+      '1': 'DirectSetDraft',
+      '2': '.DirectSetDraftParam',
+      '3': '.DirectSetDraftResponse'
+    },
+    const {
+      '1': 'DirectDeleteDirects',
+      '2': '.DirectDeleteDirectsParam',
+      '3': '.DirectDeleteDirectsResponse'
+    },
+    const {
+      '1': 'DirectMarkAsRead',
+      '2': '.DirectMarkAsReadParam',
+      '3': '.DirectMarkAsReadResponse'
+    },
+    const {
+      '1': 'DirectMarkAsUnRead',
+      '2': '.DirectMarkAsUnReadParam',
+      '3': '.DirectMarkAsUnReadResponse'
+    },
+    const {
+      '1': 'DirectPinDirects',
+      '2': '.DirectPinDirectsParam',
+      '3': '.DirectPinDirectsResponse'
+    },
+    const {
+      '1': 'DirectUnPinDirects',
+      '2': '.DirectUnPinDirectsParam',
+      '3': '.DirectUnPinDirectsResponse'
+    },
+    const {
+      '1': 'DirectArchiveDirects',
+      '2': '.DirectArchiveDirectsParam',
+      '3': '.DirectArchiveDirectsResponse'
+    },
+    const {
+      '1': 'DirectUnArchiveDirects',
+      '2': '.DirectUnArchiveDirectsParam',
+      '3': '.DirectUnArchiveDirectsResponse'
+    },
+    const {
+      '1': 'DirectClearHistories',
+      '2': '.DirectClearHistoriesParam',
+      '3': '.DirectClearHistoriesResponse'
+    },
+    const {
+      '1': 'DirectMuteDirects',
+      '2': '.DirectMuteDirectsParam',
+      '3': '.DirectMuteDirectsResponse'
+    },
+    const {
+      '1': 'DirectUnMuteDirects',
+      '2': '.DirectUnMuteDirectsParam',
+      '3': '.DirectUnMuteDirectsResponse'
+    },
+    const {
+      '1': 'DirectCreateFolder',
+      '2': '.DirectCreateFolderParam',
+      '3': '.DirectCreateFolderResponse'
+    },
+    const {
+      '1': 'DirectChangeFolder',
+      '2': '.DirectChangeFolderParam',
+      '3': '.DirectChangeFolderResponse'
+    },
+    const {
+      '1': 'DirectRemoveFromFolder',
+      '2': '.DirectRemoveFromFolderParam',
+      '3': '.DirectRemoveFromFolderResponse'
+    },
+    const {
+      '1': 'DirectReordersFolder',
+      '2': '.DirectReordersFolderParam',
+      '3': '.DirectReordersFolderResponse'
+    },
+    const {
+      '1': 'DirectDeleteFolder',
+      '2': '.DirectDeleteFolderParam',
+      '3': '.DirectDeleteFolderResponse'
+    },
+    const {
+      '1': 'DirectGetChatsList',
+      '2': '.DirectGetChatsListParam',
+      '3': '.DirectGetChatsListResponse'
+    },
+    const {
+      '1': 'DirectGetGroupsList',
+      '2': '.DirectGetGroupsListParam',
+      '3': '.DirectGetGroupsListResponse'
+    },
+    const {
+      '1': 'DirectGetChannelsList',
+      '2': '.DirectGetChannelsListParam',
+      '3': '.DirectGetChannelsListResponse'
+    },
+    const {
+      '1': 'DirectGetFoldersList',
+      '2': '.DirectGetFoldersListParam',
+      '3': '.DirectGetFoldersListResponse'
+    },
+    const {
+      '1': 'DirectGetFoldersFullList',
+      '2': '.DirectGetFoldersFullListParam',
+      '3': '.DirectGetFoldersFullListResponse'
+    },
   ],
 };
 
@@ -242,7 +342,8 @@ const RPC_DirectServiceBase$messageJson = const {
   '.DirectChangeTitleParam': DirectChangeTitleParam$json,
   '.DirectChangeTitleResponse': DirectChangeTitleResponse$json,
   '.DirectSetCustomNotificationParam': DirectSetCustomNotificationParam$json,
-  '.DirectSetCustomNotificationResponse': DirectSetCustomNotificationResponse$json,
+  '.DirectSetCustomNotificationResponse':
+      DirectSetCustomNotificationResponse$json,
   '.DirectSendActionDoingParam': DirectSendActionDoingParam$json,
   '.DirectSendActionDoingResponse': DirectSendActionDoingResponse$json,
   '.DirectSetDraftParam': DirectSetDraftParam$json,
@@ -288,4 +389,3 @@ const RPC_DirectServiceBase$messageJson = const {
   '.DirectGetFoldersFullListParam': DirectGetFoldersFullListParam$json,
   '.DirectGetFoldersFullListResponse': DirectGetFoldersFullListResponse$json,
 };
-

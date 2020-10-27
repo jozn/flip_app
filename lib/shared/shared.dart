@@ -6,7 +6,6 @@ import 'package:intl/intl.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter/services.dart';
 
-
 class Shared {
   static const IRAN_FONT = "IRANMobile";
   static const IRAN_FONT_MEDIUM = "IRANMobile_Medium";
@@ -23,7 +22,7 @@ class Shared {
     return (pixels / ratio);
   }
 
-  static void goToPage(BuildContext context,Widget w) {
+  static void goToPage(BuildContext context, Widget w) {
     Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) {
       return w;
     }));

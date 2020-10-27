@@ -333,41 +333,181 @@ const GroupGetAdminsListResponse$json = const {
 const RPC_GroupServiceBase$json = const {
   '1': 'RPC_Group',
   '2': const [
-    const {'1': 'GroupCreateGroup', '2': '.GroupCreateGroupParam', '3': '.GroupCreateGroupResponse'},
-    const {'1': 'GroupEditGroup', '2': '.GroupEditGroupParam', '3': '.GroupEditGroupResponse'},
-    const {'1': 'GroupDeleteGroup', '2': '.GroupDeleteGroupParam', '3': '.GroupDeleteGroupResponse'},
-    const {'1': 'GroupAddAdmin', '2': '.GroupAddAdminParam', '3': '.GroupAddAdminResponse'},
-    const {'1': 'GroupAddMember', '2': '.GroupAddMemberParam', '3': '.GroupAddMemberResponse'},
-    const {'1': 'GroupRemoveMember', '2': '.GroupRemoveMemberParam', '3': '.GroupRemoveMemberResponse'},
-    const {'1': 'GroupChangeMemberLevel', '2': '.GroupChangeMemberLevelParam', '3': '.GroupChangeMemberLevelResponse'},
-    const {'1': 'GroupChangeMemberPermission', '2': '.GroupChangeMemberPermissionParam', '3': '.GroupChangeMemberPermissionResponse'},
-    const {'1': 'GroupJoinGroup', '2': '.JoinGroupParam', '3': '.JoinGroupResponse'},
-    const {'1': 'GroupLeaveGroup', '2': '.GroupLeaveGroupParam', '3': '.GroupLeaveGroupResponse'},
-    const {'1': 'GroupBanMember', '2': '.GroupBanMemberParam', '3': '.GroupBanMemberResponse'},
-    const {'1': 'GroupChangePrivacy', '2': '.GroupChangePrivacyParam', '3': '.GroupChangePrivacyResponse'},
-    const {'1': 'GroupChangeDefaultPermission', '2': '.GroupChangeDefaultPermissionParam', '3': '.GroupChangeDefaultPermissionResponse'},
-    const {'1': 'GroupRevokeLink', '2': '.GroupRevokeLinkParam', '3': '.GroupRevokeLinkResponse'},
-    const {'1': 'GroupChangeUsername', '2': '.GroupChangeUsernameParam', '3': '.GroupChangeUsernameResponse'},
-    const {'1': 'GroupSendMessage', '2': '.GroupSendMessageParam', '3': '.GroupSendMessageResponse'},
-    const {'1': 'GroupEditMessage', '2': '.GroupEditMessageParam', '3': '.GroupEditMessageResponse'},
-    const {'1': 'GroupPinMessage', '2': '.GroupPinMessageParam', '3': '.GroupPinMessageResponse'},
-    const {'1': 'GroupUnPinMessage', '2': '.GroupUnPinMessageParam', '3': '.GroupUnPinMessageResponse'},
-    const {'1': 'GroupDeleteMessage', '2': '.GroupDeleteMessageParam', '3': '.GroupDeleteMessageResponse'},
-    const {'1': 'GroupDeleteMessages', '2': '.GroupDeleteMessagesParam', '3': '.GroupDeleteMessagesResponse'},
-    const {'1': 'GroupDeleteHistory', '2': '.GroupDeleteHistoryParam', '3': '.GroupDeleteHistoryResponse'},
-    const {'1': 'GroupClearHistory', '2': '.GroupClearHistoryParam', '3': '.GroupClearHistoryResponse'},
-    const {'1': 'GroupAvatarAdd', '2': '.GroupAvatarAddParam', '3': '.GroupAvatarAddResponse'},
-    const {'1': 'GroupAvatarChange', '2': '.GroupAvatarChangeParam', '3': '.GroupAvatarChangeResponse'},
-    const {'1': 'GroupAvatarDelete', '2': '.GroupAvatarDeleteParam', '3': '.GroupAvatarDeleteResponse'},
-    const {'1': 'GroupAvatarGetList', '2': '.GroupAvatarGetListParam', '3': '.GroupAvatarGetListResponse'},
-    const {'1': 'GroupSendDoingAction', '2': '.GroupSendDoingActionParam', '3': '.GroupSendDoingActionResponse'},
-    const {'1': 'GroupReportGroup', '2': '.GroupReportGroupParam', '3': '.GroupReportGroupResponse'},
-    const {'1': 'GroupGetFull', '2': '.GroupGetFullMessageParam', '3': '.GroupGetFullMessageResponse'},
-    const {'1': 'GroupGetMessagesList', '2': '.GroupGetMessagesListParam', '3': '.GroupGetMessagesListResponse'},
-    const {'1': 'GroupGetMediaList', '2': '.GroupGetMediaListParam', '3': '.GroupGetMediaListResponse'},
-    const {'1': 'GroupGetMembersList', '2': '.GroupGetMembersListParam', '3': '.GroupGetMembersListResponse'},
-    const {'1': 'GroupGetAdminsList', '2': '.GroupGetAdminsListParam', '3': '.GroupGetAdminsListResponse'},
-    const {'1': 'GroupSetDraft', '2': '.GroupSetDraftParam', '3': '.GroupSetDraftResponse'},
+    const {
+      '1': 'GroupCreateGroup',
+      '2': '.GroupCreateGroupParam',
+      '3': '.GroupCreateGroupResponse'
+    },
+    const {
+      '1': 'GroupEditGroup',
+      '2': '.GroupEditGroupParam',
+      '3': '.GroupEditGroupResponse'
+    },
+    const {
+      '1': 'GroupDeleteGroup',
+      '2': '.GroupDeleteGroupParam',
+      '3': '.GroupDeleteGroupResponse'
+    },
+    const {
+      '1': 'GroupAddAdmin',
+      '2': '.GroupAddAdminParam',
+      '3': '.GroupAddAdminResponse'
+    },
+    const {
+      '1': 'GroupAddMember',
+      '2': '.GroupAddMemberParam',
+      '3': '.GroupAddMemberResponse'
+    },
+    const {
+      '1': 'GroupRemoveMember',
+      '2': '.GroupRemoveMemberParam',
+      '3': '.GroupRemoveMemberResponse'
+    },
+    const {
+      '1': 'GroupChangeMemberLevel',
+      '2': '.GroupChangeMemberLevelParam',
+      '3': '.GroupChangeMemberLevelResponse'
+    },
+    const {
+      '1': 'GroupChangeMemberPermission',
+      '2': '.GroupChangeMemberPermissionParam',
+      '3': '.GroupChangeMemberPermissionResponse'
+    },
+    const {
+      '1': 'GroupJoinGroup',
+      '2': '.JoinGroupParam',
+      '3': '.JoinGroupResponse'
+    },
+    const {
+      '1': 'GroupLeaveGroup',
+      '2': '.GroupLeaveGroupParam',
+      '3': '.GroupLeaveGroupResponse'
+    },
+    const {
+      '1': 'GroupBanMember',
+      '2': '.GroupBanMemberParam',
+      '3': '.GroupBanMemberResponse'
+    },
+    const {
+      '1': 'GroupChangePrivacy',
+      '2': '.GroupChangePrivacyParam',
+      '3': '.GroupChangePrivacyResponse'
+    },
+    const {
+      '1': 'GroupChangeDefaultPermission',
+      '2': '.GroupChangeDefaultPermissionParam',
+      '3': '.GroupChangeDefaultPermissionResponse'
+    },
+    const {
+      '1': 'GroupRevokeLink',
+      '2': '.GroupRevokeLinkParam',
+      '3': '.GroupRevokeLinkResponse'
+    },
+    const {
+      '1': 'GroupChangeUsername',
+      '2': '.GroupChangeUsernameParam',
+      '3': '.GroupChangeUsernameResponse'
+    },
+    const {
+      '1': 'GroupSendMessage',
+      '2': '.GroupSendMessageParam',
+      '3': '.GroupSendMessageResponse'
+    },
+    const {
+      '1': 'GroupEditMessage',
+      '2': '.GroupEditMessageParam',
+      '3': '.GroupEditMessageResponse'
+    },
+    const {
+      '1': 'GroupPinMessage',
+      '2': '.GroupPinMessageParam',
+      '3': '.GroupPinMessageResponse'
+    },
+    const {
+      '1': 'GroupUnPinMessage',
+      '2': '.GroupUnPinMessageParam',
+      '3': '.GroupUnPinMessageResponse'
+    },
+    const {
+      '1': 'GroupDeleteMessage',
+      '2': '.GroupDeleteMessageParam',
+      '3': '.GroupDeleteMessageResponse'
+    },
+    const {
+      '1': 'GroupDeleteMessages',
+      '2': '.GroupDeleteMessagesParam',
+      '3': '.GroupDeleteMessagesResponse'
+    },
+    const {
+      '1': 'GroupDeleteHistory',
+      '2': '.GroupDeleteHistoryParam',
+      '3': '.GroupDeleteHistoryResponse'
+    },
+    const {
+      '1': 'GroupClearHistory',
+      '2': '.GroupClearHistoryParam',
+      '3': '.GroupClearHistoryResponse'
+    },
+    const {
+      '1': 'GroupAvatarAdd',
+      '2': '.GroupAvatarAddParam',
+      '3': '.GroupAvatarAddResponse'
+    },
+    const {
+      '1': 'GroupAvatarChange',
+      '2': '.GroupAvatarChangeParam',
+      '3': '.GroupAvatarChangeResponse'
+    },
+    const {
+      '1': 'GroupAvatarDelete',
+      '2': '.GroupAvatarDeleteParam',
+      '3': '.GroupAvatarDeleteResponse'
+    },
+    const {
+      '1': 'GroupAvatarGetList',
+      '2': '.GroupAvatarGetListParam',
+      '3': '.GroupAvatarGetListResponse'
+    },
+    const {
+      '1': 'GroupSendDoingAction',
+      '2': '.GroupSendDoingActionParam',
+      '3': '.GroupSendDoingActionResponse'
+    },
+    const {
+      '1': 'GroupReportGroup',
+      '2': '.GroupReportGroupParam',
+      '3': '.GroupReportGroupResponse'
+    },
+    const {
+      '1': 'GroupGetFull',
+      '2': '.GroupGetFullMessageParam',
+      '3': '.GroupGetFullMessageResponse'
+    },
+    const {
+      '1': 'GroupGetMessagesList',
+      '2': '.GroupGetMessagesListParam',
+      '3': '.GroupGetMessagesListResponse'
+    },
+    const {
+      '1': 'GroupGetMediaList',
+      '2': '.GroupGetMediaListParam',
+      '3': '.GroupGetMediaListResponse'
+    },
+    const {
+      '1': 'GroupGetMembersList',
+      '2': '.GroupGetMembersListParam',
+      '3': '.GroupGetMembersListResponse'
+    },
+    const {
+      '1': 'GroupGetAdminsList',
+      '2': '.GroupGetAdminsListParam',
+      '3': '.GroupGetAdminsListResponse'
+    },
+    const {
+      '1': 'GroupSetDraft',
+      '2': '.GroupSetDraftParam',
+      '3': '.GroupSetDraftResponse'
+    },
   ],
 };
 
@@ -387,7 +527,8 @@ const RPC_GroupServiceBase$messageJson = const {
   '.GroupChangeMemberLevelParam': GroupChangeMemberLevelParam$json,
   '.GroupChangeMemberLevelResponse': GroupChangeMemberLevelResponse$json,
   '.GroupChangeMemberPermissionParam': GroupChangeMemberPermissionParam$json,
-  '.GroupChangeMemberPermissionResponse': GroupChangeMemberPermissionResponse$json,
+  '.GroupChangeMemberPermissionResponse':
+      GroupChangeMemberPermissionResponse$json,
   '.JoinGroupParam': JoinGroupParam$json,
   '.JoinGroupResponse': JoinGroupResponse$json,
   '.GroupLeaveGroupParam': GroupLeaveGroupParam$json,
@@ -397,7 +538,8 @@ const RPC_GroupServiceBase$messageJson = const {
   '.GroupChangePrivacyParam': GroupChangePrivacyParam$json,
   '.GroupChangePrivacyResponse': GroupChangePrivacyResponse$json,
   '.GroupChangeDefaultPermissionParam': GroupChangeDefaultPermissionParam$json,
-  '.GroupChangeDefaultPermissionResponse': GroupChangeDefaultPermissionResponse$json,
+  '.GroupChangeDefaultPermissionResponse':
+      GroupChangeDefaultPermissionResponse$json,
   '.GroupRevokeLinkParam': GroupRevokeLinkParam$json,
   '.GroupRevokeLinkResponse': GroupRevokeLinkResponse$json,
   '.GroupChangeUsernameParam': GroupChangeUsernameParam$json,
@@ -443,4 +585,3 @@ const RPC_GroupServiceBase$messageJson = const {
   '.GroupSetDraftParam': GroupSetDraftParam$json,
   '.GroupSetDraftResponse': GroupSetDraftResponse$json,
 };
-

@@ -102,4 +102,3 @@ const RoomActionDoingEnum$json = const {
     const {'1': 'PAINTING', '2': 16},
   ],
 };
-

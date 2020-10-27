@@ -20,7 +20,11 @@ const ChangePhoneNumberResponse$json = const {
 const RPC_AccountServiceBase$json = const {
   '1': 'RPC_Account',
   '2': const [
-    const {'1': 'ChangePhoneNumber', '2': '.ChangePhoneNumberParam', '3': '.ChangePhoneNumberResponse'},
+    const {
+      '1': 'ChangePhoneNumber',
+      '2': '.ChangePhoneNumberParam',
+      '3': '.ChangePhoneNumberResponse'
+    },
   ],
 };
 
@@ -28,4 +32,3 @@ const RPC_AccountServiceBase$messageJson = const {
   '.ChangePhoneNumberParam': ChangePhoneNumberParam$json,
   '.ChangePhoneNumberResponse': ChangePhoneNumberResponse$json,
 };
-

@@ -47,11 +47,16 @@ class TopNavBarSimpleState extends State<PbPage> {
     );
   }
 }
+
 //////////////////////////////////////////////////////////////////////
 class FlipRpcClient extends RpcClient {
   @override
-  Future<T> invoke<T extends GeneratedMessage>(ClientContext ctx, String serviceName, String methodName, GeneratedMessage request, T emptyResponse) async{
-
+  Future<T> invoke<T extends GeneratedMessage>(
+      ClientContext ctx,
+      String serviceName,
+      String methodName,
+      GeneratedMessage request,
+      T emptyResponse) async {
     var d = request.writeToBuffer();
     var act = Invoke();
     act.namespace = 0;
@@ -70,17 +75,17 @@ class FlipRpcClient extends RpcClient {
     var m = Invoke.fromBuffer(dd);
     print("de: $m");
 
-    var res = await http.post("http://192.168.43.159:3002/rpc",
-        body: dd,
-        // encoding: Encoding.getByName("utf-8")
+    var res = await http.post(
+      "http://192.168.43.159:3002/rpc",
+      body: dd,
+      // encoding: Encoding.getByName("utf-8")
     );
 
     print('Response : ${res}');
-
   }
 }
 
-void playPb(){
+void playPb() {
   print("playpb0");
   // Send request
   var ctx = $pb.ClientContext();
@@ -92,19 +97,18 @@ void playPb(){
   m.sendConfirmCode(ctx, req);
 
   // sender();
-
 }
 
-void sender() async{
+void sender() async {
   print("sender");
 
   var url = 'https://example.com/whatsit/create';
-  var response = await http.post(url, body: {'name': 'doodle', 'color': 'blue'});
+  var response =
+      await http.post(url, body: {'name': 'doodle', 'color': 'blue'});
   print('Response status: ${response.statusCode}');
   print('Response body: ${response.body}');
 
   print(await http.read('https://example.com/foobar.txt'));
 
   print("sender 2");
-
 }

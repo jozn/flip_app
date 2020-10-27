@@ -51,4 +51,3 @@ const Invoke$json = const {
     const {'1': 'rpc_data', '3': 4, '4': 1, '5': 12, '10': 'rpcData'},
   ],
 };
-

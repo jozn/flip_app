@@ -11,30 +11,39 @@ import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class EchoParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('EchoParam', createEmptyInstance: create)
-    ..aOS(1, 'text')
-    ..hasRequiredFields = false
-  ;
+  static final $pb.BuilderInfo _i =
+      $pb.BuilderInfo('EchoParam', createEmptyInstance: create)
+        ..aOS(1, 'text')
+        ..hasRequiredFields = false;
 
   EchoParam._() : super();
   factory EchoParam() => create();
-  factory EchoParam.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory EchoParam.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory EchoParam.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory EchoParam.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   EchoParam clone() => EchoParam()..mergeFromMessage(this);
-  EchoParam copyWith(void Function(EchoParam) updates) => super.copyWith((message) => updates(message as EchoParam));
+  EchoParam copyWith(void Function(EchoParam) updates) =>
+      super.copyWith((message) => updates(message as EchoParam));
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static EchoParam create() => EchoParam._();
   EchoParam createEmptyInstance() => create();
   static $pb.PbList<EchoParam> createRepeated() => $pb.PbList<EchoParam>();
   @$core.pragma('dart2js:noInline')
-  static EchoParam getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<EchoParam>(create);
+  static EchoParam getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<EchoParam>(create);
   static EchoParam _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get text => $_getSZ(0);
   @$pb.TagNumber(1)
-  set text($core.String v) { $_setString(0, v); }
+  set text($core.String v) {
+    $_setString(0, v);
+  }
+
   @$pb.TagNumber(1)
   $core.bool hasText() => $_has(0);
   @$pb.TagNumber(1)
@@ -42,31 +51,41 @@ class EchoParam extends $pb.GeneratedMessage {
 }
 
 class EchoResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('EchoResponse', createEmptyInstance: create)
-    ..aOB(1, 'done')
-    ..aOS(2, 'text')
-    ..hasRequiredFields = false
-  ;
+  static final $pb.BuilderInfo _i =
+      $pb.BuilderInfo('EchoResponse', createEmptyInstance: create)
+        ..aOB(1, 'done')
+        ..aOS(2, 'text')
+        ..hasRequiredFields = false;
 
   EchoResponse._() : super();
   factory EchoResponse() => create();
-  factory EchoResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory EchoResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory EchoResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory EchoResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   EchoResponse clone() => EchoResponse()..mergeFromMessage(this);
-  EchoResponse copyWith(void Function(EchoResponse) updates) => super.copyWith((message) => updates(message as EchoResponse));
+  EchoResponse copyWith(void Function(EchoResponse) updates) =>
+      super.copyWith((message) => updates(message as EchoResponse));
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static EchoResponse create() => EchoResponse._();
   EchoResponse createEmptyInstance() => create();
-  static $pb.PbList<EchoResponse> createRepeated() => $pb.PbList<EchoResponse>();
+  static $pb.PbList<EchoResponse> createRepeated() =>
+      $pb.PbList<EchoResponse>();
   @$core.pragma('dart2js:noInline')
-  static EchoResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<EchoResponse>(create);
+  static EchoResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<EchoResponse>(create);
   static EchoResponse _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.bool get done => $_getBF(0);
   @$pb.TagNumber(1)
-  set done($core.bool v) { $_setBool(0, v); }
+  set done($core.bool v) {
+    $_setBool(0, v);
+  }
+
   @$pb.TagNumber(1)
   $core.bool hasDone() => $_has(0);
   @$pb.TagNumber(1)
@@ -75,7 +94,10 @@ class EchoResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get text => $_getSZ(1);
   @$pb.TagNumber(2)
-  set text($core.String v) { $_setString(1, v); }
+  set text($core.String v) {
+    $_setString(1, v);
+  }
+
   @$pb.TagNumber(2)
   $core.bool hasText() => $_has(1);
   @$pb.TagNumber(2)
@@ -83,30 +105,40 @@ class EchoResponse extends $pb.GeneratedMessage {
 }
 
 class CheckUserNameParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CheckUserNameParam', createEmptyInstance: create)
-    ..aOS(1, 'username')
-    ..hasRequiredFields = false
-  ;
+  static final $pb.BuilderInfo _i =
+      $pb.BuilderInfo('CheckUserNameParam', createEmptyInstance: create)
+        ..aOS(1, 'username')
+        ..hasRequiredFields = false;
 
   CheckUserNameParam._() : super();
   factory CheckUserNameParam() => create();
-  factory CheckUserNameParam.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory CheckUserNameParam.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory CheckUserNameParam.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CheckUserNameParam.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CheckUserNameParam clone() => CheckUserNameParam()..mergeFromMessage(this);
-  CheckUserNameParam copyWith(void Function(CheckUserNameParam) updates) => super.copyWith((message) => updates(message as CheckUserNameParam));
+  CheckUserNameParam copyWith(void Function(CheckUserNameParam) updates) =>
+      super.copyWith((message) => updates(message as CheckUserNameParam));
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static CheckUserNameParam create() => CheckUserNameParam._();
   CheckUserNameParam createEmptyInstance() => create();
-  static $pb.PbList<CheckUserNameParam> createRepeated() => $pb.PbList<CheckUserNameParam>();
+  static $pb.PbList<CheckUserNameParam> createRepeated() =>
+      $pb.PbList<CheckUserNameParam>();
   @$core.pragma('dart2js:noInline')
-  static CheckUserNameParam getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CheckUserNameParam>(create);
+  static CheckUserNameParam getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CheckUserNameParam>(create);
   static CheckUserNameParam _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get username => $_getSZ(0);
   @$pb.TagNumber(1)
-  set username($core.String v) { $_setString(0, v); }
+  set username($core.String v) {
+    $_setString(0, v);
+  }
+
   @$pb.TagNumber(1)
   $core.bool hasUsername() => $_has(0);
   @$pb.TagNumber(1)
@@ -114,32 +146,44 @@ class CheckUserNameParam extends $pb.GeneratedMessage {
 }
 
 class CheckUserNameResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CheckUserNameResponse', createEmptyInstance: create)
-    ..aOB(1, 'isAvailable')
-    ..aOS(2, 'username')
-    ..aOS(3, 'showMessage')
-    ..hasRequiredFields = false
-  ;
+  static final $pb.BuilderInfo _i =
+      $pb.BuilderInfo('CheckUserNameResponse', createEmptyInstance: create)
+        ..aOB(1, 'isAvailable')
+        ..aOS(2, 'username')
+        ..aOS(3, 'showMessage')
+        ..hasRequiredFields = false;
 
   CheckUserNameResponse._() : super();
   factory CheckUserNameResponse() => create();
-  factory CheckUserNameResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory CheckUserNameResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  CheckUserNameResponse clone() => CheckUserNameResponse()..mergeFromMessage(this);
-  CheckUserNameResponse copyWith(void Function(CheckUserNameResponse) updates) => super.copyWith((message) => updates(message as CheckUserNameResponse));
+  factory CheckUserNameResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CheckUserNameResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  CheckUserNameResponse clone() =>
+      CheckUserNameResponse()..mergeFromMessage(this);
+  CheckUserNameResponse copyWith(
+          void Function(CheckUserNameResponse) updates) =>
+      super.copyWith((message) => updates(message as CheckUserNameResponse));
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static CheckUserNameResponse create() => CheckUserNameResponse._();
   CheckUserNameResponse createEmptyInstance() => create();
-  static $pb.PbList<CheckUserNameResponse> createRepeated() => $pb.PbList<CheckUserNameResponse>();
+  static $pb.PbList<CheckUserNameResponse> createRepeated() =>
+      $pb.PbList<CheckUserNameResponse>();
   @$core.pragma('dart2js:noInline')
-  static CheckUserNameResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CheckUserNameResponse>(create);
+  static CheckUserNameResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CheckUserNameResponse>(create);
   static CheckUserNameResponse _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.bool get isAvailable => $_getBF(0);
   @$pb.TagNumber(1)
-  set isAvailable($core.bool v) { $_setBool(0, v); }
+  set isAvailable($core.bool v) {
+    $_setBool(0, v);
+  }
+
   @$pb.TagNumber(1)
   $core.bool hasIsAvailable() => $_has(0);
   @$pb.TagNumber(1)
@@ -148,7 +192,10 @@ class CheckUserNameResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get username => $_getSZ(1);
   @$pb.TagNumber(2)
-  set username($core.String v) { $_setString(1, v); }
+  set username($core.String v) {
+    $_setString(1, v);
+  }
+
   @$pb.TagNumber(2)
   $core.bool hasUsername() => $_has(1);
   @$pb.TagNumber(2)
@@ -157,7 +204,10 @@ class CheckUserNameResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.String get showMessage => $_getSZ(2);
   @$pb.TagNumber(3)
-  set showMessage($core.String v) { $_setString(2, v); }
+  set showMessage($core.String v) {
+    $_setString(2, v);
+  }
+
   @$pb.TagNumber(3)
   $core.bool hasShowMessage() => $_has(2);
   @$pb.TagNumber(3)
@@ -170,11 +220,14 @@ class RPC_GeneralApi {
 
   $async.Future<EchoResponse> echo($pb.ClientContext ctx, EchoParam request) {
     var emptyResponse = EchoResponse();
-    return _client.invoke<EchoResponse>(ctx, 'RPC_General', 'Echo', request, emptyResponse);
+    return _client.invoke<EchoResponse>(
+        ctx, 'RPC_General', 'Echo', request, emptyResponse);
   }
-  $async.Future<CheckUserNameResponse> checkUserName($pb.ClientContext ctx, CheckUserNameParam request) {
+
+  $async.Future<CheckUserNameResponse> checkUserName(
+      $pb.ClientContext ctx, CheckUserNameParam request) {
     var emptyResponse = CheckUserNameResponse();
-    return _client.invoke<CheckUserNameResponse>(ctx, 'RPC_General', 'CheckUserName', request, emptyResponse);
+    return _client.invoke<CheckUserNameResponse>(
+        ctx, 'RPC_General', 'CheckUserName', request, emptyResponse);
   }
 }
-

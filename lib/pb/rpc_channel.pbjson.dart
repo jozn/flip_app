@@ -370,46 +370,206 @@ const ChannelBlockedResponse$json = const {
 const RPC_ChannelServiceBase$json = const {
   '1': 'RPC_Channel',
   '2': const [
-    const {'1': 'ChannelCreateChannel', '2': '.ChannelCreateChannelParam', '3': '.ChannelCreateChannelResponse'},
-    const {'1': 'ChannelEditChannel', '2': '.ChannelEditChannelParam', '3': '.ChannelEditChannelResponse'},
-    const {'1': 'ChannelDeleteChannel', '2': '.ChannelDeleteChannelParam', '3': '.ChannelDeleteChannelResponse'},
-    const {'1': 'ChannelAddAuthor', '2': '.ChannelAddAuthorParam', '3': '.ChannelAddAuthorResponse'},
-    const {'1': 'ChannelChangeAuthorPermission', '2': '.ChannelChangeAuthorPermissionParam', '3': '.ChannelChangeAuthorPermissionResponse'},
-    const {'1': 'ChannelRemoveAuthor', '2': '.ChannelRemoveAuthorParam', '3': '.ChannelRemoveAuthorResponse'},
-    const {'1': 'ChannelFollowChannel', '2': '.ChannelFollowChannelParam', '3': '.ChannelFollowChannelResponse'},
-    const {'1': 'ChannelUnFollowChannel', '2': '.ChannelUnFollowChannelParam', '3': '.ChannelUnFollowChannelResponse'},
-    const {'1': 'ChannelRemoveFollowers', '2': '.ChannelRemoveFollowersParam', '3': '.ChannelRemoveFollowersResponse'},
-    const {'1': 'ChannelSubscribe', '2': '.ChannelSubscribeParam', '3': '.ChannelSubscribeResponse'},
-    const {'1': 'ChannelUnSubscribe', '2': '.ChannelUnSubscribeParam', '3': '.ChannelUnSubscribeResponse'},
-    const {'1': 'ChannelRemoveSubscribers', '2': '.ChannelRemoveSubscribersParam', '3': '.ChannelRemoveSubscribersResponse'},
-    const {'1': 'ChannelChangePrivacy', '2': '.ChannelChangePrivacyParam', '3': '.ChannelChangePrivacyResponse'},
-    const {'1': 'ChannelChangeDefaultPermission', '2': '.ChannelChangeDefaultPermissionParam', '3': '.ChannelChangeDefaultPermissionResponse'},
-    const {'1': 'ChannelRevokeLink', '2': '.ChannelRevokeLinkParam', '3': '.ChannelRevokeLinkResponse'},
-    const {'1': 'ChannelChangeUsername', '2': '.ChannelChangeUsernameParam', '3': '.ChannelChangeUsernameResponse'},
-    const {'1': 'ChannelBlockChannel', '2': '.ChannelBlockChannelParam', '3': '.ChannelBlockChannelResponse'},
-    const {'1': 'ChannelSendMessage', '2': '.ChannelSendMessageParam', '3': '.ChannelSendMessageResponse'},
-    const {'1': 'ChannelEditMessage', '2': '.ChannelEditMessageParam', '3': '.ChannelEditMessageResponse'},
-    const {'1': 'ChannelPinMessage', '2': '.ChannelPinMessageParam', '3': '.ChannelPinMessageResponse'},
-    const {'1': 'ChannelUnPinMessage', '2': '.ChannelUnPinMessageParam', '3': '.ChannelUnPinMessageResponse'},
-    const {'1': 'ChannelDeleteMessage', '2': '.ChannelDeleteMessageParam', '3': '.ChannelDeleteMessageResponse'},
-    const {'1': 'ChannelDeleteMessages', '2': '.ChannelDeleteMessagesParam', '3': '.ChannelDeleteMessagesResponse'},
-    const {'1': 'ChannelClearHistory', '2': '.ChannelClearHistoryParam', '3': '.ChannelClearHistoryResponse'},
-    const {'1': 'ChannelAvatarAdd', '2': '.ChannelAvatarAddParam', '3': '.ChannelAvatarAddResponse'},
-    const {'1': 'ChannelAvatarChange', '2': '.ChannelAvatarChangeParam', '3': '.ChannelAvatarChangeResponse'},
-    const {'1': 'ChannelAvatarDelete', '2': '.ChannelAvatarDeleteParam', '3': '.ChannelAvatarDeleteResponse'},
-    const {'1': 'ChannelAvatarGetList', '2': '.ChannelAvatarGetListParam', '3': '.ChannelAvatarGetListResponse'},
-    const {'1': 'ChannelSendDoingAction', '2': '.ChannelSendDoingActionParam', '3': '.ChannelSendDoingActionResponse'},
-    const {'1': 'ChannelReportChannel', '2': '.ChannelReportChannelParam', '3': '.ChannelReportChannelResponse'},
-    const {'1': 'ChannelReportMessage', '2': '.ChannelReportMessageParam', '3': '.ChannelReportMessageResponse'},
-    const {'1': 'ChannelGetFull', '2': '.ChannelGetFullParam', '3': '.ChannelGetFullResponse'},
-    const {'1': 'ChannelGetMessagesList', '2': '.ChannelGetMessagesListParam', '3': '.ChannelGetMessagesListResponse'},
-    const {'1': 'ChannelGetMediaList', '2': '.ChannelGetMediaListParam', '3': '.ChannelGetMediaListResponse'},
-    const {'1': 'ChannelGetAuthors', '2': '.ChannelGetAuthorsParam', '3': '.ChannelGetAuthorsResponse'},
-    const {'1': 'ChannelGetFollowers', '2': '.ChannelGetFollowersParam', '3': '.ChannelGetFollowersResponse'},
-    const {'1': 'ChannelGetFollowings', '2': '.ChannelGetFollowingsParam', '3': '.ChannelGetFollowingsResponse'},
-    const {'1': 'ChannelGetSubscribers', '2': '.ChannelGetSubscribersParam', '3': '.ChannelGetSubscribersResponse'},
-    const {'1': 'ChannelBlocked', '2': '.ChannelBlockedParam', '3': '.ChannelBlockedResponse'},
-    const {'1': 'ChannelSetDraft', '2': '.ChannelSetDraftParam', '3': '.ChannelSetDraftResponse'},
+    const {
+      '1': 'ChannelCreateChannel',
+      '2': '.ChannelCreateChannelParam',
+      '3': '.ChannelCreateChannelResponse'
+    },
+    const {
+      '1': 'ChannelEditChannel',
+      '2': '.ChannelEditChannelParam',
+      '3': '.ChannelEditChannelResponse'
+    },
+    const {
+      '1': 'ChannelDeleteChannel',
+      '2': '.ChannelDeleteChannelParam',
+      '3': '.ChannelDeleteChannelResponse'
+    },
+    const {
+      '1': 'ChannelAddAuthor',
+      '2': '.ChannelAddAuthorParam',
+      '3': '.ChannelAddAuthorResponse'
+    },
+    const {
+      '1': 'ChannelChangeAuthorPermission',
+      '2': '.ChannelChangeAuthorPermissionParam',
+      '3': '.ChannelChangeAuthorPermissionResponse'
+    },
+    const {
+      '1': 'ChannelRemoveAuthor',
+      '2': '.ChannelRemoveAuthorParam',
+      '3': '.ChannelRemoveAuthorResponse'
+    },
+    const {
+      '1': 'ChannelFollowChannel',
+      '2': '.ChannelFollowChannelParam',
+      '3': '.ChannelFollowChannelResponse'
+    },
+    const {
+      '1': 'ChannelUnFollowChannel',
+      '2': '.ChannelUnFollowChannelParam',
+      '3': '.ChannelUnFollowChannelResponse'
+    },
+    const {
+      '1': 'ChannelRemoveFollowers',
+      '2': '.ChannelRemoveFollowersParam',
+      '3': '.ChannelRemoveFollowersResponse'
+    },
+    const {
+      '1': 'ChannelSubscribe',
+      '2': '.ChannelSubscribeParam',
+      '3': '.ChannelSubscribeResponse'
+    },
+    const {
+      '1': 'ChannelUnSubscribe',
+      '2': '.ChannelUnSubscribeParam',
+      '3': '.ChannelUnSubscribeResponse'
+    },
+    const {
+      '1': 'ChannelRemoveSubscribers',
+      '2': '.ChannelRemoveSubscribersParam',
+      '3': '.ChannelRemoveSubscribersResponse'
+    },
+    const {
+      '1': 'ChannelChangePrivacy',
+      '2': '.ChannelChangePrivacyParam',
+      '3': '.ChannelChangePrivacyResponse'
+    },
+    const {
+      '1': 'ChannelChangeDefaultPermission',
+      '2': '.ChannelChangeDefaultPermissionParam',
+      '3': '.ChannelChangeDefaultPermissionResponse'
+    },
+    const {
+      '1': 'ChannelRevokeLink',
+      '2': '.ChannelRevokeLinkParam',
+      '3': '.ChannelRevokeLinkResponse'
+    },
+    const {
+      '1': 'ChannelChangeUsername',
+      '2': '.ChannelChangeUsernameParam',
+      '3': '.ChannelChangeUsernameResponse'
+    },
+    const {
+      '1': 'ChannelBlockChannel',
+      '2': '.ChannelBlockChannelParam',
+      '3': '.ChannelBlockChannelResponse'
+    },
+    const {
+      '1': 'ChannelSendMessage',
+      '2': '.ChannelSendMessageParam',
+      '3': '.ChannelSendMessageResponse'
+    },
+    const {
+      '1': 'ChannelEditMessage',
+      '2': '.ChannelEditMessageParam',
+      '3': '.ChannelEditMessageResponse'
+    },
+    const {
+      '1': 'ChannelPinMessage',
+      '2': '.ChannelPinMessageParam',
+      '3': '.ChannelPinMessageResponse'
+    },
+    const {
+      '1': 'ChannelUnPinMessage',
+      '2': '.ChannelUnPinMessageParam',
+      '3': '.ChannelUnPinMessageResponse'
+    },
+    const {
+      '1': 'ChannelDeleteMessage',
+      '2': '.ChannelDeleteMessageParam',
+      '3': '.ChannelDeleteMessageResponse'
+    },
+    const {
+      '1': 'ChannelDeleteMessages',
+      '2': '.ChannelDeleteMessagesParam',
+      '3': '.ChannelDeleteMessagesResponse'
+    },
+    const {
+      '1': 'ChannelClearHistory',
+      '2': '.ChannelClearHistoryParam',
+      '3': '.ChannelClearHistoryResponse'
+    },
+    const {
+      '1': 'ChannelAvatarAdd',
+      '2': '.ChannelAvatarAddParam',
+      '3': '.ChannelAvatarAddResponse'
+    },
+    const {
+      '1': 'ChannelAvatarChange',
+      '2': '.ChannelAvatarChangeParam',
+      '3': '.ChannelAvatarChangeResponse'
+    },
+    const {
+      '1': 'ChannelAvatarDelete',
+      '2': '.ChannelAvatarDeleteParam',
+      '3': '.ChannelAvatarDeleteResponse'
+    },
+    const {
+      '1': 'ChannelAvatarGetList',
+      '2': '.ChannelAvatarGetListParam',
+      '3': '.ChannelAvatarGetListResponse'
+    },
+    const {
+      '1': 'ChannelSendDoingAction',
+      '2': '.ChannelSendDoingActionParam',
+      '3': '.ChannelSendDoingActionResponse'
+    },
+    const {
+      '1': 'ChannelReportChannel',
+      '2': '.ChannelReportChannelParam',
+      '3': '.ChannelReportChannelResponse'
+    },
+    const {
+      '1': 'ChannelReportMessage',
+      '2': '.ChannelReportMessageParam',
+      '3': '.ChannelReportMessageResponse'
+    },
+    const {
+      '1': 'ChannelGetFull',
+      '2': '.ChannelGetFullParam',
+      '3': '.ChannelGetFullResponse'
+    },
+    const {
+      '1': 'ChannelGetMessagesList',
+      '2': '.ChannelGetMessagesListParam',
+      '3': '.ChannelGetMessagesListResponse'
+    },
+    const {
+      '1': 'ChannelGetMediaList',
+      '2': '.ChannelGetMediaListParam',
+      '3': '.ChannelGetMediaListResponse'
+    },
+    const {
+      '1': 'ChannelGetAuthors',
+      '2': '.ChannelGetAuthorsParam',
+      '3': '.ChannelGetAuthorsResponse'
+    },
+    const {
+      '1': 'ChannelGetFollowers',
+      '2': '.ChannelGetFollowersParam',
+      '3': '.ChannelGetFollowersResponse'
+    },
+    const {
+      '1': 'ChannelGetFollowings',
+      '2': '.ChannelGetFollowingsParam',
+      '3': '.ChannelGetFollowingsResponse'
+    },
+    const {
+      '1': 'ChannelGetSubscribers',
+      '2': '.ChannelGetSubscribersParam',
+      '3': '.ChannelGetSubscribersResponse'
+    },
+    const {
+      '1': 'ChannelBlocked',
+      '2': '.ChannelBlockedParam',
+      '3': '.ChannelBlockedResponse'
+    },
+    const {
+      '1': 'ChannelSetDraft',
+      '2': '.ChannelSetDraftParam',
+      '3': '.ChannelSetDraftResponse'
+    },
   ],
 };
 
@@ -422,8 +582,10 @@ const RPC_ChannelServiceBase$messageJson = const {
   '.ChannelDeleteChannelResponse': ChannelDeleteChannelResponse$json,
   '.ChannelAddAuthorParam': ChannelAddAuthorParam$json,
   '.ChannelAddAuthorResponse': ChannelAddAuthorResponse$json,
-  '.ChannelChangeAuthorPermissionParam': ChannelChangeAuthorPermissionParam$json,
-  '.ChannelChangeAuthorPermissionResponse': ChannelChangeAuthorPermissionResponse$json,
+  '.ChannelChangeAuthorPermissionParam':
+      ChannelChangeAuthorPermissionParam$json,
+  '.ChannelChangeAuthorPermissionResponse':
+      ChannelChangeAuthorPermissionResponse$json,
   '.ChannelRemoveAuthorParam': ChannelRemoveAuthorParam$json,
   '.ChannelRemoveAuthorResponse': ChannelRemoveAuthorResponse$json,
   '.ChannelFollowChannelParam': ChannelFollowChannelParam$json,
@@ -440,8 +602,10 @@ const RPC_ChannelServiceBase$messageJson = const {
   '.ChannelRemoveSubscribersResponse': ChannelRemoveSubscribersResponse$json,
   '.ChannelChangePrivacyParam': ChannelChangePrivacyParam$json,
   '.ChannelChangePrivacyResponse': ChannelChangePrivacyResponse$json,
-  '.ChannelChangeDefaultPermissionParam': ChannelChangeDefaultPermissionParam$json,
-  '.ChannelChangeDefaultPermissionResponse': ChannelChangeDefaultPermissionResponse$json,
+  '.ChannelChangeDefaultPermissionParam':
+      ChannelChangeDefaultPermissionParam$json,
+  '.ChannelChangeDefaultPermissionResponse':
+      ChannelChangeDefaultPermissionResponse$json,
   '.ChannelRevokeLinkParam': ChannelRevokeLinkParam$json,
   '.ChannelRevokeLinkResponse': ChannelRevokeLinkResponse$json,
   '.ChannelChangeUsernameParam': ChannelChangeUsernameParam$json,
@@ -495,4 +659,3 @@ const RPC_ChannelServiceBase$messageJson = const {
   '.ChannelSetDraftParam': ChannelSetDraftParam$json,
   '.ChannelSetDraftResponse': ChannelSetDraftResponse$json,
 };
-

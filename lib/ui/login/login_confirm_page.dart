@@ -21,152 +21,86 @@ class LoginConfirmRouteState extends State<LoginConfirmRoute> {
       appBar:
           PreferredSize(child: Container(), preferredSize: Size.fromHeight(0)),
       body: Container(
-
         child: Column(
           children: [
             SimpleTopNavBar(
               title: "09015132328",
               showGoButton: true,
-              rightIcon: null,
+              // rightIcon: SimpleTopNavBar.topRightDefault,
             ),
             ConstrainedBox(
-              constraints: BoxConstraints(
-                minHeight: 400,
-              ),
-              child: Container(
-                padding: EdgeInsets.symmetric(vertical: 10, horizontal: 40),
-                child: Column(
-                  mainAxisSize: MainAxisSize.max,
-                  children: <Widget>[
-                    Container(height: 25),
-                    Container(height: 5),
-                    Text(FStrings.loginConfirm_title,
-                        style: TextStyle(
-                            color: Colors.grey,
-                            fontSize: 16,
-                            fontFamily: Shared.IRAN_FONT
-                        )),
-                    // Spacer(),
-                    SizedBox(
-                      height: 20,
-                    ),
-/*              Align(
-                alignment: Alignment.centerRight,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    GestureDetector(
-                      onTap: (){},
-                      child: Text(
-                        FStrings.loginConfirm_changeNumber,
-                        style: TextStyle(
-                            color: Colors.blue,
-                            fontSize: 14,
-                            fontFamily: Shared.IRAN_FONT
-                        ),
-                      ),
-                    ),
-                    Text("09015132328",
-                        style: TextStyle(
-                            color: Colors.blueGrey,
-                            fontSize: 16,
-                            fontFamily: Shared.IRAN_FONT
-                        )),
-                  ],
-                )
-              ),*/
-                    SizedBox(height: 50,),
-                    VerificationCodeInput(
-                      keyboardType: TextInputType.number,
-                      length: 4,
-                      autofocus: true,
-                      onCompleted: (String value) {
-                        //...
-                        Shared.showToast(context, value);
-                        print(value);
-                      },
-                    ),
-                    SizedBox(height: 40,),
-/*              Container(
-                width: double.infinity,
-                margin: EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-                height: 40,
-                child: FlatButton(
-                  child: Text(
-                    FStrings.loginConfirm_confirmButton,
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 16,
-                      fontFamily: Shared.IRAN_FONT
-                    ),
-                  ),
-                  color: FColors.login_sendSmsButton,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: new BorderRadius.circular(20)),
-                  onPressed: () {
-
-                  },
+                constraints: BoxConstraints(
+                  minHeight: 400,
                 ),
-              ),*/
-                    Row(
-                      children: [
-                        Align(
-                          child: Text(FStrings.loginConfirm_sendAgain),
-                        ),
-                      ],
-                    ),
-
-                    Row(
-                      children: [
-                        Align(
-                          alignment: Alignment.topRight,
-                          child: Text(FStrings.loginConfirm_sendAgain),
-                        ),
-                      ],
-                    ),
-                    Align(
-                      alignment: Alignment.centerRight,
-                      child: Text(FStrings.loginConfirm_sendAgain,
+                child: Container(
+                  padding: EdgeInsets.symmetric(vertical: 10, horizontal: 40),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.max,
+                    children: <Widget>[
+                      SizedBox(
+                        height: 40,
+                      ),
+                      Text(FStrings.loginConfirm_title,
                           style: TextStyle(
                               color: Colors.blueGrey,
-                              fontSize: 16,
-                              fontFamily: Shared.IRAN_FONT
-                          )),
-                    ),
+                              fontSize: 18,
+                              fontFamily: Shared.IRAN_FONT)),
+                      // Spacer(),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      VerificationCodeInput(
+                        keyboardType: TextInputType.number,
+                        length: 4,
+                        autofocus: true,
+                        onCompleted: (String value) {
+                          //...
+                          Shared.showToast(context, value);
+                          print(value);
+                        },
+                      ),
+                      SizedBox(
+                        height: 140,
+                      ),
 
-                    Align(
-                        alignment: Alignment.centerRight,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            GestureDetector(
-                              onTap: (){},
-                              child: Text(
-                                FStrings.loginConfirm_sendAgain,
-                                style: TextStyle(
-                                    color: Colors.blue,
-                                    fontSize: 14,
-                                    fontFamily: Shared.IRAN_FONT
+                      Container(
+                        width: double.infinity,
+                        height: 1,
+                        color: Colors.blueGrey[100],
+                      ),
+
+                      SizedBox(
+                        height: 30,
+                      ),
+
+                      Align(
+                          alignment: Alignment.centerRight,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              GestureDetector(
+                                onTap: () {},
+                                child: Text(
+                                  FStrings.loginConfirm_sendAgain,
+                                  style: TextStyle(
+                                      color: Colors.blue,
+                                      fontSize: 14,
+                                      fontFamily: Shared.IRAN_FONT),
                                 ),
                               ),
-                            ),
-                            Text(FStrings.loginConfirm_notRecived,
-                                style: TextStyle(
-                                    color: Colors.blueGrey,
-                                    fontSize: 16,
-                                    fontFamily: Shared.IRAN_FONT
-                                )),
-                          ],
-                        )
-                    ),
-                  ],
-                ),
-              )
-            ),
+                              Text(FStrings.loginConfirm_notRecived,
+                                  style: TextStyle(
+                                      color: Colors.blueGrey,
+                                      fontSize: 14,
+                                      fontFamily: Shared.IRAN_FONT)),
+                            ],
+                          )),
+                    ],
+                  ),
+                )),
           ],
         ),
       ),
     );
   }
 }
-

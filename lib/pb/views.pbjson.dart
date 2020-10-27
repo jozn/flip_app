@@ -23,17 +23,58 @@ const ActionView$json = const {
   '2': const [
     const {'1': 'ActionId', '3': 1, '4': 1, '5': 3, '10': 'ActionId'},
     const {'1': 'ActorUserId', '3': 2, '4': 1, '5': 5, '10': 'ActorUserId'},
-    const {'1': 'ActionTypeEnum', '3': 3, '4': 1, '5': 5, '10': 'ActionTypeEnum'},
+    const {
+      '1': 'ActionTypeEnum',
+      '3': 3,
+      '4': 1,
+      '5': 5,
+      '10': 'ActionTypeEnum'
+    },
     const {'1': 'PeerUserId', '3': 4, '4': 1, '5': 5, '10': 'PeerUserId'},
     const {'1': 'PostId', '3': 5, '4': 1, '5': 3, '10': 'PostId'},
     const {'1': 'CommentId', '3': 6, '4': 1, '5': 3, '10': 'CommentId'},
     const {'1': 'Murmur64Hash', '3': 7, '4': 1, '5': 3, '10': 'Murmur64Hash'},
     const {'1': 'CreatedTime', '3': 8, '4': 1, '5': 5, '10': 'CreatedTime'},
-    const {'1': 'ActorUserView', '3': 100, '4': 1, '5': 11, '6': '.UserView', '10': 'ActorUserView'},
-    const {'1': 'PostView', '3': 101, '4': 1, '5': 11, '6': '.PostView', '10': 'PostView'},
-    const {'1': 'CommentView', '3': 102, '4': 1, '5': 11, '6': '.CommentView', '10': 'CommentView'},
-    const {'1': 'FollowedUserView', '3': 103, '4': 1, '5': 11, '6': '.UserView', '10': 'FollowedUserView'},
-    const {'1': 'ContentOwenerUserView', '3': 104, '4': 1, '5': 11, '6': '.UserView', '10': 'ContentOwenerUserView'},
+    const {
+      '1': 'ActorUserView',
+      '3': 100,
+      '4': 1,
+      '5': 11,
+      '6': '.UserView',
+      '10': 'ActorUserView'
+    },
+    const {
+      '1': 'PostView',
+      '3': 101,
+      '4': 1,
+      '5': 11,
+      '6': '.PostView',
+      '10': 'PostView'
+    },
+    const {
+      '1': 'CommentView',
+      '3': 102,
+      '4': 1,
+      '5': 11,
+      '6': '.CommentView',
+      '10': 'CommentView'
+    },
+    const {
+      '1': 'FollowedUserView',
+      '3': 103,
+      '4': 1,
+      '5': 11,
+      '6': '.UserView',
+      '10': 'FollowedUserView'
+    },
+    const {
+      '1': 'ContentOwenerUserView',
+      '3': 104,
+      '4': 1,
+      '5': 11,
+      '6': '.UserView',
+      '10': 'ContentOwenerUserView'
+    },
   ],
 };
 
@@ -50,9 +91,30 @@ const NotifyView$json = const {
     const {'1': 'Murmur64Hash', '3': 8, '4': 1, '5': 3, '10': 'Murmur64Hash'},
     const {'1': 'SeenStatus', '3': 9, '4': 1, '5': 5, '10': 'SeenStatus'},
     const {'1': 'CreatedTime', '3': 10, '4': 1, '5': 5, '10': 'CreatedTime'},
-    const {'1': 'ActorUserView', '3': 100, '4': 1, '5': 11, '6': '.UserView', '10': 'ActorUserView'},
-    const {'1': 'PostView', '3': 101, '4': 1, '5': 11, '6': '.PostView', '10': 'PostView'},
-    const {'1': 'CommentView', '3': 102, '4': 1, '5': 11, '6': '.CommentView', '10': 'CommentView'},
+    const {
+      '1': 'ActorUserView',
+      '3': 100,
+      '4': 1,
+      '5': 11,
+      '6': '.UserView',
+      '10': 'ActorUserView'
+    },
+    const {
+      '1': 'PostView',
+      '3': 101,
+      '4': 1,
+      '5': 11,
+      '6': '.PostView',
+      '10': 'PostView'
+    },
+    const {
+      '1': 'CommentView',
+      '3': 102,
+      '4': 1,
+      '5': 11,
+      '6': '.CommentView',
+      '10': 'CommentView'
+    },
   ],
 };
 
@@ -65,7 +127,14 @@ const CommentView$json = const {
     const {'1': 'Text', '3': 4, '4': 1, '5': 9, '10': 'Text'},
     const {'1': 'LikesCount', '3': 5, '4': 1, '5': 5, '10': 'LikesCount'},
     const {'1': 'CreatedTime', '3': 6, '4': 1, '5': 5, '10': 'CreatedTime'},
-    const {'1': 'SenderUserView', '3': 15, '4': 1, '5': 11, '6': '.UserView', '10': 'SenderUserView'},
+    const {
+      '1': 'SenderUserView',
+      '3': 15,
+      '4': 1,
+      '5': 11,
+      '6': '.UserView',
+      '10': 'SenderUserView'
+    },
   ],
 };
 
@@ -78,20 +147,66 @@ const PostView$json = const {
     const {'1': 'RichText', '3': 5, '4': 1, '5': 9, '10': 'RichText'},
     const {'1': 'MediaCount', '3': 6, '4': 1, '5': 5, '10': 'MediaCount'},
     const {'1': 'SharedTo', '3': 7, '4': 1, '5': 5, '10': 'SharedTo'},
-    const {'1': 'DisableComment', '3': 8, '4': 1, '5': 5, '10': 'DisableComment'},
+    const {
+      '1': 'DisableComment',
+      '3': 8,
+      '4': 1,
+      '5': 5,
+      '10': 'DisableComment'
+    },
     const {'1': 'HasTag', '3': 9, '4': 1, '5': 5, '10': 'HasTag'},
-    const {'1': 'CommentsCount', '3': 10, '4': 1, '5': 5, '10': 'CommentsCount'},
+    const {
+      '1': 'CommentsCount',
+      '3': 10,
+      '4': 1,
+      '5': 5,
+      '10': 'CommentsCount'
+    },
     const {'1': 'LikesCount', '3': 11, '4': 1, '5': 5, '10': 'LikesCount'},
     const {'1': 'ViewsCount', '3': 12, '4': 1, '5': 5, '10': 'ViewsCount'},
     const {'1': 'EditedTime', '3': 13, '4': 1, '5': 5, '10': 'EditedTime'},
     const {'1': 'CreatedTime', '3': 14, '4': 1, '5': 5, '10': 'CreatedTime'},
-    const {'1': 'ReSharedPostId', '3': 15, '4': 1, '5': 3, '10': 'ReSharedPostId'},
+    const {
+      '1': 'ReSharedPostId',
+      '3': 15,
+      '4': 1,
+      '5': 3,
+      '10': 'ReSharedPostId'
+    },
     const {'1': 'DidILiked', '3': 50, '4': 1, '5': 8, '10': 'DidILiked'},
     const {'1': 'DidIReShared', '3': 51, '4': 1, '5': 8, '10': 'DidIReShared'},
-    const {'1': 'SenderUserView', '3': 100, '4': 1, '5': 11, '6': '.UserView', '10': 'SenderUserView'},
-    const {'1': 'ReSharedUserView', '3': 101, '4': 1, '5': 11, '6': '.UserView', '10': 'ReSharedUserView'},
-    const {'1': 'MediaView', '3': 102, '4': 1, '5': 11, '6': '.MediaView', '10': 'MediaView'},
-    const {'1': 'MediaViewList', '3': 103, '4': 3, '5': 11, '6': '.MediaView', '10': 'MediaViewList'},
+    const {
+      '1': 'SenderUserView',
+      '3': 100,
+      '4': 1,
+      '5': 11,
+      '6': '.UserView',
+      '10': 'SenderUserView'
+    },
+    const {
+      '1': 'ReSharedUserView',
+      '3': 101,
+      '4': 1,
+      '5': 11,
+      '6': '.UserView',
+      '10': 'ReSharedUserView'
+    },
+    const {
+      '1': 'MediaView',
+      '3': 102,
+      '4': 1,
+      '5': 11,
+      '6': '.MediaView',
+      '10': 'MediaView'
+    },
+    const {
+      '1': 'MediaViewList',
+      '3': 103,
+      '4': 3,
+      '5': 11,
+      '6': '.MediaView',
+      '10': 'MediaViewList'
+    },
   ],
 };
 
@@ -112,7 +227,13 @@ const ChatView$json = const {
     const {'1': 'FromMsgId', '3': 12, '4': 1, '5': 3, '10': 'FromMsgId'},
     const {'1': 'Seq', '3': 13, '4': 1, '5': 5, '10': 'Seq'},
     const {'1': 'LastMsgId', '3': 14, '4': 1, '5': 3, '10': 'LastMsgId'},
-    const {'1': 'LastMsgStatus', '3': 15, '4': 1, '5': 5, '10': 'LastMsgStatus'},
+    const {
+      '1': 'LastMsgStatus',
+      '3': 15,
+      '4': 1,
+      '5': 5,
+      '10': 'LastMsgStatus'
+    },
     const {'1': 'SeenSeq', '3': 16, '4': 1, '5': 5, '10': 'SeenSeq'},
     const {'1': 'SeenMsgId', '3': 17, '4': 1, '5': 3, '10': 'SeenMsgId'},
     const {'1': 'Left', '3': 18, '4': 1, '5': 5, '10': 'Left'},
@@ -124,12 +245,46 @@ const ChatView$json = const {
     const {'1': 'SortTime', '3': 24, '4': 1, '5': 5, '10': 'SortTime'},
     const {'1': 'CreatedTime', '3': 25, '4': 1, '5': 5, '10': 'CreatedTime'},
     const {'1': 'DraftText', '3': 26, '4': 1, '5': 9, '10': 'DraftText'},
-    const {'1': 'DratReplyToMsgId', '3': 27, '4': 1, '5': 3, '10': 'DratReplyToMsgId'},
+    const {
+      '1': 'DratReplyToMsgId',
+      '3': 27,
+      '4': 1,
+      '5': 3,
+      '10': 'DratReplyToMsgId'
+    },
     const {'1': 'IsMute', '3': 28, '4': 1, '5': 5, '10': 'IsMute'},
-    const {'1': 'UserView', '3': 100, '4': 1, '5': 11, '6': '.UserView', '10': 'UserView'},
-    const {'1': 'GroupView', '3': 101, '4': 1, '5': 11, '6': '.GroupView', '10': 'GroupView'},
-    const {'1': 'FirstUnreadMessage', '3': 200, '4': 1, '5': 11, '6': '.MessageView', '10': 'FirstUnreadMessage'},
-    const {'1': 'LastMessage', '3': 201, '4': 1, '5': 11, '6': '.MessageView', '10': 'LastMessage'},
+    const {
+      '1': 'UserView',
+      '3': 100,
+      '4': 1,
+      '5': 11,
+      '6': '.UserView',
+      '10': 'UserView'
+    },
+    const {
+      '1': 'GroupView',
+      '3': 101,
+      '4': 1,
+      '5': 11,
+      '6': '.GroupView',
+      '10': 'GroupView'
+    },
+    const {
+      '1': 'FirstUnreadMessage',
+      '3': 200,
+      '4': 1,
+      '5': 11,
+      '6': '.MessageView',
+      '10': 'FirstUnreadMessage'
+    },
+    const {
+      '1': 'LastMessage',
+      '3': 201,
+      '4': 1,
+      '5': 11,
+      '6': '.MessageView',
+      '10': 'LastMessage'
+    },
   ],
 };
 
@@ -144,7 +299,13 @@ const GroupView$json = const {
     const {'1': 'HashTagId', '3': 6, '4': 1, '5': 3, '10': 'HashTagId'},
     const {'1': 'CreatorUserId', '3': 7, '4': 1, '5': 5, '10': 'CreatorUserId'},
     const {'1': 'GroupPrivacy', '3': 8, '4': 1, '5': 5, '10': 'GroupPrivacy'},
-    const {'1': 'HistoryViewAble', '3': 9, '4': 1, '5': 5, '10': 'HistoryViewAble'},
+    const {
+      '1': 'HistoryViewAble',
+      '3': 9,
+      '4': 1,
+      '5': 5,
+      '10': 'HistoryViewAble'
+    },
     const {'1': 'Seq', '3': 10, '4': 1, '5': 3, '10': 'Seq'},
     const {'1': 'LastMsgId', '3': 11, '4': 1, '5': 3, '10': 'LastMsgId'},
     const {'1': 'PinedMsgId', '3': 12, '4': 1, '5': 3, '10': 'PinedMsgId'},
@@ -181,18 +342,49 @@ const MessageView$json = const {
     const {'1': 'Text', '3': 6, '4': 1, '5': 9, '10': 'Text'},
     const {'1': 'Hiden', '3': 7, '4': 1, '5': 5, '10': 'Hiden'},
     const {'1': 'Seq', '3': 8, '4': 1, '5': 5, '10': 'Seq'},
-    const {'1': 'ForwardedMsgId', '3': 9, '4': 1, '5': 3, '10': 'ForwardedMsgId'},
+    const {
+      '1': 'ForwardedMsgId',
+      '3': 9,
+      '4': 1,
+      '5': 3,
+      '10': 'ForwardedMsgId'
+    },
     const {'1': 'PostId', '3': 10, '4': 1, '5': 3, '10': 'PostId'},
     const {'1': 'StickerId', '3': 11, '4': 1, '5': 3, '10': 'StickerId'},
     const {'1': 'CreatedTime', '3': 12, '4': 1, '5': 5, '10': 'CreatedTime'},
-    const {'1': 'DeliveredTime', '3': 13, '4': 1, '5': 5, '10': 'DeliveredTime'},
+    const {
+      '1': 'DeliveredTime',
+      '3': 13,
+      '4': 1,
+      '5': 5,
+      '10': 'DeliveredTime'
+    },
     const {'1': 'SeenTime', '3': 14, '4': 1, '5': 5, '10': 'SeenTime'},
-    const {'1': 'DeliviryStatus', '3': 15, '4': 1, '5': 5, '10': 'DeliviryStatus'},
-    const {'1': 'ReplyToMessageId', '3': 16, '4': 1, '5': 3, '10': 'ReplyToMessageId'},
+    const {
+      '1': 'DeliviryStatus',
+      '3': 15,
+      '4': 1,
+      '5': 5,
+      '10': 'DeliviryStatus'
+    },
+    const {
+      '1': 'ReplyToMessageId',
+      '3': 16,
+      '4': 1,
+      '5': 3,
+      '10': 'ReplyToMessageId'
+    },
     const {'1': 'ViewsCount', '3': 17, '4': 1, '5': 3, '10': 'ViewsCount'},
     const {'1': 'EditTime', '3': 18, '4': 1, '5': 5, '10': 'EditTime'},
     const {'1': 'Ttl', '3': 19, '4': 1, '5': 5, '10': 'Ttl'},
-    const {'1': 'FileRedView', '3': 50, '4': 1, '5': 11, '6': '.FileRedView', '10': 'FileRedView'},
+    const {
+      '1': 'FileRedView',
+      '3': 50,
+      '4': 1,
+      '5': 11,
+      '6': '.FileRedView',
+      '10': 'FileRedView'
+    },
   ],
 };
 
@@ -218,17 +410,61 @@ const UserView$json = const {
     const {'1': 'FirstName', '3': 4, '4': 1, '5': 9, '10': 'FirstName'},
     const {'1': 'LastName', '3': 5, '4': 1, '5': 9, '10': 'LastName'},
     const {'1': 'AvatarRefId', '3': 8, '4': 1, '5': 3, '10': 'AvatarRefId'},
-    const {'1': 'ProfilePrivacy', '3': 9, '4': 1, '5': 5, '10': 'ProfilePrivacy'},
+    const {
+      '1': 'ProfilePrivacy',
+      '3': 9,
+      '4': 1,
+      '5': 5,
+      '10': 'ProfilePrivacy'
+    },
     const {'1': 'Phone', '3': 10, '4': 1, '5': 3, '10': 'Phone'},
     const {'1': 'About', '3': 11, '4': 1, '5': 9, '10': 'About'},
-    const {'1': 'FollowersCount', '3': 100, '4': 1, '5': 5, '10': 'FollowersCount'},
-    const {'1': 'FollowingCount', '3': 101, '4': 1, '5': 5, '10': 'FollowingCount'},
+    const {
+      '1': 'FollowersCount',
+      '3': 100,
+      '4': 1,
+      '5': 5,
+      '10': 'FollowersCount'
+    },
+    const {
+      '1': 'FollowingCount',
+      '3': 101,
+      '4': 1,
+      '5': 5,
+      '10': 'FollowingCount'
+    },
     const {'1': 'PostsCount', '3': 102, '4': 1, '5': 5, '10': 'PostsCount'},
     const {'1': 'MediaCount', '3': 103, '4': 1, '5': 5, '10': 'MediaCount'},
-    const {'1': 'UserOnlineStatusEnum', '3': 200, '4': 1, '5': 14, '6': '.UserOnlineStatusEnum', '10': 'UserOnlineStatusEnum'},
-    const {'1': 'LastActiveTime', '3': 201, '4': 1, '5': 5, '10': 'LastActiveTime'},
-    const {'1': 'LastActiveTimeShow', '3': 202, '4': 1, '5': 9, '10': 'LastActiveTimeShow'},
-    const {'1': 'MyFollwing', '3': 300, '4': 1, '5': 14, '6': '.FollowingEnum', '10': 'MyFollwing'},
+    const {
+      '1': 'UserOnlineStatusEnum',
+      '3': 200,
+      '4': 1,
+      '5': 14,
+      '6': '.UserOnlineStatusEnum',
+      '10': 'UserOnlineStatusEnum'
+    },
+    const {
+      '1': 'LastActiveTime',
+      '3': 201,
+      '4': 1,
+      '5': 5,
+      '10': 'LastActiveTime'
+    },
+    const {
+      '1': 'LastActiveTimeShow',
+      '3': 202,
+      '4': 1,
+      '5': 9,
+      '10': 'LastActiveTimeShow'
+    },
+    const {
+      '1': 'MyFollwing',
+      '3': 300,
+      '4': 1,
+      '5': 14,
+      '6': '.FollowingEnum',
+      '10': 'MyFollwing'
+    },
   ],
 };
 
@@ -239,7 +475,13 @@ const SettingNotificationView$json = const {
 const AppConfig$json = const {
   '1': 'AppConfig',
   '2': const [
-    const {'1': 'DeprecatedClient', '3': 1, '4': 1, '5': 8, '10': 'DeprecatedClient'},
+    const {
+      '1': 'DeprecatedClient',
+      '3': 1,
+      '4': 1,
+      '5': 8,
+      '10': 'DeprecatedClient'
+    },
     const {'1': 'HasNewUpdate', '3': 2, '4': 1, '5': 8, '10': 'HasNewUpdate'},
   ],
 };
@@ -253,7 +495,14 @@ const UserViewRowify$json = const {
   '2': const [
     const {'1': 'Id', '3': 1, '4': 1, '5': 3, '10': 'Id'},
     const {'1': 'CreatedTime', '3': 2, '4': 1, '5': 5, '10': 'CreatedTime'},
-    const {'1': 'UserView', '3': 10, '4': 1, '5': 11, '6': '.UserView', '10': 'UserView'},
+    const {
+      '1': 'UserView',
+      '3': 10,
+      '4': 1,
+      '5': 11,
+      '6': '.UserView',
+      '10': 'UserView'
+    },
   ],
 };
 
@@ -261,7 +510,14 @@ const PostViewRowify$json = const {
   '1': 'PostViewRowify',
   '2': const [
     const {'1': 'Id', '3': 1, '4': 1, '5': 3, '10': 'Id'},
-    const {'1': 'PostView', '3': 10, '4': 1, '5': 11, '6': '.PostView', '10': 'PostView'},
+    const {
+      '1': 'PostView',
+      '3': 10,
+      '4': 1,
+      '5': 11,
+      '6': '.PostView',
+      '10': 'PostView'
+    },
   ],
 };
 
@@ -279,30 +535,88 @@ const TagView$json = const {
 const TopTagWithSamplePosts$json = const {
   '1': 'TopTagWithSamplePosts',
   '2': const [
-    const {'1': 'TagView', '3': 1, '4': 1, '5': 11, '6': '.TagView', '10': 'TagView'},
-    const {'1': 'PostViewList', '3': 2, '4': 3, '5': 11, '6': '.PostView', '10': 'PostViewList'},
+    const {
+      '1': 'TagView',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.TagView',
+      '10': 'TagView'
+    },
+    const {
+      '1': 'PostViewList',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.PostView',
+      '10': 'PostViewList'
+    },
   ],
 };
 
 const SelfUserView$json = const {
   '1': 'SelfUserView',
   '2': const [
-    const {'1': 'UserView', '3': 1, '4': 1, '5': 11, '6': '.UserView', '10': 'UserView'},
-    const {'1': 'ProfilePrivacy', '3': 30, '4': 1, '5': 5, '10': 'ProfilePrivacy'},
-    const {'1': 'OnlinePrivacy', '3': 32, '4': 1, '5': 5, '10': 'OnlinePrivacy'},
+    const {
+      '1': 'UserView',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.UserView',
+      '10': 'UserView'
+    },
+    const {
+      '1': 'ProfilePrivacy',
+      '3': 30,
+      '4': 1,
+      '5': 5,
+      '10': 'ProfilePrivacy'
+    },
+    const {
+      '1': 'OnlinePrivacy',
+      '3': 32,
+      '4': 1,
+      '5': 5,
+      '10': 'OnlinePrivacy'
+    },
     const {'1': 'CallPrivacy', '3': 33, '4': 1, '5': 5, '10': 'CallPrivacy'},
-    const {'1': 'AddToGroupPrivacy', '3': 34, '4': 1, '5': 5, '10': 'AddToGroupPrivacy'},
-    const {'1': 'SeenMessagePrivacy', '3': 35, '4': 1, '5': 5, '10': 'SeenMessagePrivacy'},
-    const {'1': 'SettingNotification', '3': 100, '4': 1, '5': 11, '6': '.SettingNotificationView', '10': 'SettingNotification'},
+    const {
+      '1': 'AddToGroupPrivacy',
+      '3': 34,
+      '4': 1,
+      '5': 5,
+      '10': 'AddToGroupPrivacy'
+    },
+    const {
+      '1': 'SeenMessagePrivacy',
+      '3': 35,
+      '4': 1,
+      '5': 5,
+      '10': 'SeenMessagePrivacy'
+    },
+    const {
+      '1': 'SettingNotification',
+      '3': 100,
+      '4': 1,
+      '5': 11,
+      '6': '.SettingNotificationView',
+      '10': 'SettingNotification'
+    },
   ],
 };
 
 const Error$json = const {
   '1': 'Error',
   '2': const [
-    const {'1': 'Error', '3': 1, '4': 1, '5': 14, '6': '.ServerErrors', '10': 'Error'},
+    const {
+      '1': 'Error',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.ServerErrors',
+      '10': 'Error'
+    },
     const {'1': 'ShowError', '3': 2, '4': 1, '5': 8, '10': 'ShowError'},
     const {'1': 'ErrorMessage', '3': 3, '4': 1, '5': 9, '10': 'ErrorMessage'},
   ],
 };
-

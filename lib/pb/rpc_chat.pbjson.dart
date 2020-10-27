@@ -100,15 +100,51 @@ const ChatGetMediaListResponse$json = const {
 const RPC_ChatServiceBase$json = const {
   '1': 'RPC_Chat',
   '2': const [
-    const {'1': 'ChatSendMessage', '2': '.ChatSendMessageParam', '3': '.ChatSendMessageResponse'},
-    const {'1': 'ChatEditMessage', '2': '.ChatEditMessageParam', '3': '.ChatEditMessageResponse'},
-    const {'1': 'ChatDeleteMessages', '2': '.ChatDeleteMessagesParam', '3': '.ChatDeleteMessagesResponse'},
-    const {'1': 'ChatDeleteHistory', '2': '.ChatDeleteHistoryParam', '3': '.ChatDeleteHistoryResponse'},
-    const {'1': 'ChatSendDoingAction', '2': '.ChatSendDoingActionParam', '3': '.ChatSendDoingActionResponse'},
-    const {'1': 'ChatReportChat', '2': '.ChatReportChatParam', '3': '.ChatReportChatResponse'},
-    const {'1': 'ChatGetFull', '2': '.ChatGetFullMessageParam', '3': '.ChatGetFullMessageResponse'},
-    const {'1': 'ChatGetMessagesList', '2': '.ChatGetMessagesListParam', '3': '.ChatGetMessagesListResponse'},
-    const {'1': 'ChatGetMediaList', '2': '.ChatGetMediaListParam', '3': '.ChatGetMediaListResponse'},
+    const {
+      '1': 'ChatSendMessage',
+      '2': '.ChatSendMessageParam',
+      '3': '.ChatSendMessageResponse'
+    },
+    const {
+      '1': 'ChatEditMessage',
+      '2': '.ChatEditMessageParam',
+      '3': '.ChatEditMessageResponse'
+    },
+    const {
+      '1': 'ChatDeleteMessages',
+      '2': '.ChatDeleteMessagesParam',
+      '3': '.ChatDeleteMessagesResponse'
+    },
+    const {
+      '1': 'ChatDeleteHistory',
+      '2': '.ChatDeleteHistoryParam',
+      '3': '.ChatDeleteHistoryResponse'
+    },
+    const {
+      '1': 'ChatSendDoingAction',
+      '2': '.ChatSendDoingActionParam',
+      '3': '.ChatSendDoingActionResponse'
+    },
+    const {
+      '1': 'ChatReportChat',
+      '2': '.ChatReportChatParam',
+      '3': '.ChatReportChatResponse'
+    },
+    const {
+      '1': 'ChatGetFull',
+      '2': '.ChatGetFullMessageParam',
+      '3': '.ChatGetFullMessageResponse'
+    },
+    const {
+      '1': 'ChatGetMessagesList',
+      '2': '.ChatGetMessagesListParam',
+      '3': '.ChatGetMessagesListResponse'
+    },
+    const {
+      '1': 'ChatGetMediaList',
+      '2': '.ChatGetMediaListParam',
+      '3': '.ChatGetMediaListResponse'
+    },
   ],
 };
 
@@ -132,4 +168,3 @@ const RPC_ChatServiceBase$messageJson = const {
   '.ChatGetMediaListParam': ChatGetMediaListParam$json,
   '.ChatGetMediaListResponse': ChatGetMediaListResponse$json,
 };
-

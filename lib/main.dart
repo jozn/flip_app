@@ -23,11 +23,14 @@ import 'pb/sys.pb.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
 import 'package:protobuf/protobuf.dart';
 
-
 class FlipRpcClient extends RpcClient {
   @override
-  Future<T> invoke<T extends GeneratedMessage>(ClientContext ctx, String serviceName, String methodName, GeneratedMessage request, T emptyResponse) {
-
+  Future<T> invoke<T extends GeneratedMessage>(
+      ClientContext ctx,
+      String serviceName,
+      String methodName,
+      GeneratedMessage request,
+      T emptyResponse) {
     var d = request;
     var act = Invoke();
     act.namespace = 0;
@@ -37,13 +40,10 @@ class FlipRpcClient extends RpcClient {
     http.post("http://127.0.0.1:3002/rpc",
         // body: ,
         encoding: Encoding.getByName("utf-8"));
-
   }
-
-
 }
 
-void playPb(){
+void playPb() {
   // Send request
   var ctx = $pb.ClientContext();
   var client = FlipRpcClient();
@@ -52,8 +52,6 @@ void playPb(){
   req.writeToBuffer();
 
   m.editComment(ctx, req);
-
-
 }
 
 void main() {
@@ -115,21 +113,21 @@ class ListBasicRouteState extends State<ListBasicRoute> {
     );
   }
 
-  void  hh() async {
+  void hh() async {
     // var s = await http.post("dsf");
     var url = 'https://example.com/whatsit/create';
-    var response = await http.post(url, body: {'name': 'doodle', 'color': 'blue'});
+    var response =
+        await http.post(url, body: {'name': 'doodle', 'color': 'blue'});
     print('Response status: ${response.statusCode}');
     print('Response body: ${response.body.length}');
 
     try {
       var m = (await http.read('https://example.com/foobar.txt'));
       print(m.length);
-    } catch(e) {
+    } catch (e) {
       print("sdf");
       print(e);
     }
-
   }
 
   void goToPage(Widget w) {
@@ -161,7 +159,6 @@ class ListBasicRouteState extends State<ListBasicRoute> {
         get("ChatTabPage", ChatTabPage()),
         get("ChatTelegramRoute", ChatTelegramRoute()),
         get("PB", PbPage()),
-
         Divider(
           height: 2,
           color: MyColors.grey_95,

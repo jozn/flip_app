@@ -20,7 +20,11 @@ const UploadFileResponse$json = const {
 const RPC_UploadServiceBase$json = const {
   '1': 'RPC_Upload',
   '2': const [
-    const {'1': 'UploadFile', '2': '.UploadFileParam', '3': '.UploadFileResponse'},
+    const {
+      '1': 'UploadFile',
+      '2': '.UploadFileParam',
+      '3': '.UploadFileResponse'
+    },
   ],
 };
 
@@ -28,4 +32,3 @@ const RPC_UploadServiceBase$messageJson = const {
   '.UploadFileParam': UploadFileParam$json,
   '.UploadFileResponse': UploadFileResponse$json,
 };
-
