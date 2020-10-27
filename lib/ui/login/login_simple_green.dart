@@ -9,6 +9,9 @@ import 'package:protobuf/protobuf.dart';
 import 'package:http/http.dart' as http;
 import 'package:protobuf/protobuf.dart' as $pb;
 
+import 'package:flip_app/ui/Api.dart' as Api;
+
+
 class LoginSimpleGreenRoute extends StatefulWidget {
   LoginSimpleGreenRoute();
 
@@ -17,6 +20,17 @@ class LoginSimpleGreenRoute extends StatefulWidget {
 }
 
 class LoginSimpleGreenRouteState extends State<LoginSimpleGreenRoute> {
+
+  void sendSmsCallback() async {
+    // playPb();
+    Shared.showToast(context, "sxxxxdf");
+
+    var param = SendConfirmCodeParam();
+    Api.Auth.sendConfirmCode2(param);
+    await Api.Auth.sendConfirmCode(param);
+
+  }
+
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -38,11 +52,11 @@ class LoginSimpleGreenRouteState extends State<LoginSimpleGreenRoute> {
               Text(FStrings.login_welocmeTitle,
                   style: TextStyle(
                       color: Colors.grey,
-                      fontSize: 16,
+                      fontSize: 20,
                       fontFamily: Shared.IRAN_FONT)),
               // Spacer(),
               SizedBox(
-                height: 50,
+                height: 60,
               ),
               Align(
                 alignment: Alignment.centerRight,
@@ -52,13 +66,15 @@ class LoginSimpleGreenRouteState extends State<LoginSimpleGreenRoute> {
                         fontSize: 16,
                         fontFamily: Shared.IRAN_FONT)),
               ),
+              SizedBox(height: 10,),
               TextField(
                 keyboardType: TextInputType.phone,
                 autofocus: true,
+                textAlign: TextAlign.center,
                 style: TextStyle(color: Colors.black),
                 decoration: InputDecoration(
                   hintText: "09123456789",
-                  hintStyle: TextStyle(color: Colors.grey[400]),
+                  hintStyle: TextStyle(color: Colors.grey[400],),
                   enabledBorder: UnderlineInputBorder(
                     borderSide:
                         BorderSide(color: Colors.blueGrey[400], width: 1),
@@ -86,7 +102,8 @@ class LoginSimpleGreenRouteState extends State<LoginSimpleGreenRoute> {
                   shape: RoundedRectangleBorder(
                       borderRadius: new BorderRadius.circular(20)),
                   onPressed: () {
-                    playPb();
+                    // playPb();
+                    sendSmsCallback();
                   },
                 ),
               ),
@@ -136,7 +153,7 @@ class FlipRpcClient extends RpcClient {
   }
 }
 
-void playPb() {
+void playPb() async {
   print("playpb0");
   // Send request
   var ctx = $pb.ClientContext();
@@ -145,7 +162,19 @@ void playPb() {
   var req = SendConfirmCodeParam();
   req.writeToBuffer();
 
-  m.sendConfirmCode(ctx, req);
+  var r = await m.sendConfirmCode(ctx, req);
 
   // sender();
 }
+
+/*class Api {
+  static class RPC_Auth {
+      $async.Future<SendConfirmCodeResponse> sendConfirmCode(
+          $pb.ClientContext ctx, SendConfirmCodeParam request) {
+          var emptyResponse = SendConfirmCodeResponse();
+          return _client.invoke<SendConfirmCodeResponse>(
+          ctx, 'RPC_Auth', 'SendConfirmCode', request, emptyResponse);
+      }
+  }
+}*/
+

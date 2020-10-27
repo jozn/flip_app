@@ -66,7 +66,7 @@ class LoginConfirmRouteState extends State<LoginConfirmRoute> {
                       Container(
                         width: double.infinity,
                         height: 1,
-                        color: Colors.blueGrey[100],
+                        color: Colors.white,
                       ),
 
                       SizedBox(
