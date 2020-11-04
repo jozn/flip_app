@@ -11,10 +11,10 @@ import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class ChannelAvatarAddParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('ChannelAvatarAddParam', createEmptyInstance: create)
-        ..a<$core.int>(1, 'channelId', $pb.PbFieldType.OU3)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ChannelAvatarAddParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..a<$core.int>(1, 'channelId', $pb.PbFieldType.OU3)
+    ..hasRequiredFields = false;
 
   ChannelAvatarAddParam._() : super();
   factory ChannelAvatarAddParam() => create();
@@ -54,9 +54,9 @@ class ChannelAvatarAddParam extends $pb.GeneratedMessage {
 }
 
 class ChannelAvatarAddResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('ChannelAvatarAddResponse', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ChannelAvatarAddResponse',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   ChannelAvatarAddResponse._() : super();
   factory ChannelAvatarAddResponse() => create();
@@ -84,10 +84,10 @@ class ChannelAvatarAddResponse extends $pb.GeneratedMessage {
 }
 
 class ChannelAvatarDeleteParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('ChannelAvatarDeleteParam', createEmptyInstance: create)
-        ..a<$core.int>(1, 'channelId', $pb.PbFieldType.OU3)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ChannelAvatarDeleteParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..a<$core.int>(1, 'channelId', $pb.PbFieldType.OU3)
+    ..hasRequiredFields = false;
 
   ChannelAvatarDeleteParam._() : super();
   factory ChannelAvatarDeleteParam() => create();
@@ -129,6 +129,7 @@ class ChannelAvatarDeleteParam extends $pb.GeneratedMessage {
 class ChannelAvatarDeleteResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ChannelAvatarDeleteResponse',
+      package: const $pb.PackageName('pb'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
@@ -160,10 +161,10 @@ class ChannelAvatarDeleteResponse extends $pb.GeneratedMessage {
 }
 
 class ChannelAvatarGetListParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('ChannelAvatarGetListParam', createEmptyInstance: create)
-        ..a<$core.int>(1, 'channelId', $pb.PbFieldType.OU3)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ChannelAvatarGetListParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..a<$core.int>(1, 'channelId', $pb.PbFieldType.OU3)
+    ..hasRequiredFields = false;
 
   ChannelAvatarGetListParam._() : super();
   factory ChannelAvatarGetListParam() => create();
@@ -206,6 +207,7 @@ class ChannelAvatarGetListParam extends $pb.GeneratedMessage {
 class ChannelAvatarGetListResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ChannelAvatarGetListResponse',
+      package: const $pb.PackageName('pb'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
@@ -237,10 +239,10 @@ class ChannelAvatarGetListResponse extends $pb.GeneratedMessage {
 }
 
 class ChannelSendMessageParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('ChannelSendMessageParam', createEmptyInstance: create)
-        ..a<$core.int>(1, 'channelId', $pb.PbFieldType.OU3)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ChannelSendMessageParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..a<$core.int>(1, 'channelId', $pb.PbFieldType.OU3)
+    ..hasRequiredFields = false;
 
   ChannelSendMessageParam._() : super();
   factory ChannelSendMessageParam() => create();
@@ -280,9 +282,11 @@ class ChannelSendMessageParam extends $pb.GeneratedMessage {
 }
 
 class ChannelSendMessageResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('ChannelSendMessageResponse', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'ChannelSendMessageResponse',
+      package: const $pb.PackageName('pb'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   ChannelSendMessageResponse._() : super();
   factory ChannelSendMessageResponse() => create();
@@ -311,10 +315,10 @@ class ChannelSendMessageResponse extends $pb.GeneratedMessage {
 }
 
 class ChannelEditMessageParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('ChannelEditMessageParam', createEmptyInstance: create)
-        ..a<$core.int>(1, 'channelId', $pb.PbFieldType.OU3)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ChannelEditMessageParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..a<$core.int>(1, 'channelId', $pb.PbFieldType.OU3)
+    ..hasRequiredFields = false;
 
   ChannelEditMessageParam._() : super();
   factory ChannelEditMessageParam() => create();
@@ -354,9 +358,11 @@ class ChannelEditMessageParam extends $pb.GeneratedMessage {
 }
 
 class ChannelEditMessageResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('ChannelEditMessageResponse', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'ChannelEditMessageResponse',
+      package: const $pb.PackageName('pb'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   ChannelEditMessageResponse._() : super();
   factory ChannelEditMessageResponse() => create();
@@ -385,10 +391,10 @@ class ChannelEditMessageResponse extends $pb.GeneratedMessage {
 }
 
 class ChannelPinMessageParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('ChannelPinMessageParam', createEmptyInstance: create)
-        ..a<$core.int>(1, 'channelId', $pb.PbFieldType.OU3)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ChannelPinMessageParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..a<$core.int>(1, 'channelId', $pb.PbFieldType.OU3)
+    ..hasRequiredFields = false;
 
   ChannelPinMessageParam._() : super();
   factory ChannelPinMessageParam() => create();
@@ -428,9 +434,9 @@ class ChannelPinMessageParam extends $pb.GeneratedMessage {
 }
 
 class ChannelPinMessageResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('ChannelPinMessageResponse', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ChannelPinMessageResponse',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   ChannelPinMessageResponse._() : super();
   factory ChannelPinMessageResponse() => create();
@@ -459,10 +465,10 @@ class ChannelPinMessageResponse extends $pb.GeneratedMessage {
 }
 
 class ChannelUnPinMessageParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('ChannelUnPinMessageParam', createEmptyInstance: create)
-        ..a<$core.int>(1, 'channelId', $pb.PbFieldType.OU3)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ChannelUnPinMessageParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..a<$core.int>(1, 'channelId', $pb.PbFieldType.OU3)
+    ..hasRequiredFields = false;
 
   ChannelUnPinMessageParam._() : super();
   factory ChannelUnPinMessageParam() => create();
@@ -504,6 +510,7 @@ class ChannelUnPinMessageParam extends $pb.GeneratedMessage {
 class ChannelUnPinMessageResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ChannelUnPinMessageResponse',
+      package: const $pb.PackageName('pb'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
@@ -535,10 +542,10 @@ class ChannelUnPinMessageResponse extends $pb.GeneratedMessage {
 }
 
 class ChannelDeleteMessageParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('ChannelDeleteMessageParam', createEmptyInstance: create)
-        ..a<$core.int>(1, 'channelId', $pb.PbFieldType.OU3)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ChannelDeleteMessageParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..a<$core.int>(1, 'channelId', $pb.PbFieldType.OU3)
+    ..hasRequiredFields = false;
 
   ChannelDeleteMessageParam._() : super();
   factory ChannelDeleteMessageParam() => create();
@@ -581,6 +588,7 @@ class ChannelDeleteMessageParam extends $pb.GeneratedMessage {
 class ChannelDeleteMessageResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ChannelDeleteMessageResponse',
+      package: const $pb.PackageName('pb'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
@@ -612,10 +620,10 @@ class ChannelDeleteMessageResponse extends $pb.GeneratedMessage {
 }
 
 class ChannelSetDraftParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('ChannelSetDraftParam', createEmptyInstance: create)
-        ..a<$core.int>(1, 'channelId', $pb.PbFieldType.OU3)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ChannelSetDraftParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..a<$core.int>(1, 'channelId', $pb.PbFieldType.OU3)
+    ..hasRequiredFields = false;
 
   ChannelSetDraftParam._() : super();
   factory ChannelSetDraftParam() => create();
@@ -654,9 +662,9 @@ class ChannelSetDraftParam extends $pb.GeneratedMessage {
 }
 
 class ChannelSetDraftResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('ChannelSetDraftResponse', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ChannelSetDraftResponse',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   ChannelSetDraftResponse._() : super();
   factory ChannelSetDraftResponse() => create();
@@ -684,10 +692,10 @@ class ChannelSetDraftResponse extends $pb.GeneratedMessage {
 }
 
 class ChannelCreateChannelParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('ChannelCreateChannelParam', createEmptyInstance: create)
-        ..a<$core.int>(1, 'groupId', $pb.PbFieldType.OU3)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ChannelCreateChannelParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..a<$core.int>(1, 'groupId', $pb.PbFieldType.OU3)
+    ..hasRequiredFields = false;
 
   ChannelCreateChannelParam._() : super();
   factory ChannelCreateChannelParam() => create();
@@ -730,6 +738,7 @@ class ChannelCreateChannelParam extends $pb.GeneratedMessage {
 class ChannelCreateChannelResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ChannelCreateChannelResponse',
+      package: const $pb.PackageName('pb'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
@@ -761,10 +770,10 @@ class ChannelCreateChannelResponse extends $pb.GeneratedMessage {
 }
 
 class ChannelEditChannelParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('ChannelEditChannelParam', createEmptyInstance: create)
-        ..a<$core.int>(1, 'groupId', $pb.PbFieldType.OU3)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ChannelEditChannelParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..a<$core.int>(1, 'groupId', $pb.PbFieldType.OU3)
+    ..hasRequiredFields = false;
 
   ChannelEditChannelParam._() : super();
   factory ChannelEditChannelParam() => create();
@@ -804,9 +813,11 @@ class ChannelEditChannelParam extends $pb.GeneratedMessage {
 }
 
 class ChannelEditChannelResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('ChannelEditChannelResponse', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'ChannelEditChannelResponse',
+      package: const $pb.PackageName('pb'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   ChannelEditChannelResponse._() : super();
   factory ChannelEditChannelResponse() => create();
@@ -835,10 +846,10 @@ class ChannelEditChannelResponse extends $pb.GeneratedMessage {
 }
 
 class ChannelDeleteChannelParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('ChannelDeleteChannelParam', createEmptyInstance: create)
-        ..a<$core.int>(1, 'groupId', $pb.PbFieldType.OU3)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ChannelDeleteChannelParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..a<$core.int>(1, 'groupId', $pb.PbFieldType.OU3)
+    ..hasRequiredFields = false;
 
   ChannelDeleteChannelParam._() : super();
   factory ChannelDeleteChannelParam() => create();
@@ -881,6 +892,7 @@ class ChannelDeleteChannelParam extends $pb.GeneratedMessage {
 class ChannelDeleteChannelResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ChannelDeleteChannelResponse',
+      package: const $pb.PackageName('pb'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
@@ -912,9 +924,9 @@ class ChannelDeleteChannelResponse extends $pb.GeneratedMessage {
 }
 
 class ChannelAddAuthorParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('ChannelAddAuthorParam', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ChannelAddAuthorParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   ChannelAddAuthorParam._() : super();
   factory ChannelAddAuthorParam() => create();
@@ -942,9 +954,9 @@ class ChannelAddAuthorParam extends $pb.GeneratedMessage {
 }
 
 class ChannelAddAuthorResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('ChannelAddAuthorResponse', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ChannelAddAuthorResponse',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   ChannelAddAuthorResponse._() : super();
   factory ChannelAddAuthorResponse() => create();
@@ -974,6 +986,7 @@ class ChannelAddAuthorResponse extends $pb.GeneratedMessage {
 class ChannelChangeAuthorPermissionParam extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ChannelChangeAuthorPermissionParam',
+      package: const $pb.PackageName('pb'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
@@ -1008,6 +1021,7 @@ class ChannelChangeAuthorPermissionParam extends $pb.GeneratedMessage {
 class ChannelChangeAuthorPermissionResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ChannelChangeAuthorPermissionResponse',
+      package: const $pb.PackageName('pb'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
@@ -1041,9 +1055,9 @@ class ChannelChangeAuthorPermissionResponse extends $pb.GeneratedMessage {
 }
 
 class ChannelRemoveAuthorParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('ChannelRemoveAuthorParam', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ChannelRemoveAuthorParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   ChannelRemoveAuthorParam._() : super();
   factory ChannelRemoveAuthorParam() => create();
@@ -1073,6 +1087,7 @@ class ChannelRemoveAuthorParam extends $pb.GeneratedMessage {
 class ChannelRemoveAuthorResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ChannelRemoveAuthorResponse',
+      package: const $pb.PackageName('pb'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
@@ -1104,9 +1119,9 @@ class ChannelRemoveAuthorResponse extends $pb.GeneratedMessage {
 }
 
 class ChannelFollowChannelParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('ChannelFollowChannelParam', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ChannelFollowChannelParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   ChannelFollowChannelParam._() : super();
   factory ChannelFollowChannelParam() => create();
@@ -1137,6 +1152,7 @@ class ChannelFollowChannelParam extends $pb.GeneratedMessage {
 class ChannelFollowChannelResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ChannelFollowChannelResponse',
+      package: const $pb.PackageName('pb'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
@@ -1170,6 +1186,7 @@ class ChannelFollowChannelResponse extends $pb.GeneratedMessage {
 class ChannelUnFollowChannelParam extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ChannelUnFollowChannelParam',
+      package: const $pb.PackageName('pb'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
@@ -1203,6 +1220,7 @@ class ChannelUnFollowChannelParam extends $pb.GeneratedMessage {
 class ChannelUnFollowChannelResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ChannelUnFollowChannelResponse',
+      package: const $pb.PackageName('pb'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
@@ -1236,6 +1254,7 @@ class ChannelUnFollowChannelResponse extends $pb.GeneratedMessage {
 class ChannelRemoveFollowersParam extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ChannelRemoveFollowersParam',
+      package: const $pb.PackageName('pb'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
@@ -1269,6 +1288,7 @@ class ChannelRemoveFollowersParam extends $pb.GeneratedMessage {
 class ChannelRemoveFollowersResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ChannelRemoveFollowersResponse',
+      package: const $pb.PackageName('pb'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
@@ -1300,9 +1320,9 @@ class ChannelRemoveFollowersResponse extends $pb.GeneratedMessage {
 }
 
 class ChannelSubscribeParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('ChannelSubscribeParam', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ChannelSubscribeParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   ChannelSubscribeParam._() : super();
   factory ChannelSubscribeParam() => create();
@@ -1330,9 +1350,9 @@ class ChannelSubscribeParam extends $pb.GeneratedMessage {
 }
 
 class ChannelSubscribeResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('ChannelSubscribeResponse', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ChannelSubscribeResponse',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   ChannelSubscribeResponse._() : super();
   factory ChannelSubscribeResponse() => create();
@@ -1360,9 +1380,9 @@ class ChannelSubscribeResponse extends $pb.GeneratedMessage {
 }
 
 class ChannelUnSubscribeParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('ChannelUnSubscribeParam', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ChannelUnSubscribeParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   ChannelUnSubscribeParam._() : super();
   factory ChannelUnSubscribeParam() => create();
@@ -1390,9 +1410,11 @@ class ChannelUnSubscribeParam extends $pb.GeneratedMessage {
 }
 
 class ChannelUnSubscribeResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('ChannelUnSubscribeResponse', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'ChannelUnSubscribeResponse',
+      package: const $pb.PackageName('pb'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   ChannelUnSubscribeResponse._() : super();
   factory ChannelUnSubscribeResponse() => create();
@@ -1423,6 +1445,7 @@ class ChannelUnSubscribeResponse extends $pb.GeneratedMessage {
 class ChannelRemoveSubscribersParam extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ChannelRemoveSubscribersParam',
+      package: const $pb.PackageName('pb'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
@@ -1456,6 +1479,7 @@ class ChannelRemoveSubscribersParam extends $pb.GeneratedMessage {
 class ChannelRemoveSubscribersResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ChannelRemoveSubscribersResponse',
+      package: const $pb.PackageName('pb'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
@@ -1488,10 +1512,10 @@ class ChannelRemoveSubscribersResponse extends $pb.GeneratedMessage {
 }
 
 class ChannelChangePrivacyParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('ChannelChangePrivacyParam', createEmptyInstance: create)
-        ..a<$core.int>(1, 'groupId', $pb.PbFieldType.OU3)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ChannelChangePrivacyParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..a<$core.int>(1, 'groupId', $pb.PbFieldType.OU3)
+    ..hasRequiredFields = false;
 
   ChannelChangePrivacyParam._() : super();
   factory ChannelChangePrivacyParam() => create();
@@ -1534,6 +1558,7 @@ class ChannelChangePrivacyParam extends $pb.GeneratedMessage {
 class ChannelChangePrivacyResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ChannelChangePrivacyResponse',
+      package: const $pb.PackageName('pb'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
@@ -1567,6 +1592,7 @@ class ChannelChangePrivacyResponse extends $pb.GeneratedMessage {
 class ChannelChangeDefaultPermissionParam extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ChannelChangeDefaultPermissionParam',
+      package: const $pb.PackageName('pb'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
@@ -1602,6 +1628,7 @@ class ChannelChangeDefaultPermissionParam extends $pb.GeneratedMessage {
 class ChannelChangeDefaultPermissionResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ChannelChangeDefaultPermissionResponse',
+      package: const $pb.PackageName('pb'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
@@ -1635,9 +1662,9 @@ class ChannelChangeDefaultPermissionResponse extends $pb.GeneratedMessage {
 }
 
 class ChannelRevokeLinkParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('ChannelRevokeLinkParam', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ChannelRevokeLinkParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   ChannelRevokeLinkParam._() : super();
   factory ChannelRevokeLinkParam() => create();
@@ -1665,9 +1692,9 @@ class ChannelRevokeLinkParam extends $pb.GeneratedMessage {
 }
 
 class ChannelRevokeLinkResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('ChannelRevokeLinkResponse', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ChannelRevokeLinkResponse',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   ChannelRevokeLinkResponse._() : super();
   factory ChannelRevokeLinkResponse() => create();
@@ -1696,9 +1723,11 @@ class ChannelRevokeLinkResponse extends $pb.GeneratedMessage {
 }
 
 class ChannelChangeUsernameParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('ChannelChangeUsernameParam', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'ChannelChangeUsernameParam',
+      package: const $pb.PackageName('pb'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   ChannelChangeUsernameParam._() : super();
   factory ChannelChangeUsernameParam() => create();
@@ -1729,6 +1758,7 @@ class ChannelChangeUsernameParam extends $pb.GeneratedMessage {
 class ChannelChangeUsernameResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ChannelChangeUsernameResponse',
+      package: const $pb.PackageName('pb'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
@@ -1760,9 +1790,9 @@ class ChannelChangeUsernameResponse extends $pb.GeneratedMessage {
 }
 
 class ChannelBlockChannelParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('ChannelBlockChannelParam', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ChannelBlockChannelParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   ChannelBlockChannelParam._() : super();
   factory ChannelBlockChannelParam() => create();
@@ -1792,6 +1822,7 @@ class ChannelBlockChannelParam extends $pb.GeneratedMessage {
 class ChannelBlockChannelResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ChannelBlockChannelResponse',
+      package: const $pb.PackageName('pb'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
@@ -1823,10 +1854,12 @@ class ChannelBlockChannelResponse extends $pb.GeneratedMessage {
 }
 
 class ChannelDeleteMessagesParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('ChannelDeleteMessagesParam', createEmptyInstance: create)
-        ..a<$core.int>(1, 'groupId', $pb.PbFieldType.OU3)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'ChannelDeleteMessagesParam',
+      package: const $pb.PackageName('pb'),
+      createEmptyInstance: create)
+    ..a<$core.int>(1, 'groupId', $pb.PbFieldType.OU3)
+    ..hasRequiredFields = false;
 
   ChannelDeleteMessagesParam._() : super();
   factory ChannelDeleteMessagesParam() => create();
@@ -1869,6 +1902,7 @@ class ChannelDeleteMessagesParam extends $pb.GeneratedMessage {
 class ChannelDeleteMessagesResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ChannelDeleteMessagesResponse',
+      package: const $pb.PackageName('pb'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
@@ -1900,9 +1934,9 @@ class ChannelDeleteMessagesResponse extends $pb.GeneratedMessage {
 }
 
 class ChannelClearHistoryParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('ChannelClearHistoryParam', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ChannelClearHistoryParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   ChannelClearHistoryParam._() : super();
   factory ChannelClearHistoryParam() => create();
@@ -1932,6 +1966,7 @@ class ChannelClearHistoryParam extends $pb.GeneratedMessage {
 class ChannelClearHistoryResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ChannelClearHistoryResponse',
+      package: const $pb.PackageName('pb'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
@@ -1963,9 +1998,9 @@ class ChannelClearHistoryResponse extends $pb.GeneratedMessage {
 }
 
 class ChannelAvatarChangeParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('ChannelAvatarChangeParam', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ChannelAvatarChangeParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   ChannelAvatarChangeParam._() : super();
   factory ChannelAvatarChangeParam() => create();
@@ -1995,6 +2030,7 @@ class ChannelAvatarChangeParam extends $pb.GeneratedMessage {
 class ChannelAvatarChangeResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ChannelAvatarChangeResponse',
+      package: const $pb.PackageName('pb'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
@@ -2028,6 +2064,7 @@ class ChannelAvatarChangeResponse extends $pb.GeneratedMessage {
 class ChannelSendDoingActionParam extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ChannelSendDoingActionParam',
+      package: const $pb.PackageName('pb'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
@@ -2061,6 +2098,7 @@ class ChannelSendDoingActionParam extends $pb.GeneratedMessage {
 class ChannelSendDoingActionResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ChannelSendDoingActionResponse',
+      package: const $pb.PackageName('pb'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
@@ -2092,9 +2130,9 @@ class ChannelSendDoingActionResponse extends $pb.GeneratedMessage {
 }
 
 class ChannelReportChannelParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('ChannelReportChannelParam', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ChannelReportChannelParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   ChannelReportChannelParam._() : super();
   factory ChannelReportChannelParam() => create();
@@ -2125,6 +2163,7 @@ class ChannelReportChannelParam extends $pb.GeneratedMessage {
 class ChannelReportChannelResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ChannelReportChannelResponse',
+      package: const $pb.PackageName('pb'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
@@ -2156,9 +2195,9 @@ class ChannelReportChannelResponse extends $pb.GeneratedMessage {
 }
 
 class ChannelReportMessageParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('ChannelReportMessageParam', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ChannelReportMessageParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   ChannelReportMessageParam._() : super();
   factory ChannelReportMessageParam() => create();
@@ -2189,6 +2228,7 @@ class ChannelReportMessageParam extends $pb.GeneratedMessage {
 class ChannelReportMessageResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ChannelReportMessageResponse',
+      package: const $pb.PackageName('pb'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
@@ -2220,9 +2260,9 @@ class ChannelReportMessageResponse extends $pb.GeneratedMessage {
 }
 
 class ChannelGetFullParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('ChannelGetFullParam', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ChannelGetFullParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   ChannelGetFullParam._() : super();
   factory ChannelGetFullParam() => create();
@@ -2248,9 +2288,9 @@ class ChannelGetFullParam extends $pb.GeneratedMessage {
 }
 
 class ChannelGetFullResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('ChannelGetFullResponse', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ChannelGetFullResponse',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   ChannelGetFullResponse._() : super();
   factory ChannelGetFullResponse() => create();
@@ -2280,6 +2320,7 @@ class ChannelGetFullResponse extends $pb.GeneratedMessage {
 class ChannelGetMessagesListParam extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ChannelGetMessagesListParam',
+      package: const $pb.PackageName('pb'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
@@ -2313,6 +2354,7 @@ class ChannelGetMessagesListParam extends $pb.GeneratedMessage {
 class ChannelGetMessagesListResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ChannelGetMessagesListResponse',
+      package: const $pb.PackageName('pb'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
@@ -2344,9 +2386,9 @@ class ChannelGetMessagesListResponse extends $pb.GeneratedMessage {
 }
 
 class ChannelGetMediaListParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('ChannelGetMediaListParam', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ChannelGetMediaListParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   ChannelGetMediaListParam._() : super();
   factory ChannelGetMediaListParam() => create();
@@ -2376,6 +2418,7 @@ class ChannelGetMediaListParam extends $pb.GeneratedMessage {
 class ChannelGetMediaListResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ChannelGetMediaListResponse',
+      package: const $pb.PackageName('pb'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
@@ -2407,9 +2450,9 @@ class ChannelGetMediaListResponse extends $pb.GeneratedMessage {
 }
 
 class ChannelGetAuthorsParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('ChannelGetAuthorsParam', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ChannelGetAuthorsParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   ChannelGetAuthorsParam._() : super();
   factory ChannelGetAuthorsParam() => create();
@@ -2437,9 +2480,9 @@ class ChannelGetAuthorsParam extends $pb.GeneratedMessage {
 }
 
 class ChannelGetAuthorsResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('ChannelGetAuthorsResponse', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ChannelGetAuthorsResponse',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   ChannelGetAuthorsResponse._() : super();
   factory ChannelGetAuthorsResponse() => create();
@@ -2468,9 +2511,9 @@ class ChannelGetAuthorsResponse extends $pb.GeneratedMessage {
 }
 
 class ChannelGetFollowersParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('ChannelGetFollowersParam', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ChannelGetFollowersParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   ChannelGetFollowersParam._() : super();
   factory ChannelGetFollowersParam() => create();
@@ -2500,6 +2543,7 @@ class ChannelGetFollowersParam extends $pb.GeneratedMessage {
 class ChannelGetFollowersResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ChannelGetFollowersResponse',
+      package: const $pb.PackageName('pb'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
@@ -2531,9 +2575,9 @@ class ChannelGetFollowersResponse extends $pb.GeneratedMessage {
 }
 
 class ChannelGetFollowingsParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('ChannelGetFollowingsParam', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ChannelGetFollowingsParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   ChannelGetFollowingsParam._() : super();
   factory ChannelGetFollowingsParam() => create();
@@ -2564,6 +2608,7 @@ class ChannelGetFollowingsParam extends $pb.GeneratedMessage {
 class ChannelGetFollowingsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ChannelGetFollowingsResponse',
+      package: const $pb.PackageName('pb'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
@@ -2595,9 +2640,11 @@ class ChannelGetFollowingsResponse extends $pb.GeneratedMessage {
 }
 
 class ChannelGetSubscribersParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('ChannelGetSubscribersParam', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'ChannelGetSubscribersParam',
+      package: const $pb.PackageName('pb'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   ChannelGetSubscribersParam._() : super();
   factory ChannelGetSubscribersParam() => create();
@@ -2628,6 +2675,7 @@ class ChannelGetSubscribersParam extends $pb.GeneratedMessage {
 class ChannelGetSubscribersResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ChannelGetSubscribersResponse',
+      package: const $pb.PackageName('pb'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
@@ -2659,9 +2707,9 @@ class ChannelGetSubscribersResponse extends $pb.GeneratedMessage {
 }
 
 class ChannelBlockedParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('ChannelBlockedParam', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ChannelBlockedParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   ChannelBlockedParam._() : super();
   factory ChannelBlockedParam() => create();
@@ -2687,9 +2735,9 @@ class ChannelBlockedParam extends $pb.GeneratedMessage {
 }
 
 class ChannelBlockedResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('ChannelBlockedResponse', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ChannelBlockedResponse',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   ChannelBlockedResponse._() : super();
   factory ChannelBlockedResponse() => create();

@@ -11,10 +11,10 @@ import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class ChatSendMessageParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('ChatSendMessageParam', createEmptyInstance: create)
-        ..a<$core.int>(1, 'groupId', $pb.PbFieldType.OU3)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ChatSendMessageParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..a<$core.int>(1, 'groupId', $pb.PbFieldType.OU3)
+    ..hasRequiredFields = false;
 
   ChatSendMessageParam._() : super();
   factory ChatSendMessageParam() => create();
@@ -53,9 +53,9 @@ class ChatSendMessageParam extends $pb.GeneratedMessage {
 }
 
 class ChatSendMessageResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('ChatSendMessageResponse', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ChatSendMessageResponse',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   ChatSendMessageResponse._() : super();
   factory ChatSendMessageResponse() => create();
@@ -83,10 +83,10 @@ class ChatSendMessageResponse extends $pb.GeneratedMessage {
 }
 
 class ChatEditMessageParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('ChatEditMessageParam', createEmptyInstance: create)
-        ..a<$core.int>(1, 'groupId', $pb.PbFieldType.OU3)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ChatEditMessageParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..a<$core.int>(1, 'groupId', $pb.PbFieldType.OU3)
+    ..hasRequiredFields = false;
 
   ChatEditMessageParam._() : super();
   factory ChatEditMessageParam() => create();
@@ -125,9 +125,9 @@ class ChatEditMessageParam extends $pb.GeneratedMessage {
 }
 
 class ChatEditMessageResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('ChatEditMessageResponse', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ChatEditMessageResponse',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   ChatEditMessageResponse._() : super();
   factory ChatEditMessageResponse() => create();
@@ -155,10 +155,10 @@ class ChatEditMessageResponse extends $pb.GeneratedMessage {
 }
 
 class ChatDeleteMessagesParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('ChatDeleteMessagesParam', createEmptyInstance: create)
-        ..a<$core.int>(1, 'groupId', $pb.PbFieldType.OU3)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ChatDeleteMessagesParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..a<$core.int>(1, 'groupId', $pb.PbFieldType.OU3)
+    ..hasRequiredFields = false;
 
   ChatDeleteMessagesParam._() : super();
   factory ChatDeleteMessagesParam() => create();
@@ -198,9 +198,11 @@ class ChatDeleteMessagesParam extends $pb.GeneratedMessage {
 }
 
 class ChatDeleteMessagesResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('ChatDeleteMessagesResponse', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'ChatDeleteMessagesResponse',
+      package: const $pb.PackageName('pb'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   ChatDeleteMessagesResponse._() : super();
   factory ChatDeleteMessagesResponse() => create();
@@ -229,9 +231,9 @@ class ChatDeleteMessagesResponse extends $pb.GeneratedMessage {
 }
 
 class ChatDeleteHistoryParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('ChatDeleteHistoryParam', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ChatDeleteHistoryParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   ChatDeleteHistoryParam._() : super();
   factory ChatDeleteHistoryParam() => create();
@@ -259,9 +261,9 @@ class ChatDeleteHistoryParam extends $pb.GeneratedMessage {
 }
 
 class ChatDeleteHistoryResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('ChatDeleteHistoryResponse', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ChatDeleteHistoryResponse',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   ChatDeleteHistoryResponse._() : super();
   factory ChatDeleteHistoryResponse() => create();
@@ -290,9 +292,9 @@ class ChatDeleteHistoryResponse extends $pb.GeneratedMessage {
 }
 
 class ChatAvatarChangeParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('ChatAvatarChangeParam', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ChatAvatarChangeParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   ChatAvatarChangeParam._() : super();
   factory ChatAvatarChangeParam() => create();
@@ -320,9 +322,9 @@ class ChatAvatarChangeParam extends $pb.GeneratedMessage {
 }
 
 class ChatAvatarChangeResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('ChatAvatarChangeResponse', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ChatAvatarChangeResponse',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   ChatAvatarChangeResponse._() : super();
   factory ChatAvatarChangeResponse() => create();
@@ -350,9 +352,9 @@ class ChatAvatarChangeResponse extends $pb.GeneratedMessage {
 }
 
 class ChatSendDoingActionParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('ChatSendDoingActionParam', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ChatSendDoingActionParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   ChatSendDoingActionParam._() : super();
   factory ChatSendDoingActionParam() => create();
@@ -382,6 +384,7 @@ class ChatSendDoingActionParam extends $pb.GeneratedMessage {
 class ChatSendDoingActionResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ChatSendDoingActionResponse',
+      package: const $pb.PackageName('pb'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
@@ -413,9 +416,9 @@ class ChatSendDoingActionResponse extends $pb.GeneratedMessage {
 }
 
 class ChatReportChatParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('ChatReportChatParam', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ChatReportChatParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   ChatReportChatParam._() : super();
   factory ChatReportChatParam() => create();
@@ -441,9 +444,9 @@ class ChatReportChatParam extends $pb.GeneratedMessage {
 }
 
 class ChatReportChatResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('ChatReportChatResponse', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ChatReportChatResponse',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   ChatReportChatResponse._() : super();
   factory ChatReportChatResponse() => create();
@@ -471,10 +474,10 @@ class ChatReportChatResponse extends $pb.GeneratedMessage {
 }
 
 class ChatGetFullMessageParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('ChatGetFullMessageParam', createEmptyInstance: create)
-        ..a<$core.int>(1, 'groupId', $pb.PbFieldType.OU3)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ChatGetFullMessageParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..a<$core.int>(1, 'groupId', $pb.PbFieldType.OU3)
+    ..hasRequiredFields = false;
 
   ChatGetFullMessageParam._() : super();
   factory ChatGetFullMessageParam() => create();
@@ -514,9 +517,11 @@ class ChatGetFullMessageParam extends $pb.GeneratedMessage {
 }
 
 class ChatGetFullMessageResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('ChatGetFullMessageResponse', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'ChatGetFullMessageResponse',
+      package: const $pb.PackageName('pb'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   ChatGetFullMessageResponse._() : super();
   factory ChatGetFullMessageResponse() => create();
@@ -545,9 +550,9 @@ class ChatGetFullMessageResponse extends $pb.GeneratedMessage {
 }
 
 class ChatGetMessagesListParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('ChatGetMessagesListParam', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ChatGetMessagesListParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   ChatGetMessagesListParam._() : super();
   factory ChatGetMessagesListParam() => create();
@@ -577,6 +582,7 @@ class ChatGetMessagesListParam extends $pb.GeneratedMessage {
 class ChatGetMessagesListResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ChatGetMessagesListResponse',
+      package: const $pb.PackageName('pb'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
@@ -608,9 +614,9 @@ class ChatGetMessagesListResponse extends $pb.GeneratedMessage {
 }
 
 class ChatGetMediaListParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('ChatGetMediaListParam', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ChatGetMediaListParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   ChatGetMediaListParam._() : super();
   factory ChatGetMediaListParam() => create();
@@ -638,9 +644,9 @@ class ChatGetMediaListParam extends $pb.GeneratedMessage {
 }
 
 class ChatGetMediaListResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('ChatGetMediaListResponse', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ChatGetMediaListResponse',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   ChatGetMediaListResponse._() : super();
   factory ChatGetMediaListResponse() => create();

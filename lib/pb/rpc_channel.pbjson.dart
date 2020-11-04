@@ -372,290 +372,290 @@ const RPC_ChannelServiceBase$json = const {
   '2': const [
     const {
       '1': 'ChannelCreateChannel',
-      '2': '.ChannelCreateChannelParam',
-      '3': '.ChannelCreateChannelResponse'
+      '2': '.pb.ChannelCreateChannelParam',
+      '3': '.pb.ChannelCreateChannelResponse'
     },
     const {
       '1': 'ChannelEditChannel',
-      '2': '.ChannelEditChannelParam',
-      '3': '.ChannelEditChannelResponse'
+      '2': '.pb.ChannelEditChannelParam',
+      '3': '.pb.ChannelEditChannelResponse'
     },
     const {
       '1': 'ChannelDeleteChannel',
-      '2': '.ChannelDeleteChannelParam',
-      '3': '.ChannelDeleteChannelResponse'
+      '2': '.pb.ChannelDeleteChannelParam',
+      '3': '.pb.ChannelDeleteChannelResponse'
     },
     const {
       '1': 'ChannelAddAuthor',
-      '2': '.ChannelAddAuthorParam',
-      '3': '.ChannelAddAuthorResponse'
+      '2': '.pb.ChannelAddAuthorParam',
+      '3': '.pb.ChannelAddAuthorResponse'
     },
     const {
       '1': 'ChannelChangeAuthorPermission',
-      '2': '.ChannelChangeAuthorPermissionParam',
-      '3': '.ChannelChangeAuthorPermissionResponse'
+      '2': '.pb.ChannelChangeAuthorPermissionParam',
+      '3': '.pb.ChannelChangeAuthorPermissionResponse'
     },
     const {
       '1': 'ChannelRemoveAuthor',
-      '2': '.ChannelRemoveAuthorParam',
-      '3': '.ChannelRemoveAuthorResponse'
+      '2': '.pb.ChannelRemoveAuthorParam',
+      '3': '.pb.ChannelRemoveAuthorResponse'
     },
     const {
       '1': 'ChannelFollowChannel',
-      '2': '.ChannelFollowChannelParam',
-      '3': '.ChannelFollowChannelResponse'
+      '2': '.pb.ChannelFollowChannelParam',
+      '3': '.pb.ChannelFollowChannelResponse'
     },
     const {
       '1': 'ChannelUnFollowChannel',
-      '2': '.ChannelUnFollowChannelParam',
-      '3': '.ChannelUnFollowChannelResponse'
+      '2': '.pb.ChannelUnFollowChannelParam',
+      '3': '.pb.ChannelUnFollowChannelResponse'
     },
     const {
       '1': 'ChannelRemoveFollowers',
-      '2': '.ChannelRemoveFollowersParam',
-      '3': '.ChannelRemoveFollowersResponse'
+      '2': '.pb.ChannelRemoveFollowersParam',
+      '3': '.pb.ChannelRemoveFollowersResponse'
     },
     const {
       '1': 'ChannelSubscribe',
-      '2': '.ChannelSubscribeParam',
-      '3': '.ChannelSubscribeResponse'
+      '2': '.pb.ChannelSubscribeParam',
+      '3': '.pb.ChannelSubscribeResponse'
     },
     const {
       '1': 'ChannelUnSubscribe',
-      '2': '.ChannelUnSubscribeParam',
-      '3': '.ChannelUnSubscribeResponse'
+      '2': '.pb.ChannelUnSubscribeParam',
+      '3': '.pb.ChannelUnSubscribeResponse'
     },
     const {
       '1': 'ChannelRemoveSubscribers',
-      '2': '.ChannelRemoveSubscribersParam',
-      '3': '.ChannelRemoveSubscribersResponse'
+      '2': '.pb.ChannelRemoveSubscribersParam',
+      '3': '.pb.ChannelRemoveSubscribersResponse'
     },
     const {
       '1': 'ChannelChangePrivacy',
-      '2': '.ChannelChangePrivacyParam',
-      '3': '.ChannelChangePrivacyResponse'
+      '2': '.pb.ChannelChangePrivacyParam',
+      '3': '.pb.ChannelChangePrivacyResponse'
     },
     const {
       '1': 'ChannelChangeDefaultPermission',
-      '2': '.ChannelChangeDefaultPermissionParam',
-      '3': '.ChannelChangeDefaultPermissionResponse'
+      '2': '.pb.ChannelChangeDefaultPermissionParam',
+      '3': '.pb.ChannelChangeDefaultPermissionResponse'
     },
     const {
       '1': 'ChannelRevokeLink',
-      '2': '.ChannelRevokeLinkParam',
-      '3': '.ChannelRevokeLinkResponse'
+      '2': '.pb.ChannelRevokeLinkParam',
+      '3': '.pb.ChannelRevokeLinkResponse'
     },
     const {
       '1': 'ChannelChangeUsername',
-      '2': '.ChannelChangeUsernameParam',
-      '3': '.ChannelChangeUsernameResponse'
+      '2': '.pb.ChannelChangeUsernameParam',
+      '3': '.pb.ChannelChangeUsernameResponse'
     },
     const {
       '1': 'ChannelBlockChannel',
-      '2': '.ChannelBlockChannelParam',
-      '3': '.ChannelBlockChannelResponse'
+      '2': '.pb.ChannelBlockChannelParam',
+      '3': '.pb.ChannelBlockChannelResponse'
     },
     const {
       '1': 'ChannelSendMessage',
-      '2': '.ChannelSendMessageParam',
-      '3': '.ChannelSendMessageResponse'
+      '2': '.pb.ChannelSendMessageParam',
+      '3': '.pb.ChannelSendMessageResponse'
     },
     const {
       '1': 'ChannelEditMessage',
-      '2': '.ChannelEditMessageParam',
-      '3': '.ChannelEditMessageResponse'
+      '2': '.pb.ChannelEditMessageParam',
+      '3': '.pb.ChannelEditMessageResponse'
     },
     const {
       '1': 'ChannelPinMessage',
-      '2': '.ChannelPinMessageParam',
-      '3': '.ChannelPinMessageResponse'
+      '2': '.pb.ChannelPinMessageParam',
+      '3': '.pb.ChannelPinMessageResponse'
     },
     const {
       '1': 'ChannelUnPinMessage',
-      '2': '.ChannelUnPinMessageParam',
-      '3': '.ChannelUnPinMessageResponse'
+      '2': '.pb.ChannelUnPinMessageParam',
+      '3': '.pb.ChannelUnPinMessageResponse'
     },
     const {
       '1': 'ChannelDeleteMessage',
-      '2': '.ChannelDeleteMessageParam',
-      '3': '.ChannelDeleteMessageResponse'
+      '2': '.pb.ChannelDeleteMessageParam',
+      '3': '.pb.ChannelDeleteMessageResponse'
     },
     const {
       '1': 'ChannelDeleteMessages',
-      '2': '.ChannelDeleteMessagesParam',
-      '3': '.ChannelDeleteMessagesResponse'
+      '2': '.pb.ChannelDeleteMessagesParam',
+      '3': '.pb.ChannelDeleteMessagesResponse'
     },
     const {
       '1': 'ChannelClearHistory',
-      '2': '.ChannelClearHistoryParam',
-      '3': '.ChannelClearHistoryResponse'
+      '2': '.pb.ChannelClearHistoryParam',
+      '3': '.pb.ChannelClearHistoryResponse'
     },
     const {
       '1': 'ChannelAvatarAdd',
-      '2': '.ChannelAvatarAddParam',
-      '3': '.ChannelAvatarAddResponse'
+      '2': '.pb.ChannelAvatarAddParam',
+      '3': '.pb.ChannelAvatarAddResponse'
     },
     const {
       '1': 'ChannelAvatarChange',
-      '2': '.ChannelAvatarChangeParam',
-      '3': '.ChannelAvatarChangeResponse'
+      '2': '.pb.ChannelAvatarChangeParam',
+      '3': '.pb.ChannelAvatarChangeResponse'
     },
     const {
       '1': 'ChannelAvatarDelete',
-      '2': '.ChannelAvatarDeleteParam',
-      '3': '.ChannelAvatarDeleteResponse'
+      '2': '.pb.ChannelAvatarDeleteParam',
+      '3': '.pb.ChannelAvatarDeleteResponse'
     },
     const {
       '1': 'ChannelAvatarGetList',
-      '2': '.ChannelAvatarGetListParam',
-      '3': '.ChannelAvatarGetListResponse'
+      '2': '.pb.ChannelAvatarGetListParam',
+      '3': '.pb.ChannelAvatarGetListResponse'
     },
     const {
       '1': 'ChannelSendDoingAction',
-      '2': '.ChannelSendDoingActionParam',
-      '3': '.ChannelSendDoingActionResponse'
+      '2': '.pb.ChannelSendDoingActionParam',
+      '3': '.pb.ChannelSendDoingActionResponse'
     },
     const {
       '1': 'ChannelReportChannel',
-      '2': '.ChannelReportChannelParam',
-      '3': '.ChannelReportChannelResponse'
+      '2': '.pb.ChannelReportChannelParam',
+      '3': '.pb.ChannelReportChannelResponse'
     },
     const {
       '1': 'ChannelReportMessage',
-      '2': '.ChannelReportMessageParam',
-      '3': '.ChannelReportMessageResponse'
+      '2': '.pb.ChannelReportMessageParam',
+      '3': '.pb.ChannelReportMessageResponse'
     },
     const {
       '1': 'ChannelGetFull',
-      '2': '.ChannelGetFullParam',
-      '3': '.ChannelGetFullResponse'
+      '2': '.pb.ChannelGetFullParam',
+      '3': '.pb.ChannelGetFullResponse'
     },
     const {
       '1': 'ChannelGetMessagesList',
-      '2': '.ChannelGetMessagesListParam',
-      '3': '.ChannelGetMessagesListResponse'
+      '2': '.pb.ChannelGetMessagesListParam',
+      '3': '.pb.ChannelGetMessagesListResponse'
     },
     const {
       '1': 'ChannelGetMediaList',
-      '2': '.ChannelGetMediaListParam',
-      '3': '.ChannelGetMediaListResponse'
+      '2': '.pb.ChannelGetMediaListParam',
+      '3': '.pb.ChannelGetMediaListResponse'
     },
     const {
       '1': 'ChannelGetAuthors',
-      '2': '.ChannelGetAuthorsParam',
-      '3': '.ChannelGetAuthorsResponse'
+      '2': '.pb.ChannelGetAuthorsParam',
+      '3': '.pb.ChannelGetAuthorsResponse'
     },
     const {
       '1': 'ChannelGetFollowers',
-      '2': '.ChannelGetFollowersParam',
-      '3': '.ChannelGetFollowersResponse'
+      '2': '.pb.ChannelGetFollowersParam',
+      '3': '.pb.ChannelGetFollowersResponse'
     },
     const {
       '1': 'ChannelGetFollowings',
-      '2': '.ChannelGetFollowingsParam',
-      '3': '.ChannelGetFollowingsResponse'
+      '2': '.pb.ChannelGetFollowingsParam',
+      '3': '.pb.ChannelGetFollowingsResponse'
     },
     const {
       '1': 'ChannelGetSubscribers',
-      '2': '.ChannelGetSubscribersParam',
-      '3': '.ChannelGetSubscribersResponse'
+      '2': '.pb.ChannelGetSubscribersParam',
+      '3': '.pb.ChannelGetSubscribersResponse'
     },
     const {
       '1': 'ChannelBlocked',
-      '2': '.ChannelBlockedParam',
-      '3': '.ChannelBlockedResponse'
+      '2': '.pb.ChannelBlockedParam',
+      '3': '.pb.ChannelBlockedResponse'
     },
     const {
       '1': 'ChannelSetDraft',
-      '2': '.ChannelSetDraftParam',
-      '3': '.ChannelSetDraftResponse'
+      '2': '.pb.ChannelSetDraftParam',
+      '3': '.pb.ChannelSetDraftResponse'
     },
   ],
 };
 
 const RPC_ChannelServiceBase$messageJson = const {
-  '.ChannelCreateChannelParam': ChannelCreateChannelParam$json,
-  '.ChannelCreateChannelResponse': ChannelCreateChannelResponse$json,
-  '.ChannelEditChannelParam': ChannelEditChannelParam$json,
-  '.ChannelEditChannelResponse': ChannelEditChannelResponse$json,
-  '.ChannelDeleteChannelParam': ChannelDeleteChannelParam$json,
-  '.ChannelDeleteChannelResponse': ChannelDeleteChannelResponse$json,
-  '.ChannelAddAuthorParam': ChannelAddAuthorParam$json,
-  '.ChannelAddAuthorResponse': ChannelAddAuthorResponse$json,
-  '.ChannelChangeAuthorPermissionParam':
+  '.pb.ChannelCreateChannelParam': ChannelCreateChannelParam$json,
+  '.pb.ChannelCreateChannelResponse': ChannelCreateChannelResponse$json,
+  '.pb.ChannelEditChannelParam': ChannelEditChannelParam$json,
+  '.pb.ChannelEditChannelResponse': ChannelEditChannelResponse$json,
+  '.pb.ChannelDeleteChannelParam': ChannelDeleteChannelParam$json,
+  '.pb.ChannelDeleteChannelResponse': ChannelDeleteChannelResponse$json,
+  '.pb.ChannelAddAuthorParam': ChannelAddAuthorParam$json,
+  '.pb.ChannelAddAuthorResponse': ChannelAddAuthorResponse$json,
+  '.pb.ChannelChangeAuthorPermissionParam':
       ChannelChangeAuthorPermissionParam$json,
-  '.ChannelChangeAuthorPermissionResponse':
+  '.pb.ChannelChangeAuthorPermissionResponse':
       ChannelChangeAuthorPermissionResponse$json,
-  '.ChannelRemoveAuthorParam': ChannelRemoveAuthorParam$json,
-  '.ChannelRemoveAuthorResponse': ChannelRemoveAuthorResponse$json,
-  '.ChannelFollowChannelParam': ChannelFollowChannelParam$json,
-  '.ChannelFollowChannelResponse': ChannelFollowChannelResponse$json,
-  '.ChannelUnFollowChannelParam': ChannelUnFollowChannelParam$json,
-  '.ChannelUnFollowChannelResponse': ChannelUnFollowChannelResponse$json,
-  '.ChannelRemoveFollowersParam': ChannelRemoveFollowersParam$json,
-  '.ChannelRemoveFollowersResponse': ChannelRemoveFollowersResponse$json,
-  '.ChannelSubscribeParam': ChannelSubscribeParam$json,
-  '.ChannelSubscribeResponse': ChannelSubscribeResponse$json,
-  '.ChannelUnSubscribeParam': ChannelUnSubscribeParam$json,
-  '.ChannelUnSubscribeResponse': ChannelUnSubscribeResponse$json,
-  '.ChannelRemoveSubscribersParam': ChannelRemoveSubscribersParam$json,
-  '.ChannelRemoveSubscribersResponse': ChannelRemoveSubscribersResponse$json,
-  '.ChannelChangePrivacyParam': ChannelChangePrivacyParam$json,
-  '.ChannelChangePrivacyResponse': ChannelChangePrivacyResponse$json,
-  '.ChannelChangeDefaultPermissionParam':
+  '.pb.ChannelRemoveAuthorParam': ChannelRemoveAuthorParam$json,
+  '.pb.ChannelRemoveAuthorResponse': ChannelRemoveAuthorResponse$json,
+  '.pb.ChannelFollowChannelParam': ChannelFollowChannelParam$json,
+  '.pb.ChannelFollowChannelResponse': ChannelFollowChannelResponse$json,
+  '.pb.ChannelUnFollowChannelParam': ChannelUnFollowChannelParam$json,
+  '.pb.ChannelUnFollowChannelResponse': ChannelUnFollowChannelResponse$json,
+  '.pb.ChannelRemoveFollowersParam': ChannelRemoveFollowersParam$json,
+  '.pb.ChannelRemoveFollowersResponse': ChannelRemoveFollowersResponse$json,
+  '.pb.ChannelSubscribeParam': ChannelSubscribeParam$json,
+  '.pb.ChannelSubscribeResponse': ChannelSubscribeResponse$json,
+  '.pb.ChannelUnSubscribeParam': ChannelUnSubscribeParam$json,
+  '.pb.ChannelUnSubscribeResponse': ChannelUnSubscribeResponse$json,
+  '.pb.ChannelRemoveSubscribersParam': ChannelRemoveSubscribersParam$json,
+  '.pb.ChannelRemoveSubscribersResponse': ChannelRemoveSubscribersResponse$json,
+  '.pb.ChannelChangePrivacyParam': ChannelChangePrivacyParam$json,
+  '.pb.ChannelChangePrivacyResponse': ChannelChangePrivacyResponse$json,
+  '.pb.ChannelChangeDefaultPermissionParam':
       ChannelChangeDefaultPermissionParam$json,
-  '.ChannelChangeDefaultPermissionResponse':
+  '.pb.ChannelChangeDefaultPermissionResponse':
       ChannelChangeDefaultPermissionResponse$json,
-  '.ChannelRevokeLinkParam': ChannelRevokeLinkParam$json,
-  '.ChannelRevokeLinkResponse': ChannelRevokeLinkResponse$json,
-  '.ChannelChangeUsernameParam': ChannelChangeUsernameParam$json,
-  '.ChannelChangeUsernameResponse': ChannelChangeUsernameResponse$json,
-  '.ChannelBlockChannelParam': ChannelBlockChannelParam$json,
-  '.ChannelBlockChannelResponse': ChannelBlockChannelResponse$json,
-  '.ChannelSendMessageParam': ChannelSendMessageParam$json,
-  '.ChannelSendMessageResponse': ChannelSendMessageResponse$json,
-  '.ChannelEditMessageParam': ChannelEditMessageParam$json,
-  '.ChannelEditMessageResponse': ChannelEditMessageResponse$json,
-  '.ChannelPinMessageParam': ChannelPinMessageParam$json,
-  '.ChannelPinMessageResponse': ChannelPinMessageResponse$json,
-  '.ChannelUnPinMessageParam': ChannelUnPinMessageParam$json,
-  '.ChannelUnPinMessageResponse': ChannelUnPinMessageResponse$json,
-  '.ChannelDeleteMessageParam': ChannelDeleteMessageParam$json,
-  '.ChannelDeleteMessageResponse': ChannelDeleteMessageResponse$json,
-  '.ChannelDeleteMessagesParam': ChannelDeleteMessagesParam$json,
-  '.ChannelDeleteMessagesResponse': ChannelDeleteMessagesResponse$json,
-  '.ChannelClearHistoryParam': ChannelClearHistoryParam$json,
-  '.ChannelClearHistoryResponse': ChannelClearHistoryResponse$json,
-  '.ChannelAvatarAddParam': ChannelAvatarAddParam$json,
-  '.ChannelAvatarAddResponse': ChannelAvatarAddResponse$json,
-  '.ChannelAvatarChangeParam': ChannelAvatarChangeParam$json,
-  '.ChannelAvatarChangeResponse': ChannelAvatarChangeResponse$json,
-  '.ChannelAvatarDeleteParam': ChannelAvatarDeleteParam$json,
-  '.ChannelAvatarDeleteResponse': ChannelAvatarDeleteResponse$json,
-  '.ChannelAvatarGetListParam': ChannelAvatarGetListParam$json,
-  '.ChannelAvatarGetListResponse': ChannelAvatarGetListResponse$json,
-  '.ChannelSendDoingActionParam': ChannelSendDoingActionParam$json,
-  '.ChannelSendDoingActionResponse': ChannelSendDoingActionResponse$json,
-  '.ChannelReportChannelParam': ChannelReportChannelParam$json,
-  '.ChannelReportChannelResponse': ChannelReportChannelResponse$json,
-  '.ChannelReportMessageParam': ChannelReportMessageParam$json,
-  '.ChannelReportMessageResponse': ChannelReportMessageResponse$json,
-  '.ChannelGetFullParam': ChannelGetFullParam$json,
-  '.ChannelGetFullResponse': ChannelGetFullResponse$json,
-  '.ChannelGetMessagesListParam': ChannelGetMessagesListParam$json,
-  '.ChannelGetMessagesListResponse': ChannelGetMessagesListResponse$json,
-  '.ChannelGetMediaListParam': ChannelGetMediaListParam$json,
-  '.ChannelGetMediaListResponse': ChannelGetMediaListResponse$json,
-  '.ChannelGetAuthorsParam': ChannelGetAuthorsParam$json,
-  '.ChannelGetAuthorsResponse': ChannelGetAuthorsResponse$json,
-  '.ChannelGetFollowersParam': ChannelGetFollowersParam$json,
-  '.ChannelGetFollowersResponse': ChannelGetFollowersResponse$json,
-  '.ChannelGetFollowingsParam': ChannelGetFollowingsParam$json,
-  '.ChannelGetFollowingsResponse': ChannelGetFollowingsResponse$json,
-  '.ChannelGetSubscribersParam': ChannelGetSubscribersParam$json,
-  '.ChannelGetSubscribersResponse': ChannelGetSubscribersResponse$json,
-  '.ChannelBlockedParam': ChannelBlockedParam$json,
-  '.ChannelBlockedResponse': ChannelBlockedResponse$json,
-  '.ChannelSetDraftParam': ChannelSetDraftParam$json,
-  '.ChannelSetDraftResponse': ChannelSetDraftResponse$json,
+  '.pb.ChannelRevokeLinkParam': ChannelRevokeLinkParam$json,
+  '.pb.ChannelRevokeLinkResponse': ChannelRevokeLinkResponse$json,
+  '.pb.ChannelChangeUsernameParam': ChannelChangeUsernameParam$json,
+  '.pb.ChannelChangeUsernameResponse': ChannelChangeUsernameResponse$json,
+  '.pb.ChannelBlockChannelParam': ChannelBlockChannelParam$json,
+  '.pb.ChannelBlockChannelResponse': ChannelBlockChannelResponse$json,
+  '.pb.ChannelSendMessageParam': ChannelSendMessageParam$json,
+  '.pb.ChannelSendMessageResponse': ChannelSendMessageResponse$json,
+  '.pb.ChannelEditMessageParam': ChannelEditMessageParam$json,
+  '.pb.ChannelEditMessageResponse': ChannelEditMessageResponse$json,
+  '.pb.ChannelPinMessageParam': ChannelPinMessageParam$json,
+  '.pb.ChannelPinMessageResponse': ChannelPinMessageResponse$json,
+  '.pb.ChannelUnPinMessageParam': ChannelUnPinMessageParam$json,
+  '.pb.ChannelUnPinMessageResponse': ChannelUnPinMessageResponse$json,
+  '.pb.ChannelDeleteMessageParam': ChannelDeleteMessageParam$json,
+  '.pb.ChannelDeleteMessageResponse': ChannelDeleteMessageResponse$json,
+  '.pb.ChannelDeleteMessagesParam': ChannelDeleteMessagesParam$json,
+  '.pb.ChannelDeleteMessagesResponse': ChannelDeleteMessagesResponse$json,
+  '.pb.ChannelClearHistoryParam': ChannelClearHistoryParam$json,
+  '.pb.ChannelClearHistoryResponse': ChannelClearHistoryResponse$json,
+  '.pb.ChannelAvatarAddParam': ChannelAvatarAddParam$json,
+  '.pb.ChannelAvatarAddResponse': ChannelAvatarAddResponse$json,
+  '.pb.ChannelAvatarChangeParam': ChannelAvatarChangeParam$json,
+  '.pb.ChannelAvatarChangeResponse': ChannelAvatarChangeResponse$json,
+  '.pb.ChannelAvatarDeleteParam': ChannelAvatarDeleteParam$json,
+  '.pb.ChannelAvatarDeleteResponse': ChannelAvatarDeleteResponse$json,
+  '.pb.ChannelAvatarGetListParam': ChannelAvatarGetListParam$json,
+  '.pb.ChannelAvatarGetListResponse': ChannelAvatarGetListResponse$json,
+  '.pb.ChannelSendDoingActionParam': ChannelSendDoingActionParam$json,
+  '.pb.ChannelSendDoingActionResponse': ChannelSendDoingActionResponse$json,
+  '.pb.ChannelReportChannelParam': ChannelReportChannelParam$json,
+  '.pb.ChannelReportChannelResponse': ChannelReportChannelResponse$json,
+  '.pb.ChannelReportMessageParam': ChannelReportMessageParam$json,
+  '.pb.ChannelReportMessageResponse': ChannelReportMessageResponse$json,
+  '.pb.ChannelGetFullParam': ChannelGetFullParam$json,
+  '.pb.ChannelGetFullResponse': ChannelGetFullResponse$json,
+  '.pb.ChannelGetMessagesListParam': ChannelGetMessagesListParam$json,
+  '.pb.ChannelGetMessagesListResponse': ChannelGetMessagesListResponse$json,
+  '.pb.ChannelGetMediaListParam': ChannelGetMediaListParam$json,
+  '.pb.ChannelGetMediaListResponse': ChannelGetMediaListResponse$json,
+  '.pb.ChannelGetAuthorsParam': ChannelGetAuthorsParam$json,
+  '.pb.ChannelGetAuthorsResponse': ChannelGetAuthorsResponse$json,
+  '.pb.ChannelGetFollowersParam': ChannelGetFollowersParam$json,
+  '.pb.ChannelGetFollowersResponse': ChannelGetFollowersResponse$json,
+  '.pb.ChannelGetFollowingsParam': ChannelGetFollowingsParam$json,
+  '.pb.ChannelGetFollowingsResponse': ChannelGetFollowingsResponse$json,
+  '.pb.ChannelGetSubscribersParam': ChannelGetSubscribersParam$json,
+  '.pb.ChannelGetSubscribersResponse': ChannelGetSubscribersResponse$json,
+  '.pb.ChannelBlockedParam': ChannelBlockedParam$json,
+  '.pb.ChannelBlockedResponse': ChannelBlockedResponse$json,
+  '.pb.ChannelSetDraftParam': ChannelSetDraftParam$json,
+  '.pb.ChannelSetDraftResponse': ChannelSetDraftResponse$json,
 };

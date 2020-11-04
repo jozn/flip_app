@@ -1,6 +1,6 @@
 ///
 //  Generated code. Do not modify.
-//  source: rpc_account.proto
+//  source: rpc_user.proto
 //
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
@@ -17,18 +17,18 @@ const ChangePhoneNumberResponse$json = const {
   ],
 };
 
-const RPC_AccountServiceBase$json = const {
-  '1': 'RPC_Account',
+const RPC_UserServiceBase$json = const {
+  '1': 'RPC_User',
   '2': const [
     const {
       '1': 'ChangePhoneNumber',
-      '2': '.ChangePhoneNumberParam',
-      '3': '.ChangePhoneNumberResponse'
+      '2': '.pb.ChangePhoneNumberParam',
+      '3': '.pb.ChangePhoneNumberResponse'
     },
   ],
 };
 
-const RPC_AccountServiceBase$messageJson = const {
-  '.ChangePhoneNumberParam': ChangePhoneNumberParam$json,
-  '.ChangePhoneNumberResponse': ChangePhoneNumberResponse$json,
+const RPC_UserServiceBase$messageJson = const {
+  '.pb.ChangePhoneNumberParam': ChangePhoneNumberParam$json,
+  '.pb.ChangePhoneNumberResponse': ChangePhoneNumberResponse$json,
 };

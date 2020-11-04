@@ -1,6 +1,6 @@
 ///
 //  Generated code. Do not modify.
-//  source: rpc_general.proto
+//  source: rpc_shared.proto
 //
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
@@ -11,10 +11,10 @@ import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class EchoParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('EchoParam', createEmptyInstance: create)
-        ..aOS(1, 'text')
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('EchoParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..aOS(1, 'text')
+    ..hasRequiredFields = false;
 
   EchoParam._() : super();
   factory EchoParam() => create();
@@ -51,11 +51,11 @@ class EchoParam extends $pb.GeneratedMessage {
 }
 
 class EchoResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('EchoResponse', createEmptyInstance: create)
-        ..aOB(1, 'done')
-        ..aOS(2, 'text')
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('EchoResponse',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..aOB(1, 'done')
+    ..aOS(2, 'text')
+    ..hasRequiredFields = false;
 
   EchoResponse._() : super();
   factory EchoResponse() => create();
@@ -105,10 +105,10 @@ class EchoResponse extends $pb.GeneratedMessage {
 }
 
 class CheckUserNameParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('CheckUserNameParam', createEmptyInstance: create)
-        ..aOS(1, 'username')
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CheckUserNameParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..aOS(1, 'username')
+    ..hasRequiredFields = false;
 
   CheckUserNameParam._() : super();
   factory CheckUserNameParam() => create();
@@ -146,12 +146,12 @@ class CheckUserNameParam extends $pb.GeneratedMessage {
 }
 
 class CheckUserNameResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('CheckUserNameResponse', createEmptyInstance: create)
-        ..aOB(1, 'isAvailable')
-        ..aOS(2, 'username')
-        ..aOS(3, 'showMessage')
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CheckUserNameResponse',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..aOB(1, 'isAvailable')
+    ..aOS(2, 'username')
+    ..aOS(3, 'showMessage')
+    ..hasRequiredFields = false;
 
   CheckUserNameResponse._() : super();
   factory CheckUserNameResponse() => create();
@@ -214,20 +214,20 @@ class CheckUserNameResponse extends $pb.GeneratedMessage {
   void clearShowMessage() => clearField(3);
 }
 
-class RPC_GeneralApi {
+class RPC_SharedApi {
   $pb.RpcClient _client;
-  RPC_GeneralApi(this._client);
+  RPC_SharedApi(this._client);
 
   $async.Future<EchoResponse> echo($pb.ClientContext ctx, EchoParam request) {
     var emptyResponse = EchoResponse();
     return _client.invoke<EchoResponse>(
-        ctx, 'RPC_General', 'Echo', request, emptyResponse);
+        ctx, 'RPC_Shared', 'Echo', request, emptyResponse);
   }
 
   $async.Future<CheckUserNameResponse> checkUserName(
       $pb.ClientContext ctx, CheckUserNameParam request) {
     var emptyResponse = CheckUserNameResponse();
     return _client.invoke<CheckUserNameResponse>(
-        ctx, 'RPC_General', 'CheckUserName', request, emptyResponse);
+        ctx, 'RPC_Shared', 'CheckUserName', request, emptyResponse);
   }
 }

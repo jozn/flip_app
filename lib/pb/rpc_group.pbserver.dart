@@ -10,157 +10,157 @@ import 'dart:async' as $async;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'dart:core' as $core;
-import 'rpc_group.pb.dart' as $8;
+import 'rpc_group.pb.dart' as $4;
 import 'rpc_group.pbjson.dart';
 
 export 'rpc_group.pb.dart';
 
 abstract class RPC_GroupServiceBase extends $pb.GeneratedService {
-  $async.Future<$8.GroupCreateGroupResponse> groupCreateGroup(
-      $pb.ServerContext ctx, $8.GroupCreateGroupParam request);
-  $async.Future<$8.GroupEditGroupResponse> groupEditGroup(
-      $pb.ServerContext ctx, $8.GroupEditGroupParam request);
-  $async.Future<$8.GroupDeleteGroupResponse> groupDeleteGroup(
-      $pb.ServerContext ctx, $8.GroupDeleteGroupParam request);
-  $async.Future<$8.GroupAddAdminResponse> groupAddAdmin(
-      $pb.ServerContext ctx, $8.GroupAddAdminParam request);
-  $async.Future<$8.GroupAddMemberResponse> groupAddMember(
-      $pb.ServerContext ctx, $8.GroupAddMemberParam request);
-  $async.Future<$8.GroupRemoveMemberResponse> groupRemoveMember(
-      $pb.ServerContext ctx, $8.GroupRemoveMemberParam request);
-  $async.Future<$8.GroupChangeMemberLevelResponse> groupChangeMemberLevel(
-      $pb.ServerContext ctx, $8.GroupChangeMemberLevelParam request);
-  $async.Future<$8.GroupChangeMemberPermissionResponse>
+  $async.Future<$4.GroupCreateGroupResponse> groupCreateGroup(
+      $pb.ServerContext ctx, $4.GroupCreateGroupParam request);
+  $async.Future<$4.GroupEditGroupResponse> groupEditGroup(
+      $pb.ServerContext ctx, $4.GroupEditGroupParam request);
+  $async.Future<$4.GroupDeleteGroupResponse> groupDeleteGroup(
+      $pb.ServerContext ctx, $4.GroupDeleteGroupParam request);
+  $async.Future<$4.GroupAddAdminResponse> groupAddAdmin(
+      $pb.ServerContext ctx, $4.GroupAddAdminParam request);
+  $async.Future<$4.GroupAddMemberResponse> groupAddMember(
+      $pb.ServerContext ctx, $4.GroupAddMemberParam request);
+  $async.Future<$4.GroupRemoveMemberResponse> groupRemoveMember(
+      $pb.ServerContext ctx, $4.GroupRemoveMemberParam request);
+  $async.Future<$4.GroupChangeMemberLevelResponse> groupChangeMemberLevel(
+      $pb.ServerContext ctx, $4.GroupChangeMemberLevelParam request);
+  $async.Future<$4.GroupChangeMemberPermissionResponse>
       groupChangeMemberPermission(
-          $pb.ServerContext ctx, $8.GroupChangeMemberPermissionParam request);
-  $async.Future<$8.JoinGroupResponse> groupJoinGroup(
-      $pb.ServerContext ctx, $8.JoinGroupParam request);
-  $async.Future<$8.GroupLeaveGroupResponse> groupLeaveGroup(
-      $pb.ServerContext ctx, $8.GroupLeaveGroupParam request);
-  $async.Future<$8.GroupBanMemberResponse> groupBanMember(
-      $pb.ServerContext ctx, $8.GroupBanMemberParam request);
-  $async.Future<$8.GroupChangePrivacyResponse> groupChangePrivacy(
-      $pb.ServerContext ctx, $8.GroupChangePrivacyParam request);
-  $async.Future<$8.GroupChangeDefaultPermissionResponse>
+          $pb.ServerContext ctx, $4.GroupChangeMemberPermissionParam request);
+  $async.Future<$4.JoinGroupResponse> groupJoinGroup(
+      $pb.ServerContext ctx, $4.JoinGroupParam request);
+  $async.Future<$4.GroupLeaveGroupResponse> groupLeaveGroup(
+      $pb.ServerContext ctx, $4.GroupLeaveGroupParam request);
+  $async.Future<$4.GroupBanMemberResponse> groupBanMember(
+      $pb.ServerContext ctx, $4.GroupBanMemberParam request);
+  $async.Future<$4.GroupChangePrivacyResponse> groupChangePrivacy(
+      $pb.ServerContext ctx, $4.GroupChangePrivacyParam request);
+  $async.Future<$4.GroupChangeDefaultPermissionResponse>
       groupChangeDefaultPermission(
-          $pb.ServerContext ctx, $8.GroupChangeDefaultPermissionParam request);
-  $async.Future<$8.GroupRevokeLinkResponse> groupRevokeLink(
-      $pb.ServerContext ctx, $8.GroupRevokeLinkParam request);
-  $async.Future<$8.GroupChangeUsernameResponse> groupChangeUsername(
-      $pb.ServerContext ctx, $8.GroupChangeUsernameParam request);
-  $async.Future<$8.GroupSendMessageResponse> groupSendMessage(
-      $pb.ServerContext ctx, $8.GroupSendMessageParam request);
-  $async.Future<$8.GroupEditMessageResponse> groupEditMessage(
-      $pb.ServerContext ctx, $8.GroupEditMessageParam request);
-  $async.Future<$8.GroupPinMessageResponse> groupPinMessage(
-      $pb.ServerContext ctx, $8.GroupPinMessageParam request);
-  $async.Future<$8.GroupUnPinMessageResponse> groupUnPinMessage(
-      $pb.ServerContext ctx, $8.GroupUnPinMessageParam request);
-  $async.Future<$8.GroupDeleteMessageResponse> groupDeleteMessage(
-      $pb.ServerContext ctx, $8.GroupDeleteMessageParam request);
-  $async.Future<$8.GroupDeleteMessagesResponse> groupDeleteMessages(
-      $pb.ServerContext ctx, $8.GroupDeleteMessagesParam request);
-  $async.Future<$8.GroupDeleteHistoryResponse> groupDeleteHistory(
-      $pb.ServerContext ctx, $8.GroupDeleteHistoryParam request);
-  $async.Future<$8.GroupClearHistoryResponse> groupClearHistory(
-      $pb.ServerContext ctx, $8.GroupClearHistoryParam request);
-  $async.Future<$8.GroupAvatarAddResponse> groupAvatarAdd(
-      $pb.ServerContext ctx, $8.GroupAvatarAddParam request);
-  $async.Future<$8.GroupAvatarChangeResponse> groupAvatarChange(
-      $pb.ServerContext ctx, $8.GroupAvatarChangeParam request);
-  $async.Future<$8.GroupAvatarDeleteResponse> groupAvatarDelete(
-      $pb.ServerContext ctx, $8.GroupAvatarDeleteParam request);
-  $async.Future<$8.GroupAvatarGetListResponse> groupAvatarGetList(
-      $pb.ServerContext ctx, $8.GroupAvatarGetListParam request);
-  $async.Future<$8.GroupSendDoingActionResponse> groupSendDoingAction(
-      $pb.ServerContext ctx, $8.GroupSendDoingActionParam request);
-  $async.Future<$8.GroupReportGroupResponse> groupReportGroup(
-      $pb.ServerContext ctx, $8.GroupReportGroupParam request);
-  $async.Future<$8.GroupGetFullMessageResponse> groupGetFull(
-      $pb.ServerContext ctx, $8.GroupGetFullMessageParam request);
-  $async.Future<$8.GroupGetMessagesListResponse> groupGetMessagesList(
-      $pb.ServerContext ctx, $8.GroupGetMessagesListParam request);
-  $async.Future<$8.GroupGetMediaListResponse> groupGetMediaList(
-      $pb.ServerContext ctx, $8.GroupGetMediaListParam request);
-  $async.Future<$8.GroupGetMembersListResponse> groupGetMembersList(
-      $pb.ServerContext ctx, $8.GroupGetMembersListParam request);
-  $async.Future<$8.GroupGetAdminsListResponse> groupGetAdminsList(
-      $pb.ServerContext ctx, $8.GroupGetAdminsListParam request);
-  $async.Future<$8.GroupSetDraftResponse> groupSetDraft(
-      $pb.ServerContext ctx, $8.GroupSetDraftParam request);
+          $pb.ServerContext ctx, $4.GroupChangeDefaultPermissionParam request);
+  $async.Future<$4.GroupRevokeLinkResponse> groupRevokeLink(
+      $pb.ServerContext ctx, $4.GroupRevokeLinkParam request);
+  $async.Future<$4.GroupChangeUsernameResponse> groupChangeUsername(
+      $pb.ServerContext ctx, $4.GroupChangeUsernameParam request);
+  $async.Future<$4.GroupSendMessageResponse> groupSendMessage(
+      $pb.ServerContext ctx, $4.GroupSendMessageParam request);
+  $async.Future<$4.GroupEditMessageResponse> groupEditMessage(
+      $pb.ServerContext ctx, $4.GroupEditMessageParam request);
+  $async.Future<$4.GroupPinMessageResponse> groupPinMessage(
+      $pb.ServerContext ctx, $4.GroupPinMessageParam request);
+  $async.Future<$4.GroupUnPinMessageResponse> groupUnPinMessage(
+      $pb.ServerContext ctx, $4.GroupUnPinMessageParam request);
+  $async.Future<$4.GroupDeleteMessageResponse> groupDeleteMessage(
+      $pb.ServerContext ctx, $4.GroupDeleteMessageParam request);
+  $async.Future<$4.GroupDeleteMessagesResponse> groupDeleteMessages(
+      $pb.ServerContext ctx, $4.GroupDeleteMessagesParam request);
+  $async.Future<$4.GroupDeleteHistoryResponse> groupDeleteHistory(
+      $pb.ServerContext ctx, $4.GroupDeleteHistoryParam request);
+  $async.Future<$4.GroupClearHistoryResponse> groupClearHistory(
+      $pb.ServerContext ctx, $4.GroupClearHistoryParam request);
+  $async.Future<$4.GroupAvatarAddResponse> groupAvatarAdd(
+      $pb.ServerContext ctx, $4.GroupAvatarAddParam request);
+  $async.Future<$4.GroupAvatarChangeResponse> groupAvatarChange(
+      $pb.ServerContext ctx, $4.GroupAvatarChangeParam request);
+  $async.Future<$4.GroupAvatarDeleteResponse> groupAvatarDelete(
+      $pb.ServerContext ctx, $4.GroupAvatarDeleteParam request);
+  $async.Future<$4.GroupAvatarGetListResponse> groupAvatarGetList(
+      $pb.ServerContext ctx, $4.GroupAvatarGetListParam request);
+  $async.Future<$4.GroupSendDoingActionResponse> groupSendDoingAction(
+      $pb.ServerContext ctx, $4.GroupSendDoingActionParam request);
+  $async.Future<$4.GroupReportGroupResponse> groupReportGroup(
+      $pb.ServerContext ctx, $4.GroupReportGroupParam request);
+  $async.Future<$4.GroupGetFullMessageResponse> groupGetFull(
+      $pb.ServerContext ctx, $4.GroupGetFullMessageParam request);
+  $async.Future<$4.GroupGetMessagesListResponse> groupGetMessagesList(
+      $pb.ServerContext ctx, $4.GroupGetMessagesListParam request);
+  $async.Future<$4.GroupGetMediaListResponse> groupGetMediaList(
+      $pb.ServerContext ctx, $4.GroupGetMediaListParam request);
+  $async.Future<$4.GroupGetMembersListResponse> groupGetMembersList(
+      $pb.ServerContext ctx, $4.GroupGetMembersListParam request);
+  $async.Future<$4.GroupGetAdminsListResponse> groupGetAdminsList(
+      $pb.ServerContext ctx, $4.GroupGetAdminsListParam request);
+  $async.Future<$4.GroupSetDraftResponse> groupSetDraft(
+      $pb.ServerContext ctx, $4.GroupSetDraftParam request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
       case 'GroupCreateGroup':
-        return $8.GroupCreateGroupParam();
+        return $4.GroupCreateGroupParam();
       case 'GroupEditGroup':
-        return $8.GroupEditGroupParam();
+        return $4.GroupEditGroupParam();
       case 'GroupDeleteGroup':
-        return $8.GroupDeleteGroupParam();
+        return $4.GroupDeleteGroupParam();
       case 'GroupAddAdmin':
-        return $8.GroupAddAdminParam();
+        return $4.GroupAddAdminParam();
       case 'GroupAddMember':
-        return $8.GroupAddMemberParam();
+        return $4.GroupAddMemberParam();
       case 'GroupRemoveMember':
-        return $8.GroupRemoveMemberParam();
+        return $4.GroupRemoveMemberParam();
       case 'GroupChangeMemberLevel':
-        return $8.GroupChangeMemberLevelParam();
+        return $4.GroupChangeMemberLevelParam();
       case 'GroupChangeMemberPermission':
-        return $8.GroupChangeMemberPermissionParam();
+        return $4.GroupChangeMemberPermissionParam();
       case 'GroupJoinGroup':
-        return $8.JoinGroupParam();
+        return $4.JoinGroupParam();
       case 'GroupLeaveGroup':
-        return $8.GroupLeaveGroupParam();
+        return $4.GroupLeaveGroupParam();
       case 'GroupBanMember':
-        return $8.GroupBanMemberParam();
+        return $4.GroupBanMemberParam();
       case 'GroupChangePrivacy':
-        return $8.GroupChangePrivacyParam();
+        return $4.GroupChangePrivacyParam();
       case 'GroupChangeDefaultPermission':
-        return $8.GroupChangeDefaultPermissionParam();
+        return $4.GroupChangeDefaultPermissionParam();
       case 'GroupRevokeLink':
-        return $8.GroupRevokeLinkParam();
+        return $4.GroupRevokeLinkParam();
       case 'GroupChangeUsername':
-        return $8.GroupChangeUsernameParam();
+        return $4.GroupChangeUsernameParam();
       case 'GroupSendMessage':
-        return $8.GroupSendMessageParam();
+        return $4.GroupSendMessageParam();
       case 'GroupEditMessage':
-        return $8.GroupEditMessageParam();
+        return $4.GroupEditMessageParam();
       case 'GroupPinMessage':
-        return $8.GroupPinMessageParam();
+        return $4.GroupPinMessageParam();
       case 'GroupUnPinMessage':
-        return $8.GroupUnPinMessageParam();
+        return $4.GroupUnPinMessageParam();
       case 'GroupDeleteMessage':
-        return $8.GroupDeleteMessageParam();
+        return $4.GroupDeleteMessageParam();
       case 'GroupDeleteMessages':
-        return $8.GroupDeleteMessagesParam();
+        return $4.GroupDeleteMessagesParam();
       case 'GroupDeleteHistory':
-        return $8.GroupDeleteHistoryParam();
+        return $4.GroupDeleteHistoryParam();
       case 'GroupClearHistory':
-        return $8.GroupClearHistoryParam();
+        return $4.GroupClearHistoryParam();
       case 'GroupAvatarAdd':
-        return $8.GroupAvatarAddParam();
+        return $4.GroupAvatarAddParam();
       case 'GroupAvatarChange':
-        return $8.GroupAvatarChangeParam();
+        return $4.GroupAvatarChangeParam();
       case 'GroupAvatarDelete':
-        return $8.GroupAvatarDeleteParam();
+        return $4.GroupAvatarDeleteParam();
       case 'GroupAvatarGetList':
-        return $8.GroupAvatarGetListParam();
+        return $4.GroupAvatarGetListParam();
       case 'GroupSendDoingAction':
-        return $8.GroupSendDoingActionParam();
+        return $4.GroupSendDoingActionParam();
       case 'GroupReportGroup':
-        return $8.GroupReportGroupParam();
+        return $4.GroupReportGroupParam();
       case 'GroupGetFull':
-        return $8.GroupGetFullMessageParam();
+        return $4.GroupGetFullMessageParam();
       case 'GroupGetMessagesList':
-        return $8.GroupGetMessagesListParam();
+        return $4.GroupGetMessagesListParam();
       case 'GroupGetMediaList':
-        return $8.GroupGetMediaListParam();
+        return $4.GroupGetMediaListParam();
       case 'GroupGetMembersList':
-        return $8.GroupGetMembersListParam();
+        return $4.GroupGetMembersListParam();
       case 'GroupGetAdminsList':
-        return $8.GroupGetAdminsListParam();
+        return $4.GroupGetAdminsListParam();
       case 'GroupSetDraft':
-        return $8.GroupSetDraftParam();
+        return $4.GroupSetDraftParam();
       default:
         throw $core.ArgumentError('Unknown method: $method');
     }

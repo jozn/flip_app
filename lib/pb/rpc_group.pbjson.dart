@@ -335,253 +335,254 @@ const RPC_GroupServiceBase$json = const {
   '2': const [
     const {
       '1': 'GroupCreateGroup',
-      '2': '.GroupCreateGroupParam',
-      '3': '.GroupCreateGroupResponse'
+      '2': '.pb.GroupCreateGroupParam',
+      '3': '.pb.GroupCreateGroupResponse'
     },
     const {
       '1': 'GroupEditGroup',
-      '2': '.GroupEditGroupParam',
-      '3': '.GroupEditGroupResponse'
+      '2': '.pb.GroupEditGroupParam',
+      '3': '.pb.GroupEditGroupResponse'
     },
     const {
       '1': 'GroupDeleteGroup',
-      '2': '.GroupDeleteGroupParam',
-      '3': '.GroupDeleteGroupResponse'
+      '2': '.pb.GroupDeleteGroupParam',
+      '3': '.pb.GroupDeleteGroupResponse'
     },
     const {
       '1': 'GroupAddAdmin',
-      '2': '.GroupAddAdminParam',
-      '3': '.GroupAddAdminResponse'
+      '2': '.pb.GroupAddAdminParam',
+      '3': '.pb.GroupAddAdminResponse'
     },
     const {
       '1': 'GroupAddMember',
-      '2': '.GroupAddMemberParam',
-      '3': '.GroupAddMemberResponse'
+      '2': '.pb.GroupAddMemberParam',
+      '3': '.pb.GroupAddMemberResponse'
     },
     const {
       '1': 'GroupRemoveMember',
-      '2': '.GroupRemoveMemberParam',
-      '3': '.GroupRemoveMemberResponse'
+      '2': '.pb.GroupRemoveMemberParam',
+      '3': '.pb.GroupRemoveMemberResponse'
     },
     const {
       '1': 'GroupChangeMemberLevel',
-      '2': '.GroupChangeMemberLevelParam',
-      '3': '.GroupChangeMemberLevelResponse'
+      '2': '.pb.GroupChangeMemberLevelParam',
+      '3': '.pb.GroupChangeMemberLevelResponse'
     },
     const {
       '1': 'GroupChangeMemberPermission',
-      '2': '.GroupChangeMemberPermissionParam',
-      '3': '.GroupChangeMemberPermissionResponse'
+      '2': '.pb.GroupChangeMemberPermissionParam',
+      '3': '.pb.GroupChangeMemberPermissionResponse'
     },
     const {
       '1': 'GroupJoinGroup',
-      '2': '.JoinGroupParam',
-      '3': '.JoinGroupResponse'
+      '2': '.pb.JoinGroupParam',
+      '3': '.pb.JoinGroupResponse'
     },
     const {
       '1': 'GroupLeaveGroup',
-      '2': '.GroupLeaveGroupParam',
-      '3': '.GroupLeaveGroupResponse'
+      '2': '.pb.GroupLeaveGroupParam',
+      '3': '.pb.GroupLeaveGroupResponse'
     },
     const {
       '1': 'GroupBanMember',
-      '2': '.GroupBanMemberParam',
-      '3': '.GroupBanMemberResponse'
+      '2': '.pb.GroupBanMemberParam',
+      '3': '.pb.GroupBanMemberResponse'
     },
     const {
       '1': 'GroupChangePrivacy',
-      '2': '.GroupChangePrivacyParam',
-      '3': '.GroupChangePrivacyResponse'
+      '2': '.pb.GroupChangePrivacyParam',
+      '3': '.pb.GroupChangePrivacyResponse'
     },
     const {
       '1': 'GroupChangeDefaultPermission',
-      '2': '.GroupChangeDefaultPermissionParam',
-      '3': '.GroupChangeDefaultPermissionResponse'
+      '2': '.pb.GroupChangeDefaultPermissionParam',
+      '3': '.pb.GroupChangeDefaultPermissionResponse'
     },
     const {
       '1': 'GroupRevokeLink',
-      '2': '.GroupRevokeLinkParam',
-      '3': '.GroupRevokeLinkResponse'
+      '2': '.pb.GroupRevokeLinkParam',
+      '3': '.pb.GroupRevokeLinkResponse'
     },
     const {
       '1': 'GroupChangeUsername',
-      '2': '.GroupChangeUsernameParam',
-      '3': '.GroupChangeUsernameResponse'
+      '2': '.pb.GroupChangeUsernameParam',
+      '3': '.pb.GroupChangeUsernameResponse'
     },
     const {
       '1': 'GroupSendMessage',
-      '2': '.GroupSendMessageParam',
-      '3': '.GroupSendMessageResponse'
+      '2': '.pb.GroupSendMessageParam',
+      '3': '.pb.GroupSendMessageResponse'
     },
     const {
       '1': 'GroupEditMessage',
-      '2': '.GroupEditMessageParam',
-      '3': '.GroupEditMessageResponse'
+      '2': '.pb.GroupEditMessageParam',
+      '3': '.pb.GroupEditMessageResponse'
     },
     const {
       '1': 'GroupPinMessage',
-      '2': '.GroupPinMessageParam',
-      '3': '.GroupPinMessageResponse'
+      '2': '.pb.GroupPinMessageParam',
+      '3': '.pb.GroupPinMessageResponse'
     },
     const {
       '1': 'GroupUnPinMessage',
-      '2': '.GroupUnPinMessageParam',
-      '3': '.GroupUnPinMessageResponse'
+      '2': '.pb.GroupUnPinMessageParam',
+      '3': '.pb.GroupUnPinMessageResponse'
     },
     const {
       '1': 'GroupDeleteMessage',
-      '2': '.GroupDeleteMessageParam',
-      '3': '.GroupDeleteMessageResponse'
+      '2': '.pb.GroupDeleteMessageParam',
+      '3': '.pb.GroupDeleteMessageResponse'
     },
     const {
       '1': 'GroupDeleteMessages',
-      '2': '.GroupDeleteMessagesParam',
-      '3': '.GroupDeleteMessagesResponse'
+      '2': '.pb.GroupDeleteMessagesParam',
+      '3': '.pb.GroupDeleteMessagesResponse'
     },
     const {
       '1': 'GroupDeleteHistory',
-      '2': '.GroupDeleteHistoryParam',
-      '3': '.GroupDeleteHistoryResponse'
+      '2': '.pb.GroupDeleteHistoryParam',
+      '3': '.pb.GroupDeleteHistoryResponse'
     },
     const {
       '1': 'GroupClearHistory',
-      '2': '.GroupClearHistoryParam',
-      '3': '.GroupClearHistoryResponse'
+      '2': '.pb.GroupClearHistoryParam',
+      '3': '.pb.GroupClearHistoryResponse'
     },
     const {
       '1': 'GroupAvatarAdd',
-      '2': '.GroupAvatarAddParam',
-      '3': '.GroupAvatarAddResponse'
+      '2': '.pb.GroupAvatarAddParam',
+      '3': '.pb.GroupAvatarAddResponse'
     },
     const {
       '1': 'GroupAvatarChange',
-      '2': '.GroupAvatarChangeParam',
-      '3': '.GroupAvatarChangeResponse'
+      '2': '.pb.GroupAvatarChangeParam',
+      '3': '.pb.GroupAvatarChangeResponse'
     },
     const {
       '1': 'GroupAvatarDelete',
-      '2': '.GroupAvatarDeleteParam',
-      '3': '.GroupAvatarDeleteResponse'
+      '2': '.pb.GroupAvatarDeleteParam',
+      '3': '.pb.GroupAvatarDeleteResponse'
     },
     const {
       '1': 'GroupAvatarGetList',
-      '2': '.GroupAvatarGetListParam',
-      '3': '.GroupAvatarGetListResponse'
+      '2': '.pb.GroupAvatarGetListParam',
+      '3': '.pb.GroupAvatarGetListResponse'
     },
     const {
       '1': 'GroupSendDoingAction',
-      '2': '.GroupSendDoingActionParam',
-      '3': '.GroupSendDoingActionResponse'
+      '2': '.pb.GroupSendDoingActionParam',
+      '3': '.pb.GroupSendDoingActionResponse'
     },
     const {
       '1': 'GroupReportGroup',
-      '2': '.GroupReportGroupParam',
-      '3': '.GroupReportGroupResponse'
+      '2': '.pb.GroupReportGroupParam',
+      '3': '.pb.GroupReportGroupResponse'
     },
     const {
       '1': 'GroupGetFull',
-      '2': '.GroupGetFullMessageParam',
-      '3': '.GroupGetFullMessageResponse'
+      '2': '.pb.GroupGetFullMessageParam',
+      '3': '.pb.GroupGetFullMessageResponse'
     },
     const {
       '1': 'GroupGetMessagesList',
-      '2': '.GroupGetMessagesListParam',
-      '3': '.GroupGetMessagesListResponse'
+      '2': '.pb.GroupGetMessagesListParam',
+      '3': '.pb.GroupGetMessagesListResponse'
     },
     const {
       '1': 'GroupGetMediaList',
-      '2': '.GroupGetMediaListParam',
-      '3': '.GroupGetMediaListResponse'
+      '2': '.pb.GroupGetMediaListParam',
+      '3': '.pb.GroupGetMediaListResponse'
     },
     const {
       '1': 'GroupGetMembersList',
-      '2': '.GroupGetMembersListParam',
-      '3': '.GroupGetMembersListResponse'
+      '2': '.pb.GroupGetMembersListParam',
+      '3': '.pb.GroupGetMembersListResponse'
     },
     const {
       '1': 'GroupGetAdminsList',
-      '2': '.GroupGetAdminsListParam',
-      '3': '.GroupGetAdminsListResponse'
+      '2': '.pb.GroupGetAdminsListParam',
+      '3': '.pb.GroupGetAdminsListResponse'
     },
     const {
       '1': 'GroupSetDraft',
-      '2': '.GroupSetDraftParam',
-      '3': '.GroupSetDraftResponse'
+      '2': '.pb.GroupSetDraftParam',
+      '3': '.pb.GroupSetDraftResponse'
     },
   ],
 };
 
 const RPC_GroupServiceBase$messageJson = const {
-  '.GroupCreateGroupParam': GroupCreateGroupParam$json,
-  '.GroupCreateGroupResponse': GroupCreateGroupResponse$json,
-  '.GroupEditGroupParam': GroupEditGroupParam$json,
-  '.GroupEditGroupResponse': GroupEditGroupResponse$json,
-  '.GroupDeleteGroupParam': GroupDeleteGroupParam$json,
-  '.GroupDeleteGroupResponse': GroupDeleteGroupResponse$json,
-  '.GroupAddAdminParam': GroupAddAdminParam$json,
-  '.GroupAddAdminResponse': GroupAddAdminResponse$json,
-  '.GroupAddMemberParam': GroupAddMemberParam$json,
-  '.GroupAddMemberResponse': GroupAddMemberResponse$json,
-  '.GroupRemoveMemberParam': GroupRemoveMemberParam$json,
-  '.GroupRemoveMemberResponse': GroupRemoveMemberResponse$json,
-  '.GroupChangeMemberLevelParam': GroupChangeMemberLevelParam$json,
-  '.GroupChangeMemberLevelResponse': GroupChangeMemberLevelResponse$json,
-  '.GroupChangeMemberPermissionParam': GroupChangeMemberPermissionParam$json,
-  '.GroupChangeMemberPermissionResponse':
+  '.pb.GroupCreateGroupParam': GroupCreateGroupParam$json,
+  '.pb.GroupCreateGroupResponse': GroupCreateGroupResponse$json,
+  '.pb.GroupEditGroupParam': GroupEditGroupParam$json,
+  '.pb.GroupEditGroupResponse': GroupEditGroupResponse$json,
+  '.pb.GroupDeleteGroupParam': GroupDeleteGroupParam$json,
+  '.pb.GroupDeleteGroupResponse': GroupDeleteGroupResponse$json,
+  '.pb.GroupAddAdminParam': GroupAddAdminParam$json,
+  '.pb.GroupAddAdminResponse': GroupAddAdminResponse$json,
+  '.pb.GroupAddMemberParam': GroupAddMemberParam$json,
+  '.pb.GroupAddMemberResponse': GroupAddMemberResponse$json,
+  '.pb.GroupRemoveMemberParam': GroupRemoveMemberParam$json,
+  '.pb.GroupRemoveMemberResponse': GroupRemoveMemberResponse$json,
+  '.pb.GroupChangeMemberLevelParam': GroupChangeMemberLevelParam$json,
+  '.pb.GroupChangeMemberLevelResponse': GroupChangeMemberLevelResponse$json,
+  '.pb.GroupChangeMemberPermissionParam': GroupChangeMemberPermissionParam$json,
+  '.pb.GroupChangeMemberPermissionResponse':
       GroupChangeMemberPermissionResponse$json,
-  '.JoinGroupParam': JoinGroupParam$json,
-  '.JoinGroupResponse': JoinGroupResponse$json,
-  '.GroupLeaveGroupParam': GroupLeaveGroupParam$json,
-  '.GroupLeaveGroupResponse': GroupLeaveGroupResponse$json,
-  '.GroupBanMemberParam': GroupBanMemberParam$json,
-  '.GroupBanMemberResponse': GroupBanMemberResponse$json,
-  '.GroupChangePrivacyParam': GroupChangePrivacyParam$json,
-  '.GroupChangePrivacyResponse': GroupChangePrivacyResponse$json,
-  '.GroupChangeDefaultPermissionParam': GroupChangeDefaultPermissionParam$json,
-  '.GroupChangeDefaultPermissionResponse':
+  '.pb.JoinGroupParam': JoinGroupParam$json,
+  '.pb.JoinGroupResponse': JoinGroupResponse$json,
+  '.pb.GroupLeaveGroupParam': GroupLeaveGroupParam$json,
+  '.pb.GroupLeaveGroupResponse': GroupLeaveGroupResponse$json,
+  '.pb.GroupBanMemberParam': GroupBanMemberParam$json,
+  '.pb.GroupBanMemberResponse': GroupBanMemberResponse$json,
+  '.pb.GroupChangePrivacyParam': GroupChangePrivacyParam$json,
+  '.pb.GroupChangePrivacyResponse': GroupChangePrivacyResponse$json,
+  '.pb.GroupChangeDefaultPermissionParam':
+      GroupChangeDefaultPermissionParam$json,
+  '.pb.GroupChangeDefaultPermissionResponse':
       GroupChangeDefaultPermissionResponse$json,
-  '.GroupRevokeLinkParam': GroupRevokeLinkParam$json,
-  '.GroupRevokeLinkResponse': GroupRevokeLinkResponse$json,
-  '.GroupChangeUsernameParam': GroupChangeUsernameParam$json,
-  '.GroupChangeUsernameResponse': GroupChangeUsernameResponse$json,
-  '.GroupSendMessageParam': GroupSendMessageParam$json,
-  '.GroupSendMessageResponse': GroupSendMessageResponse$json,
-  '.GroupEditMessageParam': GroupEditMessageParam$json,
-  '.GroupEditMessageResponse': GroupEditMessageResponse$json,
-  '.GroupPinMessageParam': GroupPinMessageParam$json,
-  '.GroupPinMessageResponse': GroupPinMessageResponse$json,
-  '.GroupUnPinMessageParam': GroupUnPinMessageParam$json,
-  '.GroupUnPinMessageResponse': GroupUnPinMessageResponse$json,
-  '.GroupDeleteMessageParam': GroupDeleteMessageParam$json,
-  '.GroupDeleteMessageResponse': GroupDeleteMessageResponse$json,
-  '.GroupDeleteMessagesParam': GroupDeleteMessagesParam$json,
-  '.GroupDeleteMessagesResponse': GroupDeleteMessagesResponse$json,
-  '.GroupDeleteHistoryParam': GroupDeleteHistoryParam$json,
-  '.GroupDeleteHistoryResponse': GroupDeleteHistoryResponse$json,
-  '.GroupClearHistoryParam': GroupClearHistoryParam$json,
-  '.GroupClearHistoryResponse': GroupClearHistoryResponse$json,
-  '.GroupAvatarAddParam': GroupAvatarAddParam$json,
-  '.GroupAvatarAddResponse': GroupAvatarAddResponse$json,
-  '.GroupAvatarChangeParam': GroupAvatarChangeParam$json,
-  '.GroupAvatarChangeResponse': GroupAvatarChangeResponse$json,
-  '.GroupAvatarDeleteParam': GroupAvatarDeleteParam$json,
-  '.GroupAvatarDeleteResponse': GroupAvatarDeleteResponse$json,
-  '.GroupAvatarGetListParam': GroupAvatarGetListParam$json,
-  '.GroupAvatarGetListResponse': GroupAvatarGetListResponse$json,
-  '.GroupSendDoingActionParam': GroupSendDoingActionParam$json,
-  '.GroupSendDoingActionResponse': GroupSendDoingActionResponse$json,
-  '.GroupReportGroupParam': GroupReportGroupParam$json,
-  '.GroupReportGroupResponse': GroupReportGroupResponse$json,
-  '.GroupGetFullMessageParam': GroupGetFullMessageParam$json,
-  '.GroupGetFullMessageResponse': GroupGetFullMessageResponse$json,
-  '.GroupGetMessagesListParam': GroupGetMessagesListParam$json,
-  '.GroupGetMessagesListResponse': GroupGetMessagesListResponse$json,
-  '.GroupGetMediaListParam': GroupGetMediaListParam$json,
-  '.GroupGetMediaListResponse': GroupGetMediaListResponse$json,
-  '.GroupGetMembersListParam': GroupGetMembersListParam$json,
-  '.GroupGetMembersListResponse': GroupGetMembersListResponse$json,
-  '.GroupGetAdminsListParam': GroupGetAdminsListParam$json,
-  '.GroupGetAdminsListResponse': GroupGetAdminsListResponse$json,
-  '.GroupSetDraftParam': GroupSetDraftParam$json,
-  '.GroupSetDraftResponse': GroupSetDraftResponse$json,
+  '.pb.GroupRevokeLinkParam': GroupRevokeLinkParam$json,
+  '.pb.GroupRevokeLinkResponse': GroupRevokeLinkResponse$json,
+  '.pb.GroupChangeUsernameParam': GroupChangeUsernameParam$json,
+  '.pb.GroupChangeUsernameResponse': GroupChangeUsernameResponse$json,
+  '.pb.GroupSendMessageParam': GroupSendMessageParam$json,
+  '.pb.GroupSendMessageResponse': GroupSendMessageResponse$json,
+  '.pb.GroupEditMessageParam': GroupEditMessageParam$json,
+  '.pb.GroupEditMessageResponse': GroupEditMessageResponse$json,
+  '.pb.GroupPinMessageParam': GroupPinMessageParam$json,
+  '.pb.GroupPinMessageResponse': GroupPinMessageResponse$json,
+  '.pb.GroupUnPinMessageParam': GroupUnPinMessageParam$json,
+  '.pb.GroupUnPinMessageResponse': GroupUnPinMessageResponse$json,
+  '.pb.GroupDeleteMessageParam': GroupDeleteMessageParam$json,
+  '.pb.GroupDeleteMessageResponse': GroupDeleteMessageResponse$json,
+  '.pb.GroupDeleteMessagesParam': GroupDeleteMessagesParam$json,
+  '.pb.GroupDeleteMessagesResponse': GroupDeleteMessagesResponse$json,
+  '.pb.GroupDeleteHistoryParam': GroupDeleteHistoryParam$json,
+  '.pb.GroupDeleteHistoryResponse': GroupDeleteHistoryResponse$json,
+  '.pb.GroupClearHistoryParam': GroupClearHistoryParam$json,
+  '.pb.GroupClearHistoryResponse': GroupClearHistoryResponse$json,
+  '.pb.GroupAvatarAddParam': GroupAvatarAddParam$json,
+  '.pb.GroupAvatarAddResponse': GroupAvatarAddResponse$json,
+  '.pb.GroupAvatarChangeParam': GroupAvatarChangeParam$json,
+  '.pb.GroupAvatarChangeResponse': GroupAvatarChangeResponse$json,
+  '.pb.GroupAvatarDeleteParam': GroupAvatarDeleteParam$json,
+  '.pb.GroupAvatarDeleteResponse': GroupAvatarDeleteResponse$json,
+  '.pb.GroupAvatarGetListParam': GroupAvatarGetListParam$json,
+  '.pb.GroupAvatarGetListResponse': GroupAvatarGetListResponse$json,
+  '.pb.GroupSendDoingActionParam': GroupSendDoingActionParam$json,
+  '.pb.GroupSendDoingActionResponse': GroupSendDoingActionResponse$json,
+  '.pb.GroupReportGroupParam': GroupReportGroupParam$json,
+  '.pb.GroupReportGroupResponse': GroupReportGroupResponse$json,
+  '.pb.GroupGetFullMessageParam': GroupGetFullMessageParam$json,
+  '.pb.GroupGetFullMessageResponse': GroupGetFullMessageResponse$json,
+  '.pb.GroupGetMessagesListParam': GroupGetMessagesListParam$json,
+  '.pb.GroupGetMessagesListResponse': GroupGetMessagesListResponse$json,
+  '.pb.GroupGetMediaListParam': GroupGetMediaListParam$json,
+  '.pb.GroupGetMediaListResponse': GroupGetMediaListResponse$json,
+  '.pb.GroupGetMembersListParam': GroupGetMembersListParam$json,
+  '.pb.GroupGetMembersListResponse': GroupGetMembersListResponse$json,
+  '.pb.GroupGetAdminsListParam': GroupGetAdminsListParam$json,
+  '.pb.GroupGetAdminsListResponse': GroupGetAdminsListResponse$json,
+  '.pb.GroupSetDraftParam': GroupSetDraftParam$json,
+  '.pb.GroupSetDraftResponse': GroupSetDraftResponse$json,
 };

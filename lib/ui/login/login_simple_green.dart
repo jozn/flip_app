@@ -9,7 +9,7 @@ import 'package:protobuf/protobuf.dart';
 import 'package:http/http.dart' as http;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'package:flip_app/ui/Api.dart' as Api;
+import 'package:flip_app/ui/api.dart' as Api;
 
 class LoginSimpleGreenRoute extends StatefulWidget {
   LoginSimpleGreenRoute();
@@ -21,7 +21,7 @@ class LoginSimpleGreenRoute extends StatefulWidget {
 class LoginSimpleGreenRouteState extends State<LoginSimpleGreenRoute> {
   void sendSmsCallback() async {
     // playPb();
-    Shared.showToast(context, "sxnnnnnnnnxxxdf");
+    Shared.showToast(context, "weeeeeee");
 
     var param = SendConfirmCodeParam();
     var res = await Api.Auth.sendConfirmCode(param);
@@ -113,6 +113,10 @@ class LoginSimpleGreenRouteState extends State<LoginSimpleGreenRoute> {
       ),
     );
   }
+}
+
+void send() {
+  Api.Auth.sendConfirmCode(SendConfirmCodeParam());
 }
 
 /////////////////////// RPC ////////////////////

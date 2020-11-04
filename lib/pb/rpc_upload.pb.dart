@@ -11,9 +11,9 @@ import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class UploadFileParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('UploadFileParam', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UploadFileParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   UploadFileParam._() : super();
   factory UploadFileParam() => create();
@@ -39,11 +39,11 @@ class UploadFileParam extends $pb.GeneratedMessage {
 }
 
 class UploadFileResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('UploadFileResponse', createEmptyInstance: create)
-        ..aOB(1, 'done')
-        ..aOS(2, 'text')
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UploadFileResponse',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..aOB(1, 'done')
+    ..aOS(2, 'text')
+    ..hasRequiredFields = false;
 
   UploadFileResponse._() : super();
   factory UploadFileResponse() => create();

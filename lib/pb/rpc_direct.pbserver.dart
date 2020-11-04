@@ -10,116 +10,116 @@ import 'dart:async' as $async;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'dart:core' as $core;
-import 'rpc_direct.pb.dart' as $6;
+import 'rpc_direct.pb.dart' as $3;
 import 'rpc_direct.pbjson.dart';
 
 export 'rpc_direct.pb.dart';
 
 abstract class RPC_DirectServiceBase extends $pb.GeneratedService {
-  $async.Future<$6.DirectDeleteDirectResponse> directDeleteDirect(
-      $pb.ServerContext ctx, $6.DirectDeleteDirectParam request);
-  $async.Future<$6.DirectChangeTitleResponse> directChangeTitle(
-      $pb.ServerContext ctx, $6.DirectChangeTitleParam request);
-  $async.Future<$6.DirectSetCustomNotificationResponse>
+  $async.Future<$3.DirectDeleteDirectResponse> directDeleteDirect(
+      $pb.ServerContext ctx, $3.DirectDeleteDirectParam request);
+  $async.Future<$3.DirectChangeTitleResponse> directChangeTitle(
+      $pb.ServerContext ctx, $3.DirectChangeTitleParam request);
+  $async.Future<$3.DirectSetCustomNotificationResponse>
       directSetCustomNotification(
-          $pb.ServerContext ctx, $6.DirectSetCustomNotificationParam request);
-  $async.Future<$6.DirectSendActionDoingResponse> directSendActionDoing(
-      $pb.ServerContext ctx, $6.DirectSendActionDoingParam request);
-  $async.Future<$6.DirectSetDraftResponse> directSetDraft(
-      $pb.ServerContext ctx, $6.DirectSetDraftParam request);
-  $async.Future<$6.DirectDeleteDirectsResponse> directDeleteDirects(
-      $pb.ServerContext ctx, $6.DirectDeleteDirectsParam request);
-  $async.Future<$6.DirectMarkAsReadResponse> directMarkAsRead(
-      $pb.ServerContext ctx, $6.DirectMarkAsReadParam request);
-  $async.Future<$6.DirectMarkAsUnReadResponse> directMarkAsUnRead(
-      $pb.ServerContext ctx, $6.DirectMarkAsUnReadParam request);
-  $async.Future<$6.DirectPinDirectsResponse> directPinDirects(
-      $pb.ServerContext ctx, $6.DirectPinDirectsParam request);
-  $async.Future<$6.DirectUnPinDirectsResponse> directUnPinDirects(
-      $pb.ServerContext ctx, $6.DirectUnPinDirectsParam request);
-  $async.Future<$6.DirectArchiveDirectsResponse> directArchiveDirects(
-      $pb.ServerContext ctx, $6.DirectArchiveDirectsParam request);
-  $async.Future<$6.DirectUnArchiveDirectsResponse> directUnArchiveDirects(
-      $pb.ServerContext ctx, $6.DirectUnArchiveDirectsParam request);
-  $async.Future<$6.DirectClearHistoriesResponse> directClearHistories(
-      $pb.ServerContext ctx, $6.DirectClearHistoriesParam request);
-  $async.Future<$6.DirectMuteDirectsResponse> directMuteDirects(
-      $pb.ServerContext ctx, $6.DirectMuteDirectsParam request);
-  $async.Future<$6.DirectUnMuteDirectsResponse> directUnMuteDirects(
-      $pb.ServerContext ctx, $6.DirectUnMuteDirectsParam request);
-  $async.Future<$6.DirectCreateFolderResponse> directCreateFolder(
-      $pb.ServerContext ctx, $6.DirectCreateFolderParam request);
-  $async.Future<$6.DirectChangeFolderResponse> directChangeFolder(
-      $pb.ServerContext ctx, $6.DirectChangeFolderParam request);
-  $async.Future<$6.DirectRemoveFromFolderResponse> directRemoveFromFolder(
-      $pb.ServerContext ctx, $6.DirectRemoveFromFolderParam request);
-  $async.Future<$6.DirectReordersFolderResponse> directReordersFolder(
-      $pb.ServerContext ctx, $6.DirectReordersFolderParam request);
-  $async.Future<$6.DirectDeleteFolderResponse> directDeleteFolder(
-      $pb.ServerContext ctx, $6.DirectDeleteFolderParam request);
-  $async.Future<$6.DirectGetChatsListResponse> directGetChatsList(
-      $pb.ServerContext ctx, $6.DirectGetChatsListParam request);
-  $async.Future<$6.DirectGetGroupsListResponse> directGetGroupsList(
-      $pb.ServerContext ctx, $6.DirectGetGroupsListParam request);
-  $async.Future<$6.DirectGetChannelsListResponse> directGetChannelsList(
-      $pb.ServerContext ctx, $6.DirectGetChannelsListParam request);
-  $async.Future<$6.DirectGetFoldersListResponse> directGetFoldersList(
-      $pb.ServerContext ctx, $6.DirectGetFoldersListParam request);
-  $async.Future<$6.DirectGetFoldersFullListResponse> directGetFoldersFullList(
-      $pb.ServerContext ctx, $6.DirectGetFoldersFullListParam request);
+          $pb.ServerContext ctx, $3.DirectSetCustomNotificationParam request);
+  $async.Future<$3.DirectSendActionDoingResponse> directSendActionDoing(
+      $pb.ServerContext ctx, $3.DirectSendActionDoingParam request);
+  $async.Future<$3.DirectSetDraftResponse> directSetDraft(
+      $pb.ServerContext ctx, $3.DirectSetDraftParam request);
+  $async.Future<$3.DirectDeleteDirectsResponse> directDeleteDirects(
+      $pb.ServerContext ctx, $3.DirectDeleteDirectsParam request);
+  $async.Future<$3.DirectMarkAsReadResponse> directMarkAsRead(
+      $pb.ServerContext ctx, $3.DirectMarkAsReadParam request);
+  $async.Future<$3.DirectMarkAsUnReadResponse> directMarkAsUnRead(
+      $pb.ServerContext ctx, $3.DirectMarkAsUnReadParam request);
+  $async.Future<$3.DirectPinDirectsResponse> directPinDirects(
+      $pb.ServerContext ctx, $3.DirectPinDirectsParam request);
+  $async.Future<$3.DirectUnPinDirectsResponse> directUnPinDirects(
+      $pb.ServerContext ctx, $3.DirectUnPinDirectsParam request);
+  $async.Future<$3.DirectArchiveDirectsResponse> directArchiveDirects(
+      $pb.ServerContext ctx, $3.DirectArchiveDirectsParam request);
+  $async.Future<$3.DirectUnArchiveDirectsResponse> directUnArchiveDirects(
+      $pb.ServerContext ctx, $3.DirectUnArchiveDirectsParam request);
+  $async.Future<$3.DirectClearHistoriesResponse> directClearHistories(
+      $pb.ServerContext ctx, $3.DirectClearHistoriesParam request);
+  $async.Future<$3.DirectMuteDirectsResponse> directMuteDirects(
+      $pb.ServerContext ctx, $3.DirectMuteDirectsParam request);
+  $async.Future<$3.DirectUnMuteDirectsResponse> directUnMuteDirects(
+      $pb.ServerContext ctx, $3.DirectUnMuteDirectsParam request);
+  $async.Future<$3.DirectCreateFolderResponse> directCreateFolder(
+      $pb.ServerContext ctx, $3.DirectCreateFolderParam request);
+  $async.Future<$3.DirectChangeFolderResponse> directChangeFolder(
+      $pb.ServerContext ctx, $3.DirectChangeFolderParam request);
+  $async.Future<$3.DirectRemoveFromFolderResponse> directRemoveFromFolder(
+      $pb.ServerContext ctx, $3.DirectRemoveFromFolderParam request);
+  $async.Future<$3.DirectReordersFolderResponse> directReordersFolder(
+      $pb.ServerContext ctx, $3.DirectReordersFolderParam request);
+  $async.Future<$3.DirectDeleteFolderResponse> directDeleteFolder(
+      $pb.ServerContext ctx, $3.DirectDeleteFolderParam request);
+  $async.Future<$3.DirectGetChatsListResponse> directGetChatsList(
+      $pb.ServerContext ctx, $3.DirectGetChatsListParam request);
+  $async.Future<$3.DirectGetGroupsListResponse> directGetGroupsList(
+      $pb.ServerContext ctx, $3.DirectGetGroupsListParam request);
+  $async.Future<$3.DirectGetChannelsListResponse> directGetChannelsList(
+      $pb.ServerContext ctx, $3.DirectGetChannelsListParam request);
+  $async.Future<$3.DirectGetFoldersListResponse> directGetFoldersList(
+      $pb.ServerContext ctx, $3.DirectGetFoldersListParam request);
+  $async.Future<$3.DirectGetFoldersFullListResponse> directGetFoldersFullList(
+      $pb.ServerContext ctx, $3.DirectGetFoldersFullListParam request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
       case 'DirectDeleteDirect':
-        return $6.DirectDeleteDirectParam();
+        return $3.DirectDeleteDirectParam();
       case 'DirectChangeTitle':
-        return $6.DirectChangeTitleParam();
+        return $3.DirectChangeTitleParam();
       case 'DirectSetCustomNotification':
-        return $6.DirectSetCustomNotificationParam();
+        return $3.DirectSetCustomNotificationParam();
       case 'DirectSendActionDoing':
-        return $6.DirectSendActionDoingParam();
+        return $3.DirectSendActionDoingParam();
       case 'DirectSetDraft':
-        return $6.DirectSetDraftParam();
+        return $3.DirectSetDraftParam();
       case 'DirectDeleteDirects':
-        return $6.DirectDeleteDirectsParam();
+        return $3.DirectDeleteDirectsParam();
       case 'DirectMarkAsRead':
-        return $6.DirectMarkAsReadParam();
+        return $3.DirectMarkAsReadParam();
       case 'DirectMarkAsUnRead':
-        return $6.DirectMarkAsUnReadParam();
+        return $3.DirectMarkAsUnReadParam();
       case 'DirectPinDirects':
-        return $6.DirectPinDirectsParam();
+        return $3.DirectPinDirectsParam();
       case 'DirectUnPinDirects':
-        return $6.DirectUnPinDirectsParam();
+        return $3.DirectUnPinDirectsParam();
       case 'DirectArchiveDirects':
-        return $6.DirectArchiveDirectsParam();
+        return $3.DirectArchiveDirectsParam();
       case 'DirectUnArchiveDirects':
-        return $6.DirectUnArchiveDirectsParam();
+        return $3.DirectUnArchiveDirectsParam();
       case 'DirectClearHistories':
-        return $6.DirectClearHistoriesParam();
+        return $3.DirectClearHistoriesParam();
       case 'DirectMuteDirects':
-        return $6.DirectMuteDirectsParam();
+        return $3.DirectMuteDirectsParam();
       case 'DirectUnMuteDirects':
-        return $6.DirectUnMuteDirectsParam();
+        return $3.DirectUnMuteDirectsParam();
       case 'DirectCreateFolder':
-        return $6.DirectCreateFolderParam();
+        return $3.DirectCreateFolderParam();
       case 'DirectChangeFolder':
-        return $6.DirectChangeFolderParam();
+        return $3.DirectChangeFolderParam();
       case 'DirectRemoveFromFolder':
-        return $6.DirectRemoveFromFolderParam();
+        return $3.DirectRemoveFromFolderParam();
       case 'DirectReordersFolder':
-        return $6.DirectReordersFolderParam();
+        return $3.DirectReordersFolderParam();
       case 'DirectDeleteFolder':
-        return $6.DirectDeleteFolderParam();
+        return $3.DirectDeleteFolderParam();
       case 'DirectGetChatsList':
-        return $6.DirectGetChatsListParam();
+        return $3.DirectGetChatsListParam();
       case 'DirectGetGroupsList':
-        return $6.DirectGetGroupsListParam();
+        return $3.DirectGetGroupsListParam();
       case 'DirectGetChannelsList':
-        return $6.DirectGetChannelsListParam();
+        return $3.DirectGetChannelsListParam();
       case 'DirectGetFoldersList':
-        return $6.DirectGetFoldersListParam();
+        return $3.DirectGetFoldersListParam();
       case 'DirectGetFoldersFullList':
-        return $6.DirectGetFoldersFullListParam();
+        return $3.DirectGetFoldersFullListParam();
       default:
         throw $core.ArgumentError('Unknown method: $method');
     }

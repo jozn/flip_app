@@ -1,6 +1,6 @@
 ///
 //  Generated code. Do not modify.
-//  source: rpc_general.proto
+//  source: rpc_shared.proto
 //
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
@@ -36,21 +36,21 @@ const CheckUserNameResponse$json = const {
   ],
 };
 
-const RPC_GeneralServiceBase$json = const {
-  '1': 'RPC_General',
+const RPC_SharedServiceBase$json = const {
+  '1': 'RPC_Shared',
   '2': const [
-    const {'1': 'Echo', '2': '.EchoParam', '3': '.EchoResponse'},
+    const {'1': 'Echo', '2': '.pb.EchoParam', '3': '.pb.EchoResponse'},
     const {
       '1': 'CheckUserName',
-      '2': '.CheckUserNameParam',
-      '3': '.CheckUserNameResponse'
+      '2': '.pb.CheckUserNameParam',
+      '3': '.pb.CheckUserNameResponse'
     },
   ],
 };
 
-const RPC_GeneralServiceBase$messageJson = const {
-  '.EchoParam': EchoParam$json,
-  '.EchoResponse': EchoResponse$json,
-  '.CheckUserNameParam': CheckUserNameParam$json,
-  '.CheckUserNameResponse': CheckUserNameResponse$json,
+const RPC_SharedServiceBase$messageJson = const {
+  '.pb.EchoParam': EchoParam$json,
+  '.pb.EchoResponse': EchoResponse$json,
+  '.pb.CheckUserNameParam': CheckUserNameParam$json,
+  '.pb.CheckUserNameResponse': CheckUserNameResponse$json,
 };

@@ -10,35 +10,35 @@ import 'dart:async' as $async;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'dart:core' as $core;
-import 'rpc_auth.pb.dart' as $3;
+import 'rpc_auth.pb.dart' as $0;
 import 'rpc_auth.pbjson.dart';
 
 export 'rpc_auth.pb.dart';
 
 abstract class RPC_AuthServiceBase extends $pb.GeneratedService {
-  $async.Future<$3.SendConfirmCodeResponse> sendConfirmCode(
-      $pb.ServerContext ctx, $3.SendConfirmCodeParam request);
-  $async.Future<$3.ConfirmCodeResponse> confirmCode(
-      $pb.ServerContext ctx, $3.ConfirmCodeParam request);
-  $async.Future<$3.SingUpResponse> singUp(
-      $pb.ServerContext ctx, $3.SingUpParam request);
-  $async.Future<$3.SingInResponse> singIn(
-      $pb.ServerContext ctx, $3.SingInParam request);
-  $async.Future<$3.LogOutResponse> logOut(
-      $pb.ServerContext ctx, $3.LogOutParam request);
+  $async.Future<$0.SendConfirmCodeResponse> sendConfirmCode(
+      $pb.ServerContext ctx, $0.SendConfirmCodeParam request);
+  $async.Future<$0.ConfirmCodeResponse> confirmCode(
+      $pb.ServerContext ctx, $0.ConfirmCodeParam request);
+  $async.Future<$0.SingUpResponse> singUp(
+      $pb.ServerContext ctx, $0.SingUpParam request);
+  $async.Future<$0.SingInResponse> singIn(
+      $pb.ServerContext ctx, $0.SingInParam request);
+  $async.Future<$0.LogOutResponse> logOut(
+      $pb.ServerContext ctx, $0.LogOutParam request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
       case 'SendConfirmCode':
-        return $3.SendConfirmCodeParam();
+        return $0.SendConfirmCodeParam();
       case 'ConfirmCode':
-        return $3.ConfirmCodeParam();
+        return $0.ConfirmCodeParam();
       case 'SingUp':
-        return $3.SingUpParam();
+        return $0.SingUpParam();
       case 'SingIn':
-        return $3.SingInParam();
+        return $0.SingInParam();
       case 'LogOut':
-        return $3.LogOutParam();
+        return $0.LogOutParam();
       default:
         throw $core.ArgumentError('Unknown method: $method');
     }

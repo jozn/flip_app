@@ -10,18 +10,16 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'views.pb.dart' as $2;
-
 export 'rpc_auth.pbenum.dart';
 
 class SendConfirmCodeParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('SendConfirmCodeParam', createEmptyInstance: create)
-        ..aOS(1, 'Hash', protoName: 'Hash')
-        ..aOS(2, 'Phone', protoName: 'Phone')
-        ..aOS(3, 'CountryCode', protoName: 'CountryCode')
-        ..aOB(4, 'Resend', protoName: 'Resend')
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SendConfirmCodeParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..aOS(1, 'Hash', protoName: 'Hash')
+    ..aOS(2, 'Phone', protoName: 'Phone')
+    ..aOS(3, 'CountryCode', protoName: 'CountryCode')
+    ..aOB(4, 'Resend', protoName: 'Resend')
+    ..hasRequiredFields = false;
 
   SendConfirmCodeParam._() : super();
   factory SendConfirmCodeParam() => create();
@@ -96,14 +94,14 @@ class SendConfirmCodeParam extends $pb.GeneratedMessage {
 }
 
 class SendConfirmCodeResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('SendConfirmCodeResponse', createEmptyInstance: create)
-        ..aOB(1, 'Done', protoName: 'Done')
-        ..aOS(2, 'ErrorMessage', protoName: 'ErrorMessage')
-        ..aOB(3, 'JustEmailRegister', protoName: 'JustEmailRegister')
-        ..pPS(4, 'SmsNumbers', protoName: 'SmsNumbers')
-        ..aOB(5, 'IsLogin', protoName: 'IsLogin')
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SendConfirmCodeResponse',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..aOB(1, 'Done', protoName: 'Done')
+    ..aOS(2, 'ErrorMessage', protoName: 'ErrorMessage')
+    ..aOB(3, 'JustEmailRegister', protoName: 'JustEmailRegister')
+    ..pPS(4, 'SmsNumbers', protoName: 'SmsNumbers')
+    ..aOB(5, 'IsLogin', protoName: 'IsLogin')
+    ..hasRequiredFields = false;
 
   SendConfirmCodeResponse._() : super();
   factory SendConfirmCodeResponse() => create();
@@ -182,12 +180,12 @@ class SendConfirmCodeResponse extends $pb.GeneratedMessage {
 }
 
 class ConfirmCodeParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('ConfirmCodeParam', createEmptyInstance: create)
-        ..aOS(1, 'Hash', protoName: 'Hash')
-        ..aOS(2, 'Phone', protoName: 'Phone')
-        ..a<$core.int>(3, 'Code', $pb.PbFieldType.O3, protoName: 'Code')
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ConfirmCodeParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..aOS(1, 'Hash', protoName: 'Hash')
+    ..aOS(2, 'Phone', protoName: 'Phone')
+    ..a<$core.int>(3, 'Code', $pb.PbFieldType.O3, protoName: 'Code')
+    ..hasRequiredFields = false;
 
   ConfirmCodeParam._() : super();
   factory ConfirmCodeParam() => create();
@@ -249,13 +247,11 @@ class ConfirmCodeParam extends $pb.GeneratedMessage {
 }
 
 class ConfirmCodeResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('ConfirmCodeResponse', createEmptyInstance: create)
-        ..aOB(1, 'Done', protoName: 'Done')
-        ..aOS(2, 'ErrorMessage', protoName: 'ErrorMessage')
-        ..aOM<$2.SelfUserView>(3, 'SelfUserView',
-            protoName: 'SelfUserView', subBuilder: $2.SelfUserView.create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ConfirmCodeResponse',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..aOB(1, 'Done', protoName: 'Done')
+    ..aOS(2, 'ErrorMessage', protoName: 'ErrorMessage')
+    ..hasRequiredFields = false;
 
   ConfirmCodeResponse._() : super();
   factory ConfirmCodeResponse() => create();
@@ -302,32 +298,18 @@ class ConfirmCodeResponse extends $pb.GeneratedMessage {
   $core.bool hasErrorMessage() => $_has(1);
   @$pb.TagNumber(2)
   void clearErrorMessage() => clearField(2);
-
-  @$pb.TagNumber(3)
-  $2.SelfUserView get selfUserView => $_getN(2);
-  @$pb.TagNumber(3)
-  set selfUserView($2.SelfUserView v) {
-    setField(3, v);
-  }
-
-  @$pb.TagNumber(3)
-  $core.bool hasSelfUserView() => $_has(2);
-  @$pb.TagNumber(3)
-  void clearSelfUserView() => clearField(3);
-  @$pb.TagNumber(3)
-  $2.SelfUserView ensureSelfUserView() => $_ensure(2);
 }
 
 class SingUpParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('SingUpParam', createEmptyInstance: create)
-        ..aOS(1, 'Hash', protoName: 'Hash')
-        ..aOS(2, 'FirstName', protoName: 'FirstName')
-        ..aOS(3, 'LastName', protoName: 'LastName')
-        ..aOS(4, 'UserName', protoName: 'UserName')
-        ..aOS(5, 'Phone', protoName: 'Phone')
-        ..aOS(6, 'Email', protoName: 'Email')
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SingUpParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..aOS(1, 'Hash', protoName: 'Hash')
+    ..aOS(2, 'FirstName', protoName: 'FirstName')
+    ..aOS(3, 'LastName', protoName: 'LastName')
+    ..aOS(4, 'UserName', protoName: 'UserName')
+    ..aOS(5, 'Phone', protoName: 'Phone')
+    ..aOS(6, 'Email', protoName: 'Email')
+    ..hasRequiredFields = false;
 
   SingUpParam._() : super();
   factory SingUpParam() => create();
@@ -424,13 +406,11 @@ class SingUpParam extends $pb.GeneratedMessage {
 }
 
 class SingUpResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('SingUpResponse', createEmptyInstance: create)
-        ..aOB(1, 'Done', protoName: 'Done')
-        ..aOS(2, 'ErrorMessage', protoName: 'ErrorMessage')
-        ..aOM<$2.SelfUserView>(3, 'SelfUserView',
-            protoName: 'SelfUserView', subBuilder: $2.SelfUserView.create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SingUpResponse',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..aOB(1, 'Done', protoName: 'Done')
+    ..aOS(2, 'ErrorMessage', protoName: 'ErrorMessage')
+    ..hasRequiredFields = false;
 
   SingUpResponse._() : super();
   factory SingUpResponse() => create();
@@ -477,28 +457,14 @@ class SingUpResponse extends $pb.GeneratedMessage {
   $core.bool hasErrorMessage() => $_has(1);
   @$pb.TagNumber(2)
   void clearErrorMessage() => clearField(2);
-
-  @$pb.TagNumber(3)
-  $2.SelfUserView get selfUserView => $_getN(2);
-  @$pb.TagNumber(3)
-  set selfUserView($2.SelfUserView v) {
-    setField(3, v);
-  }
-
-  @$pb.TagNumber(3)
-  $core.bool hasSelfUserView() => $_has(2);
-  @$pb.TagNumber(3)
-  void clearSelfUserView() => clearField(3);
-  @$pb.TagNumber(3)
-  $2.SelfUserView ensureSelfUserView() => $_ensure(2);
 }
 
 class SingInParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('SingInParam', createEmptyInstance: create)
-        ..aOS(4, 'UserNamePhoneEmail', protoName: 'UserNamePhoneEmail')
-        ..aOS(5, 'Password', protoName: 'Password')
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SingInParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..aOS(4, 'UserNamePhoneEmail', protoName: 'UserNamePhoneEmail')
+    ..aOS(5, 'Password', protoName: 'Password')
+    ..hasRequiredFields = false;
 
   SingInParam._() : super();
   factory SingInParam() => create();
@@ -547,13 +513,11 @@ class SingInParam extends $pb.GeneratedMessage {
 }
 
 class SingInResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('SingInResponse', createEmptyInstance: create)
-        ..aOB(1, 'Done', protoName: 'Done')
-        ..aOS(2, 'ErrorMessage', protoName: 'ErrorMessage')
-        ..aOM<$2.SelfUserView>(3, 'SelfUserView',
-            protoName: 'SelfUserView', subBuilder: $2.SelfUserView.create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SingInResponse',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..aOB(1, 'Done', protoName: 'Done')
+    ..aOS(2, 'ErrorMessage', protoName: 'ErrorMessage')
+    ..hasRequiredFields = false;
 
   SingInResponse._() : super();
   factory SingInResponse() => create();
@@ -600,26 +564,12 @@ class SingInResponse extends $pb.GeneratedMessage {
   $core.bool hasErrorMessage() => $_has(1);
   @$pb.TagNumber(2)
   void clearErrorMessage() => clearField(2);
-
-  @$pb.TagNumber(3)
-  $2.SelfUserView get selfUserView => $_getN(2);
-  @$pb.TagNumber(3)
-  set selfUserView($2.SelfUserView v) {
-    setField(3, v);
-  }
-
-  @$pb.TagNumber(3)
-  $core.bool hasSelfUserView() => $_has(2);
-  @$pb.TagNumber(3)
-  void clearSelfUserView() => clearField(3);
-  @$pb.TagNumber(3)
-  $2.SelfUserView ensureSelfUserView() => $_ensure(2);
 }
 
 class LogOutParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('LogOutParam', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('LogOutParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   LogOutParam._() : super();
   factory LogOutParam() => create();
@@ -644,11 +594,11 @@ class LogOutParam extends $pb.GeneratedMessage {
 }
 
 class LogOutResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('LogOutResponse', createEmptyInstance: create)
-        ..aOB(1, 'Done', protoName: 'Done')
-        ..aOS(2, 'ErrorMessage', protoName: 'ErrorMessage')
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('LogOutResponse',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..aOB(1, 'Done', protoName: 'Done')
+    ..aOS(2, 'ErrorMessage', protoName: 'ErrorMessage')
+    ..hasRequiredFields = false;
 
   LogOutResponse._() : super();
   factory LogOutResponse() => create();

@@ -102,69 +102,69 @@ const RPC_ChatServiceBase$json = const {
   '2': const [
     const {
       '1': 'ChatSendMessage',
-      '2': '.ChatSendMessageParam',
-      '3': '.ChatSendMessageResponse'
+      '2': '.pb.ChatSendMessageParam',
+      '3': '.pb.ChatSendMessageResponse'
     },
     const {
       '1': 'ChatEditMessage',
-      '2': '.ChatEditMessageParam',
-      '3': '.ChatEditMessageResponse'
+      '2': '.pb.ChatEditMessageParam',
+      '3': '.pb.ChatEditMessageResponse'
     },
     const {
       '1': 'ChatDeleteMessages',
-      '2': '.ChatDeleteMessagesParam',
-      '3': '.ChatDeleteMessagesResponse'
+      '2': '.pb.ChatDeleteMessagesParam',
+      '3': '.pb.ChatDeleteMessagesResponse'
     },
     const {
       '1': 'ChatDeleteHistory',
-      '2': '.ChatDeleteHistoryParam',
-      '3': '.ChatDeleteHistoryResponse'
+      '2': '.pb.ChatDeleteHistoryParam',
+      '3': '.pb.ChatDeleteHistoryResponse'
     },
     const {
       '1': 'ChatSendDoingAction',
-      '2': '.ChatSendDoingActionParam',
-      '3': '.ChatSendDoingActionResponse'
+      '2': '.pb.ChatSendDoingActionParam',
+      '3': '.pb.ChatSendDoingActionResponse'
     },
     const {
       '1': 'ChatReportChat',
-      '2': '.ChatReportChatParam',
-      '3': '.ChatReportChatResponse'
+      '2': '.pb.ChatReportChatParam',
+      '3': '.pb.ChatReportChatResponse'
     },
     const {
       '1': 'ChatGetFull',
-      '2': '.ChatGetFullMessageParam',
-      '3': '.ChatGetFullMessageResponse'
+      '2': '.pb.ChatGetFullMessageParam',
+      '3': '.pb.ChatGetFullMessageResponse'
     },
     const {
       '1': 'ChatGetMessagesList',
-      '2': '.ChatGetMessagesListParam',
-      '3': '.ChatGetMessagesListResponse'
+      '2': '.pb.ChatGetMessagesListParam',
+      '3': '.pb.ChatGetMessagesListResponse'
     },
     const {
       '1': 'ChatGetMediaList',
-      '2': '.ChatGetMediaListParam',
-      '3': '.ChatGetMediaListResponse'
+      '2': '.pb.ChatGetMediaListParam',
+      '3': '.pb.ChatGetMediaListResponse'
     },
   ],
 };
 
 const RPC_ChatServiceBase$messageJson = const {
-  '.ChatSendMessageParam': ChatSendMessageParam$json,
-  '.ChatSendMessageResponse': ChatSendMessageResponse$json,
-  '.ChatEditMessageParam': ChatEditMessageParam$json,
-  '.ChatEditMessageResponse': ChatEditMessageResponse$json,
-  '.ChatDeleteMessagesParam': ChatDeleteMessagesParam$json,
-  '.ChatDeleteMessagesResponse': ChatDeleteMessagesResponse$json,
-  '.ChatDeleteHistoryParam': ChatDeleteHistoryParam$json,
-  '.ChatDeleteHistoryResponse': ChatDeleteHistoryResponse$json,
-  '.ChatSendDoingActionParam': ChatSendDoingActionParam$json,
-  '.ChatSendDoingActionResponse': ChatSendDoingActionResponse$json,
-  '.ChatReportChatParam': ChatReportChatParam$json,
-  '.ChatReportChatResponse': ChatReportChatResponse$json,
-  '.ChatGetFullMessageParam': ChatGetFullMessageParam$json,
-  '.ChatGetFullMessageResponse': ChatGetFullMessageResponse$json,
-  '.ChatGetMessagesListParam': ChatGetMessagesListParam$json,
-  '.ChatGetMessagesListResponse': ChatGetMessagesListResponse$json,
-  '.ChatGetMediaListParam': ChatGetMediaListParam$json,
-  '.ChatGetMediaListResponse': ChatGetMediaListResponse$json,
+  '.pb.ChatSendMessageParam': ChatSendMessageParam$json,
+  '.pb.ChatSendMessageResponse': ChatSendMessageResponse$json,
+  '.pb.ChatEditMessageParam': ChatEditMessageParam$json,
+  '.pb.ChatEditMessageResponse': ChatEditMessageResponse$json,
+  '.pb.ChatDeleteMessagesParam': ChatDeleteMessagesParam$json,
+  '.pb.ChatDeleteMessagesResponse': ChatDeleteMessagesResponse$json,
+  '.pb.ChatDeleteHistoryParam': ChatDeleteHistoryParam$json,
+  '.pb.ChatDeleteHistoryResponse': ChatDeleteHistoryResponse$json,
+  '.pb.ChatSendDoingActionParam': ChatSendDoingActionParam$json,
+  '.pb.ChatSendDoingActionResponse': ChatSendDoingActionResponse$json,
+  '.pb.ChatReportChatParam': ChatReportChatParam$json,
+  '.pb.ChatReportChatResponse': ChatReportChatResponse$json,
+  '.pb.ChatGetFullMessageParam': ChatGetFullMessageParam$json,
+  '.pb.ChatGetFullMessageResponse': ChatGetFullMessageResponse$json,
+  '.pb.ChatGetMessagesListParam': ChatGetMessagesListParam$json,
+  '.pb.ChatGetMessagesListResponse': ChatGetMessagesListResponse$json,
+  '.pb.ChatGetMediaListParam': ChatGetMediaListParam$json,
+  '.pb.ChatGetMediaListResponse': ChatGetMediaListResponse$json,
 };

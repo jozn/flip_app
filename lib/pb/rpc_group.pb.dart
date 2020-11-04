@@ -11,10 +11,10 @@ import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class GroupAvatarAddParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('GroupAvatarAddParam', createEmptyInstance: create)
-        ..a<$core.int>(1, 'groupId', $pb.PbFieldType.OU3)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GroupAvatarAddParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..a<$core.int>(1, 'groupId', $pb.PbFieldType.OU3)
+    ..hasRequiredFields = false;
 
   GroupAvatarAddParam._() : super();
   factory GroupAvatarAddParam() => create();
@@ -52,9 +52,9 @@ class GroupAvatarAddParam extends $pb.GeneratedMessage {
 }
 
 class GroupAvatarAddResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('GroupAvatarAddResponse', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GroupAvatarAddResponse',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   GroupAvatarAddResponse._() : super();
   factory GroupAvatarAddResponse() => create();
@@ -82,10 +82,10 @@ class GroupAvatarAddResponse extends $pb.GeneratedMessage {
 }
 
 class GroupAvatarDeleteParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('GroupAvatarDeleteParam', createEmptyInstance: create)
-        ..a<$core.int>(1, 'groupId', $pb.PbFieldType.OU3)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GroupAvatarDeleteParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..a<$core.int>(1, 'groupId', $pb.PbFieldType.OU3)
+    ..hasRequiredFields = false;
 
   GroupAvatarDeleteParam._() : super();
   factory GroupAvatarDeleteParam() => create();
@@ -125,9 +125,9 @@ class GroupAvatarDeleteParam extends $pb.GeneratedMessage {
 }
 
 class GroupAvatarDeleteResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('GroupAvatarDeleteResponse', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GroupAvatarDeleteResponse',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   GroupAvatarDeleteResponse._() : super();
   factory GroupAvatarDeleteResponse() => create();
@@ -156,10 +156,10 @@ class GroupAvatarDeleteResponse extends $pb.GeneratedMessage {
 }
 
 class GroupAvatarGetListParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('GroupAvatarGetListParam', createEmptyInstance: create)
-        ..a<$core.int>(1, 'groupId', $pb.PbFieldType.OU3)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GroupAvatarGetListParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..a<$core.int>(1, 'groupId', $pb.PbFieldType.OU3)
+    ..hasRequiredFields = false;
 
   GroupAvatarGetListParam._() : super();
   factory GroupAvatarGetListParam() => create();
@@ -199,9 +199,11 @@ class GroupAvatarGetListParam extends $pb.GeneratedMessage {
 }
 
 class GroupAvatarGetListResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('GroupAvatarGetListResponse', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'GroupAvatarGetListResponse',
+      package: const $pb.PackageName('pb'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   GroupAvatarGetListResponse._() : super();
   factory GroupAvatarGetListResponse() => create();
@@ -230,10 +232,10 @@ class GroupAvatarGetListResponse extends $pb.GeneratedMessage {
 }
 
 class GroupSendMessageParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('GroupSendMessageParam', createEmptyInstance: create)
-        ..a<$core.int>(1, 'groupId', $pb.PbFieldType.OU3)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GroupSendMessageParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..a<$core.int>(1, 'groupId', $pb.PbFieldType.OU3)
+    ..hasRequiredFields = false;
 
   GroupSendMessageParam._() : super();
   factory GroupSendMessageParam() => create();
@@ -273,9 +275,9 @@ class GroupSendMessageParam extends $pb.GeneratedMessage {
 }
 
 class GroupSendMessageResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('GroupSendMessageResponse', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GroupSendMessageResponse',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   GroupSendMessageResponse._() : super();
   factory GroupSendMessageResponse() => create();
@@ -303,10 +305,10 @@ class GroupSendMessageResponse extends $pb.GeneratedMessage {
 }
 
 class GroupEditMessageParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('GroupEditMessageParam', createEmptyInstance: create)
-        ..a<$core.int>(1, 'groupId', $pb.PbFieldType.OU3)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GroupEditMessageParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..a<$core.int>(1, 'groupId', $pb.PbFieldType.OU3)
+    ..hasRequiredFields = false;
 
   GroupEditMessageParam._() : super();
   factory GroupEditMessageParam() => create();
@@ -346,9 +348,9 @@ class GroupEditMessageParam extends $pb.GeneratedMessage {
 }
 
 class GroupEditMessageResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('GroupEditMessageResponse', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GroupEditMessageResponse',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   GroupEditMessageResponse._() : super();
   factory GroupEditMessageResponse() => create();
@@ -376,10 +378,10 @@ class GroupEditMessageResponse extends $pb.GeneratedMessage {
 }
 
 class GroupPinMessageParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('GroupPinMessageParam', createEmptyInstance: create)
-        ..a<$core.int>(1, 'groupId', $pb.PbFieldType.OU3)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GroupPinMessageParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..a<$core.int>(1, 'groupId', $pb.PbFieldType.OU3)
+    ..hasRequiredFields = false;
 
   GroupPinMessageParam._() : super();
   factory GroupPinMessageParam() => create();
@@ -418,9 +420,9 @@ class GroupPinMessageParam extends $pb.GeneratedMessage {
 }
 
 class GroupPinMessageResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('GroupPinMessageResponse', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GroupPinMessageResponse',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   GroupPinMessageResponse._() : super();
   factory GroupPinMessageResponse() => create();
@@ -448,10 +450,10 @@ class GroupPinMessageResponse extends $pb.GeneratedMessage {
 }
 
 class GroupUnPinMessageParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('GroupUnPinMessageParam', createEmptyInstance: create)
-        ..a<$core.int>(1, 'groupId', $pb.PbFieldType.OU3)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GroupUnPinMessageParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..a<$core.int>(1, 'groupId', $pb.PbFieldType.OU3)
+    ..hasRequiredFields = false;
 
   GroupUnPinMessageParam._() : super();
   factory GroupUnPinMessageParam() => create();
@@ -491,9 +493,9 @@ class GroupUnPinMessageParam extends $pb.GeneratedMessage {
 }
 
 class GroupUnPinMessageResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('GroupUnPinMessageResponse', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GroupUnPinMessageResponse',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   GroupUnPinMessageResponse._() : super();
   factory GroupUnPinMessageResponse() => create();
@@ -522,10 +524,10 @@ class GroupUnPinMessageResponse extends $pb.GeneratedMessage {
 }
 
 class GroupDeleteMessageParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('GroupDeleteMessageParam', createEmptyInstance: create)
-        ..a<$core.int>(1, 'groupId', $pb.PbFieldType.OU3)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GroupDeleteMessageParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..a<$core.int>(1, 'groupId', $pb.PbFieldType.OU3)
+    ..hasRequiredFields = false;
 
   GroupDeleteMessageParam._() : super();
   factory GroupDeleteMessageParam() => create();
@@ -565,9 +567,11 @@ class GroupDeleteMessageParam extends $pb.GeneratedMessage {
 }
 
 class GroupDeleteMessageResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('GroupDeleteMessageResponse', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'GroupDeleteMessageResponse',
+      package: const $pb.PackageName('pb'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   GroupDeleteMessageResponse._() : super();
   factory GroupDeleteMessageResponse() => create();
@@ -596,10 +600,10 @@ class GroupDeleteMessageResponse extends $pb.GeneratedMessage {
 }
 
 class GroupSetDraftParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('GroupSetDraftParam', createEmptyInstance: create)
-        ..a<$core.int>(1, 'groupId', $pb.PbFieldType.OU3)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GroupSetDraftParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..a<$core.int>(1, 'groupId', $pb.PbFieldType.OU3)
+    ..hasRequiredFields = false;
 
   GroupSetDraftParam._() : super();
   factory GroupSetDraftParam() => create();
@@ -637,9 +641,9 @@ class GroupSetDraftParam extends $pb.GeneratedMessage {
 }
 
 class GroupSetDraftResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('GroupSetDraftResponse', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GroupSetDraftResponse',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   GroupSetDraftResponse._() : super();
   factory GroupSetDraftResponse() => create();
@@ -667,10 +671,10 @@ class GroupSetDraftResponse extends $pb.GeneratedMessage {
 }
 
 class GroupGetFullMessageParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('GroupGetFullMessageParam', createEmptyInstance: create)
-        ..a<$core.int>(1, 'groupId', $pb.PbFieldType.OU3)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GroupGetFullMessageParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..a<$core.int>(1, 'groupId', $pb.PbFieldType.OU3)
+    ..hasRequiredFields = false;
 
   GroupGetFullMessageParam._() : super();
   factory GroupGetFullMessageParam() => create();
@@ -712,6 +716,7 @@ class GroupGetFullMessageParam extends $pb.GeneratedMessage {
 class GroupGetFullMessageResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'GroupGetFullMessageResponse',
+      package: const $pb.PackageName('pb'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
@@ -743,10 +748,10 @@ class GroupGetFullMessageResponse extends $pb.GeneratedMessage {
 }
 
 class GroupCreateGroupParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('GroupCreateGroupParam', createEmptyInstance: create)
-        ..a<$core.int>(1, 'groupId', $pb.PbFieldType.OU3)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GroupCreateGroupParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..a<$core.int>(1, 'groupId', $pb.PbFieldType.OU3)
+    ..hasRequiredFields = false;
 
   GroupCreateGroupParam._() : super();
   factory GroupCreateGroupParam() => create();
@@ -786,9 +791,9 @@ class GroupCreateGroupParam extends $pb.GeneratedMessage {
 }
 
 class GroupCreateGroupResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('GroupCreateGroupResponse', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GroupCreateGroupResponse',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   GroupCreateGroupResponse._() : super();
   factory GroupCreateGroupResponse() => create();
@@ -816,10 +821,10 @@ class GroupCreateGroupResponse extends $pb.GeneratedMessage {
 }
 
 class GroupEditGroupParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('GroupEditGroupParam', createEmptyInstance: create)
-        ..a<$core.int>(1, 'groupId', $pb.PbFieldType.OU3)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GroupEditGroupParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..a<$core.int>(1, 'groupId', $pb.PbFieldType.OU3)
+    ..hasRequiredFields = false;
 
   GroupEditGroupParam._() : super();
   factory GroupEditGroupParam() => create();
@@ -857,9 +862,9 @@ class GroupEditGroupParam extends $pb.GeneratedMessage {
 }
 
 class GroupEditGroupResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('GroupEditGroupResponse', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GroupEditGroupResponse',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   GroupEditGroupResponse._() : super();
   factory GroupEditGroupResponse() => create();
@@ -887,10 +892,10 @@ class GroupEditGroupResponse extends $pb.GeneratedMessage {
 }
 
 class GroupDeleteGroupParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('GroupDeleteGroupParam', createEmptyInstance: create)
-        ..a<$core.int>(1, 'groupId', $pb.PbFieldType.OU3)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GroupDeleteGroupParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..a<$core.int>(1, 'groupId', $pb.PbFieldType.OU3)
+    ..hasRequiredFields = false;
 
   GroupDeleteGroupParam._() : super();
   factory GroupDeleteGroupParam() => create();
@@ -930,9 +935,9 @@ class GroupDeleteGroupParam extends $pb.GeneratedMessage {
 }
 
 class GroupDeleteGroupResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('GroupDeleteGroupResponse', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GroupDeleteGroupResponse',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   GroupDeleteGroupResponse._() : super();
   factory GroupDeleteGroupResponse() => create();
@@ -960,9 +965,9 @@ class GroupDeleteGroupResponse extends $pb.GeneratedMessage {
 }
 
 class GroupAddAdminParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('GroupAddAdminParam', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GroupAddAdminParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   GroupAddAdminParam._() : super();
   factory GroupAddAdminParam() => create();
@@ -988,9 +993,9 @@ class GroupAddAdminParam extends $pb.GeneratedMessage {
 }
 
 class GroupAddAdminResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('GroupAddAdminResponse', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GroupAddAdminResponse',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   GroupAddAdminResponse._() : super();
   factory GroupAddAdminResponse() => create();
@@ -1018,9 +1023,9 @@ class GroupAddAdminResponse extends $pb.GeneratedMessage {
 }
 
 class GroupAddMemberParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('GroupAddMemberParam', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GroupAddMemberParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   GroupAddMemberParam._() : super();
   factory GroupAddMemberParam() => create();
@@ -1046,9 +1051,9 @@ class GroupAddMemberParam extends $pb.GeneratedMessage {
 }
 
 class GroupAddMemberResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('GroupAddMemberResponse', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GroupAddMemberResponse',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   GroupAddMemberResponse._() : super();
   factory GroupAddMemberResponse() => create();
@@ -1076,9 +1081,9 @@ class GroupAddMemberResponse extends $pb.GeneratedMessage {
 }
 
 class GroupRemoveMemberParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('GroupRemoveMemberParam', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GroupRemoveMemberParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   GroupRemoveMemberParam._() : super();
   factory GroupRemoveMemberParam() => create();
@@ -1106,9 +1111,9 @@ class GroupRemoveMemberParam extends $pb.GeneratedMessage {
 }
 
 class GroupRemoveMemberResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('GroupRemoveMemberResponse', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GroupRemoveMemberResponse',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   GroupRemoveMemberResponse._() : super();
   factory GroupRemoveMemberResponse() => create();
@@ -1139,6 +1144,7 @@ class GroupRemoveMemberResponse extends $pb.GeneratedMessage {
 class GroupChangeMemberLevelParam extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'GroupChangeMemberLevelParam',
+      package: const $pb.PackageName('pb'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
@@ -1172,6 +1178,7 @@ class GroupChangeMemberLevelParam extends $pb.GeneratedMessage {
 class GroupChangeMemberLevelResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'GroupChangeMemberLevelResponse',
+      package: const $pb.PackageName('pb'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
@@ -1205,6 +1212,7 @@ class GroupChangeMemberLevelResponse extends $pb.GeneratedMessage {
 class GroupChangeMemberPermissionParam extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'GroupChangeMemberPermissionParam',
+      package: const $pb.PackageName('pb'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
@@ -1239,6 +1247,7 @@ class GroupChangeMemberPermissionParam extends $pb.GeneratedMessage {
 class GroupChangeMemberPermissionResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'GroupChangeMemberPermissionResponse',
+      package: const $pb.PackageName('pb'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
@@ -1272,9 +1281,9 @@ class GroupChangeMemberPermissionResponse extends $pb.GeneratedMessage {
 }
 
 class JoinGroupParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('JoinGroupParam', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('JoinGroupParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   JoinGroupParam._() : super();
   factory JoinGroupParam() => create();
@@ -1300,9 +1309,9 @@ class JoinGroupParam extends $pb.GeneratedMessage {
 }
 
 class JoinGroupResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('JoinGroupResponse', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('JoinGroupResponse',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   JoinGroupResponse._() : super();
   factory JoinGroupResponse() => create();
@@ -1328,9 +1337,9 @@ class JoinGroupResponse extends $pb.GeneratedMessage {
 }
 
 class GroupLeaveGroupParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('GroupLeaveGroupParam', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GroupLeaveGroupParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   GroupLeaveGroupParam._() : super();
   factory GroupLeaveGroupParam() => create();
@@ -1357,9 +1366,9 @@ class GroupLeaveGroupParam extends $pb.GeneratedMessage {
 }
 
 class GroupLeaveGroupResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('GroupLeaveGroupResponse', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GroupLeaveGroupResponse',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   GroupLeaveGroupResponse._() : super();
   factory GroupLeaveGroupResponse() => create();
@@ -1387,9 +1396,9 @@ class GroupLeaveGroupResponse extends $pb.GeneratedMessage {
 }
 
 class GroupBanMemberParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('GroupBanMemberParam', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GroupBanMemberParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   GroupBanMemberParam._() : super();
   factory GroupBanMemberParam() => create();
@@ -1415,9 +1424,9 @@ class GroupBanMemberParam extends $pb.GeneratedMessage {
 }
 
 class GroupBanMemberResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('GroupBanMemberResponse', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GroupBanMemberResponse',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   GroupBanMemberResponse._() : super();
   factory GroupBanMemberResponse() => create();
@@ -1445,10 +1454,10 @@ class GroupBanMemberResponse extends $pb.GeneratedMessage {
 }
 
 class GroupChangePrivacyParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('GroupChangePrivacyParam', createEmptyInstance: create)
-        ..a<$core.int>(1, 'groupId', $pb.PbFieldType.OU3)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GroupChangePrivacyParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..a<$core.int>(1, 'groupId', $pb.PbFieldType.OU3)
+    ..hasRequiredFields = false;
 
   GroupChangePrivacyParam._() : super();
   factory GroupChangePrivacyParam() => create();
@@ -1488,9 +1497,11 @@ class GroupChangePrivacyParam extends $pb.GeneratedMessage {
 }
 
 class GroupChangePrivacyResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('GroupChangePrivacyResponse', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'GroupChangePrivacyResponse',
+      package: const $pb.PackageName('pb'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   GroupChangePrivacyResponse._() : super();
   factory GroupChangePrivacyResponse() => create();
@@ -1521,6 +1532,7 @@ class GroupChangePrivacyResponse extends $pb.GeneratedMessage {
 class GroupChangeDefaultPermissionParam extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'GroupChangeDefaultPermissionParam',
+      package: const $pb.PackageName('pb'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
@@ -1555,6 +1567,7 @@ class GroupChangeDefaultPermissionParam extends $pb.GeneratedMessage {
 class GroupChangeDefaultPermissionResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'GroupChangeDefaultPermissionResponse',
+      package: const $pb.PackageName('pb'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
@@ -1588,9 +1601,9 @@ class GroupChangeDefaultPermissionResponse extends $pb.GeneratedMessage {
 }
 
 class GroupRevokeLinkParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('GroupRevokeLinkParam', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GroupRevokeLinkParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   GroupRevokeLinkParam._() : super();
   factory GroupRevokeLinkParam() => create();
@@ -1617,9 +1630,9 @@ class GroupRevokeLinkParam extends $pb.GeneratedMessage {
 }
 
 class GroupRevokeLinkResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('GroupRevokeLinkResponse', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GroupRevokeLinkResponse',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   GroupRevokeLinkResponse._() : super();
   factory GroupRevokeLinkResponse() => create();
@@ -1647,9 +1660,9 @@ class GroupRevokeLinkResponse extends $pb.GeneratedMessage {
 }
 
 class GroupChangeUsernameParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('GroupChangeUsernameParam', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GroupChangeUsernameParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   GroupChangeUsernameParam._() : super();
   factory GroupChangeUsernameParam() => create();
@@ -1679,6 +1692,7 @@ class GroupChangeUsernameParam extends $pb.GeneratedMessage {
 class GroupChangeUsernameResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'GroupChangeUsernameResponse',
+      package: const $pb.PackageName('pb'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
@@ -1710,10 +1724,10 @@ class GroupChangeUsernameResponse extends $pb.GeneratedMessage {
 }
 
 class GroupDeleteMessagesParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('GroupDeleteMessagesParam', createEmptyInstance: create)
-        ..a<$core.int>(1, 'groupId', $pb.PbFieldType.OU3)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GroupDeleteMessagesParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..a<$core.int>(1, 'groupId', $pb.PbFieldType.OU3)
+    ..hasRequiredFields = false;
 
   GroupDeleteMessagesParam._() : super();
   factory GroupDeleteMessagesParam() => create();
@@ -1755,6 +1769,7 @@ class GroupDeleteMessagesParam extends $pb.GeneratedMessage {
 class GroupDeleteMessagesResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'GroupDeleteMessagesResponse',
+      package: const $pb.PackageName('pb'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
@@ -1786,9 +1801,9 @@ class GroupDeleteMessagesResponse extends $pb.GeneratedMessage {
 }
 
 class GroupDeleteHistoryParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('GroupDeleteHistoryParam', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GroupDeleteHistoryParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   GroupDeleteHistoryParam._() : super();
   factory GroupDeleteHistoryParam() => create();
@@ -1816,9 +1831,11 @@ class GroupDeleteHistoryParam extends $pb.GeneratedMessage {
 }
 
 class GroupDeleteHistoryResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('GroupDeleteHistoryResponse', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'GroupDeleteHistoryResponse',
+      package: const $pb.PackageName('pb'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   GroupDeleteHistoryResponse._() : super();
   factory GroupDeleteHistoryResponse() => create();
@@ -1847,9 +1864,9 @@ class GroupDeleteHistoryResponse extends $pb.GeneratedMessage {
 }
 
 class GroupClearHistoryParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('GroupClearHistoryParam', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GroupClearHistoryParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   GroupClearHistoryParam._() : super();
   factory GroupClearHistoryParam() => create();
@@ -1877,9 +1894,9 @@ class GroupClearHistoryParam extends $pb.GeneratedMessage {
 }
 
 class GroupClearHistoryResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('GroupClearHistoryResponse', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GroupClearHistoryResponse',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   GroupClearHistoryResponse._() : super();
   factory GroupClearHistoryResponse() => create();
@@ -1908,9 +1925,9 @@ class GroupClearHistoryResponse extends $pb.GeneratedMessage {
 }
 
 class GroupAvatarChangeParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('GroupAvatarChangeParam', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GroupAvatarChangeParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   GroupAvatarChangeParam._() : super();
   factory GroupAvatarChangeParam() => create();
@@ -1938,9 +1955,9 @@ class GroupAvatarChangeParam extends $pb.GeneratedMessage {
 }
 
 class GroupAvatarChangeResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('GroupAvatarChangeResponse', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GroupAvatarChangeResponse',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   GroupAvatarChangeResponse._() : super();
   factory GroupAvatarChangeResponse() => create();
@@ -1969,9 +1986,9 @@ class GroupAvatarChangeResponse extends $pb.GeneratedMessage {
 }
 
 class GroupSendDoingActionParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('GroupSendDoingActionParam', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GroupSendDoingActionParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   GroupSendDoingActionParam._() : super();
   factory GroupSendDoingActionParam() => create();
@@ -2002,6 +2019,7 @@ class GroupSendDoingActionParam extends $pb.GeneratedMessage {
 class GroupSendDoingActionResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'GroupSendDoingActionResponse',
+      package: const $pb.PackageName('pb'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
@@ -2033,9 +2051,9 @@ class GroupSendDoingActionResponse extends $pb.GeneratedMessage {
 }
 
 class GroupReportGroupParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('GroupReportGroupParam', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GroupReportGroupParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   GroupReportGroupParam._() : super();
   factory GroupReportGroupParam() => create();
@@ -2063,9 +2081,9 @@ class GroupReportGroupParam extends $pb.GeneratedMessage {
 }
 
 class GroupReportGroupResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('GroupReportGroupResponse', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GroupReportGroupResponse',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   GroupReportGroupResponse._() : super();
   factory GroupReportGroupResponse() => create();
@@ -2093,9 +2111,9 @@ class GroupReportGroupResponse extends $pb.GeneratedMessage {
 }
 
 class GroupGetMessagesListParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('GroupGetMessagesListParam', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GroupGetMessagesListParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   GroupGetMessagesListParam._() : super();
   factory GroupGetMessagesListParam() => create();
@@ -2126,6 +2144,7 @@ class GroupGetMessagesListParam extends $pb.GeneratedMessage {
 class GroupGetMessagesListResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'GroupGetMessagesListResponse',
+      package: const $pb.PackageName('pb'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
@@ -2157,9 +2176,9 @@ class GroupGetMessagesListResponse extends $pb.GeneratedMessage {
 }
 
 class GroupGetMediaListParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('GroupGetMediaListParam', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GroupGetMediaListParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   GroupGetMediaListParam._() : super();
   factory GroupGetMediaListParam() => create();
@@ -2187,9 +2206,9 @@ class GroupGetMediaListParam extends $pb.GeneratedMessage {
 }
 
 class GroupGetMediaListResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('GroupGetMediaListResponse', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GroupGetMediaListResponse',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   GroupGetMediaListResponse._() : super();
   factory GroupGetMediaListResponse() => create();
@@ -2218,9 +2237,9 @@ class GroupGetMediaListResponse extends $pb.GeneratedMessage {
 }
 
 class GroupGetMembersListParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('GroupGetMembersListParam', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GroupGetMembersListParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   GroupGetMembersListParam._() : super();
   factory GroupGetMembersListParam() => create();
@@ -2250,6 +2269,7 @@ class GroupGetMembersListParam extends $pb.GeneratedMessage {
 class GroupGetMembersListResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'GroupGetMembersListResponse',
+      package: const $pb.PackageName('pb'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
@@ -2281,9 +2301,9 @@ class GroupGetMembersListResponse extends $pb.GeneratedMessage {
 }
 
 class GroupGetAdminsListParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('GroupGetAdminsListParam', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GroupGetAdminsListParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   GroupGetAdminsListParam._() : super();
   factory GroupGetAdminsListParam() => create();
@@ -2311,9 +2331,11 @@ class GroupGetAdminsListParam extends $pb.GeneratedMessage {
 }
 
 class GroupGetAdminsListResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('GroupGetAdminsListResponse', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'GroupGetAdminsListResponse',
+      package: const $pb.PackageName('pb'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   GroupGetAdminsListResponse._() : super();
   factory GroupGetAdminsListResponse() => create();

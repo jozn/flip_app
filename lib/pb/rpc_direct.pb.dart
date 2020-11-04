@@ -11,9 +11,9 @@ import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class DirectDeleteDirectParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('DirectDeleteDirectParam', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DirectDeleteDirectParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   DirectDeleteDirectParam._() : super();
   factory DirectDeleteDirectParam() => create();
@@ -41,9 +41,11 @@ class DirectDeleteDirectParam extends $pb.GeneratedMessage {
 }
 
 class DirectDeleteDirectResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('DirectDeleteDirectResponse', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'DirectDeleteDirectResponse',
+      package: const $pb.PackageName('pb'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   DirectDeleteDirectResponse._() : super();
   factory DirectDeleteDirectResponse() => create();
@@ -72,9 +74,9 @@ class DirectDeleteDirectResponse extends $pb.GeneratedMessage {
 }
 
 class DirectChangeTitleParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('DirectChangeTitleParam', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DirectChangeTitleParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   DirectChangeTitleParam._() : super();
   factory DirectChangeTitleParam() => create();
@@ -102,9 +104,9 @@ class DirectChangeTitleParam extends $pb.GeneratedMessage {
 }
 
 class DirectChangeTitleResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('DirectChangeTitleResponse', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DirectChangeTitleResponse',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   DirectChangeTitleResponse._() : super();
   factory DirectChangeTitleResponse() => create();
@@ -135,6 +137,7 @@ class DirectChangeTitleResponse extends $pb.GeneratedMessage {
 class DirectSetCustomNotificationParam extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'DirectSetCustomNotificationParam',
+      package: const $pb.PackageName('pb'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
@@ -169,6 +172,7 @@ class DirectSetCustomNotificationParam extends $pb.GeneratedMessage {
 class DirectSetCustomNotificationResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'DirectSetCustomNotificationResponse',
+      package: const $pb.PackageName('pb'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
@@ -202,9 +206,11 @@ class DirectSetCustomNotificationResponse extends $pb.GeneratedMessage {
 }
 
 class DirectSendActionDoingParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('DirectSendActionDoingParam', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'DirectSendActionDoingParam',
+      package: const $pb.PackageName('pb'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   DirectSendActionDoingParam._() : super();
   factory DirectSendActionDoingParam() => create();
@@ -235,6 +241,7 @@ class DirectSendActionDoingParam extends $pb.GeneratedMessage {
 class DirectSendActionDoingResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'DirectSendActionDoingResponse',
+      package: const $pb.PackageName('pb'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
@@ -266,9 +273,9 @@ class DirectSendActionDoingResponse extends $pb.GeneratedMessage {
 }
 
 class DirectSetDraftParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('DirectSetDraftParam', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DirectSetDraftParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   DirectSetDraftParam._() : super();
   factory DirectSetDraftParam() => create();
@@ -294,9 +301,9 @@ class DirectSetDraftParam extends $pb.GeneratedMessage {
 }
 
 class DirectSetDraftResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('DirectSetDraftResponse', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DirectSetDraftResponse',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   DirectSetDraftResponse._() : super();
   factory DirectSetDraftResponse() => create();
@@ -324,9 +331,9 @@ class DirectSetDraftResponse extends $pb.GeneratedMessage {
 }
 
 class DirectDeleteDirectsParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('DirectDeleteDirectsParam', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DirectDeleteDirectsParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   DirectDeleteDirectsParam._() : super();
   factory DirectDeleteDirectsParam() => create();
@@ -356,6 +363,7 @@ class DirectDeleteDirectsParam extends $pb.GeneratedMessage {
 class DirectDeleteDirectsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'DirectDeleteDirectsResponse',
+      package: const $pb.PackageName('pb'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
@@ -387,9 +395,9 @@ class DirectDeleteDirectsResponse extends $pb.GeneratedMessage {
 }
 
 class DirectMarkAsReadParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('DirectMarkAsReadParam', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DirectMarkAsReadParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   DirectMarkAsReadParam._() : super();
   factory DirectMarkAsReadParam() => create();
@@ -417,9 +425,9 @@ class DirectMarkAsReadParam extends $pb.GeneratedMessage {
 }
 
 class DirectMarkAsReadResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('DirectMarkAsReadResponse', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DirectMarkAsReadResponse',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   DirectMarkAsReadResponse._() : super();
   factory DirectMarkAsReadResponse() => create();
@@ -447,9 +455,9 @@ class DirectMarkAsReadResponse extends $pb.GeneratedMessage {
 }
 
 class DirectMarkAsUnReadParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('DirectMarkAsUnReadParam', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DirectMarkAsUnReadParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   DirectMarkAsUnReadParam._() : super();
   factory DirectMarkAsUnReadParam() => create();
@@ -477,9 +485,11 @@ class DirectMarkAsUnReadParam extends $pb.GeneratedMessage {
 }
 
 class DirectMarkAsUnReadResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('DirectMarkAsUnReadResponse', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'DirectMarkAsUnReadResponse',
+      package: const $pb.PackageName('pb'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   DirectMarkAsUnReadResponse._() : super();
   factory DirectMarkAsUnReadResponse() => create();
@@ -508,9 +518,9 @@ class DirectMarkAsUnReadResponse extends $pb.GeneratedMessage {
 }
 
 class DirectPinDirectsParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('DirectPinDirectsParam', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DirectPinDirectsParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   DirectPinDirectsParam._() : super();
   factory DirectPinDirectsParam() => create();
@@ -538,9 +548,9 @@ class DirectPinDirectsParam extends $pb.GeneratedMessage {
 }
 
 class DirectPinDirectsResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('DirectPinDirectsResponse', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DirectPinDirectsResponse',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   DirectPinDirectsResponse._() : super();
   factory DirectPinDirectsResponse() => create();
@@ -568,9 +578,9 @@ class DirectPinDirectsResponse extends $pb.GeneratedMessage {
 }
 
 class DirectUnPinDirectsParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('DirectUnPinDirectsParam', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DirectUnPinDirectsParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   DirectUnPinDirectsParam._() : super();
   factory DirectUnPinDirectsParam() => create();
@@ -598,9 +608,11 @@ class DirectUnPinDirectsParam extends $pb.GeneratedMessage {
 }
 
 class DirectUnPinDirectsResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('DirectUnPinDirectsResponse', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'DirectUnPinDirectsResponse',
+      package: const $pb.PackageName('pb'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   DirectUnPinDirectsResponse._() : super();
   factory DirectUnPinDirectsResponse() => create();
@@ -629,9 +641,9 @@ class DirectUnPinDirectsResponse extends $pb.GeneratedMessage {
 }
 
 class DirectArchiveDirectsParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('DirectArchiveDirectsParam', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DirectArchiveDirectsParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   DirectArchiveDirectsParam._() : super();
   factory DirectArchiveDirectsParam() => create();
@@ -662,6 +674,7 @@ class DirectArchiveDirectsParam extends $pb.GeneratedMessage {
 class DirectArchiveDirectsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'DirectArchiveDirectsResponse',
+      package: const $pb.PackageName('pb'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
@@ -695,6 +708,7 @@ class DirectArchiveDirectsResponse extends $pb.GeneratedMessage {
 class DirectUnArchiveDirectsParam extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'DirectUnArchiveDirectsParam',
+      package: const $pb.PackageName('pb'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
@@ -728,6 +742,7 @@ class DirectUnArchiveDirectsParam extends $pb.GeneratedMessage {
 class DirectUnArchiveDirectsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'DirectUnArchiveDirectsResponse',
+      package: const $pb.PackageName('pb'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
@@ -759,9 +774,9 @@ class DirectUnArchiveDirectsResponse extends $pb.GeneratedMessage {
 }
 
 class DirectClearHistoriesParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('DirectClearHistoriesParam', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DirectClearHistoriesParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   DirectClearHistoriesParam._() : super();
   factory DirectClearHistoriesParam() => create();
@@ -792,6 +807,7 @@ class DirectClearHistoriesParam extends $pb.GeneratedMessage {
 class DirectClearHistoriesResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'DirectClearHistoriesResponse',
+      package: const $pb.PackageName('pb'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
@@ -823,9 +839,9 @@ class DirectClearHistoriesResponse extends $pb.GeneratedMessage {
 }
 
 class DirectMuteDirectsParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('DirectMuteDirectsParam', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DirectMuteDirectsParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   DirectMuteDirectsParam._() : super();
   factory DirectMuteDirectsParam() => create();
@@ -853,9 +869,9 @@ class DirectMuteDirectsParam extends $pb.GeneratedMessage {
 }
 
 class DirectMuteDirectsResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('DirectMuteDirectsResponse', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DirectMuteDirectsResponse',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   DirectMuteDirectsResponse._() : super();
   factory DirectMuteDirectsResponse() => create();
@@ -884,9 +900,9 @@ class DirectMuteDirectsResponse extends $pb.GeneratedMessage {
 }
 
 class DirectUnMuteDirectsParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('DirectUnMuteDirectsParam', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DirectUnMuteDirectsParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   DirectUnMuteDirectsParam._() : super();
   factory DirectUnMuteDirectsParam() => create();
@@ -916,6 +932,7 @@ class DirectUnMuteDirectsParam extends $pb.GeneratedMessage {
 class DirectUnMuteDirectsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'DirectUnMuteDirectsResponse',
+      package: const $pb.PackageName('pb'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
@@ -947,9 +964,9 @@ class DirectUnMuteDirectsResponse extends $pb.GeneratedMessage {
 }
 
 class DirectCreateFolderParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('DirectCreateFolderParam', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DirectCreateFolderParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   DirectCreateFolderParam._() : super();
   factory DirectCreateFolderParam() => create();
@@ -977,9 +994,11 @@ class DirectCreateFolderParam extends $pb.GeneratedMessage {
 }
 
 class DirectCreateFolderResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('DirectCreateFolderResponse', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'DirectCreateFolderResponse',
+      package: const $pb.PackageName('pb'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   DirectCreateFolderResponse._() : super();
   factory DirectCreateFolderResponse() => create();
@@ -1008,9 +1027,9 @@ class DirectCreateFolderResponse extends $pb.GeneratedMessage {
 }
 
 class DirectChangeFolderParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('DirectChangeFolderParam', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DirectChangeFolderParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   DirectChangeFolderParam._() : super();
   factory DirectChangeFolderParam() => create();
@@ -1038,9 +1057,11 @@ class DirectChangeFolderParam extends $pb.GeneratedMessage {
 }
 
 class DirectChangeFolderResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('DirectChangeFolderResponse', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'DirectChangeFolderResponse',
+      package: const $pb.PackageName('pb'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   DirectChangeFolderResponse._() : super();
   factory DirectChangeFolderResponse() => create();
@@ -1071,6 +1092,7 @@ class DirectChangeFolderResponse extends $pb.GeneratedMessage {
 class DirectRemoveFromFolderParam extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'DirectRemoveFromFolderParam',
+      package: const $pb.PackageName('pb'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
@@ -1104,6 +1126,7 @@ class DirectRemoveFromFolderParam extends $pb.GeneratedMessage {
 class DirectRemoveFromFolderResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'DirectRemoveFromFolderResponse',
+      package: const $pb.PackageName('pb'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
@@ -1135,9 +1158,9 @@ class DirectRemoveFromFolderResponse extends $pb.GeneratedMessage {
 }
 
 class DirectReordersFolderParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('DirectReordersFolderParam', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DirectReordersFolderParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   DirectReordersFolderParam._() : super();
   factory DirectReordersFolderParam() => create();
@@ -1168,6 +1191,7 @@ class DirectReordersFolderParam extends $pb.GeneratedMessage {
 class DirectReordersFolderResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'DirectReordersFolderResponse',
+      package: const $pb.PackageName('pb'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
@@ -1199,9 +1223,9 @@ class DirectReordersFolderResponse extends $pb.GeneratedMessage {
 }
 
 class DirectDeleteFolderParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('DirectDeleteFolderParam', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DirectDeleteFolderParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   DirectDeleteFolderParam._() : super();
   factory DirectDeleteFolderParam() => create();
@@ -1229,9 +1253,11 @@ class DirectDeleteFolderParam extends $pb.GeneratedMessage {
 }
 
 class DirectDeleteFolderResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('DirectDeleteFolderResponse', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'DirectDeleteFolderResponse',
+      package: const $pb.PackageName('pb'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   DirectDeleteFolderResponse._() : super();
   factory DirectDeleteFolderResponse() => create();
@@ -1260,9 +1286,9 @@ class DirectDeleteFolderResponse extends $pb.GeneratedMessage {
 }
 
 class DirectGetChatsListParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('DirectGetChatsListParam', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DirectGetChatsListParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   DirectGetChatsListParam._() : super();
   factory DirectGetChatsListParam() => create();
@@ -1290,9 +1316,11 @@ class DirectGetChatsListParam extends $pb.GeneratedMessage {
 }
 
 class DirectGetChatsListResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('DirectGetChatsListResponse', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'DirectGetChatsListResponse',
+      package: const $pb.PackageName('pb'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   DirectGetChatsListResponse._() : super();
   factory DirectGetChatsListResponse() => create();
@@ -1321,9 +1349,9 @@ class DirectGetChatsListResponse extends $pb.GeneratedMessage {
 }
 
 class DirectGetGroupsListParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('DirectGetGroupsListParam', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DirectGetGroupsListParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   DirectGetGroupsListParam._() : super();
   factory DirectGetGroupsListParam() => create();
@@ -1353,6 +1381,7 @@ class DirectGetGroupsListParam extends $pb.GeneratedMessage {
 class DirectGetGroupsListResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'DirectGetGroupsListResponse',
+      package: const $pb.PackageName('pb'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
@@ -1384,9 +1413,11 @@ class DirectGetGroupsListResponse extends $pb.GeneratedMessage {
 }
 
 class DirectGetChannelsListParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('DirectGetChannelsListParam', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'DirectGetChannelsListParam',
+      package: const $pb.PackageName('pb'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   DirectGetChannelsListParam._() : super();
   factory DirectGetChannelsListParam() => create();
@@ -1417,6 +1448,7 @@ class DirectGetChannelsListParam extends $pb.GeneratedMessage {
 class DirectGetChannelsListResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'DirectGetChannelsListResponse',
+      package: const $pb.PackageName('pb'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
@@ -1448,9 +1480,9 @@ class DirectGetChannelsListResponse extends $pb.GeneratedMessage {
 }
 
 class DirectGetFoldersListParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('DirectGetFoldersListParam', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DirectGetFoldersListParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   DirectGetFoldersListParam._() : super();
   factory DirectGetFoldersListParam() => create();
@@ -1481,6 +1513,7 @@ class DirectGetFoldersListParam extends $pb.GeneratedMessage {
 class DirectGetFoldersListResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'DirectGetFoldersListResponse',
+      package: const $pb.PackageName('pb'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
@@ -1514,6 +1547,7 @@ class DirectGetFoldersListResponse extends $pb.GeneratedMessage {
 class DirectGetFoldersFullListParam extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'DirectGetFoldersFullListParam',
+      package: const $pb.PackageName('pb'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
@@ -1547,6 +1581,7 @@ class DirectGetFoldersFullListParam extends $pb.GeneratedMessage {
 class DirectGetFoldersFullListResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'DirectGetFoldersFullListResponse',
+      package: const $pb.PackageName('pb'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 

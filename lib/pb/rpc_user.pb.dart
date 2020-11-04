@@ -1,6 +1,6 @@
 ///
 //  Generated code. Do not modify.
-//  source: rpc_account.proto
+//  source: rpc_user.proto
 //
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
@@ -11,9 +11,9 @@ import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class ChangePhoneNumberParam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('ChangePhoneNumberParam', createEmptyInstance: create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ChangePhoneNumberParam',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..hasRequiredFields = false;
 
   ChangePhoneNumberParam._() : super();
   factory ChangePhoneNumberParam() => create();
@@ -41,11 +41,11 @@ class ChangePhoneNumberParam extends $pb.GeneratedMessage {
 }
 
 class ChangePhoneNumberResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('ChangePhoneNumberResponse', createEmptyInstance: create)
-        ..aOB(1, 'done')
-        ..aOS(2, 'text')
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ChangePhoneNumberResponse',
+      package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..aOB(1, 'done')
+    ..aOS(2, 'text')
+    ..hasRequiredFields = false;
 
   ChangePhoneNumberResponse._() : super();
   factory ChangePhoneNumberResponse() => create();
@@ -97,14 +97,14 @@ class ChangePhoneNumberResponse extends $pb.GeneratedMessage {
   void clearText() => clearField(2);
 }
 
-class RPC_AccountApi {
+class RPC_UserApi {
   $pb.RpcClient _client;
-  RPC_AccountApi(this._client);
+  RPC_UserApi(this._client);
 
   $async.Future<ChangePhoneNumberResponse> changePhoneNumber(
       $pb.ClientContext ctx, ChangePhoneNumberParam request) {
     var emptyResponse = ChangePhoneNumberResponse();
     return _client.invoke<ChangePhoneNumberResponse>(
-        ctx, 'RPC_Account', 'ChangePhoneNumber', request, emptyResponse);
+        ctx, 'RPC_User', 'ChangePhoneNumber', request, emptyResponse);
   }
 }

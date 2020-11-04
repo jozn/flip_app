@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:flip_app/pb/rpc_social.pb.dart';
+// import 'package:flip_app/pb/rpc_social.pb.dart';
 import 'package:flip_app/shared/fcolors.dart';
 import 'package:flip_app/shared/fstrings.dart';
 import 'package:flip_app/shared/my_text.dart';
@@ -8,9 +8,10 @@ import 'package:flutter/material.dart';
 
 import 'package:http/http.dart' as http;
 
-import '../pb/rpc_social.pb.dart';
+// import '../pb/rpc_social.pb.dart';
 import '../pb/rpc_auth.pb.dart';
-import '../pb/sys.pb.dart';
+// import '../pb/sys.pb.dart';
+import '../pb/global.pb.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
 import 'package:protobuf/protobuf.dart';
 

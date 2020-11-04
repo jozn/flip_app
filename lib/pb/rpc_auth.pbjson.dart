@@ -5,8 +5,6 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'views.pbjson.dart' as $2;
-
 const SendConfirmCodeTypeEnum$json = const {
   '1': 'SendConfirmCodeTypeEnum',
   '2': const [
@@ -56,14 +54,6 @@ const ConfirmCodeResponse$json = const {
   '2': const [
     const {'1': 'Done', '3': 1, '4': 1, '5': 8, '10': 'Done'},
     const {'1': 'ErrorMessage', '3': 2, '4': 1, '5': 9, '10': 'ErrorMessage'},
-    const {
-      '1': 'SelfUserView',
-      '3': 3,
-      '4': 1,
-      '5': 11,
-      '6': '.SelfUserView',
-      '10': 'SelfUserView'
-    },
   ],
 };
 
@@ -84,14 +74,6 @@ const SingUpResponse$json = const {
   '2': const [
     const {'1': 'Done', '3': 1, '4': 1, '5': 8, '10': 'Done'},
     const {'1': 'ErrorMessage', '3': 2, '4': 1, '5': 9, '10': 'ErrorMessage'},
-    const {
-      '1': 'SelfUserView',
-      '3': 3,
-      '4': 1,
-      '5': 11,
-      '6': '.SelfUserView',
-      '10': 'SelfUserView'
-    },
   ],
 };
 
@@ -114,14 +96,6 @@ const SingInResponse$json = const {
   '2': const [
     const {'1': 'Done', '3': 1, '4': 1, '5': 8, '10': 'Done'},
     const {'1': 'ErrorMessage', '3': 2, '4': 1, '5': 9, '10': 'ErrorMessage'},
-    const {
-      '1': 'SelfUserView',
-      '3': 3,
-      '4': 1,
-      '5': 11,
-      '6': '.SelfUserView',
-      '10': 'SelfUserView'
-    },
   ],
 };
 
@@ -142,32 +116,29 @@ const RPC_AuthServiceBase$json = const {
   '2': const [
     const {
       '1': 'SendConfirmCode',
-      '2': '.SendConfirmCodeParam',
-      '3': '.SendConfirmCodeResponse'
+      '2': '.pb.SendConfirmCodeParam',
+      '3': '.pb.SendConfirmCodeResponse'
     },
     const {
       '1': 'ConfirmCode',
-      '2': '.ConfirmCodeParam',
-      '3': '.ConfirmCodeResponse'
+      '2': '.pb.ConfirmCodeParam',
+      '3': '.pb.ConfirmCodeResponse'
     },
-    const {'1': 'SingUp', '2': '.SingUpParam', '3': '.SingUpResponse'},
-    const {'1': 'SingIn', '2': '.SingInParam', '3': '.SingInResponse'},
-    const {'1': 'LogOut', '2': '.LogOutParam', '3': '.LogOutResponse'},
+    const {'1': 'SingUp', '2': '.pb.SingUpParam', '3': '.pb.SingUpResponse'},
+    const {'1': 'SingIn', '2': '.pb.SingInParam', '3': '.pb.SingInResponse'},
+    const {'1': 'LogOut', '2': '.pb.LogOutParam', '3': '.pb.LogOutResponse'},
   ],
 };
 
 const RPC_AuthServiceBase$messageJson = const {
-  '.SendConfirmCodeParam': SendConfirmCodeParam$json,
-  '.SendConfirmCodeResponse': SendConfirmCodeResponse$json,
-  '.ConfirmCodeParam': ConfirmCodeParam$json,
-  '.ConfirmCodeResponse': ConfirmCodeResponse$json,
-  '.SelfUserView': $2.SelfUserView$json,
-  '.UserView': $2.UserView$json,
-  '.SettingNotificationView': $2.SettingNotificationView$json,
-  '.SingUpParam': SingUpParam$json,
-  '.SingUpResponse': SingUpResponse$json,
-  '.SingInParam': SingInParam$json,
-  '.SingInResponse': SingInResponse$json,
-  '.LogOutParam': LogOutParam$json,
-  '.LogOutResponse': LogOutResponse$json,
+  '.pb.SendConfirmCodeParam': SendConfirmCodeParam$json,
+  '.pb.SendConfirmCodeResponse': SendConfirmCodeResponse$json,
+  '.pb.ConfirmCodeParam': ConfirmCodeParam$json,
+  '.pb.ConfirmCodeResponse': ConfirmCodeResponse$json,
+  '.pb.SingUpParam': SingUpParam$json,
+  '.pb.SingUpResponse': SingUpResponse$json,
+  '.pb.SingInParam': SingInParam$json,
+  '.pb.SingInResponse': SingInResponse$json,
+  '.pb.LogOutParam': LogOutParam$json,
+  '.pb.LogOutResponse': LogOutResponse$json,
 };

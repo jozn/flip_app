@@ -18,8 +18,8 @@ import 'package:toast/toast.dart';
 import 'package:http/http.dart' as http;
 
 import 'ui/tab_chat.dart';
-import 'pb/rpc_social.pb.dart';
-import 'pb/sys.pb.dart';
+// import 'pb/rpc_social.pb.dart';
+import 'pb/global.pb.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
 import 'package:protobuf/protobuf.dart';
 
@@ -43,7 +43,7 @@ class FlipRpcClient extends RpcClient {
   }
 }
 
-void playPb() {
+/*void playPb() {
   // Send request
   var ctx = $pb.ClientContext();
   var client = FlipRpcClient();
@@ -52,7 +52,7 @@ void playPb() {
   req.writeToBuffer();
 
   m.editComment(ctx, req);
-}
+}*/
 
 void main() {
   runApp(MyApp());

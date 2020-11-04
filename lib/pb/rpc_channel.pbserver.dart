@@ -10,177 +10,177 @@ import 'dart:async' as $async;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'dart:core' as $core;
-import 'rpc_channel.pb.dart' as $4;
+import 'rpc_channel.pb.dart' as $1;
 import 'rpc_channel.pbjson.dart';
 
 export 'rpc_channel.pb.dart';
 
 abstract class RPC_ChannelServiceBase extends $pb.GeneratedService {
-  $async.Future<$4.ChannelCreateChannelResponse> channelCreateChannel(
-      $pb.ServerContext ctx, $4.ChannelCreateChannelParam request);
-  $async.Future<$4.ChannelEditChannelResponse> channelEditChannel(
-      $pb.ServerContext ctx, $4.ChannelEditChannelParam request);
-  $async.Future<$4.ChannelDeleteChannelResponse> channelDeleteChannel(
-      $pb.ServerContext ctx, $4.ChannelDeleteChannelParam request);
-  $async.Future<$4.ChannelAddAuthorResponse> channelAddAuthor(
-      $pb.ServerContext ctx, $4.ChannelAddAuthorParam request);
-  $async.Future<$4.ChannelChangeAuthorPermissionResponse>
+  $async.Future<$1.ChannelCreateChannelResponse> channelCreateChannel(
+      $pb.ServerContext ctx, $1.ChannelCreateChannelParam request);
+  $async.Future<$1.ChannelEditChannelResponse> channelEditChannel(
+      $pb.ServerContext ctx, $1.ChannelEditChannelParam request);
+  $async.Future<$1.ChannelDeleteChannelResponse> channelDeleteChannel(
+      $pb.ServerContext ctx, $1.ChannelDeleteChannelParam request);
+  $async.Future<$1.ChannelAddAuthorResponse> channelAddAuthor(
+      $pb.ServerContext ctx, $1.ChannelAddAuthorParam request);
+  $async.Future<$1.ChannelChangeAuthorPermissionResponse>
       channelChangeAuthorPermission(
-          $pb.ServerContext ctx, $4.ChannelChangeAuthorPermissionParam request);
-  $async.Future<$4.ChannelRemoveAuthorResponse> channelRemoveAuthor(
-      $pb.ServerContext ctx, $4.ChannelRemoveAuthorParam request);
-  $async.Future<$4.ChannelFollowChannelResponse> channelFollowChannel(
-      $pb.ServerContext ctx, $4.ChannelFollowChannelParam request);
-  $async.Future<$4.ChannelUnFollowChannelResponse> channelUnFollowChannel(
-      $pb.ServerContext ctx, $4.ChannelUnFollowChannelParam request);
-  $async.Future<$4.ChannelRemoveFollowersResponse> channelRemoveFollowers(
-      $pb.ServerContext ctx, $4.ChannelRemoveFollowersParam request);
-  $async.Future<$4.ChannelSubscribeResponse> channelSubscribe(
-      $pb.ServerContext ctx, $4.ChannelSubscribeParam request);
-  $async.Future<$4.ChannelUnSubscribeResponse> channelUnSubscribe(
-      $pb.ServerContext ctx, $4.ChannelUnSubscribeParam request);
-  $async.Future<$4.ChannelRemoveSubscribersResponse> channelRemoveSubscribers(
-      $pb.ServerContext ctx, $4.ChannelRemoveSubscribersParam request);
-  $async.Future<$4.ChannelChangePrivacyResponse> channelChangePrivacy(
-      $pb.ServerContext ctx, $4.ChannelChangePrivacyParam request);
-  $async.Future<$4.ChannelChangeDefaultPermissionResponse>
+          $pb.ServerContext ctx, $1.ChannelChangeAuthorPermissionParam request);
+  $async.Future<$1.ChannelRemoveAuthorResponse> channelRemoveAuthor(
+      $pb.ServerContext ctx, $1.ChannelRemoveAuthorParam request);
+  $async.Future<$1.ChannelFollowChannelResponse> channelFollowChannel(
+      $pb.ServerContext ctx, $1.ChannelFollowChannelParam request);
+  $async.Future<$1.ChannelUnFollowChannelResponse> channelUnFollowChannel(
+      $pb.ServerContext ctx, $1.ChannelUnFollowChannelParam request);
+  $async.Future<$1.ChannelRemoveFollowersResponse> channelRemoveFollowers(
+      $pb.ServerContext ctx, $1.ChannelRemoveFollowersParam request);
+  $async.Future<$1.ChannelSubscribeResponse> channelSubscribe(
+      $pb.ServerContext ctx, $1.ChannelSubscribeParam request);
+  $async.Future<$1.ChannelUnSubscribeResponse> channelUnSubscribe(
+      $pb.ServerContext ctx, $1.ChannelUnSubscribeParam request);
+  $async.Future<$1.ChannelRemoveSubscribersResponse> channelRemoveSubscribers(
+      $pb.ServerContext ctx, $1.ChannelRemoveSubscribersParam request);
+  $async.Future<$1.ChannelChangePrivacyResponse> channelChangePrivacy(
+      $pb.ServerContext ctx, $1.ChannelChangePrivacyParam request);
+  $async.Future<$1.ChannelChangeDefaultPermissionResponse>
       channelChangeDefaultPermission($pb.ServerContext ctx,
-          $4.ChannelChangeDefaultPermissionParam request);
-  $async.Future<$4.ChannelRevokeLinkResponse> channelRevokeLink(
-      $pb.ServerContext ctx, $4.ChannelRevokeLinkParam request);
-  $async.Future<$4.ChannelChangeUsernameResponse> channelChangeUsername(
-      $pb.ServerContext ctx, $4.ChannelChangeUsernameParam request);
-  $async.Future<$4.ChannelBlockChannelResponse> channelBlockChannel(
-      $pb.ServerContext ctx, $4.ChannelBlockChannelParam request);
-  $async.Future<$4.ChannelSendMessageResponse> channelSendMessage(
-      $pb.ServerContext ctx, $4.ChannelSendMessageParam request);
-  $async.Future<$4.ChannelEditMessageResponse> channelEditMessage(
-      $pb.ServerContext ctx, $4.ChannelEditMessageParam request);
-  $async.Future<$4.ChannelPinMessageResponse> channelPinMessage(
-      $pb.ServerContext ctx, $4.ChannelPinMessageParam request);
-  $async.Future<$4.ChannelUnPinMessageResponse> channelUnPinMessage(
-      $pb.ServerContext ctx, $4.ChannelUnPinMessageParam request);
-  $async.Future<$4.ChannelDeleteMessageResponse> channelDeleteMessage(
-      $pb.ServerContext ctx, $4.ChannelDeleteMessageParam request);
-  $async.Future<$4.ChannelDeleteMessagesResponse> channelDeleteMessages(
-      $pb.ServerContext ctx, $4.ChannelDeleteMessagesParam request);
-  $async.Future<$4.ChannelClearHistoryResponse> channelClearHistory(
-      $pb.ServerContext ctx, $4.ChannelClearHistoryParam request);
-  $async.Future<$4.ChannelAvatarAddResponse> channelAvatarAdd(
-      $pb.ServerContext ctx, $4.ChannelAvatarAddParam request);
-  $async.Future<$4.ChannelAvatarChangeResponse> channelAvatarChange(
-      $pb.ServerContext ctx, $4.ChannelAvatarChangeParam request);
-  $async.Future<$4.ChannelAvatarDeleteResponse> channelAvatarDelete(
-      $pb.ServerContext ctx, $4.ChannelAvatarDeleteParam request);
-  $async.Future<$4.ChannelAvatarGetListResponse> channelAvatarGetList(
-      $pb.ServerContext ctx, $4.ChannelAvatarGetListParam request);
-  $async.Future<$4.ChannelSendDoingActionResponse> channelSendDoingAction(
-      $pb.ServerContext ctx, $4.ChannelSendDoingActionParam request);
-  $async.Future<$4.ChannelReportChannelResponse> channelReportChannel(
-      $pb.ServerContext ctx, $4.ChannelReportChannelParam request);
-  $async.Future<$4.ChannelReportMessageResponse> channelReportMessage(
-      $pb.ServerContext ctx, $4.ChannelReportMessageParam request);
-  $async.Future<$4.ChannelGetFullResponse> channelGetFull(
-      $pb.ServerContext ctx, $4.ChannelGetFullParam request);
-  $async.Future<$4.ChannelGetMessagesListResponse> channelGetMessagesList(
-      $pb.ServerContext ctx, $4.ChannelGetMessagesListParam request);
-  $async.Future<$4.ChannelGetMediaListResponse> channelGetMediaList(
-      $pb.ServerContext ctx, $4.ChannelGetMediaListParam request);
-  $async.Future<$4.ChannelGetAuthorsResponse> channelGetAuthors(
-      $pb.ServerContext ctx, $4.ChannelGetAuthorsParam request);
-  $async.Future<$4.ChannelGetFollowersResponse> channelGetFollowers(
-      $pb.ServerContext ctx, $4.ChannelGetFollowersParam request);
-  $async.Future<$4.ChannelGetFollowingsResponse> channelGetFollowings(
-      $pb.ServerContext ctx, $4.ChannelGetFollowingsParam request);
-  $async.Future<$4.ChannelGetSubscribersResponse> channelGetSubscribers(
-      $pb.ServerContext ctx, $4.ChannelGetSubscribersParam request);
-  $async.Future<$4.ChannelBlockedResponse> channelBlocked(
-      $pb.ServerContext ctx, $4.ChannelBlockedParam request);
-  $async.Future<$4.ChannelSetDraftResponse> channelSetDraft(
-      $pb.ServerContext ctx, $4.ChannelSetDraftParam request);
+          $1.ChannelChangeDefaultPermissionParam request);
+  $async.Future<$1.ChannelRevokeLinkResponse> channelRevokeLink(
+      $pb.ServerContext ctx, $1.ChannelRevokeLinkParam request);
+  $async.Future<$1.ChannelChangeUsernameResponse> channelChangeUsername(
+      $pb.ServerContext ctx, $1.ChannelChangeUsernameParam request);
+  $async.Future<$1.ChannelBlockChannelResponse> channelBlockChannel(
+      $pb.ServerContext ctx, $1.ChannelBlockChannelParam request);
+  $async.Future<$1.ChannelSendMessageResponse> channelSendMessage(
+      $pb.ServerContext ctx, $1.ChannelSendMessageParam request);
+  $async.Future<$1.ChannelEditMessageResponse> channelEditMessage(
+      $pb.ServerContext ctx, $1.ChannelEditMessageParam request);
+  $async.Future<$1.ChannelPinMessageResponse> channelPinMessage(
+      $pb.ServerContext ctx, $1.ChannelPinMessageParam request);
+  $async.Future<$1.ChannelUnPinMessageResponse> channelUnPinMessage(
+      $pb.ServerContext ctx, $1.ChannelUnPinMessageParam request);
+  $async.Future<$1.ChannelDeleteMessageResponse> channelDeleteMessage(
+      $pb.ServerContext ctx, $1.ChannelDeleteMessageParam request);
+  $async.Future<$1.ChannelDeleteMessagesResponse> channelDeleteMessages(
+      $pb.ServerContext ctx, $1.ChannelDeleteMessagesParam request);
+  $async.Future<$1.ChannelClearHistoryResponse> channelClearHistory(
+      $pb.ServerContext ctx, $1.ChannelClearHistoryParam request);
+  $async.Future<$1.ChannelAvatarAddResponse> channelAvatarAdd(
+      $pb.ServerContext ctx, $1.ChannelAvatarAddParam request);
+  $async.Future<$1.ChannelAvatarChangeResponse> channelAvatarChange(
+      $pb.ServerContext ctx, $1.ChannelAvatarChangeParam request);
+  $async.Future<$1.ChannelAvatarDeleteResponse> channelAvatarDelete(
+      $pb.ServerContext ctx, $1.ChannelAvatarDeleteParam request);
+  $async.Future<$1.ChannelAvatarGetListResponse> channelAvatarGetList(
+      $pb.ServerContext ctx, $1.ChannelAvatarGetListParam request);
+  $async.Future<$1.ChannelSendDoingActionResponse> channelSendDoingAction(
+      $pb.ServerContext ctx, $1.ChannelSendDoingActionParam request);
+  $async.Future<$1.ChannelReportChannelResponse> channelReportChannel(
+      $pb.ServerContext ctx, $1.ChannelReportChannelParam request);
+  $async.Future<$1.ChannelReportMessageResponse> channelReportMessage(
+      $pb.ServerContext ctx, $1.ChannelReportMessageParam request);
+  $async.Future<$1.ChannelGetFullResponse> channelGetFull(
+      $pb.ServerContext ctx, $1.ChannelGetFullParam request);
+  $async.Future<$1.ChannelGetMessagesListResponse> channelGetMessagesList(
+      $pb.ServerContext ctx, $1.ChannelGetMessagesListParam request);
+  $async.Future<$1.ChannelGetMediaListResponse> channelGetMediaList(
+      $pb.ServerContext ctx, $1.ChannelGetMediaListParam request);
+  $async.Future<$1.ChannelGetAuthorsResponse> channelGetAuthors(
+      $pb.ServerContext ctx, $1.ChannelGetAuthorsParam request);
+  $async.Future<$1.ChannelGetFollowersResponse> channelGetFollowers(
+      $pb.ServerContext ctx, $1.ChannelGetFollowersParam request);
+  $async.Future<$1.ChannelGetFollowingsResponse> channelGetFollowings(
+      $pb.ServerContext ctx, $1.ChannelGetFollowingsParam request);
+  $async.Future<$1.ChannelGetSubscribersResponse> channelGetSubscribers(
+      $pb.ServerContext ctx, $1.ChannelGetSubscribersParam request);
+  $async.Future<$1.ChannelBlockedResponse> channelBlocked(
+      $pb.ServerContext ctx, $1.ChannelBlockedParam request);
+  $async.Future<$1.ChannelSetDraftResponse> channelSetDraft(
+      $pb.ServerContext ctx, $1.ChannelSetDraftParam request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
       case 'ChannelCreateChannel':
-        return $4.ChannelCreateChannelParam();
+        return $1.ChannelCreateChannelParam();
       case 'ChannelEditChannel':
-        return $4.ChannelEditChannelParam();
+        return $1.ChannelEditChannelParam();
       case 'ChannelDeleteChannel':
-        return $4.ChannelDeleteChannelParam();
+        return $1.ChannelDeleteChannelParam();
       case 'ChannelAddAuthor':
-        return $4.ChannelAddAuthorParam();
+        return $1.ChannelAddAuthorParam();
       case 'ChannelChangeAuthorPermission':
-        return $4.ChannelChangeAuthorPermissionParam();
+        return $1.ChannelChangeAuthorPermissionParam();
       case 'ChannelRemoveAuthor':
-        return $4.ChannelRemoveAuthorParam();
+        return $1.ChannelRemoveAuthorParam();
       case 'ChannelFollowChannel':
-        return $4.ChannelFollowChannelParam();
+        return $1.ChannelFollowChannelParam();
       case 'ChannelUnFollowChannel':
-        return $4.ChannelUnFollowChannelParam();
+        return $1.ChannelUnFollowChannelParam();
       case 'ChannelRemoveFollowers':
-        return $4.ChannelRemoveFollowersParam();
+        return $1.ChannelRemoveFollowersParam();
       case 'ChannelSubscribe':
-        return $4.ChannelSubscribeParam();
+        return $1.ChannelSubscribeParam();
       case 'ChannelUnSubscribe':
-        return $4.ChannelUnSubscribeParam();
+        return $1.ChannelUnSubscribeParam();
       case 'ChannelRemoveSubscribers':
-        return $4.ChannelRemoveSubscribersParam();
+        return $1.ChannelRemoveSubscribersParam();
       case 'ChannelChangePrivacy':
-        return $4.ChannelChangePrivacyParam();
+        return $1.ChannelChangePrivacyParam();
       case 'ChannelChangeDefaultPermission':
-        return $4.ChannelChangeDefaultPermissionParam();
+        return $1.ChannelChangeDefaultPermissionParam();
       case 'ChannelRevokeLink':
-        return $4.ChannelRevokeLinkParam();
+        return $1.ChannelRevokeLinkParam();
       case 'ChannelChangeUsername':
-        return $4.ChannelChangeUsernameParam();
+        return $1.ChannelChangeUsernameParam();
       case 'ChannelBlockChannel':
-        return $4.ChannelBlockChannelParam();
+        return $1.ChannelBlockChannelParam();
       case 'ChannelSendMessage':
-        return $4.ChannelSendMessageParam();
+        return $1.ChannelSendMessageParam();
       case 'ChannelEditMessage':
-        return $4.ChannelEditMessageParam();
+        return $1.ChannelEditMessageParam();
       case 'ChannelPinMessage':
-        return $4.ChannelPinMessageParam();
+        return $1.ChannelPinMessageParam();
       case 'ChannelUnPinMessage':
-        return $4.ChannelUnPinMessageParam();
+        return $1.ChannelUnPinMessageParam();
       case 'ChannelDeleteMessage':
-        return $4.ChannelDeleteMessageParam();
+        return $1.ChannelDeleteMessageParam();
       case 'ChannelDeleteMessages':
-        return $4.ChannelDeleteMessagesParam();
+        return $1.ChannelDeleteMessagesParam();
       case 'ChannelClearHistory':
-        return $4.ChannelClearHistoryParam();
+        return $1.ChannelClearHistoryParam();
       case 'ChannelAvatarAdd':
-        return $4.ChannelAvatarAddParam();
+        return $1.ChannelAvatarAddParam();
       case 'ChannelAvatarChange':
-        return $4.ChannelAvatarChangeParam();
+        return $1.ChannelAvatarChangeParam();
       case 'ChannelAvatarDelete':
-        return $4.ChannelAvatarDeleteParam();
+        return $1.ChannelAvatarDeleteParam();
       case 'ChannelAvatarGetList':
-        return $4.ChannelAvatarGetListParam();
+        return $1.ChannelAvatarGetListParam();
       case 'ChannelSendDoingAction':
-        return $4.ChannelSendDoingActionParam();
+        return $1.ChannelSendDoingActionParam();
       case 'ChannelReportChannel':
-        return $4.ChannelReportChannelParam();
+        return $1.ChannelReportChannelParam();
       case 'ChannelReportMessage':
-        return $4.ChannelReportMessageParam();
+        return $1.ChannelReportMessageParam();
       case 'ChannelGetFull':
-        return $4.ChannelGetFullParam();
+        return $1.ChannelGetFullParam();
       case 'ChannelGetMessagesList':
-        return $4.ChannelGetMessagesListParam();
+        return $1.ChannelGetMessagesListParam();
       case 'ChannelGetMediaList':
-        return $4.ChannelGetMediaListParam();
+        return $1.ChannelGetMediaListParam();
       case 'ChannelGetAuthors':
-        return $4.ChannelGetAuthorsParam();
+        return $1.ChannelGetAuthorsParam();
       case 'ChannelGetFollowers':
-        return $4.ChannelGetFollowersParam();
+        return $1.ChannelGetFollowersParam();
       case 'ChannelGetFollowings':
-        return $4.ChannelGetFollowingsParam();
+        return $1.ChannelGetFollowingsParam();
       case 'ChannelGetSubscribers':
-        return $4.ChannelGetSubscribersParam();
+        return $1.ChannelGetSubscribersParam();
       case 'ChannelBlocked':
-        return $4.ChannelBlockedParam();
+        return $1.ChannelBlockedParam();
       case 'ChannelSetDraft':
-        return $4.ChannelSetDraftParam();
+        return $1.ChannelSetDraftParam();
       default:
         throw $core.ArgumentError('Unknown method: $method');
     }

@@ -10,51 +10,51 @@ import 'dart:async' as $async;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'dart:core' as $core;
-import 'rpc_chat.pb.dart' as $5;
+import 'rpc_chat.pb.dart' as $2;
 import 'rpc_chat.pbjson.dart';
 
 export 'rpc_chat.pb.dart';
 
 abstract class RPC_ChatServiceBase extends $pb.GeneratedService {
-  $async.Future<$5.ChatSendMessageResponse> chatSendMessage(
-      $pb.ServerContext ctx, $5.ChatSendMessageParam request);
-  $async.Future<$5.ChatEditMessageResponse> chatEditMessage(
-      $pb.ServerContext ctx, $5.ChatEditMessageParam request);
-  $async.Future<$5.ChatDeleteMessagesResponse> chatDeleteMessages(
-      $pb.ServerContext ctx, $5.ChatDeleteMessagesParam request);
-  $async.Future<$5.ChatDeleteHistoryResponse> chatDeleteHistory(
-      $pb.ServerContext ctx, $5.ChatDeleteHistoryParam request);
-  $async.Future<$5.ChatSendDoingActionResponse> chatSendDoingAction(
-      $pb.ServerContext ctx, $5.ChatSendDoingActionParam request);
-  $async.Future<$5.ChatReportChatResponse> chatReportChat(
-      $pb.ServerContext ctx, $5.ChatReportChatParam request);
-  $async.Future<$5.ChatGetFullMessageResponse> chatGetFull(
-      $pb.ServerContext ctx, $5.ChatGetFullMessageParam request);
-  $async.Future<$5.ChatGetMessagesListResponse> chatGetMessagesList(
-      $pb.ServerContext ctx, $5.ChatGetMessagesListParam request);
-  $async.Future<$5.ChatGetMediaListResponse> chatGetMediaList(
-      $pb.ServerContext ctx, $5.ChatGetMediaListParam request);
+  $async.Future<$2.ChatSendMessageResponse> chatSendMessage(
+      $pb.ServerContext ctx, $2.ChatSendMessageParam request);
+  $async.Future<$2.ChatEditMessageResponse> chatEditMessage(
+      $pb.ServerContext ctx, $2.ChatEditMessageParam request);
+  $async.Future<$2.ChatDeleteMessagesResponse> chatDeleteMessages(
+      $pb.ServerContext ctx, $2.ChatDeleteMessagesParam request);
+  $async.Future<$2.ChatDeleteHistoryResponse> chatDeleteHistory(
+      $pb.ServerContext ctx, $2.ChatDeleteHistoryParam request);
+  $async.Future<$2.ChatSendDoingActionResponse> chatSendDoingAction(
+      $pb.ServerContext ctx, $2.ChatSendDoingActionParam request);
+  $async.Future<$2.ChatReportChatResponse> chatReportChat(
+      $pb.ServerContext ctx, $2.ChatReportChatParam request);
+  $async.Future<$2.ChatGetFullMessageResponse> chatGetFull(
+      $pb.ServerContext ctx, $2.ChatGetFullMessageParam request);
+  $async.Future<$2.ChatGetMessagesListResponse> chatGetMessagesList(
+      $pb.ServerContext ctx, $2.ChatGetMessagesListParam request);
+  $async.Future<$2.ChatGetMediaListResponse> chatGetMediaList(
+      $pb.ServerContext ctx, $2.ChatGetMediaListParam request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
       case 'ChatSendMessage':
-        return $5.ChatSendMessageParam();
+        return $2.ChatSendMessageParam();
       case 'ChatEditMessage':
-        return $5.ChatEditMessageParam();
+        return $2.ChatEditMessageParam();
       case 'ChatDeleteMessages':
-        return $5.ChatDeleteMessagesParam();
+        return $2.ChatDeleteMessagesParam();
       case 'ChatDeleteHistory':
-        return $5.ChatDeleteHistoryParam();
+        return $2.ChatDeleteHistoryParam();
       case 'ChatSendDoingAction':
-        return $5.ChatSendDoingActionParam();
+        return $2.ChatSendDoingActionParam();
       case 'ChatReportChat':
-        return $5.ChatReportChatParam();
+        return $2.ChatReportChatParam();
       case 'ChatGetFull':
-        return $5.ChatGetFullMessageParam();
+        return $2.ChatGetFullMessageParam();
       case 'ChatGetMessagesList':
-        return $5.ChatGetMessagesListParam();
+        return $2.ChatGetMessagesListParam();
       case 'ChatGetMediaList':
-        return $5.ChatGetMediaListParam();
+        return $2.ChatGetMediaListParam();
       default:
         throw $core.ArgumentError('Unknown method: $method');
     }
