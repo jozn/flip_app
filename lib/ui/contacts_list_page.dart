@@ -2,8 +2,6 @@ import 'package:flip_app/pb/global.pb.dart';
 import 'package:flip_app/pb/rpc_sample.pb.dart';
 import 'package:flip_app/shared/fcolors.dart';
 import 'package:flip_app/shared/shared.dart';
-import 'package:flip_app/ui/del/api_dep.dart' as Api_dep;
-import 'package:flip_app/ui/del/api2.dart' as Api;
 import 'package:flip_app/ui/api.dart';
 import 'package:flutter/material.dart';
 import 'package:toast/toast.dart';
@@ -29,10 +27,11 @@ class ContactsListPageState extends State<ContactsListPage> {
     fetchContacts();
   }
 
-  void fetchContacts() {
-    // Sample.getProfiles()
-    var later2 = Api.Sample.getProfiles(GetProfilesParam());
-    later2.then((value) => {setNewProfiles(value.profiles)});
+  void fetchContacts() async {
+    // var later = RPC_Sample.getProfiles(GetProfilesParam());
+    // later.then((value) => {setNewProfiles(value.profiles)});
+    var res = await RPC_Sample.getProfiles(GetProfilesParam());
+    setNewProfiles(res.profiles);
   }
 
   void setNewProfiles(List<Profile> profiles) {
@@ -45,22 +44,6 @@ class ContactsListPageState extends State<ContactsListPage> {
   @override
   Widget build(BuildContext context) {
     this.context = context;
-
-    // var later = Api.Sample.getProfiles(GetProfilesParam());
-    /*   later.then((res) => {
-      print(res)
-    });*/
-/*    List<Contact_HERE> items = [];
-
-    for (var i = 1; i < 2; i++) {
-      var c = Contact_HERE();
-      c.title = "Me contancts name  $i";
-      c.date = "14:$i last visit from yesterday";
-      c.subtitle = "Last visit yesterday $i";
-      c.image = "assets/avatars/$i.jpg";
-
-      items.add(c);
-    }*/
 
     return Scaffold(
         backgroundColor: Colors.white,
