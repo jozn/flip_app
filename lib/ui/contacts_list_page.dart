@@ -2,8 +2,9 @@ import 'package:flip_app/pb/global.pb.dart';
 import 'package:flip_app/pb/rpc_sample.pb.dart';
 import 'package:flip_app/shared/fcolors.dart';
 import 'package:flip_app/shared/shared.dart';
-import 'package:flip_app/ui/api_dep.dart' as Api_dep;
-import 'package:flip_app/ui/api2.dart' as Api;
+import 'package:flip_app/ui/del/api_dep.dart' as Api_dep;
+import 'package:flip_app/ui/del/api2.dart' as Api;
+import 'package:flip_app/ui/api.dart';
 import 'package:flutter/material.dart';
 import 'package:toast/toast.dart';
 
@@ -29,6 +30,7 @@ class ContactsListPageState extends State<ContactsListPage> {
   }
 
   void fetchContacts() {
+    // Sample.getProfiles()
     var later2 = Api.Sample.getProfiles(GetProfilesParam());
     later2.then((value) => {setNewProfiles(value.profiles)});
   }

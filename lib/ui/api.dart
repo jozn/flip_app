@@ -4,7 +4,6 @@ import 'package:protobuf/protobuf.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
 import 'package:flip_app/pb/global.pb.dart';
 
-
 import 'package:flip_app/pb/rpc_auth.pb.dart';
 import 'package:flip_app/pb/rpc_channel.pb.dart';
 import 'package:flip_app/pb/rpc_chat.pb.dart';
@@ -15,9 +14,9 @@ import 'package:flip_app/pb/rpc_shared.pb.dart';
 import 'package:flip_app/pb/rpc_upload.pb.dart';
 import 'package:flip_app/pb/rpc_user.pb.dart';
 
-
-class Auth {
-  static $async.Future<SendConfirmCodeResponse> sendConfirmCode(SendConfirmCodeParam param) async {
+class RPC_Auth {
+  static $async.Future<SendConfirmCodeResponse> sendConfirmCode(
+      SendConfirmCodeParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -40,8 +39,9 @@ class Auth {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<ConfirmCodeResponse> confirmCode(ConfirmCodeParam param) async {
+
+  static $async.Future<ConfirmCodeResponse> confirmCode(
+      ConfirmCodeParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -64,7 +64,7 @@ class Auth {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
+
   static $async.Future<SingUpResponse> singUp(SingUpParam param) async {
     var paramBuff = param.writeToBuffer();
 
@@ -88,7 +88,7 @@ class Auth {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
+
   static $async.Future<SingInResponse> singIn(SingInParam param) async {
     var paramBuff = param.writeToBuffer();
 
@@ -112,7 +112,7 @@ class Auth {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
+
   static $async.Future<LogOutResponse> logOut(LogOutParam param) async {
     var paramBuff = param.writeToBuffer();
 
@@ -136,10 +136,11 @@ class Auth {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
 }
-class Channel {
-  static $async.Future<ChannelCreateChannelResponse> channelCreateChannel(ChannelCreateChannelParam param) async {
+
+class RPC_Channel {
+  static $async.Future<ChannelCreateChannelResponse> channelCreateChannel(
+      ChannelCreateChannelParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -162,8 +163,9 @@ class Channel {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<ChannelEditChannelResponse> channelEditChannel(ChannelEditChannelParam param) async {
+
+  static $async.Future<ChannelEditChannelResponse> channelEditChannel(
+      ChannelEditChannelParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -186,8 +188,9 @@ class Channel {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<ChannelDeleteChannelResponse> channelDeleteChannel(ChannelDeleteChannelParam param) async {
+
+  static $async.Future<ChannelDeleteChannelResponse> channelDeleteChannel(
+      ChannelDeleteChannelParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -210,8 +213,9 @@ class Channel {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<ChannelAddAuthorResponse> channelAddAuthor(ChannelAddAuthorParam param) async {
+
+  static $async.Future<ChannelAddAuthorResponse> channelAddAuthor(
+      ChannelAddAuthorParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -234,8 +238,10 @@ class Channel {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<ChannelChangeAuthorPermissionResponse> channelChangeAuthorPermission(ChannelChangeAuthorPermissionParam param) async {
+
+  static $async.Future<ChannelChangeAuthorPermissionResponse>
+      channelChangeAuthorPermission(
+          ChannelChangeAuthorPermissionParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -258,8 +264,9 @@ class Channel {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<ChannelRemoveAuthorResponse> channelRemoveAuthor(ChannelRemoveAuthorParam param) async {
+
+  static $async.Future<ChannelRemoveAuthorResponse> channelRemoveAuthor(
+      ChannelRemoveAuthorParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -282,8 +289,9 @@ class Channel {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<ChannelFollowChannelResponse> channelFollowChannel(ChannelFollowChannelParam param) async {
+
+  static $async.Future<ChannelFollowChannelResponse> channelFollowChannel(
+      ChannelFollowChannelParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -306,8 +314,9 @@ class Channel {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<ChannelUnFollowChannelResponse> channelUnFollowChannel(ChannelUnFollowChannelParam param) async {
+
+  static $async.Future<ChannelUnFollowChannelResponse> channelUnFollowChannel(
+      ChannelUnFollowChannelParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -330,8 +339,9 @@ class Channel {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<ChannelRemoveFollowersResponse> channelRemoveFollowers(ChannelRemoveFollowersParam param) async {
+
+  static $async.Future<ChannelRemoveFollowersResponse> channelRemoveFollowers(
+      ChannelRemoveFollowersParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -354,8 +364,9 @@ class Channel {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<ChannelSubscribeResponse> channelSubscribe(ChannelSubscribeParam param) async {
+
+  static $async.Future<ChannelSubscribeResponse> channelSubscribe(
+      ChannelSubscribeParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -378,8 +389,9 @@ class Channel {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<ChannelUnSubscribeResponse> channelUnSubscribe(ChannelUnSubscribeParam param) async {
+
+  static $async.Future<ChannelUnSubscribeResponse> channelUnSubscribe(
+      ChannelUnSubscribeParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -402,8 +414,9 @@ class Channel {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<ChannelRemoveSubscribersResponse> channelRemoveSubscribers(ChannelRemoveSubscribersParam param) async {
+
+  static $async.Future<ChannelRemoveSubscribersResponse>
+      channelRemoveSubscribers(ChannelRemoveSubscribersParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -426,8 +439,9 @@ class Channel {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<ChannelChangePrivacyResponse> channelChangePrivacy(ChannelChangePrivacyParam param) async {
+
+  static $async.Future<ChannelChangePrivacyResponse> channelChangePrivacy(
+      ChannelChangePrivacyParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -450,8 +464,10 @@ class Channel {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<ChannelChangeDefaultPermissionResponse> channelChangeDefaultPermission(ChannelChangeDefaultPermissionParam param) async {
+
+  static $async.Future<ChannelChangeDefaultPermissionResponse>
+      channelChangeDefaultPermission(
+          ChannelChangeDefaultPermissionParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -474,8 +490,9 @@ class Channel {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<ChannelRevokeLinkResponse> channelRevokeLink(ChannelRevokeLinkParam param) async {
+
+  static $async.Future<ChannelRevokeLinkResponse> channelRevokeLink(
+      ChannelRevokeLinkParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -498,8 +515,9 @@ class Channel {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<ChannelChangeUsernameResponse> channelChangeUsername(ChannelChangeUsernameParam param) async {
+
+  static $async.Future<ChannelChangeUsernameResponse> channelChangeUsername(
+      ChannelChangeUsernameParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -522,8 +540,9 @@ class Channel {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<ChannelBlockChannelResponse> channelBlockChannel(ChannelBlockChannelParam param) async {
+
+  static $async.Future<ChannelBlockChannelResponse> channelBlockChannel(
+      ChannelBlockChannelParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -546,8 +565,9 @@ class Channel {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<ChannelSendMessageResponse> channelSendMessage(ChannelSendMessageParam param) async {
+
+  static $async.Future<ChannelSendMessageResponse> channelSendMessage(
+      ChannelSendMessageParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -570,8 +590,9 @@ class Channel {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<ChannelEditMessageResponse> channelEditMessage(ChannelEditMessageParam param) async {
+
+  static $async.Future<ChannelEditMessageResponse> channelEditMessage(
+      ChannelEditMessageParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -594,8 +615,9 @@ class Channel {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<ChannelPinMessageResponse> channelPinMessage(ChannelPinMessageParam param) async {
+
+  static $async.Future<ChannelPinMessageResponse> channelPinMessage(
+      ChannelPinMessageParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -618,8 +640,9 @@ class Channel {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<ChannelUnPinMessageResponse> channelUnPinMessage(ChannelUnPinMessageParam param) async {
+
+  static $async.Future<ChannelUnPinMessageResponse> channelUnPinMessage(
+      ChannelUnPinMessageParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -642,8 +665,9 @@ class Channel {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<ChannelDeleteMessageResponse> channelDeleteMessage(ChannelDeleteMessageParam param) async {
+
+  static $async.Future<ChannelDeleteMessageResponse> channelDeleteMessage(
+      ChannelDeleteMessageParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -666,8 +690,9 @@ class Channel {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<ChannelDeleteMessagesResponse> channelDeleteMessages(ChannelDeleteMessagesParam param) async {
+
+  static $async.Future<ChannelDeleteMessagesResponse> channelDeleteMessages(
+      ChannelDeleteMessagesParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -690,8 +715,9 @@ class Channel {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<ChannelClearHistoryResponse> channelClearHistory(ChannelClearHistoryParam param) async {
+
+  static $async.Future<ChannelClearHistoryResponse> channelClearHistory(
+      ChannelClearHistoryParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -714,8 +740,9 @@ class Channel {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<ChannelAvatarAddResponse> channelAvatarAdd(ChannelAvatarAddParam param) async {
+
+  static $async.Future<ChannelAvatarAddResponse> channelAvatarAdd(
+      ChannelAvatarAddParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -738,8 +765,9 @@ class Channel {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<ChannelAvatarChangeResponse> channelAvatarChange(ChannelAvatarChangeParam param) async {
+
+  static $async.Future<ChannelAvatarChangeResponse> channelAvatarChange(
+      ChannelAvatarChangeParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -762,8 +790,9 @@ class Channel {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<ChannelAvatarDeleteResponse> channelAvatarDelete(ChannelAvatarDeleteParam param) async {
+
+  static $async.Future<ChannelAvatarDeleteResponse> channelAvatarDelete(
+      ChannelAvatarDeleteParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -786,8 +815,9 @@ class Channel {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<ChannelAvatarGetListResponse> channelAvatarGetList(ChannelAvatarGetListParam param) async {
+
+  static $async.Future<ChannelAvatarGetListResponse> channelAvatarGetList(
+      ChannelAvatarGetListParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -810,8 +840,9 @@ class Channel {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<ChannelSendDoingActionResponse> channelSendDoingAction(ChannelSendDoingActionParam param) async {
+
+  static $async.Future<ChannelSendDoingActionResponse> channelSendDoingAction(
+      ChannelSendDoingActionParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -834,8 +865,9 @@ class Channel {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<ChannelReportChannelResponse> channelReportChannel(ChannelReportChannelParam param) async {
+
+  static $async.Future<ChannelReportChannelResponse> channelReportChannel(
+      ChannelReportChannelParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -858,8 +890,9 @@ class Channel {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<ChannelReportMessageResponse> channelReportMessage(ChannelReportMessageParam param) async {
+
+  static $async.Future<ChannelReportMessageResponse> channelReportMessage(
+      ChannelReportMessageParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -882,8 +915,9 @@ class Channel {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<ChannelGetFullResponse> channelGetFull(ChannelGetFullParam param) async {
+
+  static $async.Future<ChannelGetFullResponse> channelGetFull(
+      ChannelGetFullParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -906,8 +940,9 @@ class Channel {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<ChannelGetMessagesListResponse> channelGetMessagesList(ChannelGetMessagesListParam param) async {
+
+  static $async.Future<ChannelGetMessagesListResponse> channelGetMessagesList(
+      ChannelGetMessagesListParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -930,8 +965,9 @@ class Channel {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<ChannelGetMediaListResponse> channelGetMediaList(ChannelGetMediaListParam param) async {
+
+  static $async.Future<ChannelGetMediaListResponse> channelGetMediaList(
+      ChannelGetMediaListParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -954,8 +990,9 @@ class Channel {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<ChannelGetAuthorsResponse> channelGetAuthors(ChannelGetAuthorsParam param) async {
+
+  static $async.Future<ChannelGetAuthorsResponse> channelGetAuthors(
+      ChannelGetAuthorsParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -978,8 +1015,9 @@ class Channel {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<ChannelGetFollowersResponse> channelGetFollowers(ChannelGetFollowersParam param) async {
+
+  static $async.Future<ChannelGetFollowersResponse> channelGetFollowers(
+      ChannelGetFollowersParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -1002,8 +1040,9 @@ class Channel {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<ChannelGetFollowingsResponse> channelGetFollowings(ChannelGetFollowingsParam param) async {
+
+  static $async.Future<ChannelGetFollowingsResponse> channelGetFollowings(
+      ChannelGetFollowingsParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -1026,8 +1065,9 @@ class Channel {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<ChannelGetSubscribersResponse> channelGetSubscribers(ChannelGetSubscribersParam param) async {
+
+  static $async.Future<ChannelGetSubscribersResponse> channelGetSubscribers(
+      ChannelGetSubscribersParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -1050,8 +1090,9 @@ class Channel {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<ChannelBlockedResponse> channelBlocked(ChannelBlockedParam param) async {
+
+  static $async.Future<ChannelBlockedResponse> channelBlocked(
+      ChannelBlockedParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -1074,8 +1115,9 @@ class Channel {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<ChannelSetDraftResponse> channelSetDraft(ChannelSetDraftParam param) async {
+
+  static $async.Future<ChannelSetDraftResponse> channelSetDraft(
+      ChannelSetDraftParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -1098,10 +1140,11 @@ class Channel {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
 }
-class Chat {
-  static $async.Future<ChatSendMessageResponse> chatSendMessage(ChatSendMessageParam param) async {
+
+class RPC_Chat {
+  static $async.Future<ChatSendMessageResponse> chatSendMessage(
+      ChatSendMessageParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -1124,8 +1167,9 @@ class Chat {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<ChatEditMessageResponse> chatEditMessage(ChatEditMessageParam param) async {
+
+  static $async.Future<ChatEditMessageResponse> chatEditMessage(
+      ChatEditMessageParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -1148,8 +1192,9 @@ class Chat {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<ChatDeleteMessagesResponse> chatDeleteMessages(ChatDeleteMessagesParam param) async {
+
+  static $async.Future<ChatDeleteMessagesResponse> chatDeleteMessages(
+      ChatDeleteMessagesParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -1172,8 +1217,9 @@ class Chat {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<ChatDeleteHistoryResponse> chatDeleteHistory(ChatDeleteHistoryParam param) async {
+
+  static $async.Future<ChatDeleteHistoryResponse> chatDeleteHistory(
+      ChatDeleteHistoryParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -1196,8 +1242,9 @@ class Chat {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<ChatSendDoingActionResponse> chatSendDoingAction(ChatSendDoingActionParam param) async {
+
+  static $async.Future<ChatSendDoingActionResponse> chatSendDoingAction(
+      ChatSendDoingActionParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -1220,8 +1267,9 @@ class Chat {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<ChatReportChatResponse> chatReportChat(ChatReportChatParam param) async {
+
+  static $async.Future<ChatReportChatResponse> chatReportChat(
+      ChatReportChatParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -1244,8 +1292,9 @@ class Chat {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<ChatGetFullMessageResponse> chatGetFull(ChatGetFullMessageParam param) async {
+
+  static $async.Future<ChatGetFullMessageResponse> chatGetFull(
+      ChatGetFullMessageParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -1268,8 +1317,9 @@ class Chat {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<ChatGetMessagesListResponse> chatGetMessagesList(ChatGetMessagesListParam param) async {
+
+  static $async.Future<ChatGetMessagesListResponse> chatGetMessagesList(
+      ChatGetMessagesListParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -1292,8 +1342,9 @@ class Chat {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<ChatGetMediaListResponse> chatGetMediaList(ChatGetMediaListParam param) async {
+
+  static $async.Future<ChatGetMediaListResponse> chatGetMediaList(
+      ChatGetMediaListParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -1316,10 +1367,11 @@ class Chat {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
 }
-class Direct {
-  static $async.Future<DirectDeleteDirectResponse> directDeleteDirect(DirectDeleteDirectParam param) async {
+
+class RPC_Direct {
+  static $async.Future<DirectDeleteDirectResponse> directDeleteDirect(
+      DirectDeleteDirectParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -1342,8 +1394,9 @@ class Direct {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<DirectChangeTitleResponse> directChangeTitle(DirectChangeTitleParam param) async {
+
+  static $async.Future<DirectChangeTitleResponse> directChangeTitle(
+      DirectChangeTitleParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -1366,8 +1419,10 @@ class Direct {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<DirectSetCustomNotificationResponse> directSetCustomNotification(DirectSetCustomNotificationParam param) async {
+
+  static $async.Future<DirectSetCustomNotificationResponse>
+      directSetCustomNotification(
+          DirectSetCustomNotificationParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -1390,8 +1445,9 @@ class Direct {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<DirectSendActionDoingResponse> directSendActionDoing(DirectSendActionDoingParam param) async {
+
+  static $async.Future<DirectSendActionDoingResponse> directSendActionDoing(
+      DirectSendActionDoingParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -1414,8 +1470,9 @@ class Direct {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<DirectSetDraftResponse> directSetDraft(DirectSetDraftParam param) async {
+
+  static $async.Future<DirectSetDraftResponse> directSetDraft(
+      DirectSetDraftParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -1438,8 +1495,9 @@ class Direct {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<DirectDeleteDirectsResponse> directDeleteDirects(DirectDeleteDirectsParam param) async {
+
+  static $async.Future<DirectDeleteDirectsResponse> directDeleteDirects(
+      DirectDeleteDirectsParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -1462,8 +1520,9 @@ class Direct {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<DirectMarkAsReadResponse> directMarkAsRead(DirectMarkAsReadParam param) async {
+
+  static $async.Future<DirectMarkAsReadResponse> directMarkAsRead(
+      DirectMarkAsReadParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -1486,8 +1545,9 @@ class Direct {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<DirectMarkAsUnReadResponse> directMarkAsUnRead(DirectMarkAsUnReadParam param) async {
+
+  static $async.Future<DirectMarkAsUnReadResponse> directMarkAsUnRead(
+      DirectMarkAsUnReadParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -1510,8 +1570,9 @@ class Direct {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<DirectPinDirectsResponse> directPinDirects(DirectPinDirectsParam param) async {
+
+  static $async.Future<DirectPinDirectsResponse> directPinDirects(
+      DirectPinDirectsParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -1534,8 +1595,9 @@ class Direct {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<DirectUnPinDirectsResponse> directUnPinDirects(DirectUnPinDirectsParam param) async {
+
+  static $async.Future<DirectUnPinDirectsResponse> directUnPinDirects(
+      DirectUnPinDirectsParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -1558,8 +1620,9 @@ class Direct {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<DirectArchiveDirectsResponse> directArchiveDirects(DirectArchiveDirectsParam param) async {
+
+  static $async.Future<DirectArchiveDirectsResponse> directArchiveDirects(
+      DirectArchiveDirectsParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -1582,8 +1645,9 @@ class Direct {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<DirectUnArchiveDirectsResponse> directUnArchiveDirects(DirectUnArchiveDirectsParam param) async {
+
+  static $async.Future<DirectUnArchiveDirectsResponse> directUnArchiveDirects(
+      DirectUnArchiveDirectsParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -1606,8 +1670,9 @@ class Direct {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<DirectClearHistoriesResponse> directClearHistories(DirectClearHistoriesParam param) async {
+
+  static $async.Future<DirectClearHistoriesResponse> directClearHistories(
+      DirectClearHistoriesParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -1630,8 +1695,9 @@ class Direct {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<DirectMuteDirectsResponse> directMuteDirects(DirectMuteDirectsParam param) async {
+
+  static $async.Future<DirectMuteDirectsResponse> directMuteDirects(
+      DirectMuteDirectsParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -1654,8 +1720,9 @@ class Direct {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<DirectUnMuteDirectsResponse> directUnMuteDirects(DirectUnMuteDirectsParam param) async {
+
+  static $async.Future<DirectUnMuteDirectsResponse> directUnMuteDirects(
+      DirectUnMuteDirectsParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -1678,8 +1745,9 @@ class Direct {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<DirectCreateFolderResponse> directCreateFolder(DirectCreateFolderParam param) async {
+
+  static $async.Future<DirectCreateFolderResponse> directCreateFolder(
+      DirectCreateFolderParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -1702,8 +1770,9 @@ class Direct {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<DirectChangeFolderResponse> directChangeFolder(DirectChangeFolderParam param) async {
+
+  static $async.Future<DirectChangeFolderResponse> directChangeFolder(
+      DirectChangeFolderParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -1726,8 +1795,9 @@ class Direct {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<DirectRemoveFromFolderResponse> directRemoveFromFolder(DirectRemoveFromFolderParam param) async {
+
+  static $async.Future<DirectRemoveFromFolderResponse> directRemoveFromFolder(
+      DirectRemoveFromFolderParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -1750,8 +1820,9 @@ class Direct {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<DirectReordersFolderResponse> directReordersFolder(DirectReordersFolderParam param) async {
+
+  static $async.Future<DirectReordersFolderResponse> directReordersFolder(
+      DirectReordersFolderParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -1774,8 +1845,9 @@ class Direct {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<DirectDeleteFolderResponse> directDeleteFolder(DirectDeleteFolderParam param) async {
+
+  static $async.Future<DirectDeleteFolderResponse> directDeleteFolder(
+      DirectDeleteFolderParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -1798,8 +1870,9 @@ class Direct {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<DirectGetChatsListResponse> directGetChatsList(DirectGetChatsListParam param) async {
+
+  static $async.Future<DirectGetChatsListResponse> directGetChatsList(
+      DirectGetChatsListParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -1822,8 +1895,9 @@ class Direct {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<DirectGetGroupsListResponse> directGetGroupsList(DirectGetGroupsListParam param) async {
+
+  static $async.Future<DirectGetGroupsListResponse> directGetGroupsList(
+      DirectGetGroupsListParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -1846,8 +1920,9 @@ class Direct {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<DirectGetChannelsListResponse> directGetChannelsList(DirectGetChannelsListParam param) async {
+
+  static $async.Future<DirectGetChannelsListResponse> directGetChannelsList(
+      DirectGetChannelsListParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -1870,8 +1945,9 @@ class Direct {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<DirectGetFoldersListResponse> directGetFoldersList(DirectGetFoldersListParam param) async {
+
+  static $async.Future<DirectGetFoldersListResponse> directGetFoldersList(
+      DirectGetFoldersListParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -1894,8 +1970,9 @@ class Direct {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<DirectGetFoldersFullListResponse> directGetFoldersFullList(DirectGetFoldersFullListParam param) async {
+
+  static $async.Future<DirectGetFoldersFullListResponse>
+      directGetFoldersFullList(DirectGetFoldersFullListParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -1918,10 +1995,11 @@ class Direct {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
 }
-class Group {
-  static $async.Future<GroupCreateGroupResponse> groupCreateGroup(GroupCreateGroupParam param) async {
+
+class RPC_Group {
+  static $async.Future<GroupCreateGroupResponse> groupCreateGroup(
+      GroupCreateGroupParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -1944,8 +2022,9 @@ class Group {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<GroupEditGroupResponse> groupEditGroup(GroupEditGroupParam param) async {
+
+  static $async.Future<GroupEditGroupResponse> groupEditGroup(
+      GroupEditGroupParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -1968,8 +2047,9 @@ class Group {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<GroupDeleteGroupResponse> groupDeleteGroup(GroupDeleteGroupParam param) async {
+
+  static $async.Future<GroupDeleteGroupResponse> groupDeleteGroup(
+      GroupDeleteGroupParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -1992,8 +2072,9 @@ class Group {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<GroupAddAdminResponse> groupAddAdmin(GroupAddAdminParam param) async {
+
+  static $async.Future<GroupAddAdminResponse> groupAddAdmin(
+      GroupAddAdminParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -2016,8 +2097,9 @@ class Group {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<GroupAddMemberResponse> groupAddMember(GroupAddMemberParam param) async {
+
+  static $async.Future<GroupAddMemberResponse> groupAddMember(
+      GroupAddMemberParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -2040,8 +2122,9 @@ class Group {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<GroupRemoveMemberResponse> groupRemoveMember(GroupRemoveMemberParam param) async {
+
+  static $async.Future<GroupRemoveMemberResponse> groupRemoveMember(
+      GroupRemoveMemberParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -2064,8 +2147,9 @@ class Group {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<GroupChangeMemberLevelResponse> groupChangeMemberLevel(GroupChangeMemberLevelParam param) async {
+
+  static $async.Future<GroupChangeMemberLevelResponse> groupChangeMemberLevel(
+      GroupChangeMemberLevelParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -2088,8 +2172,10 @@ class Group {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<GroupChangeMemberPermissionResponse> groupChangeMemberPermission(GroupChangeMemberPermissionParam param) async {
+
+  static $async.Future<GroupChangeMemberPermissionResponse>
+      groupChangeMemberPermission(
+          GroupChangeMemberPermissionParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -2112,8 +2198,9 @@ class Group {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<JoinGroupResponse> groupJoinGroup(JoinGroupParam param) async {
+
+  static $async.Future<JoinGroupResponse> groupJoinGroup(
+      JoinGroupParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -2136,8 +2223,9 @@ class Group {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<GroupLeaveGroupResponse> groupLeaveGroup(GroupLeaveGroupParam param) async {
+
+  static $async.Future<GroupLeaveGroupResponse> groupLeaveGroup(
+      GroupLeaveGroupParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -2160,8 +2248,9 @@ class Group {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<GroupBanMemberResponse> groupBanMember(GroupBanMemberParam param) async {
+
+  static $async.Future<GroupBanMemberResponse> groupBanMember(
+      GroupBanMemberParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -2184,8 +2273,9 @@ class Group {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<GroupChangePrivacyResponse> groupChangePrivacy(GroupChangePrivacyParam param) async {
+
+  static $async.Future<GroupChangePrivacyResponse> groupChangePrivacy(
+      GroupChangePrivacyParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -2208,8 +2298,10 @@ class Group {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<GroupChangeDefaultPermissionResponse> groupChangeDefaultPermission(GroupChangeDefaultPermissionParam param) async {
+
+  static $async.Future<GroupChangeDefaultPermissionResponse>
+      groupChangeDefaultPermission(
+          GroupChangeDefaultPermissionParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -2232,8 +2324,9 @@ class Group {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<GroupRevokeLinkResponse> groupRevokeLink(GroupRevokeLinkParam param) async {
+
+  static $async.Future<GroupRevokeLinkResponse> groupRevokeLink(
+      GroupRevokeLinkParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -2256,8 +2349,9 @@ class Group {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<GroupChangeUsernameResponse> groupChangeUsername(GroupChangeUsernameParam param) async {
+
+  static $async.Future<GroupChangeUsernameResponse> groupChangeUsername(
+      GroupChangeUsernameParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -2280,8 +2374,9 @@ class Group {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<GroupSendMessageResponse> groupSendMessage(GroupSendMessageParam param) async {
+
+  static $async.Future<GroupSendMessageResponse> groupSendMessage(
+      GroupSendMessageParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -2304,8 +2399,9 @@ class Group {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<GroupEditMessageResponse> groupEditMessage(GroupEditMessageParam param) async {
+
+  static $async.Future<GroupEditMessageResponse> groupEditMessage(
+      GroupEditMessageParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -2328,8 +2424,9 @@ class Group {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<GroupPinMessageResponse> groupPinMessage(GroupPinMessageParam param) async {
+
+  static $async.Future<GroupPinMessageResponse> groupPinMessage(
+      GroupPinMessageParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -2352,8 +2449,9 @@ class Group {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<GroupUnPinMessageResponse> groupUnPinMessage(GroupUnPinMessageParam param) async {
+
+  static $async.Future<GroupUnPinMessageResponse> groupUnPinMessage(
+      GroupUnPinMessageParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -2376,8 +2474,9 @@ class Group {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<GroupDeleteMessageResponse> groupDeleteMessage(GroupDeleteMessageParam param) async {
+
+  static $async.Future<GroupDeleteMessageResponse> groupDeleteMessage(
+      GroupDeleteMessageParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -2400,8 +2499,9 @@ class Group {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<GroupDeleteMessagesResponse> groupDeleteMessages(GroupDeleteMessagesParam param) async {
+
+  static $async.Future<GroupDeleteMessagesResponse> groupDeleteMessages(
+      GroupDeleteMessagesParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -2424,8 +2524,9 @@ class Group {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<GroupDeleteHistoryResponse> groupDeleteHistory(GroupDeleteHistoryParam param) async {
+
+  static $async.Future<GroupDeleteHistoryResponse> groupDeleteHistory(
+      GroupDeleteHistoryParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -2448,8 +2549,9 @@ class Group {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<GroupClearHistoryResponse> groupClearHistory(GroupClearHistoryParam param) async {
+
+  static $async.Future<GroupClearHistoryResponse> groupClearHistory(
+      GroupClearHistoryParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -2472,8 +2574,9 @@ class Group {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<GroupAvatarAddResponse> groupAvatarAdd(GroupAvatarAddParam param) async {
+
+  static $async.Future<GroupAvatarAddResponse> groupAvatarAdd(
+      GroupAvatarAddParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -2496,8 +2599,9 @@ class Group {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<GroupAvatarChangeResponse> groupAvatarChange(GroupAvatarChangeParam param) async {
+
+  static $async.Future<GroupAvatarChangeResponse> groupAvatarChange(
+      GroupAvatarChangeParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -2520,8 +2624,9 @@ class Group {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<GroupAvatarDeleteResponse> groupAvatarDelete(GroupAvatarDeleteParam param) async {
+
+  static $async.Future<GroupAvatarDeleteResponse> groupAvatarDelete(
+      GroupAvatarDeleteParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -2544,8 +2649,9 @@ class Group {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<GroupAvatarGetListResponse> groupAvatarGetList(GroupAvatarGetListParam param) async {
+
+  static $async.Future<GroupAvatarGetListResponse> groupAvatarGetList(
+      GroupAvatarGetListParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -2568,8 +2674,9 @@ class Group {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<GroupSendDoingActionResponse> groupSendDoingAction(GroupSendDoingActionParam param) async {
+
+  static $async.Future<GroupSendDoingActionResponse> groupSendDoingAction(
+      GroupSendDoingActionParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -2592,8 +2699,9 @@ class Group {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<GroupReportGroupResponse> groupReportGroup(GroupReportGroupParam param) async {
+
+  static $async.Future<GroupReportGroupResponse> groupReportGroup(
+      GroupReportGroupParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -2616,8 +2724,9 @@ class Group {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<GroupGetFullMessageResponse> groupGetFull(GroupGetFullMessageParam param) async {
+
+  static $async.Future<GroupGetFullMessageResponse> groupGetFull(
+      GroupGetFullMessageParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -2640,8 +2749,9 @@ class Group {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<GroupGetMessagesListResponse> groupGetMessagesList(GroupGetMessagesListParam param) async {
+
+  static $async.Future<GroupGetMessagesListResponse> groupGetMessagesList(
+      GroupGetMessagesListParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -2664,8 +2774,9 @@ class Group {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<GroupGetMediaListResponse> groupGetMediaList(GroupGetMediaListParam param) async {
+
+  static $async.Future<GroupGetMediaListResponse> groupGetMediaList(
+      GroupGetMediaListParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -2688,8 +2799,9 @@ class Group {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<GroupGetMembersListResponse> groupGetMembersList(GroupGetMembersListParam param) async {
+
+  static $async.Future<GroupGetMembersListResponse> groupGetMembersList(
+      GroupGetMembersListParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -2712,8 +2824,9 @@ class Group {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<GroupGetAdminsListResponse> groupGetAdminsList(GroupGetAdminsListParam param) async {
+
+  static $async.Future<GroupGetAdminsListResponse> groupGetAdminsList(
+      GroupGetAdminsListParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -2736,8 +2849,9 @@ class Group {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<GroupSetDraftResponse> groupSetDraft(GroupSetDraftParam param) async {
+
+  static $async.Future<GroupSetDraftResponse> groupSetDraft(
+      GroupSetDraftParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -2760,10 +2874,11 @@ class Group {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
 }
-class Sample {
-  static $async.Future<GetUsers1Response> getUsers1(GetUsers1Param param) async {
+
+class RPC_Sample {
+  static $async.Future<GetUsers1Response> getUsers1(
+      GetUsers1Param param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -2786,8 +2901,9 @@ class Sample {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<GetProfilesResponse> getProfiles(GetProfilesParam param) async {
+
+  static $async.Future<GetProfilesResponse> getProfiles(
+      GetProfilesParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -2810,8 +2926,9 @@ class Sample {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<GetChannelsResponse> getChannels(GetChannelsParam param) async {
+
+  static $async.Future<GetChannelsResponse> getChannels(
+      GetChannelsParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -2834,8 +2951,9 @@ class Sample {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<GetDirectsResponse> getDirects(GetDirectsParam param) async {
+
+  static $async.Future<GetDirectsResponse> getDirects(
+      GetDirectsParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -2858,8 +2976,9 @@ class Sample {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<GetMessagesResponse> getMessages(GetMessagesParam param) async {
+
+  static $async.Future<GetMessagesResponse> getMessages(
+      GetMessagesParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -2882,9 +3001,9 @@ class Sample {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
 }
-class Shared {
+
+class RPC_Shared {
   static $async.Future<EchoResponse> echo(EchoParam param) async {
     var paramBuff = param.writeToBuffer();
 
@@ -2908,8 +3027,9 @@ class Shared {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
-  static $async.Future<CheckUserNameResponse> checkUserName(CheckUserNameParam param) async {
+
+  static $async.Future<CheckUserNameResponse> checkUserName(
+      CheckUserNameParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -2932,10 +3052,11 @@ class Shared {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
 }
-class Upload {
-  static $async.Future<UploadFileResponse> uploadFile(UploadFileParam param) async {
+
+class RPC_Upload {
+  static $async.Future<UploadFileResponse> uploadFile(
+      UploadFileParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -2958,10 +3079,11 @@ class Upload {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
 }
-class User {
-  static $async.Future<ChangePhoneNumberResponse> changePhoneNumber(ChangePhoneNumberParam param) async {
+
+class RPC_User {
+  static $async.Future<ChangePhoneNumberResponse> changePhoneNumber(
+      ChangePhoneNumberParam param) async {
     var paramBuff = param.writeToBuffer();
 
     var invoke = Invoke();
@@ -2984,6 +3106,4 @@ class User {
     response.mergeFromBuffer(res.bodyBytes);
     return response;
   }
-  
 }
-
