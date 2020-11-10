@@ -10,19 +10,19 @@ import 'dart:async' as $async;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'dart:core' as $core;
-import 'rpc_upload.pb.dart' as $7;
+import 'rpc_upload.pb.dart' as $8;
 import 'rpc_upload.pbjson.dart';
 
 export 'rpc_upload.pb.dart';
 
 abstract class RPC_UploadServiceBase extends $pb.GeneratedService {
-  $async.Future<$7.UploadFileResponse> uploadFile(
-      $pb.ServerContext ctx, $7.UploadFileParam request);
+  $async.Future<$8.UploadFileResponse> uploadFile(
+      $pb.ServerContext ctx, $8.UploadFileParam request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
       case 'UploadFile':
-        return $7.UploadFileParam();
+        return $8.UploadFileParam();
       default:
         throw $core.ArgumentError('Unknown method: $method');
     }

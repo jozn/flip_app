@@ -17,6 +17,16 @@ const ProfileLevelEnum$json = const {
   ],
 };
 
+const DirectTypeEnum$json = const {
+  '1': 'DirectTypeEnum',
+  '2': const [
+    const {'1': 'DEO', '2': 0},
+    const {'1': 'PROFILE', '2': 1},
+    const {'1': 'CHANNEL', '2': 2},
+    const {'1': 'GROUP', '2': 3},
+  ],
+};
+
 const MessageType$json = const {
   '1': 'MessageType',
   '2': const [
@@ -34,7 +44,6 @@ const MessageType$json = const {
     const {'1': 'WALLET', '2': 15},
     const {'1': 'PRODUCT', '2': 16},
     const {'1': 'FORWARD', '2': 17},
-    const {'1': 'POST_MEDIA', '2': 100},
   ],
 };
 
@@ -47,39 +56,21 @@ const MessageDeliveryStatues$json = const {
     const {'1': 'DELIVERED', '2': 3},
     const {'1': 'SEEN', '2': 4},
     const {'1': 'CONSUMED', '2': 5},
-    const {'1': 'NOT_ABLE', '2': 6},
+    const {'1': 'FAILED', '2': 6},
   ],
 };
 
 const MessageLogType$json = const {
   '1': 'MessageLogType',
   '2': const [
-    const {'1': 'USER_JOINED', '2': 0},
-    const {'1': 'USER_DELETED', '2': 1},
-    const {'1': 'ROOM_CREATED', '2': 2},
+    const {'1': 'MLT_UNKNOWN', '2': 0},
+    const {'1': 'USER_SINGED_UP', '2': 1},
+    const {'1': 'GROUP_CREATED', '2': 2},
     const {'1': 'MEMBER_ADDED', '2': 3},
     const {'1': 'MEMBER_KICKED', '2': 4},
     const {'1': 'MEMBER_LEFT', '2': 5},
-    const {'1': 'ROOM_CONVERTED_TO_PUBLIC', '2': 6},
-    const {'1': 'ROOM_CONVERTED_TO_PRIVATE', '2': 7},
-    const {'1': 'MEMBER_JOINED_BY_INVITE_LINK', '2': 8},
+    const {'1': 'MEMBER_JOINED_BY_LINK', '2': 8},
     const {'1': 'ROOM_DELETED', '2': 9},
-    const {'1': 'MISSED_VOICE_CALL', '2': 10},
-    const {'1': 'MISSED_VIDEO_CALL', '2': 11},
-    const {'1': 'MISSED_SCREEN_SHARE', '2': 12},
-    const {'1': 'MISSED_SECRET_CHAT', '2': 13},
-    const {'1': 'PINNED_MESSAGE', '2': 14},
-  ],
-};
-
-const ChannelType$json = const {
-  '1': 'ChannelType',
-  '2': const [
-    const {'1': 'CHANNEL_UNKNOWN', '2': 0},
-    const {'1': 'CHANNEL_PRIMARY', '2': 1},
-    const {'1': 'CHANNEL_NORMAL', '2': 2},
-    const {'1': 'CHANNEL_SAVES', '2': 3},
-    const {'1': 'CHANNEL_STORE', '2': 4},
   ],
 };
 
@@ -89,61 +80,21 @@ const ChannelPrivacy$json = const {
     const {'1': 'CHANNEL_UNKNOWN_AB', '2': 0},
     const {'1': 'CHANNEL_OPEN', '2': 1},
     const {'1': 'CHANNEL_PRIVATE_LINK', '2': 2},
-    const {'1': 'CHANNEL_CREATOR', '2': 3},
+    const {'1': 'CHANNEL_ACCEPT', '2': 3},
+    const {'1': 'CHANNEL_CREATOR', '2': 4},
   ],
 };
 
-const Cast$json = const {
-  '1': 'Cast',
-  '2': const [
-    const {'1': 'UNKNOWN', '2': 0},
-    const {'1': 'USER', '2': 1},
-    const {'1': 'CHANNEL', '2': 2},
-    const {'1': 'GROUP', '2': 3},
-    const {'1': 'BOT', '2': 4},
-    const {'1': 'STORE', '2': 6},
-    const {'1': 'TAG', '2': 7},
-  ],
-};
-
-const ReactionType$json = const {
-  '1': 'ReactionType',
-  '2': const [
-    const {'1': 'NONE', '2': 0},
-    const {'1': 'LIKE', '2': 1},
-  ],
-};
-
-const SessionPlatform$json = const {
-  '1': 'SessionPlatform',
+const DevicePlatform$json = const {
+  '1': 'DevicePlatform',
   '2': const [
     const {'1': 'UNKNOWN_PLATFORM', '2': 0},
     const {'1': 'ANDROID', '2': 1},
     const {'1': 'IOS', '2': 2},
-    const {'1': 'MAC_OS', '2': 3},
-    const {'1': 'WINDOWS', '2': 4},
+    const {'1': 'WINDOWS', '2': 3},
+    const {'1': 'MAC_OS', '2': 4},
     const {'1': 'LINUX', '2': 5},
-    const {'1': 'BLACK_BERRY', '2': 6},
     const {'1': 'Web', '2': 7},
-  ],
-};
-
-const GroupPrivacy$json = const {
-  '1': 'GroupPrivacy',
-  '2': const [
-    const {'1': 'GROUP_UNKNOWN_GP', '2': 0},
-    const {'1': 'GROUP_OPEN', '2': 1},
-    const {'1': 'GROUP_PRIVATE_LINK', '2': 2},
-  ],
-};
-
-const GroupMemberRole$json = const {
-  '1': 'GroupMemberRole',
-  '2': const [
-    const {'1': 'MEMBER_Unknown', '2': 0},
-    const {'1': 'MEMBER_CREATOR', '2': 1},
-    const {'1': 'MEMBER_MODERATOR', '2': 3},
-    const {'1': 'MEMBER_NORMAL_USER', '2': 2},
   ],
 };
 
@@ -158,29 +109,402 @@ const Invoke$json = const {
   ],
 };
 
+const Contact$json = const {
+  '1': 'Contact',
+  '2': const [
+    const {'1': 'gid', '3': 1, '4': 1, '5': 6, '10': 'gid'},
+    const {'1': 'profile_cid', '3': 2, '4': 1, '5': 13, '10': 'profileCid'},
+    const {'1': 'device_id', '3': 3, '4': 1, '5': 4, '10': 'deviceId'},
+    const {'1': 'phone', '3': 4, '4': 1, '5': 9, '10': 'phone'},
+    const {'1': 'first_name', '3': 5, '4': 1, '5': 9, '10': 'firstName'},
+    const {'1': 'last_name', '3': 6, '4': 1, '5': 9, '10': 'lastName'},
+    const {
+      '1': 'peer_profile_cid',
+      '3': 12,
+      '4': 1,
+      '5': 13,
+      '10': 'peerProfileCid'
+    },
+    const {'1': 'created_time', '3': 13, '4': 1, '5': 13, '10': 'createdTime'},
+  ],
+};
+
+const User$json = const {
+  '1': 'User',
+  '2': const [
+    const {'1': 'cid', '3': 1, '4': 1, '5': 13, '10': 'cid'},
+    const {'1': 'phone', '3': 14, '4': 1, '5': 9, '10': 'phone'},
+    const {'1': 'email', '3': 15, '4': 1, '5': 9, '10': 'email'},
+    const {'1': 'password_hash', '3': 17, '4': 1, '5': 9, '10': 'passwordHash'},
+    const {'1': 'password_salt', '3': 18, '4': 1, '5': 9, '10': 'passwordSalt'},
+    const {'1': 'created_time', '3': 36, '4': 1, '5': 13, '10': 'createdTime'},
+    const {'1': 'version_time', '3': 37, '4': 1, '5': 13, '10': 'versionTime'},
+    const {'1': 'is_deleted', '3': 38, '4': 1, '5': 8, '10': 'isDeleted'},
+    const {'1': 'is_banned', '3': 39, '4': 1, '5': 8, '10': 'isBanned'},
+    const {
+      '1': 'def_profile',
+      '3': 1114,
+      '4': 1,
+      '5': 11,
+      '6': '.pb.Profile',
+      '10': 'defProfile'
+    },
+    const {
+      '1': 'profiles',
+      '3': 110,
+      '4': 3,
+      '5': 11,
+      '6': '.pb.Profile',
+      '10': 'profiles'
+    },
+    const {
+      '1': 'stores',
+      '3': 113,
+      '4': 3,
+      '5': 11,
+      '6': '.pb.Store',
+      '10': 'stores'
+    },
+    const {
+      '1': 'sessions',
+      '3': 102,
+      '4': 3,
+      '5': 11,
+      '6': '.pb.Session',
+      '10': 'sessions'
+    },
+    const {
+      '1': 'shopping_profile',
+      '3': 111,
+      '4': 1,
+      '5': 11,
+      '6': '.pb.ShoppingProfile',
+      '10': 'shoppingProfile'
+    },
+    const {'1': 'first_name', '3': 4, '4': 1, '5': 9, '10': 'firstName'},
+    const {'1': 'last_name', '3': 5, '4': 1, '5': 9, '10': 'lastName'},
+    const {
+      '1': 'UserCounts',
+      '3': 80,
+      '4': 1,
+      '5': 11,
+      '6': '.pb.Channel',
+      '10': 'UserCounts'
+    },
+  ],
+};
+
+const UserCounts$json = const {
+  '1': 'UserCounts',
+  '2': const [
+    const {
+      '1': 'created_channels',
+      '3': 1,
+      '4': 1,
+      '5': 13,
+      '10': 'createdChannels'
+    },
+  ],
+};
+
+const Profile$json = const {
+  '1': 'Profile',
+  '2': const [
+    const {'1': 'cid', '3': 1, '4': 1, '5': 13, '10': 'cid'},
+    const {'1': 'user_cid', '3': 2, '4': 1, '5': 13, '10': 'userCid'},
+    const {
+      '1': 'primary_channel',
+      '3': 100,
+      '4': 1,
+      '5': 11,
+      '6': '.pb.Channel',
+      '10': 'primaryChannel'
+    },
+    const {
+      '1': 'saved_channel',
+      '3': 109,
+      '4': 1,
+      '5': 11,
+      '6': '.pb.SavedChannel',
+      '10': 'savedChannel'
+    },
+    const {'1': 'created_time', '3': 103, '4': 1, '5': 13, '10': 'createdTime'},
+    const {
+      '1': 'setting',
+      '3': 107,
+      '4': 1,
+      '5': 11,
+      '6': '.pb.ProfileSettings',
+      '10': 'setting'
+    },
+    const {
+      '1': 'channels',
+      '3': 104,
+      '4': 3,
+      '5': 11,
+      '6': '.pb.Channel',
+      '10': 'channels'
+    },
+    const {
+      '1': 'directs',
+      '3': 105,
+      '4': 3,
+      '5': 11,
+      '6': '.pb.Direct',
+      '10': 'directs'
+    },
+    const {
+      '1': 'groups',
+      '3': 106,
+      '4': 3,
+      '5': 11,
+      '6': '.pb.Group',
+      '10': 'groups'
+    },
+    const {
+      '1': 'contacts',
+      '3': 108,
+      '4': 3,
+      '5': 11,
+      '6': '.pb.Contact',
+      '10': 'contacts'
+    },
+    const {
+      '1': 'contact_info',
+      '3': 111,
+      '4': 1,
+      '5': 11,
+      '6': '.pb.Contact',
+      '10': 'contactInfo'
+    },
+  ],
+};
+
+const ProfileSettings$json = const {
+  '1': 'ProfileSettings',
+  '2': const [
+    const {'1': 'profile_cid', '3': 1, '4': 1, '5': 13, '10': 'profileCid'},
+  ],
+};
+
+const Direct$json = const {
+  '1': 'Direct',
+  '2': const [
+    const {'1': 'gid', '3': 1, '4': 1, '5': 6, '10': 'gid'},
+    const {'1': 'profile_cid', '3': 5, '4': 1, '5': 13, '10': 'profileCid'},
+    const {
+      '1': 'direct_type',
+      '3': 102,
+      '4': 1,
+      '5': 14,
+      '6': '.pb.DirectTypeEnum',
+      '10': 'directType'
+    },
+    const {'1': 'custom_title', '3': 9, '4': 1, '5': 9, '10': 'customTitle'},
+    const {'1': 'pin_time_ms', '3': 10, '4': 1, '5': 6, '10': 'pinTimeMs'},
+    const {'1': 'unseen_count', '3': 12, '4': 1, '5': 13, '10': 'unseenCount'},
+    const {'1': 'seq', '3': 13, '4': 1, '5': 13, '10': 'seq'},
+    const {'1': 'is_active', '3': 22, '4': 1, '5': 8, '10': 'isActive'},
+    const {'1': 'mute_until', '3': 29, '4': 1, '5': 13, '10': 'muteUntil'},
+    const {'1': 'created_time', '3': 33, '4': 1, '5': 13, '10': 'createdTime'},
+    const {'1': 'sort_time_ms', '3': 45, '4': 1, '5': 6, '10': 'sortTimeMs'},
+    const {'1': 'sync_time_ms', '3': 104, '4': 1, '5': 6, '10': 'syncTimeMs'},
+    const {
+      '1': 'my_last_seen_seq',
+      '3': 16,
+      '4': 1,
+      '5': 6,
+      '10': 'myLastSeenSeq'
+    },
+    const {
+      '1': 'my_last_seen_msg_id',
+      '3': 17,
+      '4': 1,
+      '5': 6,
+      '10': 'myLastSeenMsgId'
+    },
+    const {
+      '1': 'pined_msgs_count',
+      '3': 108,
+      '4': 1,
+      '5': 13,
+      '10': 'pinedMsgsCount'
+    },
+    const {
+      '1': 'visible_from_msg_gid',
+      '3': 11,
+      '4': 1,
+      '5': 6,
+      '10': 'visibleFromMsgGid'
+    },
+    const {
+      '1': 'channel',
+      '3': 48,
+      '4': 1,
+      '5': 11,
+      '6': '.pb.Channel',
+      '10': 'channel'
+    },
+    const {
+      '1': 'contact',
+      '3': 49,
+      '4': 1,
+      '5': 11,
+      '6': '.pb.Contact',
+      '10': 'contact'
+    },
+    const {
+      '1': 'group',
+      '3': 50,
+      '4': 1,
+      '5': 11,
+      '6': '.pb.Group',
+      '10': 'group'
+    },
+    const {
+      '1': 'last_message',
+      '3': 25,
+      '4': 1,
+      '5': 11,
+      '6': '.pb.Message',
+      '10': 'lastMessage'
+    },
+    const {
+      '1': 'pinned_message',
+      '3': 26,
+      '4': 1,
+      '5': 11,
+      '6': '.pb.Message',
+      '10': 'pinnedMessage'
+    },
+    const {
+      '1': 'group_member',
+      '3': 43,
+      '4': 1,
+      '5': 11,
+      '6': '.pb.GroupMember',
+      '10': 'groupMember'
+    },
+    const {
+      '1': 'draft',
+      '3': 46,
+      '4': 1,
+      '5': 11,
+      '6': '.pb.DirectDraft',
+      '10': 'draft'
+    },
+    const {
+      '1': 'custom_notification',
+      '3': 47,
+      '4': 1,
+      '5': 11,
+      '6': '.pb.DirectCustomNotification',
+      '10': 'customNotification'
+    },
+    const {
+      '1': 'peer_profile_cid',
+      '3': 6,
+      '4': 1,
+      '5': 13,
+      '10': 'peerProfileCid'
+    },
+    const {
+      '1': 'peer_last_seen_msg_id',
+      '3': 18,
+      '4': 1,
+      '5': 6,
+      '10': 'peerLastSeenMsgId'
+    },
+    const {
+      '1': 'my_last_delivered_seq',
+      '3': 19,
+      '4': 1,
+      '5': 6,
+      '10': 'myLastDeliveredSeq'
+    },
+    const {
+      '1': 'my_last_delivered_msg_id',
+      '3': 20,
+      '4': 1,
+      '5': 6,
+      '10': 'myLastDeliveredMsgId'
+    },
+    const {
+      '1': 'peer_last_delivered_msg_id',
+      '3': 21,
+      '4': 1,
+      '5': 6,
+      '10': 'peerLastDeliveredMsgId'
+    },
+    const {
+      '1': 'peer_channel_cid',
+      '3': 41,
+      '4': 1,
+      '5': 13,
+      '10': 'peerChannelCid'
+    },
+    const {'1': 'group_cid', '3': 7, '4': 1, '5': 13, '10': 'groupCid'},
+    const {
+      '1': 'avatar',
+      '3': 44,
+      '4': 1,
+      '5': 11,
+      '6': '.pb.FileMsg',
+      '10': 'avatar'
+    },
+  ],
+};
+
+const DirectDraft$json = const {
+  '1': 'DirectDraft',
+  '2': const [
+    const {'1': 'draft_text', '3': 34, '4': 1, '5': 9, '10': 'draftText'},
+    const {
+      '1': 'drat_reply_to_msg_id',
+      '3': 35,
+      '4': 1,
+      '5': 3,
+      '10': 'dratReplyToMsgId'
+    },
+  ],
+};
+
+const DirectCustomNotification$json = const {
+  '1': 'DirectCustomNotification',
+  '2': const [
+    const {'1': 'alert', '3': 13, '4': 1, '5': 8, '10': 'alert'},
+    const {'1': 'preview', '3': 14, '4': 1, '5': 8, '10': 'preview'},
+    const {'1': 'led_on', '3': 15, '4': 1, '5': 8, '10': 'ledOn'},
+    const {'1': 'led_color', '3': 16, '4': 1, '5': 8, '10': 'ledColor'},
+    const {'1': 'vibrate', '3': 17, '4': 1, '5': 8, '10': 'vibrate'},
+    const {'1': 'popup', '3': 18, '4': 1, '5': 8, '10': 'popup'},
+    const {'1': 'sound', '3': 19, '4': 1, '5': 8, '10': 'sound'},
+    const {'1': 'priority', '3': 20, '4': 1, '5': 8, '10': 'priority'},
+  ],
+};
+
 const Message$json = const {
   '1': 'Message',
   '2': const [
     const {'1': 'gid', '3': 1, '4': 1, '5': 6, '10': 'gid'},
-    const {'1': 'by_user_cid', '3': 2, '4': 1, '5': 13, '10': 'byUserCid'},
     const {
-      '1': 'by_channel_cid',
-      '3': 100,
+      '1': 'by_profile_cid',
+      '3': 2,
       '4': 1,
       '5': 13,
-      '10': 'byChannelCid'
+      '10': 'byProfileCid'
     },
-    const {'1': 'post_type', '3': 3, '4': 1, '5': 13, '10': 'postType'},
-    const {'1': 'media_id', '3': 4, '4': 1, '5': 3, '10': 'mediaId'},
-    const {'1': 'file_ref_id', '3': 5, '4': 1, '5': 3, '10': 'fileRefId'},
-    const {'1': 'post_key', '3': 6, '4': 1, '5': 9, '10': 'postKey'},
+    const {
+      '1': 'message_type',
+      '3': 107,
+      '4': 1,
+      '5': 14,
+      '6': '.pb.MessageType',
+      '10': 'messageType'
+    },
     const {'1': 'text', '3': 7, '4': 1, '5': 9, '10': 'text'},
-    const {'1': 'rich_text', '3': 8, '4': 1, '5': 9, '10': 'richText'},
-    const {'1': 'title', '3': 109, '4': 1, '5': 9, '10': 'title'},
-    const {'1': 'shared_to', '3': 10, '4': 1, '5': 13, '10': 'sharedTo'},
-    const {'1': 'via', '3': 12, '4': 1, '5': 13, '10': 'via'},
+    const {'1': 'via_app_id', '3': 12, '4': 1, '5': 13, '10': 'viaAppId'},
     const {'1': 'seq', '3': 13, '4': 1, '5': 13, '10': 'seq'},
-    const {'1': 'version_time', '3': 108, '4': 1, '5': 4, '10': 'versionTime'},
     const {'1': 'edited_time', '3': 17, '4': 1, '5': 13, '10': 'editedTime'},
     const {'1': 'created_time', '3': 18, '4': 1, '5': 13, '10': 'createdTime'},
     const {'1': 'verified', '3': 111, '4': 1, '5': 8, '10': 'verified'},
@@ -199,14 +523,7 @@ const Message$json = const {
       '5': 13,
       '10': 'deliveryTime'
     },
-    const {
-      '1': 'previous_message_id',
-      '3': 180,
-      '4': 1,
-      '5': 4,
-      '10': 'previousMessageId'
-    },
-    const {'1': 'deleted', '3': 15, '4': 1, '5': 8, '10': 'deleted'},
+    const {'1': 'deleted', '3': 150, '4': 1, '5': 8, '10': 'deleted'},
     const {'1': 'flags', '3': 112, '4': 1, '5': 13, '10': 'flags'},
     const {
       '1': 'forward',
@@ -224,6 +541,7 @@ const Message$json = const {
       '6': '.pb.Message',
       '10': 'replyTo'
     },
+    const {'1': 'title', '3': 109, '4': 1, '5': 9, '10': 'title'},
     const {
       '1': 'counts',
       '3': 101,
@@ -313,35 +631,27 @@ const MessageLog$json = const {
       '6': '.pb.MessageLogType',
       '10': 'logType'
     },
-    const {'1': 'by_user_cid', '3': 2, '4': 1, '5': 13, '10': 'byUserCid'},
     const {
-      '1': 'by_channel_cid',
-      '3': 50,
+      '1': 'by_profile_cid',
+      '3': 2,
       '4': 1,
       '5': 13,
-      '10': 'byChannelCid'
+      '10': 'byProfileCid'
     },
     const {
-      '1': 'target_user_cid',
+      '1': 'target_profile_cid',
       '3': 3,
       '4': 1,
       '5': 13,
-      '10': 'targetUserCid'
+      '10': 'targetProfileCid'
     },
     const {
-      '1': 'target_channel_cid',
-      '3': 4,
-      '4': 1,
-      '5': 13,
-      '10': 'targetChannelCid'
-    },
-    const {
-      '1': 'target_channel_view',
+      '1': 'target_profile_view',
       '3': 11,
       '4': 1,
       '5': 11,
-      '6': '.pb.Channel',
-      '10': 'targetChannelView'
+      '6': '.pb.Profile',
+      '10': 'targetProfileView'
     },
   ],
 };
@@ -351,16 +661,22 @@ const Channel$json = const {
   '2': const [
     const {'1': 'cid', '3': 1, '4': 1, '5': 13, '10': 'cid'},
     const {'1': 'user_name', '3': 2, '4': 1, '5': 9, '10': 'userName'},
-    const {'1': 'first_name', '3': 4, '4': 1, '5': 9, '10': 'firstName'},
-    const {'1': 'last_name', '3': 5, '4': 1, '5': 9, '10': 'lastName'},
+    const {'1': 'channel_name', '3': 3, '4': 1, '5': 9, '10': 'channelName'},
     const {
-      '1': 'creator_user_cid',
+      '1': 'creator_profile_cid',
       '3': 7,
       '4': 1,
       '5': 13,
-      '10': 'creatorUserCid'
+      '10': 'creatorProfileCid'
     },
-    const {'1': 'is_verified', '3': 6, '4': 1, '5': 13, '10': 'isVerified'},
+    const {'1': 'is_verified', '3': 6, '4': 1, '5': 8, '10': 'isVerified'},
+    const {
+      '1': 'is_profile_channel',
+      '3': 101,
+      '4': 1,
+      '5': 8,
+      '10': 'isProfileChannel'
+    },
     const {'1': 'avatar_count', '3': 40, '4': 1, '5': 3, '10': 'avatarCount'},
     const {'1': 'about', '3': 16, '4': 1, '5': 9, '10': 'about'},
     const {
@@ -370,8 +686,7 @@ const Channel$json = const {
       '5': 9,
       '10': 'inviteLinkHash'
     },
-    const {'1': 'post_seq', '3': 19, '4': 1, '5': 13, '10': 'postSeq'},
-    const {'1': 'sort_time_ms', '3': 20, '4': 1, '5': 6, '10': 'sortTimeMs'},
+    const {'1': 'message_seq', '3': 19, '4': 1, '5': 13, '10': 'messageSeq'},
     const {'1': 'sync_time_ms', '3': 21, '4': 1, '5': 6, '10': 'syncTimeMs'},
     const {'1': 'created_time', '3': 36, '4': 1, '5': 13, '10': 'createdTime'},
     const {'1': 'is_deleted', '3': 38, '4': 1, '5': 13, '10': 'isDeleted'},
@@ -381,7 +696,7 @@ const Channel$json = const {
       '3': 90,
       '4': 1,
       '5': 11,
-      '6': '.pb.ChannelNotificationSetting',
+      '6': '.pb.ChannelOwnerNotification',
       '10': 'notificationSetting'
     },
     const {
@@ -391,14 +706,6 @@ const Channel$json = const {
       '5': 14,
       '6': '.pb.ChannelPrivacy',
       '10': 'privacy'
-    },
-    const {
-      '1': 'channel_type',
-      '3': 42,
-      '4': 1,
-      '5': 14,
-      '6': '.pb.ChannelType',
-      '10': 'channelType'
     },
     const {
       '1': 'counts',
@@ -429,147 +736,14 @@ const Channel$json = const {
       '3': 100,
       '4': 1,
       '5': 11,
-      '6': '.pb.Message',
+      '6': '.pb.FileMsg',
       '10': 'avatar'
     },
   ],
 };
 
-const ChannelPrivacySetting$json = const {
-  '1': 'ChannelPrivacySetting',
-  '2': const [
-    const {
-      '1': 'online_privacy',
-      '3': 10,
-      '4': 1,
-      '5': 13,
-      '10': 'onlinePrivacy'
-    },
-    const {'1': 'call_privacy', '3': 11, '4': 1, '5': 13, '10': 'callPrivacy'},
-    const {
-      '1': 'add_to_group_privacy',
-      '3': 12,
-      '4': 1,
-      '5': 13,
-      '10': 'addToGroupPrivacy'
-    },
-    const {
-      '1': 'seen_message_privacy',
-      '3': 13,
-      '4': 1,
-      '5': 13,
-      '10': 'seenMessagePrivacy'
-    },
-  ],
-};
-
-const ChannelNotificationSetting$json = const {
-  '1': 'ChannelNotificationSetting',
-  '2': const [
-    const {'1': 'social_led_on', '3': 2, '4': 1, '5': 8, '10': 'socialLedOn'},
-    const {
-      '1': 'social_led_color',
-      '3': 3,
-      '4': 1,
-      '5': 9,
-      '10': 'socialLedColor'
-    },
-    const {
-      '1': 'request_to_follow_you',
-      '3': 4,
-      '4': 1,
-      '5': 8,
-      '10': 'requestToFollowYou'
-    },
-    const {
-      '1': 'followed_channel',
-      '3': 5,
-      '4': 1,
-      '5': 8,
-      '10': 'followedChannel'
-    },
-    const {
-      '1': 'accepted_channel_follow_request',
-      '3': 6,
-      '4': 1,
-      '5': 8,
-      '10': 'acceptedChannelFollowRequest'
-    },
-    const {
-      '1': 'channel_message_liked',
-      '3': 7,
-      '4': 1,
-      '5': 8,
-      '10': 'channelMessageLiked'
-    },
-    const {
-      '1': 'channel_message_commented',
-      '3': 8,
-      '4': 1,
-      '5': 8,
-      '10': 'channelMessageCommented'
-    },
-    const {
-      '1': 'mentioned_channel_in_message',
-      '3': 9,
-      '4': 1,
-      '5': 8,
-      '10': 'mentionedChannelInMessage'
-    },
-    const {
-      '1': 'mentioned_channel_in_comment',
-      '3': 10,
-      '4': 1,
-      '5': 8,
-      '10': 'mentionedChannelInComment'
-    },
-    const {
-      '1': 'contacts_joined',
-      '3': 11,
-      '4': 1,
-      '5': 8,
-      '10': 'contactsJoined'
-    },
-    const {
-      '1': 'direct_message',
-      '3': 12,
-      '4': 1,
-      '5': 8,
-      '10': 'directMessage'
-    },
-    const {'1': 'direct_alert', '3': 13, '4': 1, '5': 8, '10': 'directAlert'},
-    const {
-      '1': 'direct_preview',
-      '3': 14,
-      '4': 1,
-      '5': 8,
-      '10': 'directPreview'
-    },
-    const {'1': 'direct_led_on', '3': 15, '4': 1, '5': 8, '10': 'directLedOn'},
-    const {
-      '1': 'direct_led_color',
-      '3': 16,
-      '4': 1,
-      '5': 8,
-      '10': 'directLedColor'
-    },
-    const {
-      '1': 'direct_vibrate',
-      '3': 17,
-      '4': 1,
-      '5': 8,
-      '10': 'directVibrate'
-    },
-    const {'1': 'direct_popup', '3': 18, '4': 1, '5': 8, '10': 'directPopup'},
-    const {'1': 'direct_sound', '3': 19, '4': 1, '5': 8, '10': 'directSound'},
-    const {
-      '1': 'direct_priority',
-      '3': 20,
-      '4': 1,
-      '5': 8,
-      '10': 'directPriority'
-    },
-  ],
+const ChannelOwnerNotification$json = const {
+  '1': 'ChannelOwnerNotification',
 };
 
 const ChannelCounts$json = const {
@@ -581,13 +755,6 @@ const ChannelCounts$json = const {
       '4': 1,
       '5': 13,
       '10': 'followersCount'
-    },
-    const {
-      '1': 'following_count',
-      '3': 21,
-      '4': 1,
-      '5': 13,
-      '10': 'followingCount'
     },
     const {'1': 'posts_count', '3': 22, '4': 1, '5': 13, '10': 'postsCount'},
     const {'1': 'media_count', '3': 23, '4': 1, '5': 13, '10': 'mediaCount'},
@@ -611,11 +778,38 @@ const ChannelCounts$json = const {
   ],
 };
 
+const ShoppingProfile$json = const {
+  '1': 'ShoppingProfile',
+};
+
 const Store$json = const {
   '1': 'Store',
   '2': const [
-    const {'1': 'address', '3': 1, '4': 1, '5': 9, '10': 'address'},
-    const {'1': 'phone', '3': 2, '4': 1, '5': 9, '10': 'phone'},
+    const {'1': 'cid', '3': 1, '4': 1, '5': 13, '10': 'cid'},
+    const {'1': 'user_name', '3': 2, '4': 1, '5': 9, '10': 'userName'},
+    const {'1': 'store_name', '3': 3, '4': 1, '5': 9, '10': 'storeName'},
+    const {'1': 'address', '3': 102, '4': 1, '5': 9, '10': 'address'},
+    const {
+      '1': 'creator_user_cid',
+      '3': 7,
+      '4': 1,
+      '5': 13,
+      '10': 'creatorUserCid'
+    },
+    const {'1': 'about', '3': 16, '4': 1, '5': 9, '10': 'about'},
+    const {'1': 'message_seq', '3': 19, '4': 1, '5': 13, '10': 'messageSeq'},
+    const {'1': 'sync_time_ms', '3': 21, '4': 1, '5': 6, '10': 'syncTimeMs'},
+    const {'1': 'created_time', '3': 36, '4': 1, '5': 13, '10': 'createdTime'},
+    const {'1': 'is_banned', '3': 39, '4': 1, '5': 13, '10': 'isBanned'},
+    const {'1': 'is_verified', '3': 6, '4': 1, '5': 8, '10': 'isVerified'},
+    const {
+      '1': 'avatar',
+      '3': 100,
+      '4': 1,
+      '5': 11,
+      '6': '.pb.FileMsg',
+      '10': 'avatar'
+    },
   ],
 };
 
@@ -647,427 +841,27 @@ const ProductPriceInfo$json = const {
   ],
 };
 
-const Action$json = const {
-  '1': 'Action',
-  '2': const [
-    const {'1': 'gid', '3': 1, '4': 1, '5': 6, '10': 'gid'},
-    const {
-      '1': 'actor_user_cid',
-      '3': 2,
-      '4': 1,
-      '5': 13,
-      '10': 'actorUserCid'
-    },
-    const {
-      '1': 'actor_channel_cid',
-      '3': 50,
-      '4': 1,
-      '5': 13,
-      '10': 'actorChannelCid'
-    },
-    const {'1': 'action_type', '3': 3, '4': 1, '5': 13, '10': 'actionType'},
-    const {'1': 'on_user_cid', '3': 4, '4': 1, '5': 13, '10': 'onUserCid'},
-    const {'1': 'on_channel_cid', '3': 9, '4': 1, '5': 6, '10': 'onChannelCid'},
-    const {'1': 'message_gid', '3': 5, '4': 1, '5': 6, '10': 'messageGid'},
-    const {'1': 'comment_gid', '3': 6, '4': 1, '5': 6, '10': 'commentGid'},
-    const {'1': 'hash_murm64', '3': 7, '4': 1, '5': 3, '10': 'hashMurm64'},
-    const {'1': 'created_time', '3': 8, '4': 1, '5': 13, '10': 'createdTime'},
-  ],
-  '4': const [Action_ActionType$json],
-};
-
-const Action_ActionType$json = const {
-  '1': 'ActionType',
-  '2': const [
-    const {'1': 'UNKNOWN_AT', '2': 0},
-    const {'1': 'LIKED', '2': 1},
-    const {'1': 'FOLLOWED', '2': 2},
-  ],
-};
-
-const Blocked$json = const {
-  '1': 'Blocked',
-  '2': const [
-    const {'1': 'gid', '3': 1, '4': 1, '5': 6, '10': 'gid'},
-    const {'1': 'user_cid', '3': 2, '4': 1, '5': 13, '10': 'userCid'},
-    const {
-      '1': 'blocked_user_cid',
-      '3': 6,
-      '4': 1,
-      '5': 13,
-      '10': 'blockedUserCid'
-    },
-    const {
-      '1': 'blocked_channel_cid',
-      '3': 7,
-      '4': 1,
-      '5': 13,
-      '10': 'blockedChannelCid'
-    },
-    const {'1': 'created_time', '3': 5, '4': 1, '5': 13, '10': 'createdTime'},
-  ],
-};
-
-const Comment$json = const {
-  '1': 'Comment',
-  '2': const [
-    const {'1': 'gid', '3': 1, '4': 1, '5': 6, '10': 'gid'},
-    const {'1': 'channel_cid', '3': 9, '4': 1, '5': 13, '10': 'channelCid'},
-    const {'1': 'by_cast_cid', '3': 2, '4': 1, '5': 13, '10': 'byCastCid'},
-    const {'1': 'message_gid', '3': 3, '4': 1, '5': 6, '10': 'messageGid'},
-    const {'1': 'text', '3': 4, '4': 1, '5': 9, '10': 'text'},
-    const {'1': 'likes_count', '3': 5, '4': 1, '5': 13, '10': 'likesCount'},
-    const {'1': 'edit_time', '3': 6, '4': 1, '5': 13, '10': 'editTime'},
-    const {'1': 'created_time', '3': 7, '4': 1, '5': 13, '10': 'createdTime'},
-  ],
-};
-
-const Followed$json = const {
-  '1': 'Followed',
-  '2': const [
-    const {'1': 'gid', '3': 1, '4': 1, '5': 6, '10': 'gid'},
-    const {'1': 'by_user_cid', '3': 2, '4': 1, '5': 13, '10': 'byUserCid'},
-    const {
-      '1': 'by_channel_cid',
-      '3': 10,
-      '4': 1,
-      '5': 13,
-      '10': 'byChannelCid'
-    },
-    const {'1': 'target_cid', '3': 3, '4': 1, '5': 13, '10': 'targetCid'},
-    const {
-      '1': 'target_channel_id',
-      '3': 11,
-      '4': 1,
-      '5': 13,
-      '10': 'targetChannelId'
-    },
-    const {'1': 'created_time', '3': 4, '4': 1, '5': 13, '10': 'createdTime'},
-  ],
-};
-
-const Reaction$json = const {
-  '1': 'Reaction',
-  '2': const [
-    const {'1': 'gid', '3': 1, '4': 1, '5': 6, '10': 'gid'},
-    const {
-      '1': 'for_message_cid',
-      '3': 2,
-      '4': 1,
-      '5': 3,
-      '10': 'forMessageCid'
-    },
-    const {
-      '1': 'for_channel_cid',
-      '3': 11,
-      '4': 1,
-      '5': 3,
-      '10': 'forChannelCid'
-    },
-    const {'1': 'by_user_cid', '3': 3, '4': 1, '5': 13, '10': 'byUserCid'},
-    const {
-      '1': 'by_channel_cid',
-      '3': 10,
-      '4': 1,
-      '5': 13,
-      '10': 'byChannelCid'
-    },
-    const {'1': 'created_time', '3': 5, '4': 1, '5': 13, '10': 'createdTime'},
-  ],
-};
-
-const Contact$json = const {
-  '1': 'Contact',
-  '2': const [
-    const {'1': 'gid', '3': 1, '4': 1, '5': 6, '10': 'gid'},
-    const {'1': 'user_cid', '3': 2, '4': 1, '5': 13, '10': 'userCid'},
-    const {'1': 'channel_cid', '3': 10, '4': 1, '5': 13, '10': 'channelCid'},
-    const {'1': 'client_id', '3': 3, '4': 1, '5': 3, '10': 'clientId'},
-    const {'1': 'phone', '3': 4, '4': 1, '5': 9, '10': 'phone'},
-    const {'1': 'first_name', '3': 5, '4': 1, '5': 9, '10': 'firstName'},
-    const {'1': 'last_name', '3': 6, '4': 1, '5': 9, '10': 'lastName'},
-    const {
-      '1': 'target_user_cid',
-      '3': 12,
-      '4': 1,
-      '5': 13,
-      '10': 'targetUserCid'
-    },
-    const {
-      '1': 'target_channel_cid',
-      '3': 15,
-      '4': 1,
-      '5': 13,
-      '10': 'targetChannelCid'
-    },
-  ],
-};
-
-const Session$json = const {
-  '1': 'Session',
-  '2': const [
-    const {'1': 'gid', '3': 1, '4': 1, '5': 6, '10': 'gid'},
-    const {'1': 'session_uuid', '3': 2, '4': 1, '5': 9, '10': 'sessionUuid'},
-    const {'1': 'user_cid', '3': 3, '4': 1, '5': 13, '10': 'userCid'},
-    const {
-      '1': 'last_ip_address',
-      '3': 4,
-      '4': 1,
-      '5': 9,
-      '10': 'lastIpAddress'
-    },
-    const {'1': 'user_agent', '3': 8, '4': 1, '5': 9, '10': 'userAgent'},
-    const {
-      '1': 'platform',
-      '3': 9,
-      '4': 1,
-      '5': 14,
-      '6': '.pb.SessionPlatform',
-      '10': 'platform'
-    },
-    const {'1': 'app_version', '3': 5, '4': 1, '5': 13, '10': 'appVersion'},
-    const {'1': 'active_time', '3': 6, '4': 1, '5': 13, '10': 'activeTime'},
-    const {'1': 'created_time', '3': 7, '4': 1, '5': 13, '10': 'createdTime'},
-  ],
-};
-
-const Sms$json = const {
-  '1': 'Sms',
-  '2': const [
-    const {'1': 'gid', '3': 1, '4': 1, '5': 6, '10': 'gid'},
-    const {'1': 'hash', '3': 2, '4': 1, '5': 9, '10': 'hash'},
-    const {'1': 'app_uuid', '3': 3, '4': 1, '5': 9, '10': 'appUuid'},
-    const {'1': 'client_phone', '3': 4, '4': 1, '5': 9, '10': 'clientPhone'},
-    const {'1': 'genrated_code', '3': 5, '4': 1, '5': 13, '10': 'genratedCode'},
-    const {
-      '1': 'sms_sender_number',
-      '3': 6,
-      '4': 1,
-      '5': 9,
-      '10': 'smsSenderNumber'
-    },
-    const {
-      '1': 'sms_send_statues',
-      '3': 7,
-      '4': 1,
-      '5': 9,
-      '10': 'smsSendStatues'
-    },
-    const {'1': 'sms_http_body', '3': 8, '4': 1, '5': 9, '10': 'smsHttpBody'},
-    const {'1': 'err', '3': 9, '4': 1, '5': 9, '10': 'err'},
-    const {'1': 'carrier', '3': 10, '4': 1, '5': 9, '10': 'carrier'},
-    const {'1': 'country', '3': 11, '4': 1, '5': 12, '10': 'country'},
-    const {
-      '1': 'is_valid_phone',
-      '3': 12,
-      '4': 1,
-      '5': 13,
-      '10': 'isValidPhone'
-    },
-    const {'1': 'is_confirmed', '3': 13, '4': 1, '5': 13, '10': 'isConfirmed'},
-    const {'1': 'is_login', '3': 14, '4': 1, '5': 13, '10': 'isLogin'},
-    const {'1': 'is_register', '3': 15, '4': 1, '5': 13, '10': 'isRegister'},
-    const {
-      '1': 'retried_count',
-      '3': 16,
-      '4': 1,
-      '5': 13,
-      '10': 'retriedCount'
-    },
-    const {'1': 'ttl', '3': 17, '4': 1, '5': 13, '10': 'ttl'},
-  ],
-};
-
-const Tag$json = const {
-  '1': 'Tag',
-  '2': const [
-    const {'1': 'gid', '3': 1, '4': 1, '5': 6, '10': 'gid'},
-    const {'1': 'name', '3': 2, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'count', '3': 3, '4': 1, '5': 13, '10': 'count'},
-    const {'1': 'is_blocked', '3': 5, '4': 1, '5': 8, '10': 'isBlocked'},
-    const {'1': 'group_cid', '3': 6, '4': 1, '5': 13, '10': 'groupCid'},
-    const {'1': 'created_time', '3': 7, '4': 1, '5': 13, '10': 'createdTime'},
-  ],
-};
-
-const User$json = const {
-  '1': 'User',
+const SavedChannel$json = const {
+  '1': 'SavedChannel',
   '2': const [
     const {'1': 'cid', '3': 1, '4': 1, '5': 13, '10': 'cid'},
-    const {'1': 'phone', '3': 14, '4': 1, '5': 9, '10': 'phone'},
-    const {'1': 'email', '3': 15, '4': 1, '5': 9, '10': 'email'},
-    const {'1': 'password_hash', '3': 17, '4': 1, '5': 9, '10': 'passwordHash'},
-    const {'1': 'password_salt', '3': 18, '4': 1, '5': 9, '10': 'passwordSalt'},
-    const {'1': 'created_time', '3': 36, '4': 1, '5': 13, '10': 'createdTime'},
-    const {'1': 'version_time', '3': 37, '4': 1, '5': 13, '10': 'versionTime'},
-    const {'1': 'is_deleted', '3': 38, '4': 1, '5': 13, '10': 'isDeleted'},
-    const {'1': 'is_banned', '3': 39, '4': 1, '5': 13, '10': 'isBanned'},
     const {
-      '1': 'primary_channel_changed_time',
-      '3': 50,
-      '4': 1,
-      '5': 13,
-      '10': 'primaryChannelChangedTime'
-    },
-    const {
-      '1': 'UserCounts',
-      '3': 80,
-      '4': 1,
-      '5': 11,
-      '6': '.pb.Channel',
-      '10': 'UserCounts'
-    },
-    const {
-      '1': 'primary_channel',
-      '3': 100,
-      '4': 1,
-      '5': 11,
-      '6': '.pb.Channel',
-      '10': 'primaryChannel'
-    },
-    const {
-      '1': 'channels',
-      '3': 101,
-      '4': 3,
-      '5': 11,
-      '6': '.pb.Channel',
-      '10': 'channels'
-    },
-    const {
-      '1': 'sessions',
-      '3': 102,
-      '4': 3,
-      '5': 11,
-      '6': '.pb.Session',
-      '10': 'sessions'
-    },
-  ],
-};
-
-const UserCounts$json = const {
-  '1': 'UserCounts',
-  '2': const [
-    const {
-      '1': 'created_channels',
-      '3': 1,
-      '4': 1,
-      '5': 13,
-      '10': 'createdChannels'
-    },
-  ],
-};
-
-const UserRelation$json = const {
-  '1': 'UserRelation',
-  '2': const [
-    const {'1': 'rel_nano_id', '3': 1, '4': 1, '5': 3, '10': 'relNanoId'},
-    const {'1': 'user_cid', '3': 2, '4': 1, '5': 13, '10': 'userCid'},
-    const {'1': 'peer_user_id', '3': 3, '4': 1, '5': 13, '10': 'peerUserId'},
-    const {'1': 'follwing', '3': 4, '4': 1, '5': 13, '10': 'follwing'},
-    const {'1': 'followed', '3': 5, '4': 1, '5': 13, '10': 'followed'},
-    const {'1': 'in_contacts', '3': 6, '4': 1, '5': 13, '10': 'inContacts'},
-    const {
-      '1': 'mutual_contact',
+      '1': 'creator_profile_cid',
       '3': 7,
       '4': 1,
       '5': 13,
-      '10': 'mutualContact'
+      '10': 'creatorProfileCid'
     },
-    const {'1': 'is_favorite', '3': 8, '4': 1, '5': 13, '10': 'isFavorite'},
-    const {'1': 'notify', '3': 9, '4': 1, '5': 13, '10': 'notify'},
-  ],
-};
-
-const Chat$json = const {
-  '1': 'Chat',
-  '2': const [
-    const {'1': 'gid', '3': 1, '4': 1, '5': 6, '10': 'gid'},
-    const {'1': 'user_cid', '3': 5, '4': 1, '5': 13, '10': 'userCid'},
-    const {'1': 'channel_cid', '3': 40, '4': 1, '5': 13, '10': 'channelCid'},
-    const {'1': 'peer_user_cid', '3': 6, '4': 1, '5': 13, '10': 'peerUserCid'},
+    const {'1': 'message_seq', '3': 19, '4': 1, '5': 13, '10': 'messageSeq'},
+    const {'1': 'sync_time_ms', '3': 21, '4': 1, '5': 6, '10': 'syncTimeMs'},
+    const {'1': 'created_time', '3': 36, '4': 1, '5': 13, '10': 'createdTime'},
     const {
-      '1': 'peer_channel_cid',
+      '1': 'counts',
       '3': 41,
       '4': 1,
-      '5': 13,
-      '10': 'peerChannelCid'
-    },
-    const {'1': 'group_cid', '3': 7, '4': 1, '5': 13, '10': 'groupCid'},
-    const {'1': 'custom_title', '3': 9, '4': 1, '5': 9, '10': 'customTitle'},
-    const {'1': 'pin_time_ms', '3': 10, '4': 1, '5': 6, '10': 'pinTimeMs'},
-    const {'1': 'from_msg_gid', '3': 11, '4': 1, '5': 3, '10': 'fromMsgGid'},
-    const {'1': 'unseen_count', '3': 12, '4': 1, '5': 13, '10': 'unseenCount'},
-    const {'1': 'seq', '3': 13, '4': 1, '5': 13, '10': 'seq'},
-    const {
-      '1': 'my_last_seen_seq',
-      '3': 16,
-      '4': 1,
-      '5': 13,
-      '10': 'myLastSeenSeq'
-    },
-    const {
-      '1': 'my_last_seen_msg_id',
-      '3': 17,
-      '4': 1,
-      '5': 3,
-      '10': 'myLastSeenMsgId'
-    },
-    const {
-      '1': 'peer_last_seen_msg_id',
-      '3': 18,
-      '4': 1,
-      '5': 3,
-      '10': 'peerLastSeenMsgId'
-    },
-    const {
-      '1': 'my_last_delivered_seq',
-      '3': 19,
-      '4': 1,
-      '5': 13,
-      '10': 'myLastDeliveredSeq'
-    },
-    const {
-      '1': 'my_last_delivered_msg_id',
-      '3': 20,
-      '4': 1,
-      '5': 3,
-      '10': 'myLastDeliveredMsgId'
-    },
-    const {
-      '1': 'peer_last_delivered_msg_id',
-      '3': 21,
-      '4': 1,
-      '5': 3,
-      '10': 'peerLastDeliveredMsgId'
-    },
-    const {'1': 'is_active', '3': 22, '4': 1, '5': 8, '10': 'isActive'},
-    const {'1': 'mute_until', '3': 29, '4': 1, '5': 13, '10': 'muteUntil'},
-    const {'1': 'sort_time_ms', '3': 30, '4': 1, '5': 3, '10': 'sortTimeMs'},
-    const {'1': 'created_time', '3': 33, '4': 1, '5': 13, '10': 'createdTime'},
-    const {'1': 'sort_time', '3': 45, '4': 1, '5': 6, '10': 'sortTime'},
-    const {
-      '1': 'channel',
-      '3': 48,
-      '4': 1,
       '5': 11,
-      '6': '.pb.Channel',
-      '10': 'channel'
-    },
-    const {
-      '1': 'contact',
-      '3': 49,
-      '4': 1,
-      '5': 11,
-      '6': '.pb.Contact',
-      '10': 'contact'
-    },
-    const {
-      '1': 'group',
-      '3': 50,
-      '4': 1,
-      '5': 11,
-      '6': '.pb.Group',
-      '10': 'group'
+      '6': '.pb.ChannelCounts',
+      '10': 'counts'
     },
     const {
       '1': 'last_message',
@@ -1077,74 +871,6 @@ const Chat$json = const {
       '6': '.pb.Message',
       '10': 'lastMessage'
     },
-    const {
-      '1': 'pinned_message',
-      '3': 26,
-      '4': 1,
-      '5': 11,
-      '6': '.pb.Message',
-      '10': 'pinnedMessage'
-    },
-    const {
-      '1': 'avatar',
-      '3': 44,
-      '4': 1,
-      '5': 11,
-      '6': '.pb.FileMsg',
-      '10': 'avatar'
-    },
-    const {
-      '1': 'group_member',
-      '3': 43,
-      '4': 1,
-      '5': 11,
-      '6': '.pb.GroupMember',
-      '10': 'groupMember'
-    },
-    const {
-      '1': 'draft',
-      '3': 46,
-      '4': 1,
-      '5': 11,
-      '6': '.pb.MessageDraft',
-      '10': 'draft'
-    },
-    const {
-      '1': 'custom_notification',
-      '3': 47,
-      '4': 1,
-      '5': 11,
-      '6': '.pb.ChatCustomNotification',
-      '10': 'customNotification'
-    },
-  ],
-};
-
-const MessageDraft$json = const {
-  '1': 'MessageDraft',
-  '2': const [
-    const {'1': 'draft_text', '3': 34, '4': 1, '5': 9, '10': 'draftText'},
-    const {
-      '1': 'drat_reply_to_msg_id',
-      '3': 35,
-      '4': 1,
-      '5': 3,
-      '10': 'dratReplyToMsgId'
-    },
-  ],
-};
-
-const ChatCustomNotification$json = const {
-  '1': 'ChatCustomNotification',
-  '2': const [
-    const {'1': 'alert', '3': 13, '4': 1, '5': 8, '10': 'alert'},
-    const {'1': 'preview', '3': 14, '4': 1, '5': 8, '10': 'preview'},
-    const {'1': 'led_on', '3': 15, '4': 1, '5': 8, '10': 'ledOn'},
-    const {'1': 'led_color', '3': 16, '4': 1, '5': 8, '10': 'ledColor'},
-    const {'1': 'vibrate', '3': 17, '4': 1, '5': 8, '10': 'vibrate'},
-    const {'1': 'popup', '3': 18, '4': 1, '5': 8, '10': 'popup'},
-    const {'1': 'sound', '3': 19, '4': 1, '5': 8, '10': 'sound'},
-    const {'1': 'priority', '3': 20, '4': 1, '5': 8, '10': 'priority'},
   ],
 };
 
@@ -1155,34 +881,20 @@ const Group$json = const {
     const {'1': 'group_title', '3': 3, '4': 1, '5': 9, '10': 'groupTitle'},
     const {'1': 'user_name', '3': 4, '4': 1, '5': 9, '10': 'userName'},
     const {
-      '1': 'creator_user_cid',
+      '1': 'creator_profile_cid',
       '3': 7,
       '4': 1,
       '5': 13,
-      '10': 'creatorUserCid'
-    },
-    const {
-      '1': 'creator_channel_cid',
-      '3': 31,
-      '4': 1,
-      '5': 13,
-      '10': 'creatorChannelCid'
-    },
-    const {
-      '1': 'group_privacy',
-      '3': 8,
-      '4': 1,
-      '5': 14,
-      '6': '.pb.GroupPrivacy',
-      '10': 'groupPrivacy'
+      '10': 'creatorProfileCid'
     },
     const {
       '1': 'history_viewable',
-      '3': 9,
+      '3': 8,
       '4': 1,
       '5': 8,
       '10': 'historyViewable'
     },
+    const {'1': 'is_open_group', '3': 9, '4': 1, '5': 8, '10': 'isOpenGroup'},
     const {'1': 'seq', '3': 10, '4': 1, '5': 13, '10': 'seq'},
     const {'1': 'avatar_count', '3': 14, '4': 1, '5': 13, '10': 'avatarCount'},
     const {'1': 'about', '3': 15, '4': 1, '5': 9, '10': 'about'},
@@ -1240,29 +952,35 @@ const Group$json = const {
   ],
 };
 
+const GroupCounts$json = const {
+  '1': 'GroupCounts',
+  '2': const [
+    const {'1': 'media_count', '3': 23, '4': 1, '5': 13, '10': 'mediaCount'},
+    const {'1': 'photo_count', '3': 24, '4': 1, '5': 13, '10': 'photoCount'},
+    const {'1': 'video_count', '3': 25, '4': 1, '5': 13, '10': 'videoCount'},
+    const {'1': 'gif_count', '3': 26, '4': 1, '5': 13, '10': 'gifCount'},
+    const {'1': 'audio_count', '3': 27, '4': 1, '5': 13, '10': 'audioCount'},
+    const {'1': 'voice_count', '3': 28, '4': 1, '5': 13, '10': 'voiceCount'},
+    const {'1': 'file_count', '3': 29, '4': 1, '5': 13, '10': 'fileCount'},
+    const {'1': 'link_count', '3': 30, '4': 1, '5': 13, '10': 'linkCount'},
+    const {'1': 'pined_count', '3': 32, '4': 1, '5': 13, '10': 'pinedCount'},
+  ],
+};
+
 const GroupMember$json = const {
   '1': 'GroupMember',
   '2': const [
     const {'1': 'gid', '3': 1, '4': 1, '5': 3, '10': 'gid'},
     const {'1': 'group_cid', '3': 2, '4': 1, '5': 3, '10': 'groupCid'},
-    const {'1': 'user_cid', '3': 3, '4': 1, '5': 13, '10': 'userCid'},
-    const {'1': 'channel_cid', '3': 8, '4': 1, '5': 13, '10': 'channelCid'},
-    const {'1': 'by_user_cid', '3': 4, '4': 1, '5': 13, '10': 'byUserCid'},
+    const {'1': 'profile_cid', '3': 3, '4': 1, '5': 13, '10': 'profileCid'},
     const {
-      '1': 'by_channel_cid',
-      '3': 7,
+      '1': 'by_profile_cid',
+      '3': 4,
       '4': 1,
       '5': 13,
-      '10': 'byChannelCid'
+      '10': 'byProfileCid'
     },
-    const {
-      '1': 'group_role',
-      '3': 5,
-      '4': 1,
-      '5': 14,
-      '6': '.pb.GroupMemberRole',
-      '10': 'groupRole'
-    },
+    const {'1': 'is_moderator', '3': 5, '4': 1, '5': 8, '10': 'isModerator'},
     const {'1': 'created_time', '3': 6, '4': 1, '5': 13, '10': 'createdTime'},
   ],
 };
@@ -1276,8 +994,61 @@ const FileMsg$json = const {
     const {'1': 'width', '3': 4, '4': 1, '5': 13, '10': 'width'},
     const {'1': 'height', '3': 5, '4': 1, '5': 13, '10': 'height'},
     const {'1': 'extension', '3': 6, '4': 1, '5': 9, '10': 'extension'},
+    const {'1': 'full_path', '3': 61, '4': 1, '5': 9, '10': 'fullPath'},
     const {'1': 'user_cid', '3': 7, '4': 1, '5': 13, '10': 'userCid'},
     const {'1': 'data_thumb', '3': 8, '4': 1, '5': 12, '10': 'dataThumb'},
     const {'1': 'data', '3': 9, '4': 1, '5': 12, '10': 'data'},
+  ],
+};
+
+const Session$json = const {
+  '1': 'Session',
+  '2': const [
+    const {'1': 'gid', '3': 1, '4': 1, '5': 6, '10': 'gid'},
+    const {'1': 'session_uuid', '3': 2, '4': 1, '5': 9, '10': 'sessionUuid'},
+    const {'1': 'device_id', '3': 100, '4': 1, '5': 4, '10': 'deviceId'},
+    const {'1': 'user_cid', '3': 3, '4': 1, '5': 13, '10': 'userCid'},
+    const {
+      '1': 'last_ip_address',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '10': 'lastIpAddress'
+    },
+    const {'1': 'user_agent', '3': 8, '4': 1, '5': 9, '10': 'userAgent'},
+    const {
+      '1': 'platform',
+      '3': 9,
+      '4': 1,
+      '5': 14,
+      '6': '.pb.DevicePlatform',
+      '10': 'platform'
+    },
+    const {'1': 'api_version', '3': 5, '4': 1, '5': 13, '10': 'apiVersion'},
+    const {'1': 'active_time', '3': 6, '4': 1, '5': 13, '10': 'activeTime'},
+    const {'1': 'created_time', '3': 7, '4': 1, '5': 13, '10': 'createdTime'},
+  ],
+};
+
+const Sms$json = const {
+  '1': 'Sms',
+  '2': const [
+    const {'1': 'gid', '3': 1, '4': 1, '5': 6, '10': 'gid'},
+    const {'1': 'install_uuid', '3': 3, '4': 1, '5': 9, '10': 'installUuid'},
+    const {'1': 'to_phone', '3': 4, '4': 1, '5': 9, '10': 'toPhone'},
+    const {'1': 'for_confirm', '3': 103, '4': 1, '5': 8, '10': 'forConfirm'},
+    const {'1': 'confirm_code', '3': 5, '4': 1, '5': 9, '10': 'confirmCode'},
+    const {
+      '1': 'gateway_number',
+      '3': 6,
+      '4': 1,
+      '5': 9,
+      '10': 'gatewayNumber'
+    },
+    const {'1': 'text_body', '3': 101, '4': 1, '5': 9, '10': 'textBody'},
+    const {'1': 'created_time', '3': 100, '4': 1, '5': 13, '10': 'createdTime'},
+    const {'1': 'gateway_error', '3': 9, '4': 1, '5': 9, '10': 'gatewayError'},
+    const {'1': 'intent', '3': 14, '4': 1, '5': 9, '10': 'intent'},
+    const {'1': 'result', '3': 102, '4': 1, '5': 9, '10': 'result'},
   ],
 };

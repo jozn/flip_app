@@ -10,23 +10,23 @@ import 'dart:async' as $async;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'dart:core' as $core;
-import 'rpc_shared.pb.dart' as $6;
+import 'rpc_shared.pb.dart' as $7;
 import 'rpc_shared.pbjson.dart';
 
 export 'rpc_shared.pb.dart';
 
 abstract class RPC_SharedServiceBase extends $pb.GeneratedService {
-  $async.Future<$6.EchoResponse> echo(
-      $pb.ServerContext ctx, $6.EchoParam request);
-  $async.Future<$6.CheckUserNameResponse> checkUserName(
-      $pb.ServerContext ctx, $6.CheckUserNameParam request);
+  $async.Future<$7.EchoResponse> echo(
+      $pb.ServerContext ctx, $7.EchoParam request);
+  $async.Future<$7.CheckUserNameResponse> checkUserName(
+      $pb.ServerContext ctx, $7.CheckUserNameParam request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
       case 'Echo':
-        return $6.EchoParam();
+        return $7.EchoParam();
       case 'CheckUserName':
-        return $6.CheckUserNameParam();
+        return $7.CheckUserNameParam();
       default:
         throw $core.ArgumentError('Unknown method: $method');
     }

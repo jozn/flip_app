@@ -10,19 +10,19 @@ import 'dart:async' as $async;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'dart:core' as $core;
-import 'rpc_user.pb.dart' as $8;
+import 'rpc_user.pb.dart' as $9;
 import 'rpc_user.pbjson.dart';
 
 export 'rpc_user.pb.dart';
 
 abstract class RPC_UserServiceBase extends $pb.GeneratedService {
-  $async.Future<$8.ChangePhoneNumberResponse> changePhoneNumber(
-      $pb.ServerContext ctx, $8.ChangePhoneNumberParam request);
+  $async.Future<$9.ChangePhoneNumberResponse> changePhoneNumber(
+      $pb.ServerContext ctx, $9.ChangePhoneNumberParam request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
       case 'ChangePhoneNumber':
-        return $8.ChangePhoneNumberParam();
+        return $9.ChangePhoneNumberParam();
       default:
         throw $core.ArgumentError('Unknown method: $method');
     }

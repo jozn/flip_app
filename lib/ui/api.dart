@@ -130,6 +130,10 @@ var rpcNameToHashId = {
   'GroupGetAdminsList': 1772981789,
   'GroupSetDraft': 411748258,
   'GetUsers1': 920502617,
+  'GetProfiles': 770967729,
+  'GetChannels': 88100100,
+  'GetDirects': 393387904,
+  'GetMessages': 1834253004,
   'Echo': 1239211125,
   'CheckUserName': 1759322581,
   'UploadFile': 422068969,
@@ -1329,6 +1333,46 @@ class Sample {
     var ctxRpc = FlipRpcPbClientContext();
 
     return await serviceRpc.getUsers1(ctxRpc, param);
+  }
+
+  static $async.Future<GetProfilesResponse> getProfiles(
+      GetProfilesParam param) async {
+    var rpcClient = FlipHttpRpcClient();
+    var serviceRpc = RPC_SampleApi(rpcClient);
+
+    var ctxRpc = FlipRpcPbClientContext();
+
+    return await serviceRpc.getProfiles(ctxRpc, param);
+  }
+
+  static $async.Future<GetChannelsResponse> getChannels(
+      GetChannelsParam param) async {
+    var rpcClient = FlipHttpRpcClient();
+    var serviceRpc = RPC_SampleApi(rpcClient);
+
+    var ctxRpc = FlipRpcPbClientContext();
+
+    return await serviceRpc.getChannels(ctxRpc, param);
+  }
+
+  static $async.Future<GetDirectsResponse> getDirects(
+      GetDirectsParam param) async {
+    var rpcClient = FlipHttpRpcClient();
+    var serviceRpc = RPC_SampleApi(rpcClient);
+
+    var ctxRpc = FlipRpcPbClientContext();
+
+    return await serviceRpc.getDirects(ctxRpc, param);
+  }
+
+  static $async.Future<GetMessagesResponse> getMessages(
+      GetMessagesParam param) async {
+    var rpcClient = FlipHttpRpcClient();
+    var serviceRpc = RPC_SampleApi(rpcClient);
+
+    var ctxRpc = FlipRpcPbClientContext();
+
+    return await serviceRpc.getMessages(ctxRpc, param);
   }
 }
 

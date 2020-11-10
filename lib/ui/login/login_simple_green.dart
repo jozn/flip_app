@@ -1,5 +1,5 @@
 import 'package:flip_app/pb/rpc_auth.pb.dart';
-import 'package:flip_app/pb/sys.pb.dart';
+import 'package:flip_app/pb/global.pb.dart';
 import 'package:flip_app/shared/fcolors.dart';
 import 'package:flip_app/shared/fstrings.dart';
 import 'package:flip_app/shared/shared.dart';
