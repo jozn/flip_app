@@ -33,7 +33,7 @@ class Shared {
   }
 }
 
-class Contact {
+class Contact_HERE {
   num id;
   String title;
   String date;

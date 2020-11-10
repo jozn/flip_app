@@ -1,7 +1,7 @@
 import 'package:flip_app/shared/fcolors.dart';
 import 'package:flip_app/shared/shared.dart';
-import 'package:flip_app/ui/chat_list.dart';
-import 'package:flip_app/ui/hello_world.dart';
+import 'package:flip_app/ui/playground/chat_list.dart';
+import 'package:flip_app/ui/playground/hello_world.dart';
 import 'package:flutter/material.dart';
 
 import 'login.dart';

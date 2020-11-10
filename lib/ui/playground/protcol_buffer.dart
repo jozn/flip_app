@@ -9,9 +9,9 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
 // import '../pb/rpc_social.pb.dart';
-import '../pb/rpc_auth.pb.dart';
+import '../../pb/rpc_auth.pb.dart';
 // import '../pb/sys.pb.dart';
-import '../pb/global.pb.dart';
+import '../../pb/global.pb.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
 import 'package:protobuf/protobuf.dart';
 

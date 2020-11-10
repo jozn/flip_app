@@ -324,6 +324,7 @@ class RPC_SampleApi {
   $async.Future<GetUsers1Response> getUsers1(
       $pb.ClientContext ctx, GetUsers1Param request) {
     var emptyResponse = GetUsers1Response();
+    // emptyResponse.mergeFromBuffer(input);
     return _client.invoke<GetUsers1Response>(
         ctx, 'RPC_Sample', 'GetUsers1', request, emptyResponse);
   }

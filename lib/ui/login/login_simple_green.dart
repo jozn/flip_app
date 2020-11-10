@@ -9,7 +9,7 @@ import 'package:protobuf/protobuf.dart';
 import 'package:http/http.dart' as http;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'package:flip_app/ui/api.dart' as Api;
+import 'package:flip_app/ui/api_dep.dart' as Api;
 
 class LoginSimpleGreenRoute extends StatefulWidget {
   LoginSimpleGreenRoute();

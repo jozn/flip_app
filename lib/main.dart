@@ -1,23 +1,24 @@
 import 'dart:convert';
 
 import 'package:flip_app/shared/my_colors.dart';
-import 'package:flip_app/ui/bottom_nav.dart';
-import 'package:flip_app/ui/chat_list.dart';
-import 'package:flip_app/ui/chat_tab_page.dart';
-import 'package:flip_app/ui/contacts_list.dart';
-import 'package:flip_app/ui/hello_world.dart';
-import 'package:flip_app/ui/login.dart';
+import 'package:flip_app/ui/contacts_list_page.dart';
+import 'package:flip_app/ui/playground/bottom_nav.dart';
+import 'package:flip_app/ui/playground/chat_list.dart';
+import 'package:flip_app/ui/playground/chat_tab_page.dart';
+import 'package:flip_app/ui/playground/contacts_list.dart';
+import 'package:flip_app/ui/playground/hello_world.dart';
+import 'package:flip_app/ui/playground/login.dart';
 import 'package:flip_app/ui/login/login_confirm_page.dart';
 import 'package:flip_app/ui/login/login_simple_green.dart';
-import 'package:flip_app/ui/messages_list.dart';
-import 'package:flip_app/ui/protcol_buffer.dart';
-import 'package:flip_app/ui/tab_chat.dart';
-import 'package:flip_app/ui/top_nav.dart';
+import 'package:flip_app/ui/playground/messages_list.dart';
+import 'package:flip_app/ui/playground/protcol_buffer.dart';
+import 'package:flip_app/ui/playground/tab_chat.dart';
+import 'package:flip_app/ui/playground/top_nav.dart';
 import 'package:flutter/material.dart';
 import 'package:toast/toast.dart';
 import 'package:http/http.dart' as http;
 
-import 'ui/tab_chat.dart';
+import 'ui/playground/tab_chat.dart';
 // import 'pb/rpc_social.pb.dart';
 import 'pb/global.pb.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
@@ -142,19 +143,20 @@ class ListBasicRouteState extends State<ListBasicRoute> {
     hh();
     return ListView(
       children: <Widget>[
+        get("contacts page", ContactsListPage()),
+        get("-----------------------", LoginSimpleGreenRoute()),
         ListTile(
           title: Text("Login 2"),
           onTap: () {
             goToPage(LoginCardLightRoute());
           },
         ),
-        get("Login green", LoginSimpleGreenRoute()),
         get("Login confim", LoginConfirmRoute()),
         get("Main Chat tab", ChatListPageOld()),
         get("Hello World", HelloWorldPage()),
         get("TopNavBarPage", TopNavBarPage()),
         get("BottomNavBarPage", BottomNavBarPage()),
-        get("ContactsListPage", ContactsListPage()),
+        get("ContactsListPage", ContactsListPageOld()),
         get("ChatListPage", ChatListPage()),
         get("ChatTabPage", ChatTabPage()),
         get("ChatTelegramRoute", ChatTelegramRoute()),
