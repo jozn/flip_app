@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:toast/toast.dart';
 
 import 'cells/FBottomNavBarCell.dart';
+import 'cells/scrollbar.dart';
 
 class ContactsListPage extends StatefulWidget {
   ContactsListPage();
@@ -55,54 +56,12 @@ class ContactsListPageState extends State<ContactsListPage> {
             color: Colors.redAccent,
           ),
         ),
-        // bottomNavigationBar: FBottomNavBarCell(),
-/*        body: ListView.builder(
-          itemCount: profiles.length,
-          itemBuilder: (context, index) {
-            ContactRowCell(index: index,object: profiles[index], onClick: onItemClick);
-          },
-        )*/
-/*        body: SafeArea(
-          child: ListView.builder(
-            itemCount: profiles.length,
-            itemBuilder: (context, index) {
-              ContactRowCell(index: index,object: profiles[index], onClick: onItemClick);
-            },
-          )
-        )*/
-/*        bottomNavigationBar: Container(
-          height: 50,
-          color: Colors.blueGrey,
-        ),*/
         bottomNavigationBar: FBottomNavBarCell(),
         body: SafeArea(
-          child: CustomScrollView(
-            slivers: <Widget>[
-              ContactsListAdapter(this.profiles, onItemClick).getView_bk()
-            ],
-          ),
+          child: ContactsListAdapter(this.profiles, onItemClick).getView(),
         )
     );
   }
-
-/*  Widget build_old(BuildContext context) {
-    this.context = context;
-
-    return Scaffold(
-        backgroundColor: Colors.white,
-        body: SafeArea(
-          child: Column(
-            children: <Widget>[
-
-             CustomScrollView(
-                slivers: <Widget>[
-                  ContactsListAdapter(this.profiles, onItemClick).getView_bk()
-                ],
-              ),
-            ],
-          ),
-        ));
-  }*/
 }
 
 class ContactsListAdapter {
@@ -110,32 +69,25 @@ class ContactsListAdapter {
   List itemsTile = <ContactRowCell>[];
   Function onClick = null;
 
-  ContactsListAdapter(this.items, onItemClick) {
+  ContactsListAdapter(items, onItemClick) {
     this.onClick = onItemClick;
-    for (var i = 0; i < items.length; i++) {
-      itemsTile.add(
-          ContactRowCell(index: i, object: items[i], onClick: onItemClick));
-    }
+    this.items = items;
   }
 
-  Widget getView2() {
-    return ListView.builder(
-      itemCount: items.length,
-      itemBuilder:(context, index) {
-        ContactRowCell(index: index, object: items[index], onClick: onClick);
-      },
+  Widget getView() {
+    return FLeftScrollbar(
+        thickness: 4,
+        child: Padding(
+          padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+          child: ListView.builder(
+            itemCount: items.length,
+            itemBuilder:(context, index) {
+              print("intem $index");
+              return ContactRowCell(index: index, object: items[index], onClick: onClick);
+            },
+          ),
+        )
     );
-  }
-   Widget getView() {
-    return Scrollbar(
-      thickness: 10,
-      child: SliverList(
-          delegate: SliverChildListDelegate(itemsTile)),
-    );
-  }
-
-  SliverList getView_bk() {
-    return SliverList(delegate: SliverChildListDelegate(itemsTile));
   }
 }
 
@@ -185,7 +137,8 @@ class ContactRowCell extends StatelessWidget {
                     children: [
                       Spacer(),
                       Text(defCh.channelName,
-                          maxLines: 3,
+                          maxLines:1,
+                          textDirection: TextDirection.rtl,
                           style: TextStyle(
                               fontFamily: Shared.IRAN_FONT_MEDIUM,
                               color: FColors.contactsPage_rowUserTittle,
@@ -230,17 +183,8 @@ class ContactRowCell extends StatelessWidget {
                       child: Image.network(
                         "http://192.168.43.159:5000"+avatar.fullPath,
                         height: 50,
-                        // height: avatar.height.toDouble(),
-                        // width: avatar.width.toDouble(),
-                        // width: avatar.width.toDouble(),
                         fit: BoxFit.fitHeight,
                       )
-/*                      child: Image.asset(
-                        object.primaryChannel.avatar.toString(),
-                        height: 52,
-                        // width: 52,
-                        fit: BoxFit.fitHeight,
-                      )*/
                   ),
                 )),
           ],
