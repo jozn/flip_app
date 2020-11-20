@@ -39,7 +39,7 @@ class _CellColumn extends StatelessWidget {
       height: 50,
       child: InkWell(
         onTap: () {
-          Shared.showToast(context, "Hi 2");
+          FShared.showToast(context, "Hi 2");
         },
         child: Center(
           child: Column(
@@ -94,7 +94,7 @@ class BottomNavBarState extends State<BottomNavBarPage_DEP> {
 
   @override
   Widget build(BuildContext context) {
-    var s = Shared.getLogicalPixelFromDevicePixel(context, 1);
+    var s = FShared.getLogicalPixelFromDevicePixel(context, 1);
     var width = MediaQuery.of(context).size.width / 5;
 
     var cells = <Widget>[];
@@ -121,7 +121,7 @@ class BottomNavBarState extends State<BottomNavBarPage_DEP> {
                     children: <Widget>[
                       Container(
                         height:
-                            Shared.getLogicalPixelFromDevicePixel(context, 1),
+                            FShared.getLogicalPixelFromDevicePixel(context, 1),
                         width: double.infinity,
                         // color: Colors.grey[200],
                         decoration: new BoxDecoration(

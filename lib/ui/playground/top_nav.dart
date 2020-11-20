@@ -4,17 +4,17 @@ import 'package:flip_app/shared/my_text.dart';
 import 'package:flip_app/shared/shared.dart';
 import 'package:flutter/material.dart';
 
-class TopNavBarPage extends StatefulWidget {
-  TopNavBarPage();
+class TopNavBarPage_DEP extends StatefulWidget {
+  TopNavBarPage_DEP();
 
   @override
   TopNavBarSimpleState createState() => new TopNavBarSimpleState();
 }
 
-class TopNavBarSimpleState extends State<TopNavBarPage> {
+class TopNavBarSimpleState extends State<TopNavBarPage_DEP> {
   @override
   Widget build(BuildContext context) {
-    var s = Shared.getLogicalPixelFromDevicePixel(context, 1);
+    var s = FShared.getLogicalPixelFromDevicePixel(context, 1);
     return new Scaffold(
         // appBar: AppBar(
         //
@@ -45,7 +45,7 @@ class TopNavBarSimpleState extends State<TopNavBarPage> {
                                   color: FColors.topNavBar_buttons,
                                   splashRadius: 22,
                                   onPressed: () {
-                                    Shared.showToast(context, "More $s");
+                                    FShared.showToast(context, "More $s");
                                   },
                                   icon: Icon(
                                     Icons.more_vert,
@@ -72,7 +72,7 @@ class TopNavBarSimpleState extends State<TopNavBarPage> {
                                   color: FColors.topNavBar_buttons,
                                   splashRadius: 22,
                                   onPressed: () {
-                                    Shared.showToast(context, "Back $s");
+                                    FShared.showToast(context, "Back $s");
                                   },
                                   icon: Icon(
                                     Icons.arrow_forward_ios,

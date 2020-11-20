@@ -78,7 +78,7 @@ class ChatRowCell extends StatelessWidget {
 
   void onItemClick(Contact_HERE obj, BuildContext context) {
     // onClick(index, obj);
-    Shared.showToast(context, "user " + this.object.image);
+    FShared.showToast(context, "user " + this.object.image);
   }
 
   @override

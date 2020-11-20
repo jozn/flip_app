@@ -480,7 +480,7 @@ class _MsgRowBubble extends StatelessWidget {
             style: TextStyle(
               color: Colors.black,
               fontSize: 15,
-              fontFamily: Shared.IRAN_FONT,
+              fontFamily: FShared.IRAN_FONT,
               // fontWeight: FontWeight.w700,
             ),
           ),
@@ -579,7 +579,7 @@ Widget getHeaderUserWidget(_MsgParam param) {
       padding: EdgeInsets.fromLTRB(4, 0, 6, 0),
       child: GestureDetector(
         onTap: () {
-          Shared.showToast(param.context, "Go to Channel page");
+          FShared.showToast(param.context, "Go to Channel page");
         },
         child: Align(
           alignment: Alignment.topRight,
@@ -589,7 +589,7 @@ Widget getHeaderUserWidget(_MsgParam param) {
             textDirection: TextDirection.rtl,
             textAlign: TextAlign.start,
             style: TextStyle(
-              fontFamily: Shared.IRAN_FONT,
+              fontFamily: FShared.IRAN_FONT,
               fontSize: 12,
               color: Colors.blue,
             ),
@@ -619,7 +619,7 @@ Widget getReplayForwardWidget(_MsgParam param) {
         textAlign: TextAlign.start,
         style: TextStyle(
           fontSize: 10,
-          fontFamily: Shared.IRAN_FONT,
+          fontFamily: FShared.IRAN_FONT,
           color: Colors.blue,
           // fontWeight: FontWeight.w600,
           // height: 1.00,
@@ -633,7 +633,7 @@ Widget getReplayForwardWidget(_MsgParam param) {
         textAlign: TextAlign.start,
         style: TextStyle(
           fontSize: 10,
-          fontFamily: Shared.IRAN_FONT_LIGHT,
+          fontFamily: FShared.IRAN_FONT_LIGHT,
           color: Colors.blue,
           // height: 1,
           // textBaseline: TextBaseline.ideographic,
@@ -673,7 +673,7 @@ Widget getReplayForwardWidget(_MsgParam param) {
       height: 36,
       child: GestureDetector(
         onTap: () {
-          Shared.showToast(param.context, "Go to Channel page");
+          FShared.showToast(param.context, "Go to Channel page");
         },
         child: Row(
           mainAxisAlignment: MainAxisAlignment.end,

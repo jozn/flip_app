@@ -66,8 +66,8 @@ class SimpleTopNavBar extends StatelessWidget {
             color: FColors.topNavBar_buttons,
             splashRadius: 22,
             onPressed: () {
-              Shared.goBack(context);
-              Shared.showToast(context, "Back s");
+              FShared.goBack(context);
+              FShared.showToast(context, "Back s");
             },
             icon: Icon(
               Icons.arrow_forward_ios,

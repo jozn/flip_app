@@ -21,7 +21,7 @@ class LoginSimpleGreenRoute extends StatefulWidget {
 class LoginSimpleGreenRouteState extends State<LoginSimpleGreenRoute> {
   void sendSmsCallback() async {
     // playPb();
-    Shared.showToast(context, "weeeeeee");
+    FShared.showToast(context, "weeeeeee");
 
     var param = SendConfirmCodeParam();
     var res = await Api.Auth.sendConfirmCode(param);
@@ -49,7 +49,7 @@ class LoginSimpleGreenRouteState extends State<LoginSimpleGreenRoute> {
                   style: TextStyle(
                       color: Colors.grey,
                       fontSize: 20,
-                      fontFamily: Shared.IRAN_FONT)),
+                      fontFamily: FShared.IRAN_FONT)),
               // Spacer(),
               SizedBox(
                 height: 60,
@@ -60,7 +60,7 @@ class LoginSimpleGreenRouteState extends State<LoginSimpleGreenRoute> {
                     style: TextStyle(
                         color: Colors.blueGrey,
                         fontSize: 16,
-                        fontFamily: Shared.IRAN_FONT)),
+                        fontFamily: FShared.IRAN_FONT)),
               ),
               SizedBox(
                 height: 10,
@@ -96,7 +96,7 @@ class LoginSimpleGreenRouteState extends State<LoginSimpleGreenRoute> {
                     style: TextStyle(
                         color: Colors.white,
                         fontSize: 16,
-                        fontFamily: Shared.IRAN_FONT),
+                        fontFamily: FShared.IRAN_FONT),
                   ),
                   color: FColors.login_sendSmsButton,
                   shape: RoundedRectangleBorder(

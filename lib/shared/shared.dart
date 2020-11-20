@@ -6,7 +6,7 @@ import 'package:intl/intl.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter/services.dart';
 
-class Shared {
+class FShared {
   static const IRAN_FONT = "IRANMobile";
   static const IRAN_FONT_MEDIUM = "IRANMobile_Medium";
   static const IRAN_FONT_LIGHT = "IRANMobile_Light";

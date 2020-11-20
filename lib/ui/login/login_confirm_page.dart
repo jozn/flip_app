@@ -44,7 +44,7 @@ class LoginConfirmRouteState extends State<LoginConfirmRoute> {
                           style: TextStyle(
                               color: Colors.blueGrey,
                               fontSize: 18,
-                              fontFamily: Shared.IRAN_FONT)),
+                              fontFamily: FShared.IRAN_FONT)),
                       // Spacer(),
                       SizedBox(
                         height: 20,
@@ -55,7 +55,7 @@ class LoginConfirmRouteState extends State<LoginConfirmRoute> {
                         autofocus: true,
                         onCompleted: (String value) {
                           //...
-                          Shared.showToast(context, value);
+                          FShared.showToast(context, value);
                           print(value);
                         },
                       ),
@@ -85,14 +85,14 @@ class LoginConfirmRouteState extends State<LoginConfirmRoute> {
                                   style: TextStyle(
                                       color: Colors.blue,
                                       fontSize: 14,
-                                      fontFamily: Shared.IRAN_FONT),
+                                      fontFamily: FShared.IRAN_FONT),
                                 ),
                               ),
                               Text(FStrings.loginConfirm_notRecived,
                                   style: TextStyle(
                                       color: Colors.blueGrey,
                                       fontSize: 14,
-                                      fontFamily: Shared.IRAN_FONT)),
+                                      fontFamily: FShared.IRAN_FONT)),
                             ],
                           )),
                     ],

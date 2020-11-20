@@ -16,4 +16,8 @@ class FStrings {
   static String loginConfirm_notRecived = "دریافت نکردید؟ ";
   static String loginConfirm_changeNumber = "تغییر شماره";
   static String loginConfirm_buttonxxx = "";
+
+
+  // Contacts list
+  static String contactsList_title = "مخاطبین";
 }

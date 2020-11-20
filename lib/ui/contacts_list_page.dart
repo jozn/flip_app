@@ -1,13 +1,15 @@
 import 'package:flip_app/pb/global.pb.dart';
 import 'package:flip_app/pb/rpc_sample.pb.dart';
 import 'package:flip_app/shared/fcolors.dart';
+import 'package:flip_app/shared/fstrings.dart';
 import 'package:flip_app/shared/shared.dart';
 import 'package:flip_app/ui/api.dart';
 import 'package:flutter/material.dart';
 import 'package:toast/toast.dart';
 
 import 'cells/FBottomNavBarCell.dart';
-import 'cells/scrollbar.dart';
+import 'cells/FLeftScrollbar.dart';
+import 'cells/FTopNavBars.dart';
 
 class ContactsListPage extends StatefulWidget {
   ContactsListPage();
@@ -48,18 +50,15 @@ class ContactsListPageState extends State<ContactsListPage> {
   Widget build(BuildContext context) {
     this.context = context;
 
-    return Scaffold(
-        backgroundColor: Colors.white,
-        appBar: PreferredSize(
-          preferredSize: Size.fromHeight(50),
-          child: Container(
-            color: Colors.redAccent,
-          ),
-        ),
-        bottomNavigationBar: FBottomNavBarCell(),
-        body: SafeArea(
-          child: ContactsListAdapter(this.profiles, onItemClick).getView(),
-        )
+    return SafeArea(
+      child: Scaffold(
+          backgroundColor: Colors.white,
+          appBar: FSimpleTopNavBarCell(title: FStrings.contactsList_title),
+          bottomNavigationBar: FBottomNavBarCell(),
+          body: SafeArea(
+            child: ContactsListAdapter(this.profiles, onItemClick).getView(),
+          )
+      ),
     );
   }
 }
@@ -109,7 +108,7 @@ class ContactRowCell extends StatelessWidget {
 
   void onItemClick(Profile obj, BuildContext context) {
     // onClick(index, obj);
-    Shared.showToast(context, "user " + this.object.primaryChannel.userName);
+    FShared.showToast(context, "user " + this.object.primaryChannel.userName);
   }
 
   @override
@@ -140,7 +139,7 @@ class ContactRowCell extends StatelessWidget {
                           maxLines:1,
                           textDirection: TextDirection.rtl,
                           style: TextStyle(
-                              fontFamily: Shared.IRAN_FONT_MEDIUM,
+                              fontFamily: FShared.IRAN_FONT_MEDIUM,
                               color: FColors.contactsPage_rowUserTittle,
                               fontSize: 16,
                               // fontWeight: FontWeight.w600
@@ -156,7 +155,7 @@ class ContactRowCell extends StatelessWidget {
                       Spacer(),
                       Text("last oninlie 3 hours ago",
                           style: TextStyle(
-                            fontFamily: Shared.IRAN_FONT_LIGHT,
+                            fontFamily: FShared.IRAN_FONT_LIGHT,
                             color: FColors.contactsPage_lastActivity,
                             fontSize: 15,
                           )),
