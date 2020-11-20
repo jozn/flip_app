@@ -1,23 +1,11 @@
 import 'package:flip_app/shared/fcolors.dart';
-import 'package:flip_app/shared/fstrings.dart';
-import 'package:flip_app/shared/my_text.dart';
 import 'package:flip_app/shared/shared.dart';
 import 'package:flutter/material.dart';
 
-/*
-class FTopNaveBarParam {
-  String title;
-  FTopNaveBarParam({this.title});
-}
-*/
-
 class FSimpleTopNavBarCell extends StatefulWidget implements PreferredSizeWidget {
-
-  // FTopNaveBarParam param;
   String title;
 
   FSimpleTopNavBarCell({this.title});
-
 
   @override
   _TopNavBarSimpleState createState() => new _TopNavBarSimpleState(this);

@@ -7,9 +7,9 @@ import 'package:flip_app/ui/api.dart';
 import 'package:flutter/material.dart';
 import 'package:toast/toast.dart';
 
-import 'cells/FBottomNavBarCell.dart';
-import 'cells/FLeftScrollbar.dart';
-import 'cells/FTopNavBars.dart';
+import '../cells/FBottomNavBarCell.dart';
+import '../utils/FLeftScrollbar.dart';
+import '../cells/FTopNavBars.dart';
 
 class ContactsListPage extends StatefulWidget {
   ContactsListPage();
