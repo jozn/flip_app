@@ -23,6 +23,15 @@ class Shared {
   }
 
   static void goToPage(BuildContext context, Widget w) {
+/*    Navigator.pushReplacement(
+      context,
+      PageRouteBuilder(
+        pageBuilder: (context, animation1, animation2) => w,
+        transitionDuration: Duration(seconds: 0),
+      ),
+    );*/
+
+    // default
     Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) {
       return w;
     }));

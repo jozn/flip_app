@@ -4,8 +4,8 @@ import 'package:flip_app/shared/my_text.dart';
 import 'package:flip_app/shared/shared.dart';
 import 'package:flutter/material.dart';
 
-class BottomNavBarPage extends StatefulWidget {
-  BottomNavBarPage();
+class BottomNavBarPage_DEP extends StatefulWidget {
+  BottomNavBarPage_DEP();
 
   @override
   BottomNavBarState createState() => new BottomNavBarState();
@@ -68,7 +68,7 @@ class _CellColumn extends StatelessWidget {
   }
 }
 
-class BottomNavBarState extends State<BottomNavBarPage> {
+class BottomNavBarState extends State<BottomNavBarPage_DEP> {
   var itmes = [
     _Cell(
       title: "Shop",

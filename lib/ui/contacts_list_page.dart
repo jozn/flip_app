@@ -6,6 +6,8 @@ import 'package:flip_app/ui/api.dart';
 import 'package:flutter/material.dart';
 import 'package:toast/toast.dart';
 
+import 'cells/FBottomNavBarCell.dart';
+
 class ContactsListPage extends StatefulWidget {
   ContactsListPage();
 
@@ -15,7 +17,7 @@ class ContactsListPage extends StatefulWidget {
 
 class ContactsListPageState extends State<ContactsListPage> {
   BuildContext context;
-  List<Profile> profiles;
+  List<Profile> profiles = [];
   void onItemClick(int index) {
     Toast.show("News " + index.toString() + "clicked", context,
         duration: Toast.LENGTH_SHORT);
@@ -47,28 +49,92 @@ class ContactsListPageState extends State<ContactsListPage> {
 
     return Scaffold(
         backgroundColor: Colors.white,
+        appBar: PreferredSize(
+          preferredSize: Size.fromHeight(50),
+          child: Container(
+            color: Colors.redAccent,
+          ),
+        ),
+        // bottomNavigationBar: FBottomNavBarCell(),
+/*        body: ListView.builder(
+          itemCount: profiles.length,
+          itemBuilder: (context, index) {
+            ContactRowCell(index: index,object: profiles[index], onClick: onItemClick);
+          },
+        )*/
+/*        body: SafeArea(
+          child: ListView.builder(
+            itemCount: profiles.length,
+            itemBuilder: (context, index) {
+              ContactRowCell(index: index,object: profiles[index], onClick: onItemClick);
+            },
+          )
+        )*/
+/*        bottomNavigationBar: Container(
+          height: 50,
+          color: Colors.blueGrey,
+        ),*/
+        bottomNavigationBar: FBottomNavBarCell(),
         body: SafeArea(
           child: CustomScrollView(
             slivers: <Widget>[
-              ContactsListAdapter(this.profiles, onItemClick).getView()
+              ContactsListAdapter(this.profiles, onItemClick).getView_bk()
+            ],
+          ),
+        )
+    );
+  }
+
+/*  Widget build_old(BuildContext context) {
+    this.context = context;
+
+    return Scaffold(
+        backgroundColor: Colors.white,
+        body: SafeArea(
+          child: Column(
+            children: <Widget>[
+
+             CustomScrollView(
+                slivers: <Widget>[
+                  ContactsListAdapter(this.profiles, onItemClick).getView_bk()
+                ],
+              ),
             ],
           ),
         ));
-  }
+  }*/
 }
 
 class ContactsListAdapter {
   List items = <Profile>[];
   List itemsTile = <ContactRowCell>[];
+  Function onClick = null;
 
   ContactsListAdapter(this.items, onItemClick) {
+    this.onClick = onItemClick;
     for (var i = 0; i < items.length; i++) {
       itemsTile.add(
           ContactRowCell(index: i, object: items[i], onClick: onItemClick));
     }
   }
 
-  SliverList getView() {
+  Widget getView2() {
+    return ListView.builder(
+      itemCount: items.length,
+      itemBuilder:(context, index) {
+        ContactRowCell(index: index, object: items[index], onClick: onClick);
+      },
+    );
+  }
+   Widget getView() {
+    return Scrollbar(
+      thickness: 10,
+      child: SliverList(
+          delegate: SliverChildListDelegate(itemsTile)),
+    );
+  }
+
+  SliverList getView_bk() {
     return SliverList(delegate: SliverChildListDelegate(itemsTile));
   }
 }
@@ -96,6 +162,8 @@ class ContactRowCell extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var avatar = object.primaryChannel.avatar;
+    var defCh = object.primaryChannel;
     return InkWell(
       onTap: () {
         onItemClick(object, context);
@@ -113,27 +181,31 @@ class ContactRowCell extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Spacer(),
-                  Row(
+                  Row( // == Top row
                     children: [
                       Spacer(),
-                      Text(object.primaryChannel.channelName,
+                      Text(defCh.channelName,
                           maxLines: 3,
                           style: TextStyle(
+                              fontFamily: Shared.IRAN_FONT_MEDIUM,
                               color: FColors.contactsPage_rowUserTittle,
                               fontSize: 16,
-                              fontWeight: FontWeight.w600)),
+                              // fontWeight: FontWeight.w600
+                          )
+                      ),
                     ],
                   ),
                   SizedBox(
-                    height: 10,
+                    height: 4,
                   ),
-                  Row(
+                  Row( // === Last activity
                     children: <Widget>[
                       Spacer(),
-                      Text(object.primaryChannel.createdTime.toString(),
+                      Text("last oninlie 3 hours ago",
                           style: TextStyle(
+                            fontFamily: Shared.IRAN_FONT_LIGHT,
                             color: FColors.contactsPage_lastActivity,
-                            fontSize: 14,
+                            fontSize: 15,
                           )),
                     ],
                   ),
@@ -145,7 +217,7 @@ class ContactRowCell extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(
+            SizedBox( // == Avatar holder
                 width: 66,
                 child: Center(
                   child: Card(
@@ -155,12 +227,21 @@ class ContactRowCell extends StatelessWidget {
                         borderRadius: BorderRadius.circular(800),
                       ),
                       clipBehavior: Clip.antiAliasWithSaveLayer,
-                      child: Image.asset(
+                      child: Image.network(
+                        "http://192.168.43.159:5000"+avatar.fullPath,
+                        height: 50,
+                        // height: avatar.height.toDouble(),
+                        // width: avatar.width.toDouble(),
+                        // width: avatar.width.toDouble(),
+                        fit: BoxFit.fitHeight,
+                      )
+/*                      child: Image.asset(
                         object.primaryChannel.avatar.toString(),
                         height: 52,
                         // width: 52,
                         fit: BoxFit.fitHeight,
-                      )),
+                      )*/
+                  ),
                 )),
           ],
         ),

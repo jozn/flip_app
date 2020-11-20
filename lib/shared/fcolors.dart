@@ -35,7 +35,7 @@ class FColors {
 
   // Contacts page
   static const Color contactsPage_rowUserTittle = fontColorDark1;
-  static const Color contactsPage_lastActivity = Color(0xff888888);
+  static const Color contactsPage_lastActivity = Colors.blueGrey;//Color(0xff888888);
   static const Color contactsPage_divider = Color(0xffcccccc);
 
   // Chat Inbox Row
