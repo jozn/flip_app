@@ -21,6 +21,7 @@ class ContactsListPage extends StatefulWidget {
 class ContactsListPageState extends State<ContactsListPage> {
   BuildContext context;
   List<Profile> profiles = [];
+
   void onItemClick(int index) {
     Toast.show("News " + index.toString() + "clicked", context,
         duration: Toast.LENGTH_SHORT);

@@ -1,5 +1,6 @@
 import 'package:flip_app/shared/fcolors.dart';
 import 'package:flip_app/shared/shared.dart';
+import 'package:flip_app/ui/cells/ChatInboxListCell.dart';
 import 'package:flip_app/ui/cells/FBottomNavBarCell.dart';
 import 'package:flip_app/ui/cells/FDrawerCell.dart';
 import 'package:flip_app/ui/playground/chat_list.dart';
@@ -128,7 +129,8 @@ class _AppDefaultHomePageState extends State<AppDefaultHomePage>
                 Expanded(
                   child: TabBarView(
                     children: [
-                      HelloWorldPage(),
+                      // HelloWorldPage(),
+                      ChatInboxListCell(),
                       ChatListPage(),
                       // Tab(text: "GAMES 555"),
                       // Tab(text: "GAMES 555"),
