@@ -2,7 +2,7 @@ import 'package:flip_app/pb/global.pb.dart';
 import 'package:flip_app/pb/rpc_sample.pb.dart';
 import 'package:flip_app/shared/fcolors.dart';
 import 'package:flip_app/shared/shared.dart';
-import 'package:flip_app/ui/cells/rows/FDirectRowCell.dart';
+import 'package:flip_app/ui/cells/rows/direct_row.dart';
 import 'package:flip_app/ui/utils/FLeftScrollbar.dart';
 import 'package:flutter/material.dart';
 import 'package:toast/toast.dart';

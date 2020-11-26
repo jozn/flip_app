@@ -2,21 +2,21 @@ import 'package:flip_app/pb/global.pb.dart';
 import 'package:flip_app/pb/rpc_sample.pb.dart';
 import 'package:flip_app/shared/fcolors.dart';
 import 'package:flip_app/shared/shared.dart';
-import 'package:flip_app/ui/cells/rows/FDirectRowCell.dart';
+import 'package:flip_app/ui/cells/rows/direct_row.dart';
 import 'package:flip_app/ui/utils/FLeftScrollbar.dart';
 import 'package:flutter/material.dart';
 import 'package:toast/toast.dart';
 
 import '../api.dart';
 
-class FDirectChatListCell extends StatefulWidget {
-  FDirectChatListCell();
+class FDirectGroupListCell extends StatefulWidget {
+  FDirectGroupListCell();
 
   @override
-  _FDirectChatListCellState createState() => new _FDirectChatListCellState();
+  _FDirectGroupListCellState createState() => new _FDirectGroupListCellState();
 }
 
-class _FDirectChatListCellState extends State<FDirectChatListCell> {
+class _FDirectGroupListCellState extends State<FDirectGroupListCell> {
   BuildContext context;
   List<Direct> items = [];
 
@@ -59,6 +59,7 @@ class _FDirectChatListCellState extends State<FDirectChatListCell> {
       // color: Colors.white,
       child: FLeftScrollbar(
         thickness: 3,
+
         child: Material(
           color: Colors.white,
           child: ListView.builder(

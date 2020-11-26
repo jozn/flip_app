@@ -1,9 +1,9 @@
 import 'package:flip_app/shared/fcolors.dart';
 import 'package:flip_app/shared/shared.dart';
-import 'package:flip_app/ui/cells/FDirectChatListCell.dart';
-import 'package:flip_app/ui/cells/FDirectGroupListCell.dart';
-import 'package:flip_app/ui/cells/FBottomNavBarCell.dart';
-import 'package:flip_app/ui/cells/FDrawerCell.dart';
+import 'package:flip_app/ui/cells/direct_chat.dart';
+import 'package:flip_app/ui/cells/direct_group.dart';
+import 'package:flip_app/ui/cells/bottom_navbar.dart';
+import 'package:flip_app/ui/cells/drawer.dart';
 import 'package:flip_app/ui/playground/chat_list.dart';
 import 'package:flip_app/ui/playground/hello_world.dart';
 import 'package:flip_app/ui/playground/login.dart';
