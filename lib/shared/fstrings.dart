@@ -20,4 +20,15 @@ class FStrings {
 
   // Contacts list
   static String contactsList_title = "مخاطبین";
+
+
+  static String home_tabTitleChats = "چت ها";
+  static String home_tabTitleChat = "چت";
+  static String home_tabTitleGroups = "گروه ها";
+  static String home_tabTitleGroup = "گروه";
+
+
+  // https://en.wikipedia.org/wiki/Thin_space
+  // U+202F
+  static String howe_thinspace = " ";
 }
