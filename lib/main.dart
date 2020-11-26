@@ -159,7 +159,7 @@ class ListBasicRouteState extends State<ListBasicRoute> {
         get("TopNavBarPage", TopNavBarPage_DEP()),
         get("BottomNavBarPage", BottomNavBarPage_DEP()),
         get("ContactsListPage", ContactsListPageOld()),
-        get("ChatListPage", ChatListPage()),
+        get("ChatListPage", ChatListPage_DEP()),
         get("ChatTabPage", ChatTabPage()),
         get("ChatTelegramRoute", ChatTelegramRoute()),
         get("PB", PbPage()),

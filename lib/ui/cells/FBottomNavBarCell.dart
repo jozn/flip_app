@@ -86,16 +86,16 @@ class _BottomNavBarState extends State<FBottomNavBarCell> {
       title: "Chat",
       icon: Icons.chat,
     ),
-    _Cell(
+    /*_Cell(
       title: "Chat",
       icon: Icons.title,
-    ),
+    ),*/
   ];
 
   @override
   Widget build(BuildContext context) {
     var s = FShared.getLogicalPixelFromDevicePixel(context, 1);
-    var width = MediaQuery.of(context).size.width / 5;
+    var width = MediaQuery.of(context).size.width / itmes.length;
 
     var cells = <Widget>[];
 

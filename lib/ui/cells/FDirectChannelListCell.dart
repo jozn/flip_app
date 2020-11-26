@@ -9,14 +9,14 @@ import 'package:toast/toast.dart';
 
 import '../api.dart';
 
-class ChatInboxListCell extends StatefulWidget {
-  ChatInboxListCell();
+class FDirectChannelListCell extends StatefulWidget {
+  FDirectChannelListCell();
 
   @override
-  _ChatInboxListCellState createState() => new _ChatInboxListCellState();
+  _FDirectChannelListCellState createState() => new _FDirectChannelListCellState();
 }
 
-class _ChatInboxListCellState extends State<ChatInboxListCell> {
+class _FDirectChannelListCellState extends State<FDirectChannelListCell> {
   BuildContext context;
   List<Direct> items = [];
 
@@ -56,14 +56,19 @@ class _ChatInboxListCellState extends State<ChatInboxListCell> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      // color: Colors.white,
       child: FLeftScrollbar(
         thickness: 3,
-        child:ListView.builder(
+
+        child: Material(
+          color: Colors.white,
+          child: ListView.builder(
             itemCount: items.length,
             itemBuilder:(context, index) {
               return FDirectRowCell(index: index,direct: items[index], onClick: onItemClick2);
             },
-        ),
+          ),
+        )
       ),
     );
   }

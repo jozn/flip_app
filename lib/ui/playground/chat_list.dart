@@ -3,14 +3,14 @@ import 'package:flip_app/shared/shared.dart';
 import 'package:flutter/material.dart';
 import 'package:toast/toast.dart';
 
-class ChatListPage extends StatefulWidget {
-  ChatListPage();
+class ChatListPage_DEP extends StatefulWidget {
+  ChatListPage_DEP();
 
   @override
-  ChatListPageState createState() => new ChatListPageState();
+  ChatListPage_DEPState createState() => new ChatListPage_DEPState();
 }
 
-class ChatListPageState extends State<ChatListPage> {
+class ChatListPage_DEPState extends State<ChatListPage_DEP> {
   BuildContext context;
   void onItemClick(int index) {
     Toast.show("News " + index.toString() + "clicked", context,

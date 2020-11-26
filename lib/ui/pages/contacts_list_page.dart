@@ -77,14 +77,16 @@ class ContactsListAdapter {
   Widget getView() {
     return FLeftScrollbar(
         thickness: 4,
-        child: Padding(
-          padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-          child: ListView.builder(
-            itemCount: items.length,
-            itemBuilder:(context, index) {
-              print("intem $index");
-              return ContactRowCell(index: index, object: items[index], onClick: onClick);
-            },
+        child: Material(
+          child: Padding(
+            padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+            child: ListView.builder(
+              itemCount: items.length,
+              itemBuilder:(context, index) {
+                print("intem $index");
+                return ContactRowCell(index: index, object: items[index], onClick: onClick);
+              },
+            ),
           ),
         )
     );
@@ -181,7 +183,7 @@ class ContactRowCell extends StatelessWidget {
                       ),
                       clipBehavior: Clip.antiAliasWithSaveLayer,
                       child: Image.network(
-                        "http://192.168.43.159:5000"+avatar.fullPath,
+                        "http://192.168.43.160:5000"+avatar.fullPath,
                         height: 50,
                         fit: BoxFit.fitHeight,
                       )

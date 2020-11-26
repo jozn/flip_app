@@ -125,7 +125,7 @@ class ChatTabPageState extends State<ChatTabPage>
                   child: TabBarView(
                     children: [
                       HelloWorldPage(),
-                      ChatListPage(),
+                      ChatListPage_DEP(),
                       // Tab(text: "GAMES 555"),
                       // Tab(text: "GAMES 555"),
                     ],

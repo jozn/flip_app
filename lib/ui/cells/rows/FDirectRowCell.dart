@@ -55,7 +55,7 @@ class FDirectRowCell extends StatelessWidget {
       },
       child: Container(
         height: 64,
-        color: Colors.white,
+        color: Colors.transparent,
         width: double.infinity,
         padding: EdgeInsets.fromLTRB(10, 0, 0, 0),
         child: Row(
@@ -131,7 +131,7 @@ class FDirectRowCell extends StatelessWidget {
                       ),
                       clipBehavior: Clip.antiAliasWithSaveLayer,
                       child: Image.network(
-                        "http://192.168.43.159:5000"+data.getAvatar(),
+                        "http://192.168.43.160:5000"+data.getAvatar(),
                         height: 52,
                         fit: BoxFit.fitHeight,
                       )

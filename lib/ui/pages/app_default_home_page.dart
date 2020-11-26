@@ -1,6 +1,7 @@
 import 'package:flip_app/shared/fcolors.dart';
 import 'package:flip_app/shared/shared.dart';
-import 'package:flip_app/ui/cells/ChatInboxListCell.dart';
+import 'package:flip_app/ui/cells/FDirectChatListCell.dart';
+import 'package:flip_app/ui/cells/FDirectGroupListCell.dart';
 import 'package:flip_app/ui/cells/FBottomNavBarCell.dart';
 import 'package:flip_app/ui/cells/FDrawerCell.dart';
 import 'package:flip_app/ui/playground/chat_list.dart';
@@ -49,7 +50,7 @@ class _AppDefaultHomePageState extends State<AppDefaultHomePage>
     return Scaffold(
         key: scaffoldKey,
         endDrawer: _getDrawerScreen(context),
-        backgroundColor: Colors.grey[200],
+        backgroundColor: Colors.red[300],
         bottomNavigationBar: FBottomNavBarCell(),
         body: SafeArea(
           child: Container(
@@ -130,8 +131,9 @@ class _AppDefaultHomePageState extends State<AppDefaultHomePage>
                   child: TabBarView(
                     children: [
                       // HelloWorldPage(),
-                      ChatInboxListCell(),
-                      ChatListPage(),
+                      FDirectGroupListCell(),
+                      FDirectChatListCell(),
+                      // ChatListPage_DEP(),
                       // Tab(text: "GAMES 555"),
                       // Tab(text: "GAMES 555"),
                     ],
