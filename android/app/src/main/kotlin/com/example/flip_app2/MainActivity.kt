@@ -1,4 +1,4 @@
-package com.example.flip_app
+package com.example.flip_app2
 
 import io.flutter.embedding.android.FlutterActivity
 

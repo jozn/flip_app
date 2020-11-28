@@ -1,6 +1,6 @@
-# flip_app
+# flip_app2
 
-A new Flutter application.
+A new Flutter project.
 
 ## Getting Started
 
