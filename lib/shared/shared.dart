@@ -79,21 +79,21 @@ class CircleImage extends StatelessWidget {
   }
 }
 
-class Message {
+class LocalMessage {
   int id;
   String date;
   String content;
   bool fromMe;
   bool showTime = true;
 
-  Message(int id, String content, bool fromMe, String date) {
+  LocalMessage(int id, String content, bool fromMe, String date) {
     this.id = id;
     this.date = date;
     this.content = content;
     this.fromMe = fromMe;
   }
 
-  Message.time(
+  LocalMessage.time(
       int id, String content, bool fromMe, bool showTime, String date) {
     this.id = id;
     this.date = date;

@@ -39,20 +39,20 @@ class ChatTelegramRouteState extends State<ChatTelegramRoute> {
   double dsf = 0;
 
   final TextEditingController inputController = new TextEditingController();
-  List<Message> items = [];
+  List<LocalMessage> items = [];
   ChatTelegramAdapter adapter;
 
   @override
   void initState() {
     super.initState();
     var m1 = "sdfsafsd kfjsdflsdflksdf slkjfds";
-    items.add(Message.time(items.length, "Hai..", false, items.length % 5 == 0,
+    items.add(LocalMessage.time(items.length, "Hai..", false, items.length % 5 == 0,
         Tools.getFormattedTimeEvent(DateTime.now().millisecondsSinceEpoch)));
-    items.add(Message.time(items.length, "Hello!", true, items.length % 5 == 0,
+    items.add(LocalMessage.time(items.length, "Hello!", true, items.length % 5 == 0,
         Tools.getFormattedTimeEvent(DateTime.now().millisecondsSinceEpoch)));
-    items.add(Message.time(items.length, m1, true, items.length % 5 == 0,
+    items.add(LocalMessage.time(items.length, m1, true, items.length % 5 == 0,
         Tools.getFormattedTimeEvent(DateTime.now().millisecondsSinceEpoch)));
-    items.add(Message.time(items.length, m1, true, items.length % 5 == 0,
+    items.add(LocalMessage.time(items.length, m1, true, items.length % 5 == 0,
         Tools.getFormattedTimeEvent(DateTime.now().millisecondsSinceEpoch)));
   }
 
@@ -168,7 +168,7 @@ class ChatTelegramRouteState extends State<ChatTelegramRoute> {
     inputController.clear();
     showSend = false;
     setState(() {
-      adapter.insertSingleItem(Message.time(
+      adapter.insertSingleItem(LocalMessage.time(
           adapter.getItemCount(),
           message,
           true,
@@ -181,7 +181,7 @@ class ChatTelegramRouteState extends State<ChatTelegramRoute> {
   void generateReply(String msg) {
     Timer(Duration(seconds: 1), () {
       setState(() {
-        adapter.insertSingleItem(Message.time(
+        adapter.insertSingleItem(LocalMessage.time(
             adapter.getItemCount(),
             msg,
             false,
@@ -196,14 +196,14 @@ class ChatTelegramRouteState extends State<ChatTelegramRoute> {
 //////////////////////////////
 
 class ChatTelegramAdapter {
-  List items = <Message>[];
+  List items = <LocalMessage>[];
   BuildContext context;
   Function onItemClick;
   ScrollController scrollController = new ScrollController();
 
   ChatTelegramAdapter(this.context, this.items, this.onItemClick);
 
-  void insertSingleItem(Message msg) {
+  void insertSingleItem(LocalMessage msg) {
     int insertIndex = items.length;
     items.insert(insertIndex, msg);
     scrollController.animateTo(scrollController.position.maxScrollExtent + 100,
@@ -216,13 +216,13 @@ class ChatTelegramAdapter {
       padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
       controller: scrollController,
       itemBuilder: (context, index) {
-        Message item = items[index];
+        LocalMessage item = items[index];
         return buildListItemView(index, item);
       },
     );
   }
 
-  Widget buildListItemView(int index, Message item) {
+  Widget buildListItemView(int index, LocalMessage item) {
     var p = _MsgParam();
     p.context = context;
     p.msg = item;
@@ -237,7 +237,7 @@ class ChatTelegramAdapter {
     return m;
   }
 
-  Widget buildListItemView2(int index, Message item) {
+  Widget buildListItemView2(int index, LocalMessage item) {
     bool isMe = item.fromMe;
 
     return Wrap(
@@ -306,7 +306,7 @@ class _MsgColors {
 
 class _MsgParam {
   BuildContext context;
-  Message msg;
+  LocalMessage msg;
   _Align align = _Align.right;
   _MsgColors colors = _MsgColors();
   bool withAvatar;

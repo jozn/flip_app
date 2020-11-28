@@ -21,11 +21,14 @@ class FStrings {
   // Contacts list
   static String contactsList_title = "مخاطبین";
 
-
+  // Tabar Chat Top Tabs
   static String home_tabTitleChats = "چت ها";
   static String home_tabTitleChat = "چت";
   static String home_tabTitleGroups = "گروه ها";
   static String home_tabTitleGroup = "گروه";
+
+  // Chat Page
+  static String chatPage_title = "چت";
 
 
   // https://en.wikipedia.org/wiki/Thin_space
