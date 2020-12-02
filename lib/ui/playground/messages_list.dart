@@ -46,9 +46,17 @@ class ChatTelegramRouteState extends State<ChatTelegramRoute> {
   void initState() {
     super.initState();
     var m1 = "sdfsafsd kfjsdflsdflksdf slkjfds";
-    items.add(LocalMessage.time(items.length, "Hai..", false, items.length % 5 == 0,
+    items.add(LocalMessage.time(
+        items.length,
+        "Hai..",
+        false,
+        items.length % 5 == 0,
         Tools.getFormattedTimeEvent(DateTime.now().millisecondsSinceEpoch)));
-    items.add(LocalMessage.time(items.length, "Hello!", true, items.length % 5 == 0,
+    items.add(LocalMessage.time(
+        items.length,
+        "Hello!",
+        true,
+        items.length % 5 == 0,
         Tools.getFormattedTimeEvent(DateTime.now().millisecondsSinceEpoch)));
     items.add(LocalMessage.time(items.length, m1, true, items.length % 5 == 0,
         Tools.getFormattedTimeEvent(DateTime.now().millisecondsSinceEpoch)));

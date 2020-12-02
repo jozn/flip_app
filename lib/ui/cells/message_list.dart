@@ -54,8 +54,7 @@ class _FMessageListCellState extends State<FMessageListCell> {
   }
 
   void onItemClick2() {
-    Toast.show("News " + "clicked", context,
-        duration: Toast.LENGTH_SHORT);
+    Toast.show("News " + "clicked", context, duration: Toast.LENGTH_SHORT);
   }
 
   void onItemClick(int index) {
@@ -68,27 +67,27 @@ class _FMessageListCellState extends State<FMessageListCell> {
     return Container(
       // color: Colors.white,
       child: FLeftScrollbar(
-        thickness: 4,
-        child: Material(
-          color: Colors.white,
-          child: ListView.builder(
-            itemCount: messages.length,
-            padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
-            controller: scrollController,
-            itemBuilder:(context, index) {
-              Message item = messages[index];
-              var parm = FMessageRowParam();
-              parm.message = item;
-              parm.index = index;
+          thickness: 4,
+          radius: Radius.circular(4),
+          child: Material(
+            color: Colors.white,
+            child: ListView.builder(
+              itemCount: messages.length,
+              padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+              controller: scrollController,
+              itemBuilder: (context, index) {
+                Message item = messages[index];
+                var parm = FMessageRowParam();
+                parm.message = item;
+                parm.index = index;
 
-              var msgWidget = FMessageRow();
-              msgWidget.param = parm;
+                var msgWidget = FMessageRow();
+                msgWidget.param = parm;
 
-              return msgWidget;
-            },
-          ),
-        )
-      ),
+                return msgWidget;
+              },
+            ),
+          )),
     );
   }
 }

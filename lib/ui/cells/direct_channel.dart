@@ -13,7 +13,8 @@ class FDirectChannelListCell extends StatefulWidget {
   FDirectChannelListCell();
 
   @override
-  _FDirectChannelListCellState createState() => new _FDirectChannelListCellState();
+  _FDirectChannelListCellState createState() =>
+      new _FDirectChannelListCellState();
 }
 
 class _FDirectChannelListCellState extends State<FDirectChannelListCell> {
@@ -44,8 +45,7 @@ class _FDirectChannelListCellState extends State<FDirectChannelListCell> {
   }
 
   void onItemClick2() {
-    Toast.show("News " + "clicked", context,
-        duration: Toast.LENGTH_SHORT);
+    Toast.show("News " + "clicked", context, duration: Toast.LENGTH_SHORT);
   }
 
   void onItemClick(int index) {
@@ -58,18 +58,17 @@ class _FDirectChannelListCellState extends State<FDirectChannelListCell> {
     return Container(
       // color: Colors.white,
       child: FLeftScrollbar(
-        thickness: 3,
-
-        child: Material(
-          color: Colors.white,
-          child: ListView.builder(
-            itemCount: items.length,
-            itemBuilder:(context, index) {
-              return FDirectRowCell(index: index,direct: items[index], onClick: onItemClick2);
-            },
-          ),
-        )
-      ),
+          thickness: 3,
+          child: Material(
+            color: Colors.white,
+            child: ListView.builder(
+              itemCount: items.length,
+              itemBuilder: (context, index) {
+                return FDirectRowCell(
+                    index: index, direct: items[index], onClick: onItemClick2);
+              },
+            ),
+          )),
     );
   }
 }

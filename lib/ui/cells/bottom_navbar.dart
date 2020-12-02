@@ -111,8 +111,7 @@ class _BottomNavBarState extends State<FBottomNavBarCell> {
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
             Container(
-              height:
-              FShared.getLogicalPixelFromDevicePixel(context, 1),
+              height: FShared.getLogicalPixelFromDevicePixel(context, 1),
               width: double.infinity,
               // color: Colors.grey[200],
               decoration: new BoxDecoration(

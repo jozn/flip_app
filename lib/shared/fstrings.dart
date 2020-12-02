@@ -17,7 +17,6 @@ class FStrings {
   static String loginConfirm_changeNumber = "تغییر شماره";
   static String loginConfirm_buttonxxx = "";
 
-
   // Contacts list
   static String contactsList_title = "مخاطبین";
 
@@ -29,7 +28,6 @@ class FStrings {
 
   // Chat Page
   static String chatPage_title = "چت";
-
 
   // https://en.wikipedia.org/wiki/Thin_space
   // U+202F

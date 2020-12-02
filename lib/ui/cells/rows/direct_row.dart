@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flip_app/pb/global.pb.dart';
 import 'package:flip_app/pb/rpc_sample.pb.dart';
 import 'package:flip_app/shared/fcolors.dart';
@@ -9,19 +11,19 @@ import 'package:toast/toast.dart';
 class _DataProxy {
   Direct direct;
 
-  String lastMsg(){
+  String lastMsg() {
     return direct.group.lastMessage.text;
   }
 
-  String getTitle(){
+  String getTitle() {
     return direct.group.groupTitle;
   }
 
-  String getAvatar(){
+  String getAvatar() {
     return direct.group.avatar.fullPath;
   }
-
 }
+
 // ignore: must_be_immutable
 class FDirectRowCell extends StatelessWidget {
   final Direct direct;
@@ -45,9 +47,11 @@ class FDirectRowCell extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var id = 44;//direct.id;
+    var id = 44; //direct.id;
     var data = _DataProxy();
     data.direct = this.direct;
+    var lastMsgtxt =
+        data.lastMsg().toString().substring(0, min(data.lastMsg().length, 700));
 
     return InkWell(
       onTap: () {
@@ -96,7 +100,7 @@ class FDirectRowCell extends StatelessWidget {
                           borderRadius: BorderRadius.all(Radius.circular(20)),
                         ),
                         padding:
-                        EdgeInsets.symmetric(vertical: 2.5, horizontal: 8),
+                            EdgeInsets.symmetric(vertical: 2.5, horizontal: 8),
                         child: Text(direct.unseenCount.toString(),
                             maxLines: 3,
                             style: TextStyle(
@@ -104,12 +108,22 @@ class FDirectRowCell extends StatelessWidget {
                                 fontSize: 14,
                                 fontWeight: FontWeight.w400)),
                       ),
-                      Spacer(),
-                      Text(data.lastMsg(),
-                          style: TextStyle(
-                            color: FColors.contactsPage_lastActivity,
-                            fontSize: 14,
-                          )),
+                      // Spacer(),
+                      SizedBox(
+                        width: 1,
+                      ),
+                      Expanded(
+                        child: Text(lastMsgtxt,
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            textDirection: TextDirection.rtl,
+                            softWrap: false,
+                            style: TextStyle(
+                              color: FColors.contactsPage_lastActivity,
+                              fontFamily: FShared.IRAN_FONT_LIGHT,
+                              fontSize: 13,
+                            )),
+                      ),
                     ],
                   ),
                   Spacer(),
@@ -131,11 +145,10 @@ class FDirectRowCell extends StatelessWidget {
                       ),
                       clipBehavior: Clip.antiAliasWithSaveLayer,
                       child: Image.network(
-                        "http://192.168.43.160:5000"+data.getAvatar(),
+                        "http://192.168.43.160:5000" + data.getAvatar(),
                         height: 52,
                         fit: BoxFit.fitHeight,
-                      )
-                  ),
+                      )),
                 )),
           ],
         ),

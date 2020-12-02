@@ -23,7 +23,7 @@ class AppDefaultHomePage extends StatefulWidget {
 class _AppDefaultHomePageState extends State<AppDefaultHomePage>
     with SingleTickerProviderStateMixin {
   GlobalKey<ScaffoldState> scaffoldKey =
-  GlobalKey<ScaffoldState>(debugLabel: "sdf");
+      GlobalKey<ScaffoldState>(debugLabel: "sdf");
   BuildContext ctx;
 
   TabController _tabController;
@@ -83,10 +83,11 @@ Widget _getDrawerScreen(BuildContext context) {
   return FGetDrawerScreen(context);
 }
 
-Widget _getTopTabBar(BuildContext context, TabController _tabController , GlobalKey<ScaffoldState> scaffoldKey ){
-
-  Widget getTitleText (String title){
-    return Text(title,
+Widget _getTopTabBar(BuildContext context, TabController _tabController,
+    GlobalKey<ScaffoldState> scaffoldKey) {
+  Widget getTitleText(String title) {
+    return Text(
+      title,
       style: TextStyle(
         fontFamily: FShared.IRAN_FONT_LIGHT,
         fontSize: 14,

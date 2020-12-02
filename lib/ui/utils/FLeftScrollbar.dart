@@ -47,8 +47,9 @@ class FLeftScrollbar extends StatefulWidget {
     this.isAlwaysShown = false,
     this.thickness,
     this.radius,
-  }) : assert(!isAlwaysShown || controller != null, 'When isAlwaysShown is true, must pass a controller that is attached to a scroll view'),
-       super(key: key);
+  })  : assert(!isAlwaysShown || controller != null,
+            'When isAlwaysShown is true, must pass a controller that is attached to a scroll view'),
+        super(key: key);
 
   /// The widget below this widget in the tree.
   ///
@@ -88,7 +89,8 @@ class FLeftScrollbar extends StatefulWidget {
   _FLeftScrollbarState createState() => _FLeftScrollbarState();
 }
 
-class _FLeftScrollbarState extends State<FLeftScrollbar> with TickerProviderStateMixin {
+class _FLeftScrollbarState extends State<FLeftScrollbar>
+    with TickerProviderStateMixin {
   ScrollbarPainter _materialPainter;
   TextDirection _textDirection;
   Color _themeColor;
@@ -229,9 +231,11 @@ class _FLeftScrollbarState extends State<FLeftScrollbar> with TickerProviderStat
         child: widget.child,
         isAlwaysShown: widget.isAlwaysShown,
         thickness: widget.thickness ?? CupertinoScrollbar.defaultThickness,
-        thicknessWhileDragging: widget.thickness ?? CupertinoScrollbar.defaultThicknessWhileDragging,
+        thicknessWhileDragging: widget.thickness ??
+            CupertinoScrollbar.defaultThicknessWhileDragging,
         radius: widget.radius ?? CupertinoScrollbar.defaultRadius,
-        radiusWhileDragging: widget.radius ?? CupertinoScrollbar.defaultRadiusWhileDragging,
+        radiusWhileDragging:
+            widget.radius ?? CupertinoScrollbar.defaultRadiusWhileDragging,
         controller: widget.controller,
       );
     }

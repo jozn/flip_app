@@ -29,13 +29,15 @@ class FColors {
 
   // Bottom Nav bar
   static const Color bottomNavBar_background = background;
-  static const Color bottomNavBar_icon = Color(0xaa000000);//Color(0xFF0D47A1); //Color(0xFF37474F); //Color(0xFFff2222);
+  static const Color bottomNavBar_icon = Color(
+      0xaa000000); //Color(0xFF0D47A1); //Color(0xFF37474F); //Color(0xFFff2222);
   static const Color bottomNavBar_iconActive = Color(0xFFff6666);
   static const Color bottomNavBar_tittle = Color(0xFF222222);
 
   // Contacts page
   static const Color contactsPage_rowUserTittle = fontColorDark1;
-  static const Color contactsPage_lastActivity = Colors.blueGrey;//Color(0xff888888);
+  static const Color contactsPage_lastActivity =
+      Colors.blueGrey; //Color(0xff888888);
   static const Color contactsPage_divider = Color(0xffcccccc);
 
   // Chat Inbox Row

@@ -58,8 +58,7 @@ class ContactsListPageState extends State<ContactsListPage> {
           bottomNavigationBar: FBottomNavBarCell(),
           body: SafeArea(
             child: ContactsListAdapter(this.profiles, onItemClick).getView(),
-          )
-      ),
+          )),
     );
   }
 }
@@ -82,14 +81,14 @@ class ContactsListAdapter {
             padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
             child: ListView.builder(
               itemCount: items.length,
-              itemBuilder:(context, index) {
+              itemBuilder: (context, index) {
                 print("intem $index");
-                return ContactRowCell(index: index, object: items[index], onClick: onClick);
+                return ContactRowCell(
+                    index: index, object: items[index], onClick: onClick);
               },
             ),
           ),
-        )
-    );
+        ));
   }
 }
 
@@ -135,25 +134,26 @@ class ContactRowCell extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Spacer(),
-                  Row( // == Top row
+                  Row(
+                    // == Top row
                     children: [
                       Spacer(),
                       Text(defCh.channelName,
-                          maxLines:1,
+                          maxLines: 1,
                           textDirection: TextDirection.rtl,
                           style: TextStyle(
-                              fontFamily: FShared.IRAN_FONT_MEDIUM,
-                              color: FColors.contactsPage_rowUserTittle,
-                              fontSize: 16,
-                              // fontWeight: FontWeight.w600
-                          )
-                      ),
+                            fontFamily: FShared.IRAN_FONT_MEDIUM,
+                            color: FColors.contactsPage_rowUserTittle,
+                            fontSize: 16,
+                            // fontWeight: FontWeight.w600
+                          )),
                     ],
                   ),
                   SizedBox(
                     height: 4,
                   ),
-                  Row( // === Last activity
+                  Row(
+                    // === Last activity
                     children: <Widget>[
                       Spacer(),
                       Text("last oninlie 3 hours ago",
@@ -172,7 +172,8 @@ class ContactRowCell extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox( // == Avatar holder
+            SizedBox(
+                // == Avatar holder
                 width: 66,
                 child: Center(
                   child: Card(
@@ -183,11 +184,10 @@ class ContactRowCell extends StatelessWidget {
                       ),
                       clipBehavior: Clip.antiAliasWithSaveLayer,
                       child: Image.network(
-                        "http://192.168.43.160:5000"+avatar.fullPath,
+                        "http://192.168.43.160:5000" + avatar.fullPath,
                         height: 50,
                         fit: BoxFit.fitHeight,
-                      )
-                  ),
+                      )),
                 )),
           ],
         ),

@@ -34,8 +34,7 @@ class _ChatPageState extends State<ChatPage> {
                 _InputMsgText(),
               ],
             ),
-          )
-      ),
+          )),
     );
   }
 }
@@ -45,10 +44,9 @@ class _InputMsgText extends StatefulWidget {
   _InputMsgTextState createState() {
     return _InputMsgTextState();
   }
-
 }
 
-class _InputMsgTextState extends State<_InputMsgText>{
+class _InputMsgTextState extends State<_InputMsgText> {
   final TextEditingController inputController = new TextEditingController();
   bool showSend = false;
 
@@ -56,8 +54,8 @@ class _InputMsgTextState extends State<_InputMsgText>{
     String message = inputController.text;
     inputController.clear();
     showSend = false;
-
   }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -76,12 +74,11 @@ class _InputMsgTextState extends State<_InputMsgText>{
               maxLines: 1000000,
               minLines: 1,
               keyboardType: TextInputType.multiline,
-              decoration:
-              new InputDecoration.collapsed(hintText: 'Message'),
+              decoration: new InputDecoration.collapsed(hintText: 'Message'),
               onChanged: (term) {
                 setState(() {
-                showSend = (term.length > 0);
-              });
+                  showSend = (term.length > 0);
+                });
               },
             ),
           ),
@@ -91,8 +88,7 @@ class _InputMsgTextState extends State<_InputMsgText>{
               ),
               onPressed: () {}),
           IconButton(
-              icon: Icon(showSend ? Icons.send : Icons.mic,
-                  color: Colors.blue),
+              icon: Icon(showSend ? Icons.send : Icons.mic, color: Colors.blue),
               onPressed: () {
                 if (showSend) sendMessage();
               }),
@@ -102,9 +98,8 @@ class _InputMsgTextState extends State<_InputMsgText>{
   }
 }
 
-
 ////////////////////////// Archive //////////////////////
-Widget _getInputBar(){
+Widget _getInputBar() {
   final TextEditingController inputController = new TextEditingController();
   bool showSend = false;
 
@@ -112,8 +107,8 @@ Widget _getInputBar(){
     String message = inputController.text;
     inputController.clear();
     showSend = false;
-
   }
+
   return Container(
     //color: Colors.green,//Colors.white,
     alignment: Alignment.centerLeft,
@@ -130,8 +125,7 @@ Widget _getInputBar(){
             maxLines: 1000000,
             minLines: 1,
             keyboardType: TextInputType.multiline,
-            decoration:
-            new InputDecoration.collapsed(hintText: 'Message'),
+            decoration: new InputDecoration.collapsed(hintText: 'Message'),
             onChanged: (term) {
               /*setState(() {
                 showSend = (term.length > 0);
@@ -145,8 +139,7 @@ Widget _getInputBar(){
             ),
             onPressed: () {}),
         IconButton(
-            icon: Icon(showSend ? Icons.send : Icons.mic,
-                color: Colors.blue),
+            icon: Icon(showSend ? Icons.send : Icons.mic, color: Colors.blue),
             onPressed: () {
               if (showSend) sendMessage();
             }),

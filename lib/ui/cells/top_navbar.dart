@@ -2,7 +2,8 @@ import 'package:flip_app/shared/fcolors.dart';
 import 'package:flip_app/shared/shared.dart';
 import 'package:flutter/material.dart';
 
-class FSimpleTopNavBarCell extends StatefulWidget implements PreferredSizeWidget {
+class FSimpleTopNavBarCell extends StatefulWidget
+    implements PreferredSizeWidget {
   String title;
 
   FSimpleTopNavBarCell({this.title});
@@ -58,14 +59,14 @@ class _TopNavBarSimpleState extends State<FSimpleTopNavBarCell> {
                       Expanded(
                         child: Center(
                             child: Text(
-                              param.title,
-                              style: TextStyle(
-                                color: FColors.topNavBar_tittle,
-                                fontSize: 16,
-                                fontFamily: FShared.IRAN_FONT,
-                                // fontWeight: FontWeight.w300,
-                              ),
-                            )),
+                          param.title,
+                          style: TextStyle(
+                            color: FColors.topNavBar_tittle,
+                            fontSize: 16,
+                            fontFamily: FShared.IRAN_FONT,
+                            // fontWeight: FontWeight.w300,
+                          ),
+                        )),
                       ),
                       SizedBox(
                         width: 50,

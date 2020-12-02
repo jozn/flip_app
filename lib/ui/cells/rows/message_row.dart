@@ -9,7 +9,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-class FMessageRowParam{
+class FMessageRowParam {
   Message message;
   num index;
 }
@@ -20,8 +20,8 @@ class FMessageRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-      this.context = context;
-      return buildListItemView();
+    this.context = context;
+    return buildListItemView();
   }
 
   Widget buildListItemView() {
@@ -38,7 +38,6 @@ class FMessageRow extends StatelessWidget {
 
     return m;
   }
-
 }
 
 enum _Align {
@@ -186,21 +185,23 @@ class _MediaSize {
 
   double screenWidth;
 
-  _MediaSize(this.originalWidth, this.originalHeight, this.screenWidth){
+  _MediaSize(this.originalWidth, this.originalHeight, this.screenWidth) {
     // this.screenWidth = screenWidth *0.8;
-    if(screenWidth >= originalWidth) { // stretch - small image
+    if (screenWidth >= originalWidth) {
+      // stretch - small image
       adjustedWidth = screenWidth;
       var ratio = screenWidth / originalWidth;
       adjustedHeight = ratio * originalHeight;
-    } else { // shrink - big image
+    } else {
+      // shrink - big image
       adjustedWidth = screenWidth;
       var ratio = screenWidth / originalWidth;
       adjustedHeight = ratio * originalHeight;
     }
 
     const MAX_VERTICAL_RATIO = 1.2;
-    var ratio = adjustedHeight /adjustedWidth;
-    if(ratio > MAX_VERTICAL_RATIO) {
+    var ratio = adjustedHeight / adjustedWidth;
+    if (ratio > MAX_VERTICAL_RATIO) {
       adjustedHeight = MAX_VERTICAL_RATIO * adjustedWidth;
     }
 /*    var minWidth = min(screenWidth, originalWidth);
@@ -209,10 +210,9 @@ class _MediaSize {
     adjustedHeight = minWidth; //ratio * originalHeight;*/
   }
 
-  double getWidth(){
+  double getWidth() {
     return originalHeight;
   }
-
 }
 
 class _MsgRowBubble extends StatelessWidget {
@@ -228,11 +228,12 @@ class _MsgRowBubble extends StatelessWidget {
 
     var width = param.screenWidth * 0.80; //- 4;
     FileMsg img;
-    if(param.msg.files.length > 0) {
+    if (param.msg.files.length > 0) {
       img = param.msg.files[0];
-    }else {
+    } else {
       img = FileMsg();
-      img.fullPath = "/home/hamid/life/__files__/Telegram/images/400025900436_18056.jpg";
+      img.fullPath =
+          "/home/hamid/life/__files__/Telegram/images/400025900436_18056.jpg";
       img.width = 720;
       img.height = 1280;
     }
@@ -247,7 +248,7 @@ class _MsgRowBubble extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.all(Radius.circular(4)),
         border:
-        Border.all(width: 1, color: Color(0xffeeeeee)), //Colors.grey[200]
+            Border.all(width: 1, color: Color(0xffeeeeee)), //Colors.grey[200]
         color: BACKGROUND_CHAT_COLOR,
       ),
       // child: Expanded(
@@ -278,7 +279,7 @@ class _MsgRowBubble extends StatelessWidget {
             ),
           ),
           Text(
-            m1,
+            param.msg.text,
             softWrap: true,
             maxLines: 10000,
             textDirection: TextDirection.rtl,
@@ -511,7 +512,6 @@ var m1 = """ 🔻پایان اخذ رای در 3 حوزه انتخابیه اس�
 
 ✅خبرگزاری فارس استان فارس👇🏻👇🏻
 https://t.me/farsnaonline""";
-
 
 ////////// dead ////////*class ChatTelegramAdapter {
 //   List messages = <Message>[];

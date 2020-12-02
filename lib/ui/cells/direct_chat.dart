@@ -44,8 +44,7 @@ class _FDirectChatListCellState extends State<FDirectChatListCell> {
   }
 
   void onItemClick2() {
-    Toast.show("News " + "clicked", context,
-        duration: Toast.LENGTH_SHORT);
+    Toast.show("News " + "clicked", context, duration: Toast.LENGTH_SHORT);
   }
 
   void onItemClick(int index) {
@@ -58,17 +57,17 @@ class _FDirectChatListCellState extends State<FDirectChatListCell> {
     return Container(
       // color: Colors.white,
       child: FLeftScrollbar(
-        thickness: 3,
-        child: Material(
-          color: Colors.white,
-          child: ListView.builder(
-            itemCount: items.length,
-            itemBuilder:(context, index) {
-              return FDirectRowCell(index: index,direct: items[index], onClick: onItemClick2);
-            },
-          ),
-        )
-      ),
+          thickness: 3,
+          child: Material(
+            color: Colors.white,
+            child: ListView.builder(
+              itemCount: items.length,
+              itemBuilder: (context, index) {
+                return FDirectRowCell(
+                    index: index, direct: items[index], onClick: onItemClick2);
+              },
+            ),
+          )),
     );
   }
 }
