@@ -8,21 +8,21 @@ import 'package:flutter/material.dart';
 class FNav {
   void push() {}
   void pop() {}
-  void replace() {}
+  void goToBranch() {}
   void s() {}
 }
 
 class FNavInstance {
-  var activeBranch = dep_defaultBranch();
+  // var activeBranch = defaultBranch();
   var mapTree = HashMap<FBranch, List<FPage>>();
-  var orderedBranches = <FBranch>[dep_defaultBranch()];
+  var orderedBranches = <FBranch>[defaultBranch()];
 
   push(FPage page) {
-    var activeStake = mapTree[activeBranch];
+    var activeStake = mapTree[getActiveBranch()];
     if (activeStake == null) {
       // extract??
       activeStake = <FPage>[];
-      mapTree[activeBranch] = activeStake;
+      mapTree[getActiveBranch()] = activeStake;
     }
     activeStake.add(FPage());
     invalidate();
@@ -30,31 +30,81 @@ class FNavInstance {
 
   pop() {
     // in branch stack
-    var activeStake = mapTree[activeBranch];
-    if (activeStake != null) {
-      // still in branc
-      if (activeStake.length >= 2) {
-        // var page = activeStake[activeStake.length - 2]; //??
-        activeStake.removeLast();
-      }
+    var activeStake = mapTree[getActiveBranch()];
+    if (activeStake == null) {
+      _goToPreviousBranch();
+      return;
+    }
 
-      if (activeStake.length == 1) {
-        // go to default branch tab
-        activeStake.removeLast();
-      }
+    // still in branc
+    if (activeStake.length >= 2) {
+      // var page = activeStake[activeStake.length - 2]; //??
+      activeStake.removeLast();
+    }
 
-      if (activeStake.length == 0) {
-        // go to previous branch
-        activeStake.removeLast();
-      }
+    if (activeStake.length == 1) {
+      // go to default branch tab
+      activeStake.removeLast();
+    }
+
+    if (activeStake.length == 0) {
+      _goToPreviousBranch();
     }
   }
 
-  void _setPreviousBranc() {}
+  goToBranch(FBranch branch) {
+    orderedBranches.remove(branch);
+    orderedBranches.add(branch);
+/*    for(var i = 0; i < orderedBranches.length ; i ++){
+      if(orderedBranches[i] == branch) {
+        orderedBranches.removeAt(index)
+      }
+    }*/
+  }
+
+  void _goToPreviousBranch() {
+    if (orderedBranches.length >= 2) {
+      orderedBranches.removeLast();
+    } else {
+      // exit
+    }
+  }
 
   invalidate() {}
 
-  static FBranch dep_defaultBranch() {
+  FPage getActivePage() {
+    var branch = getActiveBranch();
+    var activeStake = mapTree[branch];
+    if (activeStake == null || activeStake.length == 0) {
+      return getDefaultTabPage(branch);
+    }
+    return activeStake.last;
+  }
+
+  FBranch getActiveBranch() {
+    assert(orderedBranches.length > 0);
+    return orderedBranches.last;
+  }
+
+  static FPage getDefaultTabPage(FBranch branch) {
+    var page;
+    switch (branch) {
+      case FBranch.CHAT:
+        page = FPage();
+        break;
+      case FBranch.HOME:
+        page = FPage();
+        break;
+      case FBranch.DISCOVER:
+        page = FPage();
+        break;
+      case FBranch.SHOP:
+        page = FPage();
+    }
+    return page;
+  }
+
+  static FBranch defaultBranch() {
     return FBranch.CHAT;
   }
 }
@@ -78,7 +128,7 @@ class FScaffold extends StatelessWidget {
   }
 }
 
-class FPage extends StatefulWidget {
+/*class FPage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
     return FPageState();
@@ -91,9 +141,9 @@ class FPageState extends State<FPage> {
     // TODO: implement build
     throw UnimplementedError();
   }
-}
+}*/
 
-class FPageSample extends StatelessWidget {
+class FPage extends StatelessWidget {
   static num cnt = 0;
   var id = 0;
   @override
@@ -114,7 +164,7 @@ class FPageSample extends StatelessWidget {
     );
   }
 
-  FPageSample() {
+  FPage() {
     cnt += 1;
     id = cnt;
   }
@@ -166,7 +216,7 @@ class _NavStates extends State<NavPage> {
                     onPressed: () => {
                       that.setState(() {
                         i += 1;
-                        page = FPageSample();
+                        page = FPage();
                         pages.add(page);
                       })
                     },
