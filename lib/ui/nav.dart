@@ -51,6 +51,7 @@ class FNavInstance {
   }
 
   pop() {
+    print(mapTree);
     // in branch stack
     var branch = getActiveBranch();
     var activeStake = mapTree[branch];
@@ -62,14 +63,10 @@ class FNavInstance {
     // still in branch
     if (activeStake.length >= 2) {
       activeStake.removeLast();
-    }
-
-    if (activeStake.length == 1) {
+    } else if (activeStake.length == 1) {
       // go to default branch tab
       activeStake.removeLast();
-    }
-
-    if (activeStake.length == 0) {
+    } else if (activeStake.length == 0) {
       _goToPreviousBranch();
     }
   }
@@ -112,28 +109,28 @@ class FNavInstance {
       case FBranch.CHAT:
         page = _defTabPages[FBranch.CHAT];
         if (page == null) {
-          page = FPage();
+          page = FPageImpl();
           _defTabPages[FBranch.CHAT] = page;
         }
         break;
       case FBranch.HOME:
         page = _defTabPages[FBranch.HOME];
         if (page == null) {
-          page = FPage();
+          page = FPageImpl();
           _defTabPages[FBranch.HOME] = page;
         }
         break;
       case FBranch.DISCOVER:
         page = _defTabPages[FBranch.DISCOVER];
         if (page == null) {
-          page = FPage();
+          page = FPageImpl();
           _defTabPages[FBranch.DISCOVER] = page;
         }
         break;
       case FBranch.SHOP:
         page = _defTabPages[FBranch.SHOP];
         if (page == null) {
-          page = FPage();
+          page = FPageImpl();
           _defTabPages[FBranch.SHOP] = page;
         }
     }
@@ -197,7 +194,7 @@ class _NavStates extends State<FScaffold> {
           child: Column(
             children: [
               Expanded(
-                child: _page_,
+                child: _page_.getWidget(),
               ),
               Row(
                 children: [
@@ -208,7 +205,7 @@ class _NavStates extends State<FScaffold> {
                         // page = FPage();
                         // pages.add(page);
                         // FNav.goToBranch(FBranch.CHAT);
-                        FNav.push(FPage());
+                        FNav.push(FPageImpl());
                       })
                     },
                     child: Text("push"),
@@ -256,7 +253,12 @@ class _NavStates extends State<FScaffold> {
   }
 }
 
-class FPage extends StatelessWidget {
+abstract class FPage {
+  // get the parent Widget > almost always "return this;" at the imple
+  Widget getWidget();
+}
+
+class FPageImpl extends StatelessWidget implements FPage {
   static num cnt = 0;
   var id = 0;
   var br = FNav.fNavInstance.getActiveBranch();
@@ -278,9 +280,14 @@ class FPage extends StatelessWidget {
     );
   }
 
-  FPage() {
+  FPageImpl() {
     cnt += 1;
     id = cnt;
+  }
+
+  @override
+  Widget getWidget() {
+    return this;
   }
 }
 
