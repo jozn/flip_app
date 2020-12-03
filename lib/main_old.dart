@@ -4,9 +4,9 @@ import 'package:flip_app/shared/my_colors.dart';
 import 'package:flip_app/ui/login/login_confirm_page.dart';
 import 'package:flip_app/ui/login/login_simple_green.dart';
 import 'package:flip_app/ui/nav.dart';
-import 'package:flip_app/ui/pages/app_default_home_page.dart';
-import 'package:flip_app/ui/pages/chat_page.dart';
-import 'package:flip_app/ui/pages/contacts_list_page.dart';
+import 'package:flip_app/ui/pages_dep/chat_page.dart';
+import 'package:flip_app/ui/pages_dep/contacts_list_page.dart';
+import 'package:flip_app/ui/pages_dep/dep_app_default_home_page.dart';
 import 'package:flip_app/ui/playground/bottom_nav.dart';
 import 'package:flip_app/ui/playground/chat_list.dart';
 import 'package:flip_app/ui/playground/chat_tab_page.dart';
@@ -57,11 +57,11 @@ class FlipRpcClient extends RpcClient {
   m.editComment(ctx, req);
 }*/
 
-void main() {
-  runApp(MyApp());
+void main_old() {
+  runApp(MyAppOld());
 }
 
-class MyApp extends StatelessWidget {
+class MyAppOld extends StatelessWidget implements FPage {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -79,6 +79,11 @@ class MyApp extends StatelessWidget {
         body: ListBasicRoute(),
       ),
     );
+  }
+
+  @override
+  Widget getWidget() {
+    return this;
   }
 }
 

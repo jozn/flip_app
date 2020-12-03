@@ -3,24 +3,25 @@ import 'package:flip_app/shared/fstrings.dart';
 import 'package:flip_app/shared/shared.dart';
 import 'package:flip_app/ui/cells/direct_chat.dart';
 import 'package:flip_app/ui/cells/direct_group.dart';
-import 'package:flip_app/ui/cells/bottom_navbar.dart';
 import 'package:flip_app/ui/cells/drawer.dart';
-import 'package:flip_app/ui/playground/chat_list.dart';
-import 'package:flip_app/ui/playground/hello_world.dart';
-import 'package:flip_app/ui/playground/login.dart';
+import 'package:flip_app/ui/nav.dart';
 import 'package:flutter/material.dart';
-import 'package:http/http.dart';
 
 // import 'login.dart';
 
-class AppDefaultHomePage extends StatefulWidget {
-  AppDefaultHomePage();
+class ChatDefTabPage extends StatefulWidget implements FPage {
+  ChatDefTabPage();
 
   @override
-  _AppDefaultHomePageState createState() => new _AppDefaultHomePageState();
+  _ChatDefTabPageState createState() => new _ChatDefTabPageState();
+
+  @override
+  Widget getWidget() {
+    return this;
+  }
 }
 
-class _AppDefaultHomePageState extends State<AppDefaultHomePage>
+class _ChatDefTabPageState extends State<ChatDefTabPage>
     with SingleTickerProviderStateMixin {
   GlobalKey<ScaffoldState> scaffoldKey =
       GlobalKey<ScaffoldState>(debugLabel: "sdf");
@@ -53,7 +54,7 @@ class _AppDefaultHomePageState extends State<AppDefaultHomePage>
         key: scaffoldKey,
         endDrawer: _getDrawerScreen(context),
         backgroundColor: Colors.red[300],
-        bottomNavigationBar: FBottomNavBarCell(),
+        // bottomNavigationBar: FBottomNavBarCell(),
         body: SafeArea(
           child: Container(
             child: Column(

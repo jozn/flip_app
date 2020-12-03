@@ -1,9 +1,11 @@
 import 'dart:collection';
 
 import 'package:flip_app/shared/fcolors.dart';
+import 'package:flip_app/ui/pages/chat_tab_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../main_old.dart';
 import 'cells/bottom_navbar.dart';
 
 class FNav {
@@ -128,7 +130,7 @@ class FNavInstance {
       case FBranch.CHAT:
         page = _defTabPages[FBranch.CHAT];
         if (page == null) {
-          page = FPageImpl();
+          page = ChatDefTabPage();
           _defTabPages[FBranch.CHAT] = page;
         }
         break;
@@ -149,7 +151,7 @@ class FNavInstance {
       case FBranch.SHOP:
         page = _defTabPages[FBranch.SHOP];
         if (page == null) {
-          page = FPageImpl();
+          page = MyAppOld();
           _defTabPages[FBranch.SHOP] = page;
         }
     }
@@ -218,42 +220,6 @@ class _NavStates extends State<FScaffold> {
                 child: _page_.getWidget(),
               ),
               FBottomNavBarCell(),
-              Row(
-                children: [
-                  FlatButton(
-                    onPressed: () => {
-                      that.setState(() {
-                        FNav.push(FPageImpl());
-                      })
-                    },
-                    child: Text("push"),
-                  ),
-                  FlatButton(
-                    onPressed: () => {
-                      that.setState(() {
-                        FNav.pop();
-                      })
-                    },
-                    child: Text("pop"),
-                  ),
-                  FlatButton(
-                    onPressed: () => {
-                      that.setState(() {
-                        FNav.goToBranch(FBranch.SHOP);
-                      })
-                    },
-                    child: Text("shop"),
-                  ),
-                  FlatButton(
-                    onPressed: () => {
-                      that.setState(() {
-                        FNav.goToBranch(FBranch.CHAT);
-                      })
-                    },
-                    child: Text("chat"),
-                  ),
-                ],
-              ),
             ],
           ),
         ),
@@ -291,7 +257,8 @@ class FPageImpl extends StatelessWidget implements FPage {
           )),
           FlatButton(
               onPressed: () => {FNav.push(FPageImpl())},
-              child: Text("Add page"))
+              child: Text("Add page")),
+          FlatButton(onPressed: () => {FNav.pop()}, child: Text("Pop")),
         ],
       ),
     );
@@ -329,3 +296,43 @@ class FPageState extends State<FPage> {
     throw UnimplementedError();
   }
 }*/
+
+/*
+
+Row(
+                children: [
+                  FlatButton(
+                    onPressed: () => {
+                      that.setState(() {
+                        FNav.push(FPageImpl());
+                      })
+                    },
+                    child: Text("push"),
+                  ),
+                  FlatButton(
+                    onPressed: () => {
+                      that.setState(() {
+                        FNav.pop();
+                      })
+                    },
+                    child: Text("pop"),
+                  ),
+                  FlatButton(
+                    onPressed: () => {
+                      that.setState(() {
+                        FNav.goToBranch(FBranch.SHOP);
+                      })
+                    },
+                    child: Text("shop"),
+                  ),
+                  FlatButton(
+                    onPressed: () => {
+                      that.setState(() {
+                        FNav.goToBranch(FBranch.CHAT);
+                      })
+                    },
+                    child: Text("chat"),
+                  ),
+                ],
+              ),
+*/
