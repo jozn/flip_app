@@ -7,17 +7,17 @@ import 'package:flutter/material.dart';
 
 class FNav {
   static FNavInstance fNavInstance;
-  void push(FPage page) {
+  static void push(FPage page) {
     assert(fNavInstance != null);
     fNavInstance.push(page);
   }
 
-  void pop() {
+  static void pop() {
     assert(fNavInstance != null);
     fNavInstance.pop();
   }
 
-  void goToBranch(FBranch branch) {
+  static void goToBranch(FBranch branch) {
     assert(fNavInstance != null);
     fNavInstance.goToBranch(branch);
   }
@@ -29,25 +29,27 @@ class FNavInstance {
   var orderedBranches = <FBranch>[defaultBranch()];
 
   push(FPage page) {
-    var activeStake = mapTree[getActiveBranch()];
+    var branch = getActiveBranch();
+    var activeStake = mapTree[branch];
     if (activeStake == null) {
       // extract??
       activeStake = <FPage>[];
-      mapTree[getActiveBranch()] = activeStake;
+      mapTree[branch] = activeStake;
     }
-    activeStake.add(FPage());
+    activeStake.add(page);
     invalidate();
   }
 
   pop() {
     // in branch stack
-    var activeStake = mapTree[getActiveBranch()];
+    var branch = getActiveBranch();
+    var activeStake = mapTree[branch];
     if (activeStake == null) {
       _goToPreviousBranch();
       return;
     }
 
-    // still in branc
+    // still in branch
     if (activeStake.length >= 2) {
       // var page = activeStake[activeStake.length - 2]; //??
       activeStake.removeLast();
@@ -66,6 +68,7 @@ class FNavInstance {
   goToBranch(FBranch branch) {
     orderedBranches.remove(branch);
     orderedBranches.add(branch);
+    print(orderedBranches);
   }
 
   void _goToPreviousBranch() {
@@ -92,20 +95,38 @@ class FNavInstance {
     return orderedBranches.last;
   }
 
+  static var _defTabPages = HashMap<FBranch, FPage>();
+
   static FPage getDefaultTabPage(FBranch branch) {
     var page;
     switch (branch) {
       case FBranch.CHAT:
-        page = FPage();
+        page = _defTabPages[FBranch.CHAT];
+        if (page == null) {
+          page = FPage();
+          _defTabPages[FBranch.CHAT] = page;
+        }
         break;
       case FBranch.HOME:
-        page = FPage();
+        page = _defTabPages[FBranch.HOME];
+        if (page == null) {
+          page = FPage();
+          _defTabPages[FBranch.HOME] = page;
+        }
         break;
       case FBranch.DISCOVER:
-        page = FPage();
+        page = _defTabPages[FBranch.DISCOVER];
+        if (page == null) {
+          page = FPage();
+          _defTabPages[FBranch.DISCOVER] = page;
+        }
         break;
       case FBranch.SHOP:
-        page = FPage();
+        page = _defTabPages[FBranch.SHOP];
+        if (page == null) {
+          page = FPage();
+          _defTabPages[FBranch.SHOP] = page;
+        }
     }
     return page;
   }
@@ -132,7 +153,7 @@ class FScaffold extends StatefulWidget {
 class _NavStates extends State<FScaffold> {
   FNavInstance fNavInstance = FNavInstance();
 
-  FScaffold() {
+  _NavStates() {
     FNav.fNavInstance = fNavInstance;
   }
 
@@ -152,6 +173,9 @@ class _NavStates extends State<FScaffold> {
   @override
   Widget build(BuildContext context) {
     var that = this;
+    print(fNavInstance.getActiveBranch());
+    var _page_ = fNavInstance.getActivePage();
+    assert(_page_ != null);
     return new Scaffold(
       // appBar: AppBar(
       //
@@ -164,7 +188,7 @@ class _NavStates extends State<FScaffold> {
           child: Column(
             children: [
               Expanded(
-                child: page,
+                child: _page_,
               ),
               Row(
                 children: [
@@ -172,8 +196,10 @@ class _NavStates extends State<FScaffold> {
                     onPressed: () => {
                       that.setState(() {
                         i += 1;
-                        page = FPage();
-                        pages.add(page);
+                        // page = FPage();
+                        // pages.add(page);
+                        // FNav.goToBranch(FBranch.CHAT);
+                        FNav.push(FPage());
                       })
                     },
                     child: Text("push"),
@@ -181,10 +207,12 @@ class _NavStates extends State<FScaffold> {
                   FlatButton(
                     onPressed: () => {
                       that.setState(() {
-                        if (pages.length > 1) {
-                          page = pages[pages.length - 2];
-                          pages.removeLast();
-                        }
+                        // FNav.goToBranch(FBranch.HOME);
+                        FNav.pop();
+                        // if (pages.length > 1) {
+                        //   page = pages[pages.length - 2];
+                        //   pages.removeLast();
+                        // }
                       })
                     },
                     child: Text("pop"),
@@ -192,20 +220,22 @@ class _NavStates extends State<FScaffold> {
                   FlatButton(
                     onPressed: () => {
                       that.setState(() {
-                        i += 1;
-                        m = "xx $i";
+                        FNav.goToBranch(FBranch.SHOP);
+                        // i += 1;
+                        // m = "xx $i";
                       })
                     },
-                    child: Text(m),
+                    child: Text("shop"),
                   ),
                   FlatButton(
                     onPressed: () => {
                       that.setState(() {
-                        i += 1;
-                        m = "nn $i";
+                        FNav.goToBranch(FBranch.CHAT);
+                        // i += 1;
+                        // m = "xx $i";
                       })
                     },
-                    child: Text(m),
+                    child: Text("chat"),
                   ),
                 ],
               ),
@@ -220,6 +250,7 @@ class _NavStates extends State<FScaffold> {
 class FPage extends StatelessWidget {
   static num cnt = 0;
   var id = 0;
+  var br = FNav.fNavInstance.getActiveBranch();
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -228,7 +259,7 @@ class FPage extends StatelessWidget {
       color: Colors.yellow,
       child: Center(
         child: Text(
-          "hi $id",
+          "$br $id",
           style: TextStyle(
             color: FColors.red,
             fontSize: 18,
