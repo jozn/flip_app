@@ -8,21 +8,31 @@ import 'cells/bottom_navbar.dart';
 
 class FNav {
   static FNavInstance fNavInstance;
-  static FScaffold s;
+  static _NavStates _kFScaffold;
 
   static void push(FPage page) {
     assert(fNavInstance != null);
     fNavInstance.push(page);
+    _invalidate();
   }
 
   static void pop() {
     assert(fNavInstance != null);
     fNavInstance.pop();
+    _invalidate();
   }
 
   static void goToBranch(FBranch branch) {
     assert(fNavInstance != null);
     fNavInstance.goToBranch(branch);
+    _invalidate();
+  }
+
+  static void resetBranch(FBranch branch) {
+    assert(fNavInstance != null);
+    // fNavInstance.goToBranch(branch);
+    // todo
+    _invalidate();
   }
 
   static FPage getActivePage() {
@@ -36,7 +46,9 @@ class FNav {
   }
 
   static _invalidate() {
-    if (s != null) {}
+    if (_kFScaffold != null) {
+      _kFScaffold.invalidate();
+    }
   }
 }
 
@@ -158,9 +170,17 @@ enum FBranch {
 
 class FScaffold extends StatefulWidget {
   FScaffold();
+  _NavStates state;
+
+  invalidate() {
+    state.invalidate();
+  }
 
   @override
-  _NavStates createState() => new _NavStates();
+  _NavStates createState() {
+    this.state = new _NavStates();
+    return state;
+  }
 }
 
 class _NavStates extends State<FScaffold> {
@@ -168,6 +188,13 @@ class _NavStates extends State<FScaffold> {
 
   _NavStates() {
     FNav.fNavInstance = fNavInstance;
+    FNav._kFScaffold = this;
+  }
+  var i = 0;
+  invalidate() {
+    setState(() {
+      // i += 1;
+    });
   }
 
   @override
@@ -250,14 +277,22 @@ class FPageImpl extends StatelessWidget implements FPage {
       width: double.infinity,
       height: double.infinity,
       color: Colors.yellow,
-      child: Center(
-        child: Text(
-          "$br $id",
-          style: TextStyle(
-            color: FColors.red,
-            fontSize: 18,
-          ),
-        ),
+      child: Column(
+        children: <Widget>[
+          Expanded(
+              child: Center(
+            child: Text(
+              "$br $id",
+              style: TextStyle(
+                color: FColors.red,
+                fontSize: 18,
+              ),
+            ),
+          )),
+          FlatButton(
+              onPressed: () => {FNav.push(FPageImpl())},
+              child: Text("Add page"))
+        ],
       ),
     );
   }
