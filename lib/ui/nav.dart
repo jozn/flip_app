@@ -6,10 +6,21 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class FNav {
-  void push() {}
-  void pop() {}
-  void goToBranch() {}
-  void s() {}
+  static FNavInstance fNavInstance;
+  void push(FPage page) {
+    assert(fNavInstance != null);
+    fNavInstance.push(page);
+  }
+
+  void pop() {
+    assert(fNavInstance != null);
+    fNavInstance.pop();
+  }
+
+  void goToBranch(FBranch branch) {
+    assert(fNavInstance != null);
+    fNavInstance.goToBranch(branch);
+  }
 }
 
 class FNavInstance {
@@ -55,11 +66,6 @@ class FNavInstance {
   goToBranch(FBranch branch) {
     orderedBranches.remove(branch);
     orderedBranches.add(branch);
-/*    for(var i = 0; i < orderedBranches.length ; i ++){
-      if(orderedBranches[i] == branch) {
-        orderedBranches.removeAt(index)
-      }
-    }*/
   }
 
   void _goToPreviousBranch() {
@@ -116,32 +122,100 @@ enum FBranch {
   SHOP,
 }
 
-//??
-class FNavTree {}
+class FScaffold extends StatefulWidget {
+  FScaffold();
 
-class FScaffold extends StatelessWidget {
+  @override
+  _NavStates createState() => new _NavStates();
+}
+
+class _NavStates extends State<FScaffold> {
+  FNavInstance fNavInstance = FNavInstance();
+
+  FScaffold() {
+    FNav.fNavInstance = fNavInstance;
+  }
+
+  var m = "sfd";
+  var i = 0;
+  var pages = <Widget>[];
+
+  Widget page = Center(
+    child: Text(
+      FStrings.hello_world,
+      style: TextStyle(
+        color: FColors.red,
+        fontSize: 18,
+      ),
+    ),
+  );
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.red,
+    var that = this;
+    return new Scaffold(
+      // appBar: AppBar(
+      //
+      // ),
+      extendBody: false,
+      extendBodyBehindAppBar: false,
+      body: SafeArea(
+        child: Container(
+          color: FColors.background,
+          child: Column(
+            children: [
+              Expanded(
+                child: page,
+              ),
+              Row(
+                children: [
+                  FlatButton(
+                    onPressed: () => {
+                      that.setState(() {
+                        i += 1;
+                        page = FPage();
+                        pages.add(page);
+                      })
+                    },
+                    child: Text("push"),
+                  ),
+                  FlatButton(
+                    onPressed: () => {
+                      that.setState(() {
+                        if (pages.length > 1) {
+                          page = pages[pages.length - 2];
+                          pages.removeLast();
+                        }
+                      })
+                    },
+                    child: Text("pop"),
+                  ),
+                  FlatButton(
+                    onPressed: () => {
+                      that.setState(() {
+                        i += 1;
+                        m = "xx $i";
+                      })
+                    },
+                    child: Text(m),
+                  ),
+                  FlatButton(
+                    onPressed: () => {
+                      that.setState(() {
+                        i += 1;
+                        m = "nn $i";
+                      })
+                    },
+                    child: Text(m),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
-
-/*class FPage extends StatefulWidget {
-  @override
-  State<StatefulWidget> createState() {
-    return FPageState();
-  }
-}
-
-class FPageState extends State<FPage> {
-  @override
-  Widget build(BuildContext context) {
-    // TODO: implement build
-    throw UnimplementedError();
-  }
-}*/
 
 class FPage extends StatelessWidget {
   static num cnt = 0;
@@ -172,14 +246,35 @@ class FPage extends StatelessWidget {
 
 //////////////////////
 
+////////////////////////////////// Archvies ///////////////
+/*
+//??
+class FNavTree {}
+
+class FPage extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    return FPageState();
+  }
+}
+
+class FPageState extends State<FPage> {
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    throw UnimplementedError();
+  }
+}*/
+
+/*
 class NavPage extends StatefulWidget {
   NavPage();
 
   @override
-  _NavStates createState() => new _NavStates();
+  _NavStates2 createState() => new _NavStates2();
 }
 
-class _NavStates extends State<NavPage> {
+class _NavStates2 extends State<NavPage> {
   var m = "sfd";
   var i = 0;
   var pages = <Widget>[];
@@ -260,3 +355,5 @@ class _NavStates extends State<NavPage> {
     );
   }
 }
+
+*/

@@ -148,7 +148,7 @@ class ListBasicRouteState extends State<ListBasicRoute> {
         get("Homepage", AppDefaultHomePage()),
         get("ChatPage", ChatPage()),
         get("contacts page", ContactsListPage()),
-        get("Nav", NavPage()),
+        get("Nav", FScaffold()),
         get("-----------------------", LoginSimpleGreenRoute()),
         ListTile(
           title: Text("Login 2"),
