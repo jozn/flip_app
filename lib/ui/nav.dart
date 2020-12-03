@@ -21,6 +21,16 @@ class FNav {
     assert(fNavInstance != null);
     fNavInstance.goToBranch(branch);
   }
+
+  static FPage getActivePage() {
+    assert(fNavInstance != null);
+    return fNavInstance.getActivePage();
+  }
+
+  static FBranch getActiveBranch() {
+    assert(fNavInstance != null);
+    return fNavInstance.getActiveBranch();
+  }
 }
 
 class FNavInstance {
@@ -51,7 +61,6 @@ class FNavInstance {
 
     // still in branch
     if (activeStake.length >= 2) {
-      // var page = activeStake[activeStake.length - 2]; //??
       activeStake.removeLast();
     }
 
