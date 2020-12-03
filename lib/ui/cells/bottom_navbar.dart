@@ -1,7 +1,6 @@
 import 'package:flip_app/shared/fcolors.dart';
-import 'package:flip_app/shared/fstrings.dart';
-import 'package:flip_app/shared/my_text.dart';
 import 'package:flip_app/shared/shared.dart';
+import 'package:flip_app/ui/nav.dart';
 import 'package:flutter/material.dart';
 
 class FBottomNavBarCell extends StatefulWidget {
@@ -14,11 +13,13 @@ class FBottomNavBarCell extends StatefulWidget {
 class _Cell {
   String title;
   IconData icon;
+  FBranch branch;
   VoidCallback callback;
 
   _Cell({
     this.title,
     this.icon,
+    this.branch,
     this.callback,
   });
 }
@@ -26,21 +27,33 @@ class _Cell {
 class _CellColumn extends StatelessWidget {
   _Cell cell;
   double width;
+  bool isActive;
+  Function onTap;
+  Function onLongPress;
 
-  _CellColumn(_Cell _item, double width) {
-    this.cell = _item;
-    this.width = width;
-  }
+  // _CellColumn.old(_Cell _item, double width, bool isActive) {
+  //   this.cell = _item;
+  //   this.width = width;
+  //   this.isActive = isActive;
+  // }
+
+  _CellColumn(
+      {this.cell, this.width, this.isActive, this.onTap, this.onLongPress});
 
   @override
   Widget build(BuildContext context) {
+    var iconColor =
+        isActive ? FColors.bottomNavBar_iconActive : FColors.bottomNavBar_icon;
+    var textColor = isActive
+        ? FColors.bottomNavBar_tittleActive
+        : FColors.bottomNavBar_tittle;
+
     return SizedBox(
       width: this.width,
       height: 50,
       child: InkWell(
-        onTap: () {
-          FShared.showToast(context, "Hi 2");
-        },
+        onTap: this.onTap,
+        onLongPress: this.onLongPress,
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -48,7 +61,7 @@ class _CellColumn extends StatelessWidget {
             children: [
               Icon(
                 this.cell.icon,
-                color: FColors.bottomNavBar_icon,
+                color: iconColor,
               ),
               SizedBox(
                 height: 4,
@@ -56,7 +69,7 @@ class _CellColumn extends StatelessWidget {
               Text(
                 this.cell.title,
                 style: TextStyle(
-                  // color: FColors.bottomNavBar_tittle,
+                  color: textColor,
                   fontSize: 10,
                 ),
               ),
@@ -73,18 +86,22 @@ class _BottomNavBarState extends State<FBottomNavBarCell> {
     _Cell(
       title: "Shop",
       icon: Icons.shopping_cart,
+      branch: FBranch.SHOP,
     ),
     _Cell(
       title: "Browse",
       icon: Icons.group_work,
+      branch: FBranch.DISCOVER,
     ),
     _Cell(
       title: "Home",
       icon: Icons.home,
+      branch: FBranch.HOME,
     ),
     _Cell(
       title: "Chat",
       icon: Icons.chat,
+      branch: FBranch.CHAT,
     ),
     /*_Cell(
       title: "Chat",
@@ -92,15 +109,39 @@ class _BottomNavBarState extends State<FBottomNavBarCell> {
     ),*/
   ];
 
+  var active = 1;
+
   @override
   Widget build(BuildContext context) {
     var s = FShared.getLogicalPixelFromDevicePixel(context, 1);
     var width = MediaQuery.of(context).size.width / itmes.length;
 
     var cells = <Widget>[];
+    var activeBranch = FNav.getActiveBranch();
 
     for (var i = 0; i < itmes.length; i++) {
-      cells.add(_CellColumn(itmes[i], width));
+      var branchCell = itmes[i];
+      var isActive = (activeBranch == branchCell.branch);
+      var thisBranch = branchCell.branch;
+      // cells.add(_CellColumn(branchCell, width, isActive));
+      // cells.add(_CellColumn({branchCell: branchCell,width: width, isActive:isActive});
+      cells.add(_CellColumn(
+        cell: branchCell,
+        isActive: isActive,
+        width: width,
+        onTap: () {
+          FNav.goToBranch(thisBranch);
+          setState(() {
+            active += 1;
+          });
+        },
+        onLongPress: () {
+          FNav.goToBranch(thisBranch);
+          setState(() {
+            active += 1;
+          });
+        },
+      ));
     }
 
     return new Container(

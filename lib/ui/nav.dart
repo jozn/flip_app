@@ -1,12 +1,15 @@
 import 'dart:collection';
 
 import 'package:flip_app/shared/fcolors.dart';
-import 'package:flip_app/shared/fstrings.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'cells/bottom_navbar.dart';
+
 class FNav {
   static FNavInstance fNavInstance;
+  static FScaffold s;
+
   static void push(FPage page) {
     assert(fNavInstance != null);
     fNavInstance.push(page);
@@ -30,6 +33,10 @@ class FNav {
   static FBranch getActiveBranch() {
     assert(fNavInstance != null);
     return fNavInstance.getActiveBranch();
+  }
+
+  static _invalidate() {
+    if (s != null) {}
   }
 }
 
@@ -163,19 +170,6 @@ class _NavStates extends State<FScaffold> {
     FNav.fNavInstance = fNavInstance;
   }
 
-  var m = "sfd";
-  var i = 0;
-  var pages = <Widget>[];
-
-  Widget page = Center(
-    child: Text(
-      FStrings.hello_world,
-      style: TextStyle(
-        color: FColors.red,
-        fontSize: 18,
-      ),
-    ),
-  );
   @override
   Widget build(BuildContext context) {
     var that = this;
@@ -196,15 +190,12 @@ class _NavStates extends State<FScaffold> {
               Expanded(
                 child: _page_.getWidget(),
               ),
+              FBottomNavBarCell(),
               Row(
                 children: [
                   FlatButton(
                     onPressed: () => {
                       that.setState(() {
-                        i += 1;
-                        // page = FPage();
-                        // pages.add(page);
-                        // FNav.goToBranch(FBranch.CHAT);
                         FNav.push(FPageImpl());
                       })
                     },
@@ -213,12 +204,7 @@ class _NavStates extends State<FScaffold> {
                   FlatButton(
                     onPressed: () => {
                       that.setState(() {
-                        // FNav.goToBranch(FBranch.HOME);
                         FNav.pop();
-                        // if (pages.length > 1) {
-                        //   page = pages[pages.length - 2];
-                        //   pages.removeLast();
-                        // }
                       })
                     },
                     child: Text("pop"),
@@ -227,8 +213,6 @@ class _NavStates extends State<FScaffold> {
                     onPressed: () => {
                       that.setState(() {
                         FNav.goToBranch(FBranch.SHOP);
-                        // i += 1;
-                        // m = "xx $i";
                       })
                     },
                     child: Text("shop"),
@@ -237,8 +221,6 @@ class _NavStates extends State<FScaffold> {
                     onPressed: () => {
                       that.setState(() {
                         FNav.goToBranch(FBranch.CHAT);
-                        // i += 1;
-                        // m = "xx $i";
                       })
                     },
                     child: Text("chat"),
