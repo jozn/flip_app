@@ -1,9 +1,11 @@
+import 'dart:math';
 import 'dart:ui';
 
 import 'package:flip_app/pb/global.pb.dart';
 import 'package:flip_app/shared/fcolors.dart';
 import 'package:flip_app/shared/shared.dart';
 import 'package:flip_app/ui/cells/avatar_cell.dart';
+import 'package:flip_app/ui/utils/richtext_util.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -125,7 +127,8 @@ class _MsgRowAllContentWithAvatar extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             contentFull,
-            Align(
+            SizedBox(
+              width: 42,
               child: AvatarCells.getSimpleAvatar(),
               /*child: CircleImage(
                 imageProvider: AssetImage("assets/avatars/8.jpg"),
@@ -265,26 +268,9 @@ class _MsgRowBubble extends StatelessWidget {
                 height: _mediaSize.adjustedHeight,
                 fit: BoxFit.fitWidth,
               ),
-              /*child: Image.asset(
-                "assets/dog2.jpg",
-                width: width,
-                height: width,
-                fit: BoxFit.fill,
-              ),*/
             ),
           ),
-          Text(
-            param.msg.text,
-            softWrap: true,
-            maxLines: 10000,
-            textDirection: TextDirection.rtl,
-            style: TextStyle(
-              color: Colors.black,
-              fontSize: 15,
-              fontFamily: FShared.IRAN_FONT,
-              // fontWeight: FontWeight.w700,
-            ),
-          ),
+          RichMsgText.getMsgRichText(param.msg, true),
           SizedBox(
             height: 3,
           ),
@@ -485,6 +471,57 @@ Widget getReplayForwardWidget(_MsgParam param) {
     );
   }
   return out;
+}
+
+Widget getMsgRichText(_MsgParam param, BuildContext context) {
+  // Dep simple txt
+  Widget out = Text(
+    param.msg.text,
+    softWrap: true,
+    maxLines: 10000,
+    textDirection: TextDirection.rtl,
+    style: TextStyle(
+      color: Colors.black,
+      fontSize: 15,
+      fontFamily: FShared.IRAN_FONT,
+    ),
+  );
+  // var Wiget
+  var txts = param.msg.text.split(" ");
+  var rich = <TextSpan>[];
+
+  var rnd = Random();
+  for (var i = 0; i < txts.length; i++) {
+    var t = txts[i];
+    var r = rnd.nextInt(10);
+    TextSpan rt;
+    if (r < 4) {
+      rt = TextSpan(
+          text: t + " ", style: TextStyle(fontWeight: FontWeight.bold));
+    } else if (r < 6) {
+      rt = TextSpan(text: t + " ", style: TextStyle(color: Colors.blue));
+    } else if (r < 7) {
+      rt = TextSpan(text: t + " ", style: TextStyle(color: Colors.red));
+    } else {
+      rt = TextSpan(
+        text: t + " ",
+      );
+    }
+    rich.add(rt);
+  }
+
+  Widget out2 = RichText(
+    text: TextSpan(
+      text: 'Hello ',
+      style: TextStyle(
+        color: Colors.black,
+        fontSize: 15,
+        fontFamily: FShared.IRAN_FONT,
+      ),
+      children: rich,
+    ),
+  );
+  return out2;
 }
 
 /////////////////// Archive ///////////////////

@@ -135,7 +135,11 @@ class FDirectRowCell extends StatelessWidget {
                 ],
               ),
             ),
-            AvatarCells.getSimpleAvatar(size: 52, src: data.getAvatar()),
+            SizedBox(
+              width: 66,
+              child:
+                  AvatarCells.getSimpleAvatar(size: 52, src: data.getAvatar()),
+            )
           ],
         ),
       ),

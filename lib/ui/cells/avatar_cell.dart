@@ -13,7 +13,7 @@ class AvatarCells {
       ),
     );
 
-    var rnd = Random().nextInt(60);
+    var rnd = Random().nextInt(59) + 1;
     var imgSrc =
         "http://192.168.43.160:5000/home/hamid/life/__files__/avatars/$rnd.jpg";
     if (src != null) {
