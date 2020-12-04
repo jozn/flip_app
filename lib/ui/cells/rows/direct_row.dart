@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:flip_app/pb/global.pb.dart';
 import 'package:flip_app/shared/fcolors.dart';
 import 'package:flip_app/shared/shared.dart';
+import 'package:flip_app/ui/cells/avatar_cell.dart';
 import 'package:flutter/material.dart';
 
 class _DataProxy {
@@ -134,22 +135,7 @@ class FDirectRowCell extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(
-                width: 66,
-                child: Center(
-                  child: Card(
-                      margin: EdgeInsets.all(0),
-                      elevation: 0,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(800),
-                      ),
-                      clipBehavior: Clip.antiAliasWithSaveLayer,
-                      child: Image.network(
-                        "http://192.168.43.160:5000" + data.getAvatar(),
-                        height: 52,
-                        fit: BoxFit.fitHeight,
-                      )),
-                )),
+            AvatarCells.getSimpleAvatar(size: 52, src: data.getAvatar()),
           ],
         ),
       ),

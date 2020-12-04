@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flip_app/pb/global.pb.dart';
 import 'package:flip_app/shared/fcolors.dart';
 import 'package:flip_app/shared/shared.dart';
+import 'package:flip_app/ui/cells/avatar_cell.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -125,10 +126,11 @@ class _MsgRowAllContentWithAvatar extends StatelessWidget {
           children: <Widget>[
             contentFull,
             Align(
-              child: CircleImage(
+              child: AvatarCells.getSimpleAvatar(),
+              /*child: CircleImage(
                 imageProvider: AssetImage("assets/avatars/8.jpg"),
                 size: 40,
-              ),
+              ),*/
             ),
             // MsgContent
             // Avatar
@@ -201,10 +203,6 @@ class _MediaSize {
     if (ratio > MAX_VERTICAL_RATIO) {
       adjustedHeight = MAX_VERTICAL_RATIO * adjustedWidth;
     }
-/*    var minWidth = min(screenWidth, originalWidth);
-    var ratio = minWidth / screenWidth;
-    adjustedWidth = minWidth;
-    adjustedHeight = minWidth; //ratio * originalHeight;*/
   }
 
   double getWidth() {
