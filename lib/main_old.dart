@@ -4,8 +4,8 @@ import 'package:flip_app/shared/my_colors.dart';
 import 'package:flip_app/ui/login/login_confirm_page.dart';
 import 'package:flip_app/ui/login/login_simple_green.dart';
 import 'package:flip_app/ui/nav.dart';
-import 'package:flip_app/ui/pages_dep/chat_page.dart';
 import 'package:flip_app/ui/pages_dep/dep_app_default_home_page.dart';
+import 'package:flip_app/ui/pages_dep/dep_chat_page.dart';
 import 'package:flip_app/ui/pages_dep/dep_contacts_list_page.dart';
 import 'package:flip_app/ui/playground/bottom_nav.dart';
 import 'package:flip_app/ui/playground/chat_list.dart';
@@ -151,7 +151,7 @@ class ListBasicRouteState extends State<ListBasicRoute> {
     return ListView(
       children: <Widget>[
         get("Homepage", AppDefaultHomePage()),
-        get("ChatPage", ChatPage()),
+        get("ChatPage", ChatPage_Dep()),
         get("contacts page", ContactsListPage_Dep()),
         get("Nav", FScaffold()),
         get("-----------------------", LoginSimpleGreenRoute()),

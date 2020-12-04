@@ -4,11 +4,11 @@ import 'package:flip_app/shared/fcolors.dart';
 import 'package:flip_app/shared/fstrings.dart';
 import 'package:flip_app/shared/shared.dart';
 import 'package:flip_app/ui/api.dart';
+import 'package:flip_app/ui/cells/top_navbar.dart';
 import 'package:flip_app/ui/nav.dart';
 import 'package:flutter/material.dart';
 import 'package:toast/toast.dart';
 
-import '../cells/top_navbar.dart';
 import '../utils/FLeftScrollbar.dart';
 
 class ContactsListPage extends StatefulWidget implements FPage {

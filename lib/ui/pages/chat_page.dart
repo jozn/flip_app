@@ -1,15 +1,20 @@
 import 'package:flip_app/shared/fstrings.dart';
 import 'package:flip_app/ui/cells/message_list.dart';
+import 'package:flip_app/ui/nav.dart';
 import 'package:flutter/material.dart';
 
-import '../cells/bottom_navbar.dart';
 import '../cells/top_navbar.dart';
 
-class ChatPage extends StatefulWidget {
+class ChatPage extends StatefulWidget implements FPage {
   ChatPage();
 
   @override
   _ChatPageState createState() => new _ChatPageState();
+
+  @override
+  Widget getWidget() {
+    return this;
+  }
 }
 
 class _ChatPageState extends State<ChatPage> {
@@ -20,21 +25,15 @@ class _ChatPageState extends State<ChatPage> {
     this.context = context;
 
     return SafeArea(
-      child: Scaffold(
-          backgroundColor: Colors.white,
-          appBar: FSimpleTopNavBarCell(title: FStrings.chatPage_title),
-          //bottomNavigationBar: FBottomNavBarCell(),
-          body: SafeArea(
-            // child: FMessageListCell(),
-            child: Column(
-              children: <Widget>[
-                Expanded(
-                  child: FMessageListCell(),
-                ),
-                _InputMsgText(),
-              ],
-            ),
-          )),
+      child: Column(
+        children: <Widget>[
+          FSimpleTopNavBarCell(title: FStrings.contactsList_title),
+          Expanded(
+            child: FMessageListCell(),
+          ),
+          _InputMsgText(),
+        ],
+      ),
     );
   }
 }

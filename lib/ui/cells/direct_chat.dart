@@ -1,13 +1,12 @@
 import 'package:flip_app/pb/global.pb.dart';
 import 'package:flip_app/pb/rpc_sample.pb.dart';
-import 'package:flip_app/shared/fcolors.dart';
-import 'package:flip_app/shared/shared.dart';
 import 'package:flip_app/ui/cells/rows/direct_row.dart';
+import 'package:flip_app/ui/pages/chat_page.dart';
 import 'package:flip_app/ui/utils/FLeftScrollbar.dart';
 import 'package:flutter/material.dart';
-import 'package:toast/toast.dart';
 
 import '../api.dart';
+import '../nav.dart';
 
 class FDirectChatListCell extends StatefulWidget {
   FDirectChatListCell();
@@ -43,13 +42,8 @@ class _FDirectChatListCellState extends State<FDirectChatListCell> {
     });
   }
 
-  void onItemClick2() {
-    Toast.show("News " + "clicked", context, duration: Toast.LENGTH_SHORT);
-  }
-
-  void onItemClick(int index) {
-    Toast.show("News " + index.toString() + "clicked", context,
-        duration: Toast.LENGTH_SHORT);
+  void onItemClick() {
+    FNav.push(ChatPage());
   }
 
   @override
@@ -64,7 +58,7 @@ class _FDirectChatListCellState extends State<FDirectChatListCell> {
               itemCount: items.length,
               itemBuilder: (context, index) {
                 return FDirectRowCell(
-                    index: index, direct: items[index], onClick: onItemClick2);
+                    index: index, direct: items[index], onClick: onItemClick);
               },
             ),
           )),
