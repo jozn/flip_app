@@ -8,17 +8,17 @@ import 'package:flutter/material.dart';
 import 'package:toast/toast.dart';
 
 import '../cells/bottom_navbar.dart';
-import '../utils/FLeftScrollbar.dart';
 import '../cells/top_navbar.dart';
+import '../utils/FLeftScrollbar.dart';
 
-class ContactsListPage extends StatefulWidget {
-  ContactsListPage();
+class ContactsListPage_Dep extends StatefulWidget {
+  ContactsListPage_Dep();
 
   @override
-  ContactsListPageState createState() => new ContactsListPageState();
+  ContactsListPage_DepState createState() => new ContactsListPage_DepState();
 }
 
-class ContactsListPageState extends State<ContactsListPage> {
+class ContactsListPage_DepState extends State<ContactsListPage_Dep> {
   BuildContext context;
   List<Profile> profiles = [];
 

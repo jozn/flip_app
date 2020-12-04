@@ -2,6 +2,8 @@ import 'package:flip_app/shared/fcolors.dart';
 import 'package:flip_app/shared/shared.dart';
 import 'package:flutter/material.dart';
 
+import '../nav.dart';
+
 class FSimpleTopNavBarCell extends StatefulWidget
     implements PreferredSizeWidget {
   String title;
@@ -75,7 +77,8 @@ class _TopNavBarSimpleState extends State<FSimpleTopNavBarCell> {
                             color: FColors.topNavBar_buttons,
                             splashRadius: 22,
                             onPressed: () {
-                              FShared.goBack(context);
+                              // FShared.goBack(context);
+                              FNav.pop();
                               // Shared.showToast(context, "Back $s");
                             },
                             icon: Icon(

@@ -1,7 +1,10 @@
 import 'package:flip_app/shared/fcolors.dart';
 import 'package:flip_app/shared/shared.dart';
+import 'package:flip_app/ui/pages/contacts_list_page.dart';
 import 'package:flip_app/ui/playground/login.dart';
 import 'package:flutter/material.dart';
+
+import '../nav.dart';
 
 class _CellRowDrawer extends StatelessWidget {
   _CellDrawerInfo info;
@@ -96,7 +99,8 @@ Widget FGetDrawerScreen(BuildContext context) {
       title: "Contacts",
       icon: Icons.person,
       callback: () {
-        goToPage(LoginCardLightRoute());
+        FNav.push(ContactsListPage());
+        // goToPage(LoginCardLightRoute());
       },
     ),
     _CellDrawerInfo(
