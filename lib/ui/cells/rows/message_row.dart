@@ -1,5 +1,3 @@
-import 'dart:async';
-import 'dart:math';
 import 'dart:ui';
 
 import 'package:flip_app/pb/global.pb.dart';
@@ -7,7 +5,6 @@ import 'package:flip_app/shared/fcolors.dart';
 import 'package:flip_app/shared/shared.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 class FMessageRowParam {
   Message message;
@@ -512,100 +509,3 @@ var m1 = """ 🔻پایان اخذ رای در 3 حوزه انتخابیه اس�
 
 ✅خبرگزاری فارس استان فارس👇🏻👇🏻
 https://t.me/farsnaonline""";
-
-////////// dead ////////*class ChatTelegramAdapter {
-//   List messages = <Message>[];
-//   BuildContext context;
-//   Function onItemClick;
-//   ScrollController scrollController = new ScrollController();
-//
-//   ChatTelegramAdapter(this.context, this.messages, this.onItemClick);
-//
-//   void insertSingleItem(Message msg) {
-//     int insertIndex = messages.length;
-//     messages.insert(insertIndex, msg);
-//     scrollController.animateTo(scrollController.position.maxScrollExtent + 100,
-//         duration: Duration(milliseconds: 100), curve: Curves.easeOut);
-//   }
-//
-//   Widget getView() {
-//     return ListView.builder(
-//       itemCount: messages.length,
-//       padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
-//       controller: scrollController,
-//       itemBuilder: (context, index) {
-//         Message item = messages[index];
-//         return buildListItemView(index, item);
-//       },
-//     );
-//   }
-//
-//   Widget buildListItemView(int index, Message item) {
-//     var p = _MsgParam();
-//     p.context = context;
-//     p.msg = item;
-//     p.withUserHeader = true;
-//     p.withFooter = true;
-//     p.withAvatar = true;
-//     p.screenWidth = MediaQuery.of(context).size.width;
-//
-//     var m = _MsgRowEntryHolder();
-//     m.param = p;
-//
-//     return m;
-//   }
-//
-//   Widget buildListItemView2(int index, Message item) {
-//     bool isMe = item.fromMe;
-//
-//     return Wrap(
-//       alignment: isMe ? WrapAlignment.end : WrapAlignment.start,
-//       children: <Widget>[
-//         Card(
-//             shape: RoundedRectangleBorder(
-//               borderRadius: BorderRadius.circular(5),
-//             ),
-//             margin: EdgeInsets.fromLTRB(isMe ? 20 : 10, 5, isMe ? 10 : 20, 5),
-//             color: isMe ? Color(0xffEFFFDE) : Colors.white,
-//             elevation: 1,
-//             child: Padding(
-//               padding: EdgeInsets.symmetric(horizontal: 5, vertical: 5),
-//               child: Column(
-//                 crossAxisAlignment: CrossAxisAlignment.end,
-//                 children: <Widget>[
-//                   Container(
-//                     constraints: BoxConstraints(minWidth: 150),
-//                     child: Text(
-//                       "$index " + item.content,
-//                       maxLines: 100,
-//                       softWrap: true,
-//                     ),
-//                   ),
-//                   Container(height: 3, width: 0),
-//                   Row(
-//                     crossAxisAlignment: CrossAxisAlignment.center,
-//                     mainAxisSize: MainAxisSize.min,
-//                     children: <Widget>[
-//                       Text(item.date,
-//                           textAlign: TextAlign.end,
-//                           style: TextStyle(
-//                               fontSize: 12,
-//                               color: isMe
-//                                   ? Color(0xff58B346)
-//                                   : Color(0xffffB346))),
-//                       Container(width: 3),
-//                       isMe
-//                           ? Icon(Icons.done_all,
-//                           size: 12, color: Color(0xff58B346))
-//                           : Container(width: 0, height: 0)
-//                     ],
-//                   )
-//                 ],
-//               ),
-//             ))
-//       ],
-//     );
-//   }
-//
-//   int getItemCount() => messages.length;
-// }*/
