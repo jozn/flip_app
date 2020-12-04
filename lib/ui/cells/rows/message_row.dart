@@ -1,4 +1,3 @@
-import 'dart:math';
 import 'dart:ui';
 
 import 'package:flip_app/pb/global.pb.dart';
@@ -471,57 +470,6 @@ Widget getReplayForwardWidget(_MsgParam param) {
     );
   }
   return out;
-}
-
-Widget getMsgRichText(_MsgParam param, BuildContext context) {
-  // Dep simple txt
-  Widget out = Text(
-    param.msg.text,
-    softWrap: true,
-    maxLines: 10000,
-    textDirection: TextDirection.rtl,
-    style: TextStyle(
-      color: Colors.black,
-      fontSize: 15,
-      fontFamily: FShared.IRAN_FONT,
-    ),
-  );
-  // var Wiget
-  var txts = param.msg.text.split(" ");
-  var rich = <TextSpan>[];
-
-  var rnd = Random();
-  for (var i = 0; i < txts.length; i++) {
-    var t = txts[i];
-    var r = rnd.nextInt(10);
-    TextSpan rt;
-    if (r < 4) {
-      rt = TextSpan(
-          text: t + " ", style: TextStyle(fontWeight: FontWeight.bold));
-    } else if (r < 6) {
-      rt = TextSpan(text: t + " ", style: TextStyle(color: Colors.blue));
-    } else if (r < 7) {
-      rt = TextSpan(text: t + " ", style: TextStyle(color: Colors.red));
-    } else {
-      rt = TextSpan(
-        text: t + " ",
-      );
-    }
-    rich.add(rt);
-  }
-
-  Widget out2 = RichText(
-    text: TextSpan(
-      text: 'Hello ',
-      style: TextStyle(
-        color: Colors.black,
-        fontSize: 15,
-        fontFamily: FShared.IRAN_FONT,
-      ),
-      children: rich,
-    ),
-  );
-  return out2;
 }
 
 /////////////////// Archive ///////////////////

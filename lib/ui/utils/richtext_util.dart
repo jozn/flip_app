@@ -4,6 +4,7 @@ import 'dart:ui';
 import 'package:flip_app/pb/global.pb.dart';
 import 'package:flip_app/shared/shared.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 class RichMsgText {
@@ -35,7 +36,7 @@ class RichMsgText {
       TextSpan rt;
       if (r < 4) {
         rt = _getBold(t + " ");
-      } else if (r < 6) {
+      } else if (r < 10) {
         rt = _getLink(t + " ");
       } else if (r < 7) {
         rt = TextSpan(text: t + " ", style: TextStyle(color: Colors.red));
@@ -66,7 +67,15 @@ class RichMsgText {
   }
 
   static TextSpan _getLink(String text) {
-    var rt = TextSpan(text: text, style: TextStyle(color: Colors.blue));
+    var rt = TextSpan(
+      text: text,
+      style: TextStyle(color: Colors.blue),
+      recognizer: new TapGestureRecognizer()
+        ..onTap = () {
+          print(
+              'https://docs.flutter.io/flutter/services/UrlLauncher-class.html');
+        },
+    );
     return rt;
   }
 }
