@@ -1,3 +1,4 @@
+import 'dart:math';
 import 'dart:ui';
 
 import 'package:flip_app/pb/global.pb.dart';
@@ -57,16 +58,19 @@ class FMessageRow extends StatelessWidget {
 
   Widget buildListItemView() {
     var p = _MsgParam();
+    var rnd = Random();
     p.context = context;
     p.msg = param.message;
-    p.withUserHeader = true;
-    p.withFooter = true;
-    p.withAvatar = true;
+    // p.withUserHeader = true;
+    // p.withFooter = true;
+    // p.withAvatar = true;
+    p.withUserHeader = rnd.nextBool();
+    p.withFooter = rnd.nextBool();
+    p.withAvatar = rnd.nextBool();
     p.screenWidth = MediaQuery.of(context).size.width;
 
     print(param.message.messageType);
-    // var m = _MsgRowEntryHolder();
-    // m.param = p;
+
     Widget m;
     switch (param.message.messageType) {
       case MessageType.TEXT:
@@ -86,7 +90,7 @@ class FMessageRow extends StatelessWidget {
 
 class _MsgTypesWidgets {
   static Widget getText(_MsgParam param) {
-    var txt = RichMsgText.getMsgRichText(param.msg, true);
+    var txt = _MsgSharedSubWidgets.getMsgText(param);
     var buble =
         _MsgCommonBuild._commonMsgContentHolder(param: param, child: txt);
     return _MsgCommonBuild._commonMsgRow(param: param, child: buble);
@@ -95,7 +99,7 @@ class _MsgTypesWidgets {
   static Widget getImage(_MsgParam param) {
     var txt;
     if (param.msg.text.length > 0) {
-      txt = txt = RichMsgText.getMsgRichText(param.msg, true);
+      txt = _MsgSharedSubWidgets.getMsgText(param);
     }
 
     var width = param.screenWidth * 0.80; //- 4;
@@ -106,13 +110,13 @@ class _MsgTypesWidgets {
     var media = Container(
       clipBehavior: Clip.antiAlias,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.all(Radius.circular(4)),
+        borderRadius: BorderRadius.all(Radius.circular(6)),
       ),
       child: Image.network(
         "http://192.168.43.160:5000" + img.fullPath,
         width: _mediaSize.adjustedWidth,
         height: _mediaSize.adjustedHeight,
-        fit: BoxFit.fitWidth,
+        fit: BoxFit.cover,
       ),
     );
 
@@ -142,6 +146,13 @@ class _MsgTypesWidgets {
 }
 
 class _MsgSharedSubWidgets {
+  static Widget getMsgText(_MsgParam param) {
+    return Padding(
+      padding: EdgeInsets.all(4),
+      child: RichMsgText.getMsgRichText(param.msg, true),
+    );
+  }
+
   static Widget getDateWidget(_MsgParam param) {
     var item = param.msg;
     var isMe = param.msg.gid % 2 == 0 ? true : false;
@@ -164,7 +175,7 @@ class _MsgSharedSubWidgets {
   }
 
   static Widget getHeaderUserWidget(_MsgParam param) {
-    Widget headerByChannel = SizedBox();
+    Widget headerByChannel = SizedBox(); // empty
     if (param.withUserHeader) {
       headerByChannel = Container(
         padding: EdgeInsets.fromLTRB(4, 0, 6, 0),
@@ -193,71 +204,71 @@ class _MsgSharedSubWidgets {
   }
 
   static Widget getReplayForwardWidget(_MsgParam param) {
-    Widget out = SizedBox();
+    Widget out = SizedBox(); // empty
     const double HEIGHT = 34;
 
-    var childs = <Widget>[];
-
-    // texts
-    childs.add(Column(
-      crossAxisAlignment: CrossAxisAlignment.end,
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Text(
-          "آخرین خبر",
-          maxLines: 1,
-          textDirection: TextDirection.rtl,
-          textAlign: TextAlign.start,
-          style: TextStyle(
-            fontSize: 10,
-            fontFamily: FShared.IRAN_FONT,
-            color: Colors.blue,
-            // fontWeight: FontWeight.w600,
-            // height: 1.00,
-          ),
-        ),
-        Text(
-          "بر last message",
-          // textHeightBehavior: TextHeightBehavior.fromEncoded(encoded),/
-          maxLines: 1,
-          textDirection: TextDirection.rtl,
-          textAlign: TextAlign.start,
-          style: TextStyle(
-            fontSize: 10,
-            fontFamily: FShared.IRAN_FONT_LIGHT,
-            color: Colors.blue,
-            // height: 1,
-            // textBaseline: TextBaseline.ideographic,
-          ),
-        ),
-      ],
-    ));
-
-    // show image
-    if (true) {
-      childs.add(Padding(
-        padding: EdgeInsets.fromLTRB(5, 0, 0, 0),
-        child: Image.asset(
-          "assets/avatars/12.jpg",
-          height: HEIGHT - 2,
-          width: HEIGHT - 2,
-        ),
-      ));
-    }
-
-    if (true) {
-      childs.add(Container(
-        // width: 4,
-        color: Colors.blue,
-        margin: EdgeInsets.fromLTRB(5, 0, 0, 0),
-        child: SizedBox(
-          width: 2,
-          height: HEIGHT,
-          //width: 4,
-        ),
-      ));
-    }
     if (param.withUserHeader) {
+      var childs = <Widget>[];
+      // texts
+      childs.add(Column(
+        crossAxisAlignment: CrossAxisAlignment.end,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            "آخرین خبر",
+            maxLines: 1,
+            textDirection: TextDirection.rtl,
+            textAlign: TextAlign.start,
+            style: TextStyle(
+              fontSize: 10,
+              fontFamily: FShared.IRAN_FONT,
+              color: Colors.blue,
+              // fontWeight: FontWeight.w600,
+              // height: 1.00,
+            ),
+          ),
+          Text(
+            "بر last message",
+            // textHeightBehavior: TextHeightBehavior.fromEncoded(encoded),/
+            maxLines: 1,
+            textDirection: TextDirection.rtl,
+            textAlign: TextAlign.start,
+            style: TextStyle(
+              fontSize: 10,
+              fontFamily: FShared.IRAN_FONT_LIGHT,
+              color: Colors.blue,
+              // height: 1,
+              // textBaseline: TextBaseline.ideographic,
+            ),
+          ),
+        ],
+      ));
+
+      // show image
+      if (true) {
+        childs.add(Padding(
+          padding: EdgeInsets.fromLTRB(5, 0, 0, 0),
+          child: Image.asset(
+            "assets/avatars/12.jpg",
+            height: HEIGHT - 2,
+            width: HEIGHT - 2,
+          ),
+        ));
+      }
+
+      if (true) {
+        childs.add(Container(
+          // width: 4,
+          color: Colors.blue,
+          margin: EdgeInsets.fromLTRB(5, 0, 0, 0),
+          child: SizedBox(
+            width: 2,
+            height: HEIGHT,
+            //width: 4,
+          ),
+        ));
+      }
+
       out = Container(
         padding: EdgeInsets.fromLTRB(4, 0, 6, 0),
         margin: EdgeInsets.fromLTRB(4, 0, 0, 2),
@@ -274,6 +285,7 @@ class _MsgSharedSubWidgets {
         ),
       );
     }
+
     return out;
   }
 }
@@ -285,30 +297,33 @@ class _MsgCommonBuild {
 
     var width = param.screenWidth * 0.80; //- 4;
 
+    var avatarHolder;
     if (param.withAvatar) {
-      return Container(
-        // color: Colors.yellow,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.end, // rtl
-          crossAxisAlignment: CrossAxisAlignment.start, // avatar in top
-          children: <Widget>[
-            LimitedBox(
-              maxWidth: width,
-              child: child,
-            ),
-            // Expanded(),
-            SizedBox(
-              width: 44,
-              child: AvatarCells.getSimpleAvatar(size: 38),
-            ),
-          ],
-        ),
+      avatarHolder = SizedBox(
+        width: 50,
+        child: AvatarCells.getSimpleAvatar(size: 38),
       );
     } else {
-      return Container(
-        child: child,
+      avatarHolder = SizedBox(
+        width: 12,
       );
     }
+
+    return Container(
+      // color: Colors.yellow,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.end, // rtl
+        crossAxisAlignment: CrossAxisAlignment.start, // avatar in top
+        children: <Widget>[
+          LimitedBox(
+            maxWidth: width,
+            child: child,
+          ),
+          // Expanded(),
+          avatarHolder,
+        ],
+      ),
+    );
   }
 
   static Widget _commonMsgRow({_MsgParam param, Widget child}) {
@@ -358,11 +373,11 @@ class _MsgCommonBuild {
     var width = param.screenWidth * 0.80; //- 4;
 
     return Container(
-      padding: EdgeInsets.all(6),
+      padding: EdgeInsets.all(2),
       margin: EdgeInsets.all(0),
       clipBehavior: Clip.antiAlias,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.all(Radius.circular(4)),
+        borderRadius: BorderRadius.all(Radius.circular(6)),
         border:
             Border.all(width: 1, color: Color(0xffeeeeee)), //Colors.grey[200]
         color: BACKGROUND_CHAT_COLOR,
