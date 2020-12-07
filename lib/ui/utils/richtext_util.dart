@@ -18,7 +18,7 @@ class RichMsgText {
         textDirection: TextDirection.rtl,
         style: TextStyle(
           color: Colors.black,
-          fontSize: 15,
+          fontSize: 14,
           fontFamily: FShared.IRAN_FONT,
         ),
       );
@@ -34,11 +34,11 @@ class RichMsgText {
       var t = txts[i];
       var r = rnd.nextInt(10);
       TextSpan rt;
-      if (r < 4) {
+      if (r < 1) {
         rt = _getBold(t + " ");
-      } else if (r < 10) {
+      } else if (r < 3) {
         rt = _getLink(t + " ");
-      } else if (r < 7) {
+      } else if (r < 4) {
         rt = TextSpan(text: t + " ", style: TextStyle(color: Colors.red));
       } else {
         rt = TextSpan(
@@ -49,11 +49,12 @@ class RichMsgText {
     }
 
     Widget out2 = RichText(
+      textDirection: TextDirection.rtl,
       text: TextSpan(
-        text: 'Hello ',
+        // text: 'Hello ',
         style: TextStyle(
           color: Colors.black,
-          fontSize: 15,
+          fontSize: 14,
           fontFamily: FShared.IRAN_FONT,
         ),
         children: rich,

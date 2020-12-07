@@ -1,20 +1,28 @@
 import 'package:flip_app/pb/global.pb.dart';
 import 'package:flip_app/pb/rpc_sample.pb.dart';
-import 'package:flip_app/ui/cells/rows/message_row_old.dart';
+import 'package:flip_app/ui/cells/rows/message_row.dart';
+// import 'package:flip_app/ui/cells/rows/message_row_old.dart';
 import 'package:flip_app/ui/utils/FLeftScrollbar.dart';
 import 'package:flutter/material.dart';
 import 'package:toast/toast.dart';
 
 import '../api.dart';
+import '../nav.dart';
 
-class FMessageListCell extends StatefulWidget {
-  FMessageListCell();
+class FMessageListCell_Play extends StatefulWidget implements FPage {
+  FMessageListCell_Play();
 
   @override
-  _FMessageListCellState createState() => new _FMessageListCellState();
+  _FMessageListCell_PlayState createState() =>
+      new _FMessageListCell_PlayState();
+
+  @override
+  Widget getWidget() {
+    return this;
+  }
 }
 
-class _FMessageListCellState extends State<FMessageListCell> {
+class _FMessageListCell_PlayState extends State<FMessageListCell_Play> {
   BuildContext context;
   List<Message> messages = [];
   ScrollController scrollController = new ScrollController();
@@ -78,7 +86,7 @@ class _FMessageListCellState extends State<FMessageListCell> {
                 parm.message = item;
                 parm.index = index;
 
-                var msgWidget = FMessageRow_OLD();
+                var msgWidget = FMessageRow();
                 msgWidget.param = parm;
 
                 return msgWidget;
