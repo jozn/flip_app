@@ -29,6 +29,8 @@ class FStrings {
   // Chat Page
   static String chatPage_title = "چت";
 
+  static String chatMsg_UnknowMsgType = "این پیام در ای نسخه پشتیبانی نمی شود.";
+
   // https://en.wikipedia.org/wiki/Thin_space
   // U+202F
   static String howe_thinspace = " ";

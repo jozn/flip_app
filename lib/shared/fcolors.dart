@@ -29,7 +29,8 @@ class FColors {
 
   // Bottom Nav bar
   static const Color bottomNavBar_background = background;
-  static const Color bottomNavBar_icon = Color(0xaa000000); //Color(0xFF0D47A1); //Color(0xFF37474F); //Color(0xFFff2222);
+  static const Color bottomNavBar_icon = Color(
+      0xaa000000); //Color(0xFF0D47A1); //Color(0xFF37474F); //Color(0xFFff2222);
   static const Color bottomNavBar_iconActive = Color(0xFFff6666);
   static const Color bottomNavBar_tittle = Color(0xFF222222);
   static const Color bottomNavBar_tittleActive = Color(0xFF882222);

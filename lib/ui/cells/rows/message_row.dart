@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flip_app/pb/global.pb.dart';
 import 'package:flip_app/shared/fcolors.dart';
+import 'package:flip_app/shared/fstrings.dart';
 import 'package:flip_app/shared/shared.dart';
 import 'package:flip_app/ui/utils/richtext_util.dart';
 import 'package:flutter/cupertino.dart';
@@ -63,21 +64,84 @@ class FMessageRow extends StatelessWidget {
     p.withAvatar = true;
     p.screenWidth = MediaQuery.of(context).size.width;
 
+    print(param.message.messageType);
     // var m = _MsgRowEntryHolder();
     // m.param = p;
-    var m = _MsgWidgetsTypes.getText(p);
+    Widget m;
+    switch (param.message.messageType) {
+      case MessageType.TEXT:
+        m = _MsgTypesWidgets.getText(p);
+        break;
+      case MessageType.IMAGE:
+        m = _MsgTypesWidgets.getImage(p);
+        break;
+      default:
+        m = _MsgTypesWidgets.getUnknow(p);
+        break;
+    }
 
     return m;
   }
 }
 
-class _MsgWidgetsTypes {
+class _MsgTypesWidgets {
   static Widget getText(_MsgParam param) {
     var txt = RichMsgText.getMsgRichText(param.msg, true);
-    var buble = _commonMsgContentHolder(param: param, child: txt);
-    return _commonMsgRow(param: param, child: buble);
+    var buble =
+        _MsgCommonBuild._commonMsgContentHolder(param: param, child: txt);
+    return _MsgCommonBuild._commonMsgRow(param: param, child: buble);
   }
 
+  static Widget getImage(_MsgParam param) {
+    var txt;
+    if (param.msg.text.length > 0) {
+      txt = txt = RichMsgText.getMsgRichText(param.msg, true);
+    }
+
+    var width = param.screenWidth * 0.80; //- 4;
+    var img = param.msg.files[0];
+    var _mediaSize =
+        _MediaSize(img.width.toDouble(), img.height.toDouble(), width);
+
+    var media = Container(
+      clipBehavior: Clip.antiAlias,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.all(Radius.circular(4)),
+      ),
+      child: Image.network(
+        "http://192.168.43.160:5000" + img.fullPath,
+        width: _mediaSize.adjustedWidth,
+        height: _mediaSize.adjustedHeight,
+        fit: BoxFit.fitWidth,
+      ),
+    );
+
+    List<Widget> child = [];
+    if (media != null) {
+      child.add(media);
+    }
+    if (txt != null) {
+      child.add(txt);
+    }
+
+    var cols = Column(
+      children: child,
+    );
+
+    var bubble =
+        _MsgCommonBuild._commonMsgContentHolder(param: param, child: cols);
+    return _MsgCommonBuild._commonMsgRow(param: param, child: bubble);
+  }
+
+  static Widget getUnknow(_MsgParam param) {
+    var txt = Text(FStrings.chatMsg_UnknowMsgType);
+    var buble =
+        _MsgCommonBuild._commonMsgContentHolder(param: param, child: txt);
+    return _MsgCommonBuild._commonMsgRow(param: param, child: buble);
+  }
+}
+
+class _MsgSharedSubWidgets {
   static Widget getDateWidget(_MsgParam param) {
     var item = param.msg;
     var isMe = param.msg.gid % 2 == 0 ? true : false;
@@ -212,7 +276,9 @@ class _MsgWidgetsTypes {
     }
     return out;
   }
+}
 
+class _MsgCommonBuild {
   static Widget _rowWithAvatar({_MsgParam param, Widget child}) {
     assert(param != null);
     assert(child != null);
@@ -284,8 +350,10 @@ class _MsgWidgetsTypes {
     assert(param != null);
     assert(child != null);
 
-    Widget headerByChannelWidget = _MsgWidgetsTypes.getHeaderUserWidget(param);
-    Widget replayForwardWidget = _MsgWidgetsTypes.getReplayForwardWidget(param);
+    Widget headerByChannelWidget =
+        _MsgSharedSubWidgets.getHeaderUserWidget(param);
+    Widget replayForwardWidget =
+        _MsgSharedSubWidgets.getReplayForwardWidget(param);
 
     var width = param.screenWidth * 0.80; //- 4;
 
@@ -314,11 +382,46 @@ class _MsgWidgetsTypes {
             // width: 100,
             child: Align(
               alignment: Alignment.bottomRight,
-              child: _MsgWidgetsTypes.getDateWidget(param),
+              child: _MsgSharedSubWidgets.getDateWidget(param),
             ),
           ),
         ],
       ),
     );
+  }
+}
+
+class _MediaSize {
+  double originalWidth;
+  double originalHeight;
+
+  double adjustedWidth;
+  double adjustedHeight;
+
+  double screenWidth;
+
+  _MediaSize(this.originalWidth, this.originalHeight, this.screenWidth) {
+    // this.screenWidth = screenWidth *0.8;
+    if (screenWidth >= originalWidth) {
+      // stretch - small image
+      adjustedWidth = screenWidth;
+      var ratio = screenWidth / originalWidth;
+      adjustedHeight = ratio * originalHeight;
+    } else {
+      // shrink - big image
+      adjustedWidth = screenWidth;
+      var ratio = screenWidth / originalWidth;
+      adjustedHeight = ratio * originalHeight;
+    }
+
+    const MAX_VERTICAL_RATIO = 1.2;
+    var ratio = adjustedHeight / adjustedWidth;
+    if (ratio > MAX_VERTICAL_RATIO) {
+      adjustedHeight = MAX_VERTICAL_RATIO * adjustedWidth;
+    }
+  }
+
+  double getWidth() {
+    return originalHeight;
   }
 }
