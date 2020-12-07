@@ -1,15 +1,15 @@
-import 'package:flip_app/pb/rpc_auth.pb.dart';
 import 'package:flip_app/pb/global.pb.dart';
+import 'package:flip_app/pb/rpc_auth.pb.dart';
 import 'package:flip_app/shared/fcolors.dart';
 import 'package:flip_app/shared/fstrings.dart';
 import 'package:flip_app/shared/shared.dart';
+import 'package:flip_app/ui/api.dart';
 import 'package:flutter/material.dart';
-import 'package:protobuf/protobuf.dart';
-
 import 'package:http/http.dart' as http;
+import 'package:protobuf/protobuf.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'package:flip_app/ui/del/api_dep.dart' as Api;
+// import 'package:flip_app/ui/del/api_dep.dart' as Api;
 
 class LoginSimpleGreenRoute extends StatefulWidget {
   LoginSimpleGreenRoute();
@@ -24,7 +24,8 @@ class LoginSimpleGreenRouteState extends State<LoginSimpleGreenRoute> {
     FShared.showToast(context, "weeeeeee");
 
     var param = SendConfirmCodeParam();
-    var res = await Api.Auth.sendConfirmCode(param);
+    var res = await RPC_Auth.sendConfirmCode(SendConfirmCodeParam());
+    // var res = await Api.Auth.sendConfirmCode(param);
   }
 
   @override
@@ -115,8 +116,10 @@ class LoginSimpleGreenRouteState extends State<LoginSimpleGreenRoute> {
   }
 }
 
-void send() {
-  Api.Auth.sendConfirmCode(SendConfirmCodeParam());
+Future<void> send() async {
+  // Api.Auth.sendConfirmCode(SendConfirmCodeParam());
+  var res = await RPC_Auth.sendConfirmCode(SendConfirmCodeParam());
+  // setNewProfiles(res.profiles);
 }
 
 /////////////////////// RPC ////////////////////

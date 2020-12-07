@@ -4,19 +4,11 @@ import 'package:flip_app/shared/my_colors.dart';
 import 'package:flip_app/ui/login/login_confirm_page.dart';
 import 'package:flip_app/ui/login/login_simple_green.dart';
 import 'package:flip_app/ui/nav.dart';
-import 'package:flip_app/ui/pages_dep/dep_app_default_home_page.dart';
-import 'package:flip_app/ui/pages_dep/dep_chat_page.dart';
-import 'package:flip_app/ui/pages_dep/dep_contacts_list_page.dart';
-import 'package:flip_app/ui/playground/bottom_nav.dart';
 import 'package:flip_app/ui/playground/chat_list.dart';
-import 'package:flip_app/ui/playground/chat_tab_page.dart';
 import 'package:flip_app/ui/playground/contacts_list.dart';
 import 'package:flip_app/ui/playground/hello_world.dart';
 import 'package:flip_app/ui/playground/login.dart';
-import 'package:flip_app/ui/playground/messages_list.dart';
 import 'package:flip_app/ui/playground/protcol_buffer.dart';
-import 'package:flip_app/ui/playground/tab_chat.dart';
-import 'package:flip_app/ui/playground/top_nav.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:protobuf/protobuf.dart';
@@ -24,7 +16,6 @@ import 'package:toast/toast.dart';
 
 // import 'pb/rpc_social.pb.dart';
 import 'pb/global.pb.dart';
-import 'ui/playground/tab_chat.dart';
 
 class FlipRpcClient extends RpcClient {
   @override
@@ -150,9 +141,6 @@ class ListBasicRouteState extends State<ListBasicRoute> {
     hh();
     return ListView(
       children: <Widget>[
-        get("Homepage", AppDefaultHomePage()),
-        get("ChatPage", ChatPage_Dep()),
-        get("contacts page", ContactsListPage_Dep()),
         get("Nav", FScaffold()),
         get("-----------------------", LoginSimpleGreenRoute()),
         ListTile(
@@ -162,14 +150,9 @@ class ListBasicRouteState extends State<ListBasicRoute> {
           },
         ),
         get("Login confim", LoginConfirmRoute()),
-        get("Main Chat tab", ChatListPageOld()),
         get("Hello World", HelloWorldPage()),
-        get("TopNavBarPage", TopNavBarPage_DEP()),
-        get("BottomNavBarPage", BottomNavBarPage_DEP()),
         get("ContactsListPage", ContactsListPageOld()),
         get("ChatListPage", ChatListPage_DEP()),
-        get("ChatTabPage", ChatTabPage()),
-        get("ChatTelegramRoute", ChatTelegramRoute()),
         get("PB", PbPage()),
         Divider(
           height: 2,
