@@ -26,6 +26,15 @@ class FStrings {
   static String home_tabTitleGroups = "گروه ها";
   static String home_tabTitleGroup = "گروه";
 
+  // Tabar Chat Top Tabs
+  static String channelPage_about = "درباره";
+  static String channelPage_posts = "پست";
+  static String channelPage_gallery = "گالری";
+  static String channelPage_photoes = "عکس";
+  static String channelPage_videos = "ویدیو";
+  static String channelPage_music = "صوت"; //and voices
+  static String channelPage_files = "فایل";
+
   // Chat Page
   static String chatPage_title = "چت";
 

@@ -4,6 +4,7 @@ import 'package:flip_app/shared/shared.dart';
 import 'package:flip_app/ui/cells/avatar_cell.dart';
 import 'package:flip_app/ui/cells/direct_chat.dart';
 import 'package:flip_app/ui/cells/drawer.dart';
+import 'package:flip_app/ui/cells/gallery_grid_list.dart';
 import 'package:flip_app/ui/cells/message_list_play.dart';
 import 'package:flip_app/ui/nav.dart';
 import 'package:flutter/material.dart';
@@ -66,7 +67,7 @@ class _ChannelPageState extends State<ChannelPage>
                     children: [
                       // HelloWorldPage(),
                       FDirectChatListCell(),
-                      FDirectChatListCell(),
+                      getGrid(context),
                       FMessageListCell_Play(),
 
                       // ChatListPage_DEP(),
@@ -152,13 +153,13 @@ Widget _getNavTabs(BuildContext context, TabController _tabController) {
           labelColor: Colors.blue,
           tabs: [
             Tab(
-              child: getTitleText(FStrings.home_tabTitleGroup),
+              child: getTitleText(FStrings.channelPage_posts),
             ),
             Tab(
-              child: getTitleText(FStrings.home_tabTitleChat),
+              child: getTitleText(FStrings.channelPage_gallery),
             ),
             Tab(
-              child: getTitleText(FStrings.home_tabTitleChat),
+              child: getTitleText(FStrings.channelPage_music),
             ),
             //Tab(text: "Chat"),
           ],
