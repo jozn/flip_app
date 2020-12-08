@@ -297,14 +297,29 @@ class _MsgSharedSubWidgets {
       out = Container(
         child: Column(
           children: <Widget>[
-            Text("Footer info"),
-            Text("Footer"),
-            Text("Footer buttons"),
+            _MsgGlassButton(),
+            getSampleGlassButtons(2),
+            getSampleGlassButtons(3),
           ],
         ),
       );
     }
 
+    return out;
+  }
+
+  static Widget getSampleGlassButtons(int cnt) {
+    var out = Row(
+      children: <Widget>[],
+    );
+    for (var i = 0; i < cnt; i++) {
+      out.children.add(Expanded(child: _MsgGlassButton()));
+      if (i != cnt - 1) {
+        out.children.add(SizedBox(
+          width: 4,
+        ));
+      }
+    }
     return out;
   }
 
@@ -530,5 +545,51 @@ class _MediaSize {
 
   double getWidth() {
     return originalHeight;
+  }
+}
+
+class _MsgGlassButton extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        print("tap glass btn");
+      },
+      child: Container(
+        height: 42,
+        margin: EdgeInsets.fromLTRB(0, 4, 0, 0),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(6),
+          color: Color.fromARGB(50, 50, 50, 50),
+          boxShadow: [
+            //BoxShadow(color: Colors.green, spreadRadius: 3),
+          ],
+        ),
+        // color: Color.fromARGB(50, 50, 50, 50),
+        child: Stack(
+          children: <Widget>[
+            Positioned(
+                right: 6,
+                top: 4,
+                child: Icon(
+                  Icons.open_in_new_outlined,
+                  size: 14,
+                  color: Colors.white,
+                )),
+            Center(
+              child: Text(
+                "some link",
+                textDirection: TextDirection.rtl,
+                style: TextStyle(
+                  fontFamily: FShared.IRAN_FONT,
+                  fontSize: 16,
+                  color: Colors.white,
+                ),
+              ),
+            )
+          ],
+        ),
+      ),
+    );
   }
 }

@@ -75,7 +75,8 @@ class _FMessageListCell_PlayState extends State<FMessageListCell_Play> {
           thickness: 4,
           radius: Radius.circular(4),
           child: Material(
-            color: Colors.white,
+            // color: Colors.white,
+            color: Colors.red[100],
             child: ListView.builder(
               itemCount: messages.length,
               padding: EdgeInsets.symmetric(vertical: 0, horizontal: 0),
