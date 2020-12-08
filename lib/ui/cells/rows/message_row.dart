@@ -551,38 +551,38 @@ class _MediaSize {
 class _MsgGlassButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        print("tap glass btn");
-      },
-      child: Container(
-        height: 42,
-        margin: EdgeInsets.fromLTRB(0, 4, 0, 0),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(6),
-          color: Color.fromARGB(50, 50, 50, 50),
-          boxShadow: [
-            //BoxShadow(color: Colors.green, spreadRadius: 3),
-          ],
-        ),
-        // color: Color.fromARGB(50, 50, 50, 50),
+    return Container(
+      height: 42,
+      margin: EdgeInsets.fromLTRB(0, 4, 0, 0),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(6),
+        color: Color.fromARGB(50, 50, 50, 50),
+        boxShadow: [
+          //BoxShadow(color: Colors.green, spreadRadius: 3),
+        ],
+      ),
+      // color: Color.fromARGB(50, 50, 50, 50),
+      child: InkWell(
+        onTap: () {
+          print("glass btn clicked");
+        },
         child: Stack(
           children: <Widget>[
             Positioned(
-                right: 6,
+                left: 6,
                 top: 4,
                 child: Icon(
                   Icons.open_in_new_outlined,
-                  size: 14,
+                  size: 12,
                   color: Colors.white,
                 )),
             Center(
               child: Text(
-                "some link",
+                "مشعهدی نینک",
                 textDirection: TextDirection.rtl,
                 style: TextStyle(
                   fontFamily: FShared.IRAN_FONT,
-                  fontSize: 16,
+                  fontSize: 12,
                   color: Colors.white,
                 ),
               ),
