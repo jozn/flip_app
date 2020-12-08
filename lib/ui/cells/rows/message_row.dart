@@ -65,7 +65,7 @@ class FMessageRow extends StatelessWidget {
     // p.withFooter = true;
     // p.withAvatar = true;
     p.withUserHeader = rnd.nextBool();
-    p.withFooter = rnd.nextBool();
+    p.withFooter = true;
     p.withAvatar = rnd.nextBool();
     p.screenWidth = MediaQuery.of(context).size.width;
 
@@ -288,6 +288,90 @@ class _MsgSharedSubWidgets {
 
     return out;
   }
+
+  static Widget getFooterAll(_MsgParam param) {
+    Widget out = SizedBox(); // empty
+    const double HEIGHT = 34;
+
+    if (param.withFooter) {
+      out = Container(
+        child: Column(
+          children: <Widget>[
+            Text("Footer info"),
+            Text("Footer"),
+            Text("Footer buttons"),
+          ],
+        ),
+      );
+    }
+
+    return out;
+  }
+
+  //likes, comments
+  static Widget getActionBar(_MsgParam param) {
+    Widget out = SizedBox(); // empty
+    const double HEIGHT = 34;
+
+    if (param.withFooter) {
+      out = Container(
+        child: Column(
+          children: <Widget>[
+            Container(
+              margin: EdgeInsets.symmetric(vertical: 2, horizontal: 6),
+              color: Colors.grey[500],
+              height: 1,
+            ),
+            Padding(
+              padding: EdgeInsets.symmetric(vertical: 2, horizontal: 6),
+              child: Row(
+                children: <Widget>[
+                  GestureDetector(
+                    onTap: () {},
+                    child: Row(
+                      children: [
+                        Icon(Icons.repeat),
+                        Text("ReShare"),
+                      ],
+                    ),
+                  ),
+                  Expanded(child: SizedBox()),
+                  GestureDetector(
+                    onTap: () {},
+                    child: Row(
+                      children: [
+                        Icon(Icons.comment),
+                        Text("13"),
+                      ],
+                    ),
+                  ),
+                  Expanded(child: SizedBox()),
+                  GestureDetector(
+                    onTap: () {},
+                    child: Row(
+                      children: [
+                        Text("345"),
+                      ],
+                    ),
+                  ),
+                  GestureDetector(
+                    onTap: () {},
+                    child: Row(
+                      children: [
+                        Icon(Icons.add_location_outlined),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      );
+    }
+
+    return out;
+  }
 }
 
 class _MsgCommonBuild {
@@ -370,38 +454,46 @@ class _MsgCommonBuild {
     Widget replayForwardWidget =
         _MsgSharedSubWidgets.getReplayForwardWidget(param);
 
+    Widget footerWidget = _MsgSharedSubWidgets.getFooterAll(param);
+
     var width = param.screenWidth * 0.80; //- 4;
 
-    return Container(
-      padding: EdgeInsets.all(2),
-      margin: EdgeInsets.all(0),
-      clipBehavior: Clip.antiAlias,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.all(Radius.circular(6)),
-        border:
-            Border.all(width: 1, color: Color(0xffeeeeee)), //Colors.grey[200]
-        color: BACKGROUND_CHAT_COLOR,
-      ),
-      // child: Expanded(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          headerByChannelWidget,
-          replayForwardWidget,
-          child,
-          SizedBox(
-            height: 3,
+    return Column(
+      children: <Widget>[
+        Container(
+          padding: EdgeInsets.all(2),
+          margin: EdgeInsets.all(0),
+          clipBehavior: Clip.antiAlias,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.all(Radius.circular(6)),
+            border: Border.all(
+                width: 1, color: Color(0xffeeeeee)), //Colors.grey[200]
+            color: BACKGROUND_CHAT_COLOR,
           ),
-          Container(
-            // color: Colors.white,
-            // width: 100,
-            child: Align(
-              alignment: Alignment.bottomRight,
-              child: _MsgSharedSubWidgets.getDateWidget(param),
-            ),
+          // child: Expanded(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              headerByChannelWidget,
+              replayForwardWidget,
+              child,
+              SizedBox(
+                height: 3,
+              ),
+              Container(
+                // color: Colors.white,
+                // width: 100,
+                child: Align(
+                  alignment: Alignment.bottomRight,
+                  child: _MsgSharedSubWidgets.getDateWidget(param),
+                ),
+              ),
+              _MsgSharedSubWidgets.getActionBar(param),
+            ],
           ),
-        ],
-      ),
+        ),
+        footerWidget,
+      ],
     );
   }
 }
