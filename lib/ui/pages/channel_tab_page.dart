@@ -6,6 +6,7 @@ import 'package:flip_app/ui/cells/direct_chat.dart';
 import 'package:flip_app/ui/cells/drawer.dart';
 import 'package:flip_app/ui/cells/gallery_grid_list.dart';
 import 'package:flip_app/ui/cells/message_list_play.dart';
+import 'package:flip_app/ui/cells/music_list.dart';
 import 'package:flip_app/ui/nav.dart';
 import 'package:flutter/material.dart';
 
@@ -34,12 +35,9 @@ class _ChannelPageState extends State<ChannelPage>
 
   @override
   void initState() {
-    _tabController = TabController(length: 3, vsync: this, initialIndex: 2);
+    _tabController = TabController(length: 4, vsync: this, initialIndex: 0);
     _scrollController = ScrollController();
     super.initState();
-    Future.delayed(Duration(seconds: 1), () {
-      scaffoldKey.currentState.openDrawer();
-    });
   }
 
   @override
@@ -52,35 +50,36 @@ class _ChannelPageState extends State<ChannelPage>
   @override
   Widget build(BuildContext context) {
     this.ctx = context;
-    return Scaffold(
-        key: scaffoldKey,
-        endDrawer: _getDrawerScreen(context),
-        backgroundColor: Colors.red[300],
-        // bottomNavigationBar: FBottomNavBarCell(),
-        body: SafeArea(
-          child: Container(
-            child: Column(
-              children: <Widget>[
-                _getTopTabBar(context, _tabController, scaffoldKey),
-                Expanded(
-                  child: TabBarView(
-                    children: [
-                      // HelloWorldPage(),
-                      FDirectChatListCell(),
-                      getGrid(context),
-                      FMessageListCell_Play(),
+    return Directionality(
+      textDirection: TextDirection.rtl,
+      child: Container(
+          // key: scaffoldKey,
+          color: Colors.red[300],
+          // bottomNavigationBar: FBottomNavBarCell(),
+          child: SafeArea(
+            child: Container(
+              child: Column(
+                children: <Widget>[
+                  _getTopTabBar(context, _tabController, scaffoldKey),
+                  Expanded(
+                    child: TabBarView(
+                      children: [
+                        FMessageListCell_Play(),
+                        getGrid(context),
+                        FMusicListCell(),
+                        FDirectChatListCell(),
 
-                      // ChatListPage_DEP(),
-                      // Tab(text: "GAMES 555"),
-                      // Tab(text: "GAMES 555"),
-                    ],
-                    controller: _tabController,
+                        // Tab(text: "GAMES 555"),
+                        // Tab(text: "GAMES 555"),
+                      ],
+                      controller: _tabController,
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
-        ));
+          )),
+    );
   }
 }
 
@@ -138,7 +137,7 @@ Widget _getNavTabs(BuildContext context, TabController _tabController) {
   }
 
   return Directionality(
-      textDirection: TextDirection.ltr,
+      textDirection: TextDirection.rtl,
       child: Container(
         height: 25,
         // color: Colors.greenAccent,
@@ -157,6 +156,9 @@ Widget _getNavTabs(BuildContext context, TabController _tabController) {
             ),
             Tab(
               child: getTitleText(FStrings.channelPage_gallery),
+            ),
+            Tab(
+              child: getTitleText(FStrings.channelPage_music),
             ),
             Tab(
               child: getTitleText(FStrings.channelPage_music),
