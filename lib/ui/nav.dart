@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 
 import '../main_old.dart';
 import 'cells/bottom_navbar.dart';
+import 'cells/produc_list.dart';
 
 class FNav {
   static FNavInstance fNavInstance;
@@ -137,7 +138,7 @@ class FNavInstance {
       case FBranch.HOME:
         page = _defTabPages[FBranch.HOME];
         if (page == null) {
-          page = FPageImpl();
+          page = FProductListCell();
           _defTabPages[FBranch.HOME] = page;
         }
         break;
